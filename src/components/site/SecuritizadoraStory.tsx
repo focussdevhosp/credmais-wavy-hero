@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import credmaisOffice from "@/assets/credmais-office.png.asset.json";
+import credmaisOffice from "@/assets/credmais-founder.jpeg.asset.json";
 
 gsap.registerPlugin(ScrollTrigger);
 
