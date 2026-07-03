@@ -227,15 +227,16 @@ export function SecuritizadoraStory() {
           id="textBlock2"
           className="pointer-events-none absolute w-full translate-y-20 scale-95 select-none px-6 text-center opacity-0"
         >
-          <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.6em] text-primary md:text-sm">
+          <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.6em] md:text-sm" style={{ color: "oklch(0.82 0.18 305)" }}>
             Capítulo II
           </span>
-          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter text-ink md:text-9xl lg:text-[11rem]">
+          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]" style={{ color: "oklch(0.96 0.03 300)" }}>
             Securitização
           </h2>
-          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest text-ink-soft md:text-sm">
+          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm" style={{ color: "oklch(0.85 0.08 300)" }}>
             Estruturamos, emitimos títulos e distribuímos o risco com governança.
           </p>
+
         </div>
 
         {/* TEXTO III */}
