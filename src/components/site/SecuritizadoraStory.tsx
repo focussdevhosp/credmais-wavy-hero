@@ -152,7 +152,7 @@ export function SecuritizadoraStory() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(120% 90% at 20% 20%, hsl(var(--primary) / 0.18), transparent 55%), radial-gradient(100% 80% at 85% 80%, hsl(var(--primary) / 0.10), transparent 60%), linear-gradient(180deg, hsl(var(--background)) 0%, color-mix(in oklab, hsl(var(--primary)) 4%, hsl(var(--background))) 100%)",
+              "radial-gradient(120% 90% at 20% 20%, color-mix(in oklab, var(--primary) 18%, transparent), transparent 55%), radial-gradient(100% 80% at 85% 80%, color-mix(in oklab, var(--primary) 10%, transparent), transparent 60%), linear-gradient(180deg, var(--background) 0%, color-mix(in oklab, var(--primary) 4%, var(--background)) 100%)",
             animation: "securiFloat1 14s ease-in-out infinite alternate",
           }}
         />
@@ -161,7 +161,7 @@ export function SecuritizadoraStory() {
           className="pointer-events-none absolute inset-0 opacity-0"
           style={{
             background:
-              "radial-gradient(90% 70% at 80% 25%, hsl(var(--primary) / 0.28), transparent 55%), radial-gradient(110% 90% at 15% 85%, hsl(var(--primary) / 0.14), transparent 60%), linear-gradient(160deg, hsl(var(--background)) 0%, color-mix(in oklab, hsl(var(--primary)) 8%, hsl(var(--background))) 100%)",
+              "radial-gradient(90% 70% at 80% 25%, color-mix(in oklab, var(--primary) 28%, transparent), transparent 55%), radial-gradient(110% 90% at 15% 85%, color-mix(in oklab, var(--primary-glow) 16%, transparent), transparent 60%), linear-gradient(160deg, var(--background) 0%, color-mix(in oklab, var(--primary) 8%, var(--background)) 100%)",
             animation: "securiFloat2 18s ease-in-out infinite alternate",
           }}
         />
@@ -170,9 +170,9 @@ export function SecuritizadoraStory() {
           className="pointer-events-none absolute inset-0 opacity-0"
           style={{
             background:
-              "conic-gradient(from 210deg at 50% 50%, color-mix(in oklab, hsl(var(--primary)) 12%, hsl(var(--background))), hsl(var(--background)) 40%, color-mix(in oklab, hsl(var(--primary)) 18%, hsl(var(--background))) 70%, hsl(var(--background)))",
+              "conic-gradient(from 210deg at 50% 50%, color-mix(in oklab, var(--primary) 14%, var(--background)), var(--background) 40%, color-mix(in oklab, var(--primary-glow) 20%, var(--background)) 70%, var(--background))",
             animation: "securiSpin 30s linear infinite",
-            filter: "blur(40px)",
+            filter: "blur(30px)",
           }}
         />
         <div
@@ -180,10 +180,11 @@ export function SecuritizadoraStory() {
           className="pointer-events-none absolute inset-0 opacity-0"
           style={{
             background:
-              "radial-gradient(60% 60% at 50% 50%, hsl(var(--primary) / 0.35), transparent 60%), linear-gradient(180deg, color-mix(in oklab, hsl(var(--primary)) 6%, hsl(var(--background))) 0%, hsl(var(--background)) 100%)",
+              "radial-gradient(60% 60% at 50% 50%, color-mix(in oklab, var(--primary) 35%, transparent), transparent 60%), linear-gradient(180deg, color-mix(in oklab, var(--primary) 6%, var(--background)) 0%, var(--background) 100%)",
             animation: "securiPulse 8s ease-in-out infinite",
           }}
         />
+
         <style>{`
           @keyframes securiFloat1 {
             0% { background-position: 0% 0%, 100% 100%, 0 0; transform: scale(1); }
