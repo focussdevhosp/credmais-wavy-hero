@@ -152,7 +152,7 @@ export function SecuritizadoraStory() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(120% 90% at 20% 20%, oklch(0.82 0.19 145) 0%, oklch(0.72 0.20 148) 45%, oklch(0.55 0.18 150) 100%)",
+              "radial-gradient(120% 90% at 20% 20%, oklch(0.99 0.01 150) 0%, oklch(0.95 0.02 148) 45%, oklch(0.90 0.02 145) 100%)",
             animation: "securiFloat1 14s ease-in-out infinite alternate",
           }}
         />
@@ -161,7 +161,7 @@ export function SecuritizadoraStory() {
           className="pointer-events-none absolute inset-0 opacity-0"
           style={{
             background:
-              "radial-gradient(120% 90% at 80% 25%, oklch(0.55 0.24 300) 0%, oklch(0.40 0.22 295) 50%, oklch(0.22 0.14 290) 100%)",
+              "radial-gradient(120% 90% at 80% 25%, oklch(0.95 0.18 95) 0%, oklch(0.88 0.20 85) 50%, oklch(0.75 0.18 80) 100%)",
             animation: "securiFloat2 18s ease-in-out infinite alternate",
           }}
         />
@@ -170,7 +170,7 @@ export function SecuritizadoraStory() {
           className="pointer-events-none absolute inset-0 opacity-0"
           style={{
             background:
-              "radial-gradient(120% 90% at 50% 30%, oklch(0.92 0.18 95) 0%, oklch(0.85 0.20 85) 45%, oklch(0.72 0.19 70) 100%)",
+              "radial-gradient(120% 90% at 50% 30%, oklch(0.75 0.18 145) 0%, oklch(0.62 0.20 148) 45%, oklch(0.45 0.18 150) 100%)",
             animation: "securiFloat1 16s ease-in-out infinite alternate",
           }}
         />
@@ -210,10 +210,10 @@ export function SecuritizadoraStory() {
           id="textBlock1"
           className="pointer-events-none absolute w-full select-none px-6 text-center"
         >
-          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]" style={{ color: "oklch(0.15 0.06 150)" }}>
+          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]" style={{ color: "oklch(0.20 0.06 150)" }}>
             Recebíveis
           </h2>
-          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm" style={{ color: "oklch(0.25 0.08 150)" }}>
+          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm" style={{ color: "oklch(0.35 0.06 150)" }}>
             O patrimônio invisível gerado todos os dias pelo seu negócio.
           </p>
 
@@ -225,10 +225,10 @@ export function SecuritizadoraStory() {
           id="textBlock2"
           className="pointer-events-none absolute w-full translate-y-20 scale-95 select-none px-6 text-center opacity-0"
         >
-          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]" style={{ color: "oklch(0.96 0.03 300)" }}>
+          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]" style={{ color: "oklch(0.28 0.08 75)" }}>
             Securitização
           </h2>
-          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm" style={{ color: "oklch(0.85 0.08 300)" }}>
+          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm" style={{ color: "oklch(0.35 0.08 80)" }}>
             Estruturamos, emitimos títulos e distribuímos o risco com governança.
           </p>
 
@@ -239,10 +239,10 @@ export function SecuritizadoraStory() {
           id="textBlock3"
           className="pointer-events-none absolute w-full translate-y-20 scale-95 select-none px-6 text-center opacity-0"
         >
-          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]" style={{ color: "oklch(0.25 0.08 55)" }}>
+          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]" style={{ color: "oklch(0.98 0.03 145)" }}>
             Caixa
           </h2>
-          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm" style={{ color: "oklch(0.38 0.10 60)" }}>
+          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm" style={{ color: "oklch(0.88 0.05 145)" }}>
             Antecipação com taxas competitivas — sem a burocracia de um banco.
           </p>
 
