@@ -29,13 +29,18 @@ export function SecuritizadoraStory() {
         },
       });
 
+      // Fundos: começam com bg1 visível
+      tl.to("#bg1", { opacity: 0, duration: 2, ease: "power2.inOut" }, 0);
+      tl.to("#bg2", { opacity: 1, duration: 2, ease: "power2.inOut" }, 0);
+
       tl.to("#textBlock1", {
         opacity: 0,
         scale: 0.9,
         yPercent: -20,
         duration: 2,
         ease: "power2.inOut",
-      });
+      }, 0);
+
 
       tl.to(
         "#textBlock2",
