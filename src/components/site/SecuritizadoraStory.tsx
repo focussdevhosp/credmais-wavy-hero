@@ -66,6 +66,9 @@ export function SecuritizadoraStory() {
         },
         "+=0.6",
       );
+      tl.to("#bg2", { opacity: 0, duration: 2, ease: "power2.inOut" }, "<");
+      tl.to("#bg3", { opacity: 1, duration: 2, ease: "power2.inOut" }, "<");
+
 
       tl.to(
         "#textBlock3",
