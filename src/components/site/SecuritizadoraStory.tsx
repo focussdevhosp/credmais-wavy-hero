@@ -146,13 +146,13 @@ export function SecuritizadoraStory() {
         ref={pinRef}
         className="relative flex h-screen w-full items-center justify-center overflow-hidden"
       >
-        {/* Fundos gradientes imersivos — cor distinta por capítulo */}
+        {/* Fundos imersivos — cor distinta por capítulo */}
         <div
           id="bg1"
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(120% 90% at 20% 20%, oklch(0.72 0.19 145 / 0.35), transparent 55%), radial-gradient(100% 80% at 85% 80%, oklch(0.58 0.16 148 / 0.22), transparent 60%), linear-gradient(180deg, #f3faf5 0%, #dff3e6 100%)",
+              "radial-gradient(120% 90% at 20% 20%, oklch(0.82 0.19 145) 0%, oklch(0.72 0.20 148) 45%, oklch(0.55 0.18 150) 100%)",
             animation: "securiFloat1 14s ease-in-out infinite alternate",
           }}
         />
@@ -161,7 +161,7 @@ export function SecuritizadoraStory() {
           className="pointer-events-none absolute inset-0 opacity-0"
           style={{
             background:
-              "radial-gradient(90% 70% at 80% 25%, oklch(0.65 0.22 300 / 0.45), transparent 55%), radial-gradient(110% 90% at 15% 85%, oklch(0.55 0.24 285 / 0.30), transparent 60%), linear-gradient(160deg, #1a0f2e 0%, #2d1b4e 100%)",
+              "radial-gradient(120% 90% at 80% 25%, oklch(0.55 0.24 300) 0%, oklch(0.40 0.22 295) 50%, oklch(0.22 0.14 290) 100%)",
             animation: "securiFloat2 18s ease-in-out infinite alternate",
           }}
         />
@@ -170,9 +170,8 @@ export function SecuritizadoraStory() {
           className="pointer-events-none absolute inset-0 opacity-0"
           style={{
             background:
-              "conic-gradient(from 210deg at 50% 50%, oklch(0.85 0.18 90), #fff8dc 40%, oklch(0.78 0.20 75) 70%, #fef3c7)",
-            animation: "securiSpin 30s linear infinite",
-            filter: "blur(20px)",
+              "radial-gradient(120% 90% at 50% 30%, oklch(0.92 0.18 95) 0%, oklch(0.85 0.20 85) 45%, oklch(0.72 0.19 70) 100%)",
+            animation: "securiFloat1 16s ease-in-out infinite alternate",
           }}
         />
         <div
@@ -180,10 +179,11 @@ export function SecuritizadoraStory() {
           className="pointer-events-none absolute inset-0 opacity-0"
           style={{
             background:
-              "radial-gradient(60% 60% at 50% 50%, oklch(0.58 0.16 148 / 0.35), transparent 60%), linear-gradient(180deg, #0f1f14 0%, #05100a 100%)",
+              "radial-gradient(60% 60% at 50% 50%, oklch(0.58 0.16 148 / 0.5), transparent 60%), linear-gradient(180deg, #0f1f14 0%, #05100a 100%)",
             animation: "securiPulse 8s ease-in-out infinite",
           }}
         />
+
 
 
         <style>{`
@@ -210,15 +210,16 @@ export function SecuritizadoraStory() {
           id="textBlock1"
           className="pointer-events-none absolute w-full select-none px-6 text-center"
         >
-          <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.6em] md:text-sm" style={{ color: "oklch(0.45 0.16 148)" }}>
+          <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.6em] md:text-sm" style={{ color: "oklch(0.20 0.08 150)" }}>
             Capítulo I
           </span>
-          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]" style={{ color: "oklch(0.22 0.08 150)" }}>
+          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]" style={{ color: "oklch(0.15 0.06 150)" }}>
             Recebíveis
           </h2>
-          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm" style={{ color: "oklch(0.38 0.08 150)" }}>
+          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm" style={{ color: "oklch(0.25 0.08 150)" }}>
             O patrimônio invisível gerado todos os dias pelo seu negócio.
           </p>
+
 
         </div>
 
