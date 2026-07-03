@@ -244,15 +244,16 @@ export function SecuritizadoraStory() {
           id="textBlock3"
           className="pointer-events-none absolute w-full translate-y-20 scale-95 select-none px-6 text-center opacity-0"
         >
-          <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.6em] text-primary md:text-sm">
+          <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.6em] md:text-sm" style={{ color: "oklch(0.45 0.15 65)" }}>
             Capítulo III
           </span>
-          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter text-ink md:text-9xl lg:text-[11rem]">
+          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]" style={{ color: "oklch(0.25 0.08 55)" }}>
             Caixa
           </h2>
-          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest text-ink-soft md:text-sm">
+          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm" style={{ color: "oklch(0.38 0.10 60)" }}>
             Antecipação com taxas competitivas — sem a burocracia de um banco.
           </p>
+
         </div>
 
         {/* REVELAÇÃO DA IMAGEM */}
