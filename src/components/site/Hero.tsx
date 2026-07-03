@@ -108,7 +108,7 @@ export function Hero() {
         <div className="absolute -right-24 top-24 h-[28rem] w-[28rem] rounded-full bg-primary/10 blur-3xl" />
       </div>
 
-      <div className="container-page relative pb-32 md:pb-44 md:pt-16">
+      <div className="container-page relative pb-20 md:pb-28 md:pt-16">
         {/* TEXT COL */}
         <div data-hero-text-col className="relative text-background">
           <div
@@ -183,7 +183,7 @@ export function Hero() {
         aria-hidden
         viewBox="0 0 1440 140"
         preserveAspectRatio="none"
-        className="absolute inset-x-0 bottom-0 h-24 w-full text-background md:h-32"
+        className="absolute inset-x-0 bottom-0 h-10 w-full text-background md:h-14"
       >
         <path
           fill="currentColor"
