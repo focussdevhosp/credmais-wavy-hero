@@ -16,7 +16,7 @@ export function Navbar() {
   return (
     <header
       data-nav-root
-      className="fixed inset-x-0 top-0 z-50 bg-background/95 backdrop-blur-xl"
+      className="fixed inset-x-0 top-0 z-50 bg-background"
     >
       <div className="container-page flex h-20 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
@@ -84,13 +84,13 @@ export function Navbar() {
       {/* Onda inferior */}
       <svg
         aria-hidden
-        viewBox="0 0 1440 24"
+        viewBox="0 0 1440 28"
         preserveAspectRatio="none"
-        className="pointer-events-none absolute inset-x-0 -bottom-6 h-6 w-full text-background"
+        className="pointer-events-none absolute inset-x-0 -bottom-7 h-7 w-full"
       >
         <path
-          fill="currentColor"
-          d="M0,0 C360,24 720,24 1080,0 C1260,-12 1380,-12 1440,0 L1440,24 L0,24 Z"
+          fill="var(--background)"
+          d="M0,2 C360,24 1080,24 1440,2 L1440,28 L0,28 Z"
         />
       </svg>
     </header>
