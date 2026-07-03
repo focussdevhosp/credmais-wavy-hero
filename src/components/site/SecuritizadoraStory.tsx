@@ -17,6 +17,15 @@ export function SecuritizadoraStory() {
     if (!scrollRef.current || !pinRef.current) return;
 
     const ctx = gsap.context(() => {
+      // Garante estados iniciais independentemente do estado anterior
+      gsap.set("#bg1", { opacity: 1 });
+      gsap.set("#bg2, #bg3", { opacity: 0 });
+      gsap.set("#textBlock1", { opacity: 1, scale: 1, yPercent: 0 });
+      gsap.set("#textBlock2, #textBlock3, #imageRevealWrapper", { opacity: 0 });
+      gsap.set("#imageMask", { clipPath: "inset(20% 25% round 24px)" });
+      gsap.set("#revealImage", { scale: 1.3 });
+      gsap.set("#captionText", { opacity: 0, y: 40 });
+
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: scrollRef.current!,
@@ -29,101 +38,49 @@ export function SecuritizadoraStory() {
         },
       });
 
-      // Fundos: começam com bg1 visível
+      // Capítulo I -> Capítulo II
       tl.to("#bg1", { opacity: 0, duration: 2, ease: "power2.inOut" }, 0);
       tl.to("#bg2", { opacity: 1, duration: 2, ease: "power2.inOut" }, 0);
-
-      tl.to("#textBlock1", {
-        opacity: 0,
-        scale: 0.9,
-        yPercent: -20,
-        duration: 2,
-        ease: "power2.inOut",
-      }, 0);
-
-
-      tl.to(
+      tl.to("#textBlock1", { opacity: 0, scale: 0.9, yPercent: -20, duration: 2, ease: "power2.inOut" }, 0);
+      tl.fromTo(
         "#textBlock2",
-        {
-          opacity: 1,
-          scale: 1,
-          yPercent: 0,
-          y: 0,
-          duration: 2,
-          ease: "power2.inOut",
-        },
-        "-=1.6",
+        { opacity: 0, scale: 0.95, yPercent: 20 },
+        { opacity: 1, scale: 1, yPercent: 0, duration: 2, ease: "power2.inOut" },
+        0.4,
       );
 
-      tl.to(
-        "#textBlock2",
-        {
-          opacity: 0,
-          scale: 0.9,
-          yPercent: -30,
-          duration: 2,
-          ease: "power2.inOut",
-        },
-        "+=0.6",
-      );
-      tl.to("#bg2", { opacity: 0, duration: 2, ease: "power2.inOut" }, "<");
-      tl.to("#bg3", { opacity: 1, duration: 2, ease: "power2.inOut" }, "<");
-
-
-      tl.to(
+      // Capítulo II -> Capítulo III
+      tl.to("#bg2", { opacity: 0, duration: 2, ease: "power2.inOut" }, 3);
+      tl.to("#bg3", { opacity: 1, duration: 2, ease: "power2.inOut" }, 3);
+      tl.to("#textBlock2", { opacity: 0, scale: 0.9, yPercent: -30, duration: 2, ease: "power2.inOut" }, 3);
+      tl.fromTo(
         "#textBlock3",
-        {
-          opacity: 1,
-          scale: 1,
-          yPercent: 0,
-          y: 0,
-          duration: 2,
-          ease: "power2.inOut",
-        },
-        "-=1.6",
+        { opacity: 0, scale: 0.95, yPercent: 20 },
+        { opacity: 1, scale: 1, yPercent: 0, duration: 2, ease: "power2.inOut" },
+        3.4,
       );
 
-      tl.to(
-        "#textBlock3",
-        {
-          opacity: 0,
-          scale: 1.08,
-          yPercent: -20,
-          duration: 2,
-          ease: "power2.inOut",
-        },
-        "+=0.6",
-      );
-      tl.to("#bg3", { opacity: 0, duration: 2, ease: "power2.inOut" }, "<");
-      tl.to("#bg4", { opacity: 1, duration: 2, ease: "power2.inOut" }, "<");
-
-
-      tl.to(
-        "#imageRevealWrapper",
-        { opacity: 1, duration: 1.5, ease: "power2.out" },
-        "-=1.4",
-      );
+      // Capítulo III -> Revelação da imagem
+      tl.to("#bg3", { opacity: 0, duration: 2, ease: "power2.inOut" }, 6);
+      tl.to("#textBlock3", { opacity: 0, scale: 1.08, yPercent: -20, duration: 2, ease: "power2.inOut" }, 6);
+      tl.to("#imageRevealWrapper", { opacity: 1, duration: 1.5, ease: "power2.out" }, 6.4);
 
       tl.to(
         "#imageMask",
-        {
-          clipPath: "inset(0% 0% round 0px)",
-          duration: 2.5,
-          ease: "power3.inOut",
-        },
-        "-=1.0",
+        { clipPath: "inset(0% 0% round 0px)", duration: 2.5, ease: "power3.inOut" },
+        6.8,
       );
 
       tl.to(
         "#revealImage",
         { scale: 1, duration: 2.5, ease: "power3.inOut" },
-        "<",
+        6.8,
       );
 
       tl.to(
         "#captionText",
         { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" },
-        "-=0.8",
+        8.0,
       );
     }, scrollRef);
 
@@ -174,17 +131,6 @@ export function SecuritizadoraStory() {
             animation: "securiFloat1 16s ease-in-out infinite alternate",
           }}
         />
-        <div
-          id="bg4"
-          className="pointer-events-none absolute inset-0 opacity-0"
-          style={{
-            background:
-              "radial-gradient(60% 60% at 50% 50%, oklch(0.58 0.16 148 / 0.5), transparent 60%), linear-gradient(180deg, #0f1f14 0%, #05100a 100%)",
-            animation: "securiPulse 8s ease-in-out infinite",
-          }}
-        />
-
-
 
         <style>{`
           @keyframes securiFloat1 {
@@ -195,29 +141,25 @@ export function SecuritizadoraStory() {
             0% { background-position: 100% 0%, 0% 100%, 0 0; transform: translate3d(0,0,0); }
             100% { background-position: 70% 30%, 20% 60%, 0 0; transform: translate3d(-2%,1%,0); }
           }
-          @keyframes securiSpin {
-            to { transform: rotate(360deg); }
-          }
-          @keyframes securiPulse {
-            0%,100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.08); opacity: 0.85; }
-          }
         `}</style>
-
 
         {/* TEXTO I */}
         <div
           id="textBlock1"
           className="pointer-events-none absolute w-full select-none px-6 text-center"
         >
-          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]" style={{ color: "oklch(0.20 0.06 150)" }}>
+          <h2
+            className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]"
+            style={{ color: "oklch(0.45 0.18 145)" }}
+          >
             Recebíveis
           </h2>
-          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm" style={{ color: "oklch(0.35 0.06 150)" }}>
+          <p
+            className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm"
+            style={{ color: "oklch(0.35 0.10 145)" }}
+          >
             O patrimônio invisível gerado todos os dias pelo seu negócio.
           </p>
-
-
         </div>
 
         {/* TEXTO II */}
@@ -225,13 +167,18 @@ export function SecuritizadoraStory() {
           id="textBlock2"
           className="pointer-events-none absolute w-full translate-y-20 scale-95 select-none px-6 text-center opacity-0"
         >
-          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]" style={{ color: "oklch(0.28 0.08 75)" }}>
+          <h2
+            className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]"
+            style={{ color: "oklch(0.45 0.20 300)" }}
+          >
             Securitização
           </h2>
-          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm" style={{ color: "oklch(0.35 0.08 80)" }}>
+          <p
+            className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm"
+            style={{ color: "oklch(0.32 0.12 300)" }}
+          >
             Estruturamos, emitimos títulos e distribuímos o risco com governança.
           </p>
-
         </div>
 
         {/* TEXTO III */}
@@ -239,13 +186,18 @@ export function SecuritizadoraStory() {
           id="textBlock3"
           className="pointer-events-none absolute w-full translate-y-20 scale-95 select-none px-6 text-center opacity-0"
         >
-          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]" style={{ color: "oklch(0.98 0.03 145)" }}>
+          <h2
+            className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]"
+            style={{ color: "oklch(0.85 0.16 85)" }}
+          >
             Caixa
           </h2>
-          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm" style={{ color: "oklch(0.88 0.05 145)" }}>
+          <p
+            className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm"
+            style={{ color: "oklch(0.72 0.10 85)" }}
+          >
             Antecipação com taxas competitivas — sem a burocracia de um banco.
           </p>
-
         </div>
 
         {/* REVELAÇÃO DA IMAGEM */}
