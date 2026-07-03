@@ -11,6 +11,7 @@ function Index() {
   return (
     <>
       <Hero />
+      <SecuritizadoraStory />
 
       <section className="container-page py-24">
         <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-end">
