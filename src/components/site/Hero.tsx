@@ -169,7 +169,7 @@ export function Hero() {
           </div>
         </div>
 
-        {/* FLOATING CARD (glass) — sem thumbnail, video já é o fundo */}
+        {/* FLOATING CARD (glass) — fundo escuro sólido */}
         <div className="relative md:justify-self-end">
           <div
             data-hero-card
