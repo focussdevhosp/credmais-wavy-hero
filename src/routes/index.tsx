@@ -64,13 +64,13 @@ function Index() {
       </section>
 
       <section className="container-page py-24">
-        <div className="rounded-3xl bg-ink p-10 text-background md:p-14">
+        <div className="rounded-3xl border border-border bg-surface p-10 shadow-[0_30px_80px_-40px_rgba(15,42,30,0.18)] md:p-14">
           <div className="grid items-center gap-8 md:grid-cols-[1.4fr_1fr]">
             <div>
-              <h2 className="text-3xl font-semibold md:text-4xl">
+              <h2 className="text-3xl font-semibold text-ink md:text-4xl">
                 Descubra em 2 minutos quanto sua empresa pode antecipar.
               </h2>
-              <p className="mt-4 max-w-xl text-background/70">
+              <p className="mt-4 max-w-xl text-ink-soft">
                 Simulação gratuita, sem compromisso, com resposta de um consultor humano.
               </p>
             </div>
