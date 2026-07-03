@@ -18,9 +18,9 @@ export function Navbar() {
       data-nav-root
       className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl"
     >
-      <div className="container-page flex h-16 items-center justify-between">
+      <div className="container-page flex h-28 items-center justify-between py-2">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logoAsset.url} alt="Credmais Securitizadora" className="h-8 w-auto" />
+          <img src={logoAsset.url} alt="Credmais Securitizadora" className="h-24 w-auto" />
         </Link>
         <nav className="hidden items-center gap-1 md:flex">
           {links.map((l) => (
