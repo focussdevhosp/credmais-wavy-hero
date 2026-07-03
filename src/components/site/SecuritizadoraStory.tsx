@@ -94,6 +94,9 @@ export function SecuritizadoraStory() {
         },
         "+=0.6",
       );
+      tl.to("#bg3", { opacity: 0, duration: 2, ease: "power2.inOut" }, "<");
+      tl.to("#bg4", { opacity: 1, duration: 2, ease: "power2.inOut" }, "<");
+
 
       tl.to(
         "#imageRevealWrapper",
