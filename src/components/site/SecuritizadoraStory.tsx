@@ -2,8 +2,8 @@ import { useEffect, useRef } from "react";
 import { ShieldCheck, Layers, Sparkles } from "lucide-react";
 
 /**
- * Seção imersiva no estilo AETHER, contando a história da securitizadora.
- * Efeito: reveal + parallax suave conforme entra na viewport.
+ * Seção editorial que apresenta o tema "securitizadora".
+ * Fundo branco para continuar a onda do Hero sem quebra visual.
  */
 export function SecuritizadoraStory() {
   const rootRef = useRef<HTMLElement | null>(null);
@@ -30,43 +30,45 @@ export function SecuritizadoraStory() {
   return (
     <section
       ref={rootRef}
-      className="relative overflow-hidden bg-ink text-background"
+      className="relative overflow-hidden bg-background text-ink"
     >
-      {/* Glow decorativo */}
+      {/* Grade decorativa muito suave */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full opacity-40 blur-3xl"
-        style={{ background: "radial-gradient(circle, var(--primary-glow), transparent 60%)" }}
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-[0.06]"
+        className="pointer-events-none absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage:
-            "linear-gradient(var(--background) 1px, transparent 1px), linear-gradient(90deg, var(--background) 1px, transparent 1px)",
-          backgroundSize: "64px 64px",
+            "linear-gradient(var(--ink) 1px, transparent 1px), linear-gradient(90deg, var(--ink) 1px, transparent 1px)",
+          backgroundSize: "72px 72px",
+          maskImage:
+            "radial-gradient(ellipse at center, black 40%, transparent 75%)",
         }}
       />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full opacity-30 blur-3xl"
+        style={{ background: "radial-gradient(circle, var(--primary-glow), transparent 60%)" }}
+      />
 
-      <div className="container-page relative py-32 md:py-40">
+      <div className="container-page relative py-28 md:py-36">
         {/* Cabeçalho editorial */}
         <div className="max-w-3xl" data-reveal>
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-primary-glow">
+          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-primary">
             O que é uma securitizadora
           </p>
-          <h2 className="mt-6 font-display text-4xl leading-[1.05] md:text-6xl">
-            Transformamos <em className="italic text-primary-glow">recebíveis</em> em capital,
+          <h2 className="mt-6 font-display text-4xl leading-[1.05] text-ink md:text-6xl">
+            Transformamos <em className="italic text-primary">recebíveis</em> em capital,
             com a disciplina de um mercado regulado.
           </h2>
-          <p className="mt-8 max-w-2xl text-lg text-background/70">
+          <p className="mt-8 max-w-2xl text-lg text-ink-soft">
             Somos uma securitizadora: adquirimos direitos creditórios do seu negócio,
             emitimos títulos lastreados nessas operações e devolvemos para você
-            aquilo que mais importa — <span className="text-background">caixa hoje, previsibilidade amanhã</span>.
+            aquilo que mais importa — <span className="text-ink">caixa hoje, previsibilidade amanhã</span>.
           </p>
         </div>
 
         {/* Capítulos */}
-        <div className="mt-24 grid gap-16 md:mt-32 md:grid-cols-3">
+        <div className="mt-20 grid gap-10 md:mt-28 md:grid-cols-3">
           <Chapter
             n="I"
             title="Origem"
@@ -92,18 +94,18 @@ export function SecuritizadoraStory() {
 
         {/* Manifesto */}
         <div
-          className="mt-28 rounded-3xl border border-background/10 bg-background/[0.03] p-10 backdrop-blur-sm md:mt-36 md:p-16"
+          className="mt-24 rounded-3xl border border-border bg-surface p-10 shadow-[0_30px_80px_-40px_rgba(15,42,30,0.18)] md:mt-32 md:p-16"
           data-reveal
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-primary-glow">
+          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-primary">
             Manifesto
           </p>
-          <p className="mt-6 font-display text-3xl leading-tight md:text-5xl">
-            Crédito não é favor. É <span className="italic text-primary-glow">engenharia financeira</span>
+          <p className="mt-6 font-display text-3xl leading-tight text-ink md:text-5xl">
+            Crédito não é favor. É <span className="italic text-primary">engenharia financeira</span>
             <br className="hidden md:block" />
             a serviço de quem produz.
           </p>
-          <p className="mt-6 max-w-2xl text-background/70">
+          <p className="mt-6 max-w-2xl text-ink-soft">
             Cada operação é desenhada sob medida, com transparência total sobre custos,
             prazos e garantias. Sem letras miúdas, sem surpresas — só o rigor de uma
             securitizadora que respeita o tempo do seu negócio.
@@ -142,18 +144,18 @@ function Chapter({
 }) {
   return (
     <article className="group relative" data-reveal>
-      <div className="flex items-center gap-4 text-primary-glow">
+      <div className="flex items-center gap-4 text-primary">
         <span className="font-display text-5xl italic">{n}</span>
-        <span className="h-px flex-1 bg-background/20" />
-        <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-background/20">
+        <span className="h-px flex-1 bg-border" />
+        <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-surface">
           {icon}
         </span>
       </div>
-      <p className="mt-8 text-xs font-semibold uppercase tracking-[0.3em] text-background/50">
+      <p className="mt-8 text-xs font-semibold uppercase tracking-[0.3em] text-ink-soft">
         Capítulo — {kicker}
       </p>
-      <h3 className="mt-3 font-display text-3xl md:text-4xl">{title}</h3>
-      <p className="mt-4 text-background/70">{copy}</p>
+      <h3 className="mt-3 font-display text-3xl text-ink md:text-4xl">{title}</h3>
+      <p className="mt-4 text-ink-soft">{copy}</p>
     </article>
   );
 }
