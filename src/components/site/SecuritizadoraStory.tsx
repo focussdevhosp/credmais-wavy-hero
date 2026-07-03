@@ -134,13 +134,9 @@ export function SecuritizadoraStory() {
         ref={pinRef}
         className="relative flex h-screen w-full items-center justify-center overflow-hidden bg-background"
       >
-        {/* Atmosfera de fundo sutil (clara) */}
-        <div className="pointer-events-none absolute inset-0 opacity-60">
-          <div
-            className="absolute left-[25%] top-[15%] h-[35vw] w-[35vw] rounded-full blur-[130px]"
-            style={{ background: "var(--primary-glow, rgba(15,42,30,0.10))" }}
-          />
-          <div className="absolute bottom-[15%] right-[15%] h-[40vw] w-[40vw] rounded-full bg-primary/10 blur-[150px]" />
+        {/* Atmosfera de fundo sutil — mantida longe do topo para não interferir na onda do Hero */}
+        <div className="pointer-events-none absolute inset-0 opacity-40">
+          <div className="absolute bottom-[10%] right-[15%] h-[36vw] w-[36vw] rounded-full bg-primary/5 blur-[160px]" />
         </div>
 
         {/* TEXTO I */}
