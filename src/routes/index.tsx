@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Hero } from "@/components/site/Hero";
 import { SecuritizadoraStory } from "@/components/site/SecuritizadoraStory";
+import { ParallaxSection } from "@/components/ui/parallax-scrolling";
 import { ArrowRight, Banknote, ShieldCheck, Clock3, LineChart } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -13,37 +14,40 @@ function Index() {
       <Hero />
       <SecuritizadoraStory />
 
-      <section className="container-page py-24">
-        <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-end">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-primary">Nossas soluções</p>
-            <h2 className="mt-3 text-3xl font-semibold text-ink md:text-4xl">
-              Dois produtos, um único objetivo: caixa previsível.
-            </h2>
+      <ParallaxSection>
+        <section className="container-page py-24">
+          <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-end">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-primary">Nossas soluções</p>
+              <h2 className="mt-3 text-3xl font-semibold text-ink md:text-4xl">
+                Dois produtos, um único objetivo: caixa previsível.
+              </h2>
+            </div>
+            <p className="text-ink-soft">
+              Estruturamos operações de crédito lastreadas em recebíveis performados e a performar,
+              com governança de securitizadora e cobrança integrada.
+            </p>
           </div>
-          <p className="text-ink-soft">
-            Estruturamos operações de crédito lastreadas em recebíveis performados e a performar,
-            com governança de securitizadora e cobrança integrada.
-          </p>
-        </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
-          <ProductCard
-            to="/antecipacao-de-recebiveis"
-            icon={<Banknote className="h-5 w-5" />}
-            title="Antecipação de Recebíveis"
-            copy="Duplicatas, cheques e contratos convertidos em caixa em até 24h, com taxas competitivas e limite recorrente."
-            bullets={["Liquidação D+0", "Análise em 4 horas", "Sem tarifa de cadastro"]}
-          />
-          <ProductCard
-            to="/boleto-garantido"
-            icon={<ShieldCheck className="h-5 w-5" />}
-            title="Boleto Garantido"
-            copy="Emita boletos sabendo que o valor cai na sua conta — inadimplência é problema nosso, não seu."
-            bullets={["Garantia 100%", "Régua de cobrança inclusa", "Integração via API"]}
-          />
-        </div>
-      </section>
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            <ProductCard
+              to="/antecipacao-de-recebiveis"
+              icon={<Banknote className="h-5 w-5" />}
+              title="Antecipação de Recebíveis"
+              copy="Duplicatas, cheques e contratos convertidos em caixa em até 24h, com taxas competitivas e limite recorrente."
+              bullets={["Liquidação D+0", "Análise em 4 horas", "Sem tarifa de cadastro"]}
+            />
+            <ProductCard
+              to="/boleto-garantido"
+              icon={<ShieldCheck className="h-5 w-5" />}
+              title="Boleto Garantido"
+              copy="Emita boletos sabendo que o valor cai na sua conta — inadimplência é problema nosso, não seu."
+              bullets={["Garantia 100%", "Régua de cobrança inclusa", "Integração via API"]}
+            />
+          </div>
+        </section>
+      </ParallaxSection>
+
 
       <section className="bg-background py-24">
         <div className="container-page grid gap-6 md:grid-cols-3">
