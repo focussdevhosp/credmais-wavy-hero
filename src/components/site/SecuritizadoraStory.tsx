@@ -17,6 +17,7 @@ export function SecuritizadoraStory() {
     if (!scrollRef.current || !pinRef.current) return;
 
     const ctx = gsap.context(() => {
+      const q = gsap.utils.selector(scrollRef);
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: scrollRef.current!,
@@ -29,21 +30,21 @@ export function SecuritizadoraStory() {
         },
       });
 
-      // Fundos: começam com bg1 visível
-      tl.to("#bg1", { opacity: 0, duration: 2, ease: "power2.inOut" }, 0);
-      tl.to("#bg2", { opacity: 1, duration: 2, ease: "power2.inOut" }, 0);
+      // Fundos: começam com bg1 visível. 
+      // Iniciamos a primeira transição em 1.0 para manter bg1 visível por um momento inicial do scroll.
+      tl.to(q("#bg1"), { opacity: 0, duration: 2, ease: "power2.inOut" }, 1);
+      tl.to(q("#bg2"), { opacity: 1, duration: 2, ease: "power2.inOut" }, 1);
 
-      tl.to("#textBlock1", {
+      tl.to(q("#textBlock1"), {
         opacity: 0,
         scale: 0.9,
         yPercent: -20,
         duration: 2,
         ease: "power2.inOut",
-      }, 0);
-
+      }, 1);
 
       tl.to(
-        "#textBlock2",
+        q("#textBlock2"),
         {
           opacity: 1,
           scale: 1,
@@ -56,7 +57,7 @@ export function SecuritizadoraStory() {
       );
 
       tl.to(
-        "#textBlock2",
+        q("#textBlock2"),
         {
           opacity: 0,
           scale: 0.9,
@@ -66,12 +67,11 @@ export function SecuritizadoraStory() {
         },
         "+=0.6",
       );
-      tl.to("#bg2", { opacity: 0, duration: 2, ease: "power2.inOut" }, "<");
-      tl.to("#bg3", { opacity: 1, duration: 2, ease: "power2.inOut" }, "<");
-
+      tl.to(q("#bg2"), { opacity: 0, duration: 2, ease: "power2.inOut" }, "<");
+      tl.to(q("#bg3"), { opacity: 1, duration: 2, ease: "power2.inOut" }, "<");
 
       tl.to(
-        "#textBlock3",
+        q("#textBlock3"),
         {
           opacity: 1,
           scale: 1,
@@ -84,7 +84,7 @@ export function SecuritizadoraStory() {
       );
 
       tl.to(
-        "#textBlock3",
+        q("#textBlock3"),
         {
           opacity: 0,
           scale: 1.08,
@@ -94,18 +94,17 @@ export function SecuritizadoraStory() {
         },
         "+=0.6",
       );
-      tl.to("#bg3", { opacity: 0, duration: 2, ease: "power2.inOut" }, "<");
-      tl.to("#bg4", { opacity: 1, duration: 2, ease: "power2.inOut" }, "<");
-
+      tl.to(q("#bg3"), { opacity: 0, duration: 2, ease: "power2.inOut" }, "<");
+      tl.to(q("#bg4"), { opacity: 1, duration: 2, ease: "power2.inOut" }, "<");
 
       tl.to(
-        "#imageRevealWrapper",
+        q("#imageRevealWrapper"),
         { opacity: 1, duration: 1.5, ease: "power2.out" },
         "-=1.4",
       );
 
       tl.to(
-        "#imageMask",
+        q("#imageMask"),
         {
           clipPath: "inset(0% 0% round 0px)",
           duration: 2.5,
@@ -115,13 +114,13 @@ export function SecuritizadoraStory() {
       );
 
       tl.to(
-        "#revealImage",
+        q("#revealImage"),
         { scale: 1, duration: 2.5, ease: "power3.inOut" },
         "<",
       );
 
       tl.to(
-        "#captionText",
+        q("#captionText"),
         { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" },
         "-=0.8",
       );
@@ -199,8 +198,8 @@ export function SecuritizadoraStory() {
             to { transform: rotate(360deg); }
           }
           @keyframes securiPulse {
-            0%,100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.08); opacity: 0.85; }
+            0%,100% { transform: scale(1);  }
+            50% { transform: scale(1.08);  }
           }
         `}</style>
 
