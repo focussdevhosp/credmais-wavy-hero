@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Hero } from "@/components/site/Hero";
 import { SecuritizadoraStory } from "@/components/site/SecuritizadoraStory";
+import { ParallaxSection } from "@/components/ui/parallax-scrolling";
 import { ArrowRight, Banknote, ShieldCheck, Clock3, LineChart } from "lucide-react";
 
 export const Route = createFileRoute("/")({
