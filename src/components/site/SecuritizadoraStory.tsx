@@ -144,7 +144,7 @@ export function SecuritizadoraStory() {
     >
       <div
         ref={pinRef}
-        className="relative flex h-screen w-full items-center justify-center overflow-hidden bg-background"
+        className="relative flex h-screen w-full items-center justify-center overflow-hidden"
       >
         {/* Fundos gradientes imersivos — um por capítulo */}
         <div
