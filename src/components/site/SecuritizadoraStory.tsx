@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import credmaisOffice from "@/assets/credmais-office.png.asset.json";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -202,8 +203,8 @@ export function SecuritizadoraStory() {
           >
             <img
               id="revealImage"
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80"
-              alt="Estrutura financeira"
+              src={credmaisOffice.url}
+              alt="CredMais Securitizadora — escritório"
               className="h-full w-full origin-center scale-[1.3] object-cover"
             />
             <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/85 via-black/30 to-transparent p-8 md:p-24">
