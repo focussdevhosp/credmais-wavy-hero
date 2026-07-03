@@ -146,13 +146,13 @@ export function SecuritizadoraStory() {
         ref={pinRef}
         className="relative flex h-screen w-full items-center justify-center overflow-hidden"
       >
-        {/* Fundos gradientes imersivos — um por capítulo */}
+        {/* Fundos gradientes imersivos — cor distinta por capítulo */}
         <div
           id="bg1"
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(120% 90% at 20% 20%, color-mix(in oklab, var(--primary) 18%, transparent), transparent 55%), radial-gradient(100% 80% at 85% 80%, color-mix(in oklab, var(--primary) 10%, transparent), transparent 60%), linear-gradient(180deg, var(--background) 0%, color-mix(in oklab, var(--primary) 4%, var(--background)) 100%)",
+              "radial-gradient(120% 90% at 20% 20%, oklch(0.72 0.19 145 / 0.35), transparent 55%), radial-gradient(100% 80% at 85% 80%, oklch(0.58 0.16 148 / 0.22), transparent 60%), linear-gradient(180deg, #f3faf5 0%, #dff3e6 100%)",
             animation: "securiFloat1 14s ease-in-out infinite alternate",
           }}
         />
@@ -161,7 +161,7 @@ export function SecuritizadoraStory() {
           className="pointer-events-none absolute inset-0 opacity-0"
           style={{
             background:
-              "radial-gradient(90% 70% at 80% 25%, color-mix(in oklab, var(--primary) 28%, transparent), transparent 55%), radial-gradient(110% 90% at 15% 85%, color-mix(in oklab, var(--primary-glow) 16%, transparent), transparent 60%), linear-gradient(160deg, var(--background) 0%, color-mix(in oklab, var(--primary) 8%, var(--background)) 100%)",
+              "radial-gradient(90% 70% at 80% 25%, oklch(0.65 0.22 300 / 0.45), transparent 55%), radial-gradient(110% 90% at 15% 85%, oklch(0.55 0.24 285 / 0.30), transparent 60%), linear-gradient(160deg, #1a0f2e 0%, #2d1b4e 100%)",
             animation: "securiFloat2 18s ease-in-out infinite alternate",
           }}
         />
@@ -170,9 +170,9 @@ export function SecuritizadoraStory() {
           className="pointer-events-none absolute inset-0 opacity-0"
           style={{
             background:
-              "conic-gradient(from 210deg at 50% 50%, color-mix(in oklab, var(--primary) 14%, var(--background)), var(--background) 40%, color-mix(in oklab, var(--primary-glow) 20%, var(--background)) 70%, var(--background))",
+              "conic-gradient(from 210deg at 50% 50%, oklch(0.85 0.18 90), #fff8dc 40%, oklch(0.78 0.20 75) 70%, #fef3c7)",
             animation: "securiSpin 30s linear infinite",
-            filter: "blur(30px)",
+            filter: "blur(20px)",
           }}
         />
         <div
@@ -180,10 +180,11 @@ export function SecuritizadoraStory() {
           className="pointer-events-none absolute inset-0 opacity-0"
           style={{
             background:
-              "radial-gradient(60% 60% at 50% 50%, color-mix(in oklab, var(--primary) 35%, transparent), transparent 60%), linear-gradient(180deg, color-mix(in oklab, var(--primary) 6%, var(--background)) 0%, var(--background) 100%)",
+              "radial-gradient(60% 60% at 50% 50%, oklch(0.58 0.16 148 / 0.35), transparent 60%), linear-gradient(180deg, #0f1f14 0%, #05100a 100%)",
             animation: "securiPulse 8s ease-in-out infinite",
           }}
         />
+
 
         <style>{`
           @keyframes securiFloat1 {
@@ -209,15 +210,16 @@ export function SecuritizadoraStory() {
           id="textBlock1"
           className="pointer-events-none absolute w-full select-none px-6 text-center"
         >
-          <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.6em] text-primary md:text-sm">
+          <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.6em] md:text-sm" style={{ color: "oklch(0.45 0.16 148)" }}>
             Capítulo I
           </span>
-          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter text-ink md:text-9xl lg:text-[11rem]">
+          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]" style={{ color: "oklch(0.22 0.08 150)" }}>
             Recebíveis
           </h2>
-          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest text-ink-soft md:text-sm">
+          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm" style={{ color: "oklch(0.38 0.08 150)" }}>
             O patrimônio invisível gerado todos os dias pelo seu negócio.
           </p>
+
         </div>
 
         {/* TEXTO II */}
@@ -225,15 +227,16 @@ export function SecuritizadoraStory() {
           id="textBlock2"
           className="pointer-events-none absolute w-full translate-y-20 scale-95 select-none px-6 text-center opacity-0"
         >
-          <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.6em] text-primary md:text-sm">
+          <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.6em] md:text-sm" style={{ color: "oklch(0.82 0.18 305)" }}>
             Capítulo II
           </span>
-          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter text-ink md:text-9xl lg:text-[11rem]">
+          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]" style={{ color: "oklch(0.96 0.03 300)" }}>
             Securitização
           </h2>
-          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest text-ink-soft md:text-sm">
+          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm" style={{ color: "oklch(0.85 0.08 300)" }}>
             Estruturamos, emitimos títulos e distribuímos o risco com governança.
           </p>
+
         </div>
 
         {/* TEXTO III */}
@@ -241,15 +244,16 @@ export function SecuritizadoraStory() {
           id="textBlock3"
           className="pointer-events-none absolute w-full translate-y-20 scale-95 select-none px-6 text-center opacity-0"
         >
-          <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.6em] text-primary md:text-sm">
+          <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.6em] md:text-sm" style={{ color: "oklch(0.45 0.15 65)" }}>
             Capítulo III
           </span>
-          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter text-ink md:text-9xl lg:text-[11rem]">
+          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]" style={{ color: "oklch(0.25 0.08 55)" }}>
             Caixa
           </h2>
-          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest text-ink-soft md:text-sm">
+          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm" style={{ color: "oklch(0.38 0.10 60)" }}>
             Antecipação com taxas competitivas — sem a burocracia de um banco.
           </p>
+
         </div>
 
         {/* REVELAÇÃO DA IMAGEM */}
