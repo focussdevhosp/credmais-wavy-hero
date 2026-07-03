@@ -39,24 +39,24 @@ export function Hero() {
       tlHero.to([sub, ...ctas], { y: 0, opacity: 1, duration: 0.7, stagger: 0.1 }, 0.6);
       tlHero.to(card, { x: 0, rotationY: 0, opacity: 1, duration: 0.9, ease: "power3.out" }, 0.7);
 
-      // 1.2s — loop partículas boleto → pix
       tlHero.add(() => {
         const loop = gsap.timeline({ repeat: -1, repeatDelay: 2.5 });
-        loop.fromTo(
-          particles,
-          { xPercent: 0, opacity: 0, scale: 0.6 },
-          {
-            xPercent: 100,
-            opacity: 1,
-            scale: 1,
-            duration: 1.1,
-            stagger: 0.12,
-            ease: "power2.inOut",
-          }
-        ).to(particles, { opacity: 0, duration: 0.3 }, ">-0.2");
+        loop
+          .fromTo(
+            particles,
+            { xPercent: 0, opacity: 0, scale: 0.6 },
+            {
+              xPercent: 100,
+              opacity: 1,
+              scale: 1,
+              duration: 1.1,
+              stagger: 0.12,
+              ease: "power2.inOut",
+            }
+          )
+          .to(particles, { opacity: 0, duration: 0.3 }, ">-0.2");
       }, 1.2);
 
-      // 1.4s — countUp
       tlHero.add(() => {
         counters.forEach((el) => {
           const target = Number(el.dataset.counter || "0");
@@ -76,7 +76,6 @@ export function Hero() {
         });
       }, 1.4);
 
-      // Parallax scrub
       if (textCol && card) {
         gsap.to(textCol, {
           yPercent: -6,
@@ -90,7 +89,6 @@ export function Hero() {
         });
       }
 
-      // Scroll hint at 40%
       ScrollTrigger.create({
         trigger: root.current,
         start: "top top",
@@ -111,24 +109,34 @@ export function Hero() {
   return (
     <section
       ref={root}
-      className="relative overflow-hidden bg-gradient-to-b from-background via-background to-surface-alt pt-28 md:pt-32"
+      className="relative isolate overflow-hidden bg-ink pt-28 md:pt-32"
     >
-      {/* Ambient orbs */}
-      <div className="pointer-events-none absolute -left-32 top-20 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
-      <div className="pointer-events-none absolute -right-24 top-40 h-[28rem] w-[28rem] rounded-full bg-primary-glow/10 blur-3xl" />
+      {/* FULL-BLEED VIDEO BACKGROUND */}
+      <video
+        src={heroVideo.url}
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover"
+      />
+      {/* Overlays for legibility */}
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r from-ink/85 via-ink/65 to-ink/30" />
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-t from-ink/90 via-ink/20 to-ink/40" />
+      <div className="pointer-events-none absolute -right-24 top-24 -z-10 h-[28rem] w-[28rem] rounded-full bg-primary/15 blur-3xl" />
 
-      <div className="container-page relative grid items-center gap-14 pb-24 md:grid-cols-[1.05fr_0.95fr] md:pb-40">
+      <div className="container-page relative grid items-center gap-14 pb-32 md:grid-cols-[1.1fr_0.9fr] md:pb-44 md:pt-16">
         {/* TEXT COL */}
-        <div data-hero-text-col className="relative">
+        <div data-hero-text-col className="relative text-background">
           <div
             data-hero-eyebrow
-            className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/8 px-3 py-1.5 text-xs font-medium text-primary"
+            className="inline-flex items-center gap-2 rounded-full border border-primary-glow/40 bg-primary/15 px-3 py-1.5 text-xs font-medium text-primary-glow backdrop-blur-md"
           >
             <ShieldCheck className="h-3.5 w-3.5" />
             Securitizadora registrada · CVM
           </div>
 
-          <h1 className="mt-6 text-[40px] font-semibold leading-[1.02] text-ink md:text-[64px]">
+          <h1 className="mt-6 text-[40px] font-semibold leading-[1.02] text-background drop-shadow-[0_2px_20px_rgba(0,0,0,0.35)] md:text-[64px]">
             {H1_LINES.map((l, i) => (
               <span key={i} data-hero-line className="reveal-line">
                 <span>{l}</span>
@@ -136,7 +144,10 @@ export function Hero() {
             ))}
           </h1>
 
-          <p data-hero-sub className="mt-6 max-w-lg text-base text-ink-soft md:text-lg">
+          <p
+            data-hero-sub
+            className="mt-6 max-w-lg text-base text-background/80 md:text-lg"
+          >
             Transforme boletos e recebíveis em caixa hoje. A Credmais estrutura operações
             sob medida — do PME ao middle market — com liquidação em D+0 e cobrança 100%
             garantida.
@@ -154,67 +165,63 @@ export function Hero() {
             <Link
               to="/boleto-garantido"
               data-hero-cta
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-6 py-3 text-sm font-semibold text-ink transition hover:border-primary/40"
+              className="inline-flex items-center gap-2 rounded-full border border-background/25 bg-background/10 px-6 py-3 text-sm font-semibold text-background backdrop-blur-md transition hover:border-background/50 hover:bg-background/15"
             >
-              <Zap className="h-4 w-4 text-primary" />
+              <Zap className="h-4 w-4 text-primary-glow" />
               Conhecer Boleto Garantido
             </Link>
           </div>
 
           {/* Trust line — counters */}
-          <div className="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-border pt-6">
+          <div className="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-background/15 pt-6">
             <Metric value={2.8} decimals={1} suffix="B" label="antecipados em 2025" />
             <Metric value={12000} decimals={0} suffix="+" label="empresas atendidas" />
             <Metric value={99.7} decimals={1} suffix="%" label="cobrança liquidada" />
           </div>
         </div>
 
-        {/* CARD */}
-        <div className="relative">
+        {/* FLOATING CARD (glass) — sem thumbnail, video já é o fundo */}
+        <div className="relative md:justify-self-end">
           <div
             data-hero-card
-            className="relative rounded-3xl border border-border bg-surface p-4 shadow-[var(--shadow-card)] md:p-5"
+            className="relative w-full max-w-sm rounded-3xl border border-background/15 bg-background/10 p-5 text-background shadow-[var(--shadow-card)] backdrop-blur-xl md:p-6"
           >
-            <div className="relative overflow-hidden rounded-2xl">
-              <video
-                src={heroVideo.url}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="aspect-[4/5] w-full object-cover"
-              />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" />
-            </div>
+            <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-background/60">
+              Fluxo em tempo real
+            </p>
+            <p className="mt-1 text-base font-semibold text-background">
+              Boleto compensado → PIX na sua conta
+            </p>
 
-            {/* Floating boleto → pix flow (desktop) */}
-            <div className="mt-4 hidden items-stretch gap-3 md:flex">
+            {/* Desktop: fluxo com partículas */}
+            <div className="mt-5 hidden items-stretch gap-3 md:flex">
               <MiniCard label="Boleto emitido" value="R$ 48.290,00" />
               <div className="relative flex flex-1 items-center">
-                <div className="absolute inset-x-2 top-1/2 h-px -translate-y-1/2 bg-gradient-to-r from-primary/10 via-primary/60 to-primary/10" />
+                <div className="absolute inset-x-2 top-1/2 h-px -translate-y-1/2 bg-gradient-to-r from-primary/10 via-primary-glow to-primary/10" />
                 {[0, 1, 2].map((i) => (
                   <span
                     key={i}
                     data-particle
-                    className="absolute top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-primary shadow-[0_0_12px_var(--primary)]"
+                    className="absolute top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-primary-glow shadow-[0_0_14px_var(--primary-glow)]"
                     style={{ left: "0%" }}
                   />
                 ))}
               </div>
-              <MiniCard label="PIX liquidado · D+0" value="R$ 48.108,50" accent />
+              <MiniCard label="PIX D+0" value="R$ 48.108,50" accent />
             </div>
 
-            {/* Mobile simplified crossfade */}
-            <div className="mt-4 grid grid-cols-2 gap-3 md:hidden">
+            {/* Mobile simplificado */}
+            <div className="mt-5 grid grid-cols-2 gap-3 md:hidden">
               <MiniCard label="Boleto" value="R$ 48.290" />
               <MiniCard label="PIX D+0" value="R$ 48.108" accent />
             </div>
-          </div>
 
-          {/* Badge */}
-          <div className="absolute -left-3 -top-3 hidden rounded-2xl border border-border bg-surface px-4 py-3 shadow-[var(--shadow-soft)] md:block">
-            <p className="text-[10px] font-medium uppercase tracking-wider text-ink-soft">Taxa a partir de</p>
-            <p className="mt-0.5 text-xl font-semibold text-ink">1,29% <span className="text-xs font-normal text-ink-soft">a.m.</span></p>
+            <div className="mt-5 flex items-center justify-between border-t border-background/15 pt-4 text-xs text-background/70">
+              <span>Taxa a partir de</span>
+              <span className="text-sm font-semibold text-background">
+                1,29% <span className="font-normal text-background/60">a.m.</span>
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -222,11 +229,13 @@ export function Hero() {
       {/* Scroll hint */}
       <div
         data-scroll-hint
-        className="pointer-events-none absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2"
+        className="pointer-events-none absolute bottom-10 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2"
       >
-        <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-primary">scroll</span>
+        <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-primary-glow">
+          scroll
+        </span>
         <span
-          className="block h-16 w-px bg-gradient-to-b from-primary to-transparent"
+          className="block h-16 w-px bg-gradient-to-b from-primary-glow to-transparent"
           style={{ animation: "pulse-line 1.6s ease-in-out infinite" }}
         />
       </div>
@@ -236,7 +245,7 @@ export function Hero() {
         aria-hidden
         viewBox="0 0 1440 140"
         preserveAspectRatio="none"
-        className="absolute inset-x-0 bottom-0 h-24 w-full text-surface-alt md:h-32"
+        className="absolute inset-x-0 bottom-0 h-24 w-full text-background md:h-32"
       >
         <path
           fill="currentColor"
@@ -260,28 +269,42 @@ function Metric({
 }) {
   return (
     <div>
-      <p className="text-2xl font-semibold text-ink md:text-3xl">
-        <span data-counter={value} data-decimals={decimals}>0</span>
-        <span className="text-primary">{suffix}</span>
+      <p className="text-2xl font-semibold text-background md:text-3xl">
+        <span data-counter={value} data-decimals={decimals}>
+          0
+        </span>
+        <span className="text-primary-glow">{suffix}</span>
       </p>
-      <p className="mt-1 text-[11px] leading-tight text-ink-soft">{label}</p>
+      <p className="mt-1 text-[11px] leading-tight text-background/65">{label}</p>
     </div>
   );
 }
 
-function MiniCard({ label, value, accent }: { label: string; value: string; accent?: boolean }) {
+function MiniCard({
+  label,
+  value,
+  accent,
+}: {
+  label: string;
+  value: string;
+  accent?: boolean;
+}) {
   return (
     <div
       className={
         "flex flex-1 flex-col justify-between rounded-xl border p-3 " +
         (accent
-          ? "border-primary/30 bg-primary/8"
-          : "border-border bg-surface-alt")
+          ? "border-primary-glow/40 bg-primary/15"
+          : "border-background/15 bg-background/10")
       }
     >
-      <p className="text-[10px] font-medium uppercase tracking-wider text-ink-soft">{label}</p>
-      <p className="mt-2 text-sm font-semibold text-ink">
-        {accent && <CheckCircle2 className="mr-1 inline h-3.5 w-3.5 -translate-y-px text-primary" />}
+      <p className="text-[10px] font-medium uppercase tracking-wider text-background/60">
+        {label}
+      </p>
+      <p className="mt-2 text-sm font-semibold text-background">
+        {accent && (
+          <CheckCircle2 className="mr-1 inline h-3.5 w-3.5 -translate-y-px text-primary-glow" />
+        )}
         {value}
       </p>
     </div>
