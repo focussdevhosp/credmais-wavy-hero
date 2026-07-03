@@ -29,13 +29,18 @@ export function SecuritizadoraStory() {
         },
       });
 
+      // Fundos: começam com bg1 visível
+      tl.to("#bg1", { opacity: 0, duration: 2, ease: "power2.inOut" }, 0);
+      tl.to("#bg2", { opacity: 1, duration: 2, ease: "power2.inOut" }, 0);
+
       tl.to("#textBlock1", {
         opacity: 0,
         scale: 0.9,
         yPercent: -20,
         duration: 2,
         ease: "power2.inOut",
-      });
+      }, 0);
+
 
       tl.to(
         "#textBlock2",
@@ -61,6 +66,9 @@ export function SecuritizadoraStory() {
         },
         "+=0.6",
       );
+      tl.to("#bg2", { opacity: 0, duration: 2, ease: "power2.inOut" }, "<");
+      tl.to("#bg3", { opacity: 1, duration: 2, ease: "power2.inOut" }, "<");
+
 
       tl.to(
         "#textBlock3",
@@ -86,6 +94,9 @@ export function SecuritizadoraStory() {
         },
         "+=0.6",
       );
+      tl.to("#bg3", { opacity: 0, duration: 2, ease: "power2.inOut" }, "<");
+      tl.to("#bg4", { opacity: 1, duration: 2, ease: "power2.inOut" }, "<");
+
 
       tl.to(
         "#imageRevealWrapper",
@@ -133,12 +144,65 @@ export function SecuritizadoraStory() {
     >
       <div
         ref={pinRef}
-        className="relative flex h-screen w-full items-center justify-center overflow-hidden bg-background"
+        className="relative flex h-screen w-full items-center justify-center overflow-hidden"
       >
-        {/* Atmosfera de fundo sutil — mantida longe do topo para não interferir na onda do Hero */}
-        <div className="pointer-events-none absolute inset-0 opacity-40">
-          <div className="absolute bottom-[10%] right-[15%] h-[36vw] w-[36vw] rounded-full bg-primary/5 blur-[160px]" />
-        </div>
+        {/* Fundos gradientes imersivos — um por capítulo */}
+        <div
+          id="bg1"
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(120% 90% at 20% 20%, color-mix(in oklab, var(--primary) 18%, transparent), transparent 55%), radial-gradient(100% 80% at 85% 80%, color-mix(in oklab, var(--primary) 10%, transparent), transparent 60%), linear-gradient(180deg, var(--background) 0%, color-mix(in oklab, var(--primary) 4%, var(--background)) 100%)",
+            animation: "securiFloat1 14s ease-in-out infinite alternate",
+          }}
+        />
+        <div
+          id="bg2"
+          className="pointer-events-none absolute inset-0 opacity-0"
+          style={{
+            background:
+              "radial-gradient(90% 70% at 80% 25%, color-mix(in oklab, var(--primary) 28%, transparent), transparent 55%), radial-gradient(110% 90% at 15% 85%, color-mix(in oklab, var(--primary-glow) 16%, transparent), transparent 60%), linear-gradient(160deg, var(--background) 0%, color-mix(in oklab, var(--primary) 8%, var(--background)) 100%)",
+            animation: "securiFloat2 18s ease-in-out infinite alternate",
+          }}
+        />
+        <div
+          id="bg3"
+          className="pointer-events-none absolute inset-0 opacity-0"
+          style={{
+            background:
+              "conic-gradient(from 210deg at 50% 50%, color-mix(in oklab, var(--primary) 14%, var(--background)), var(--background) 40%, color-mix(in oklab, var(--primary-glow) 20%, var(--background)) 70%, var(--background))",
+            animation: "securiSpin 30s linear infinite",
+            filter: "blur(30px)",
+          }}
+        />
+        <div
+          id="bg4"
+          className="pointer-events-none absolute inset-0 opacity-0"
+          style={{
+            background:
+              "radial-gradient(60% 60% at 50% 50%, color-mix(in oklab, var(--primary) 35%, transparent), transparent 60%), linear-gradient(180deg, color-mix(in oklab, var(--primary) 6%, var(--background)) 0%, var(--background) 100%)",
+            animation: "securiPulse 8s ease-in-out infinite",
+          }}
+        />
+
+        <style>{`
+          @keyframes securiFloat1 {
+            0% { background-position: 0% 0%, 100% 100%, 0 0; transform: scale(1); }
+            100% { background-position: 10% 20%, 80% 70%, 0 0; transform: scale(1.05); }
+          }
+          @keyframes securiFloat2 {
+            0% { background-position: 100% 0%, 0% 100%, 0 0; transform: translate3d(0,0,0); }
+            100% { background-position: 70% 30%, 20% 60%, 0 0; transform: translate3d(-2%,1%,0); }
+          }
+          @keyframes securiSpin {
+            to { transform: rotate(360deg); }
+          }
+          @keyframes securiPulse {
+            0%,100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.08); opacity: 0.85; }
+          }
+        `}</style>
+
 
         {/* TEXTO I */}
         <div
