@@ -210,9 +210,6 @@ export function SecuritizadoraStory() {
           id="textBlock1"
           className="pointer-events-none absolute w-full select-none px-6 text-center"
         >
-          <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.6em] md:text-sm" style={{ color: "oklch(0.20 0.08 150)" }}>
-            Capítulo I
-          </span>
           <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]" style={{ color: "oklch(0.15 0.06 150)" }}>
             Recebíveis
           </h2>
@@ -228,9 +225,6 @@ export function SecuritizadoraStory() {
           id="textBlock2"
           className="pointer-events-none absolute w-full translate-y-20 scale-95 select-none px-6 text-center opacity-0"
         >
-          <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.6em] md:text-sm" style={{ color: "oklch(0.82 0.18 305)" }}>
-            Capítulo II
-          </span>
           <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]" style={{ color: "oklch(0.96 0.03 300)" }}>
             Securitização
           </h2>
@@ -245,9 +239,6 @@ export function SecuritizadoraStory() {
           id="textBlock3"
           className="pointer-events-none absolute w-full translate-y-20 scale-95 select-none px-6 text-center opacity-0"
         >
-          <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.6em] md:text-sm" style={{ color: "oklch(0.45 0.15 65)" }}>
-            Capítulo III
-          </span>
           <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]" style={{ color: "oklch(0.25 0.08 55)" }}>
             Caixa
           </h2>
