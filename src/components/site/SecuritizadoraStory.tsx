@@ -1,149 +1,236 @@
 import { useEffect, useRef } from "react";
-import { ShieldCheck, Layers, Sparkles } from "lucide-react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 /**
- * Seção editorial que apresenta o tema "securitizadora".
- * Fundo branco para continuar a onda do Hero sem quebra visual.
+ * Seção editorial "securitizadora" com efeito pinned de scroll GSAP.
+ * Mesma coreografia do protótipo AETHER, adaptada ao fundo branco do site.
  */
 export function SecuritizadoraStory() {
-  const rootRef = useRef<HTMLElement | null>(null);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const pinRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const root = rootRef.current;
-    if (!root) return;
-    const items = root.querySelectorAll<HTMLElement>("[data-reveal]");
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add("is-in");
-            io.unobserve(e.target);
-          }
-        });
-      },
-      { threshold: 0.2 },
-    );
-    items.forEach((el) => io.observe(el));
-    return () => io.disconnect();
+    if (!scrollRef.current || !pinRef.current) return;
+
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: scrollRef.current!,
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 1,
+          pin: pinRef.current!,
+          pinSpacing: true,
+          anticipatePin: 1,
+        },
+      });
+
+      tl.to("#textBlock1", {
+        opacity: 0,
+        scale: 0.9,
+        yPercent: -20,
+        duration: 2,
+        ease: "power2.inOut",
+      });
+
+      tl.to(
+        "#textBlock2",
+        {
+          opacity: 1,
+          scale: 1,
+          yPercent: 0,
+          y: 0,
+          duration: 2,
+          ease: "power2.inOut",
+        },
+        "-=1.6",
+      );
+
+      tl.to(
+        "#textBlock2",
+        {
+          opacity: 0,
+          scale: 0.9,
+          yPercent: -30,
+          duration: 2,
+          ease: "power2.inOut",
+        },
+        "+=0.6",
+      );
+
+      tl.to(
+        "#textBlock3",
+        {
+          opacity: 1,
+          scale: 1,
+          yPercent: 0,
+          y: 0,
+          duration: 2,
+          ease: "power2.inOut",
+        },
+        "-=1.6",
+      );
+
+      tl.to(
+        "#textBlock3",
+        {
+          opacity: 0,
+          scale: 1.08,
+          yPercent: -20,
+          duration: 2,
+          ease: "power2.inOut",
+        },
+        "+=0.6",
+      );
+
+      tl.to(
+        "#imageRevealWrapper",
+        { opacity: 1, duration: 1.5, ease: "power2.out" },
+        "-=1.4",
+      );
+
+      tl.to(
+        "#imageMask",
+        {
+          clipPath: "inset(0% 0% round 0px)",
+          duration: 2.5,
+          ease: "power3.inOut",
+        },
+        "-=1.0",
+      );
+
+      tl.to(
+        "#revealImage",
+        { scale: 1, duration: 2.5, ease: "power3.inOut" },
+        "<",
+      );
+
+      tl.to(
+        "#captionText",
+        { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" },
+        "-=0.8",
+      );
+    }, scrollRef);
+
+    const refresh = () => ScrollTrigger.refresh();
+    window.addEventListener("load", refresh);
+
+    return () => {
+      window.removeEventListener("load", refresh);
+      ctx.revert();
+    };
   }, []);
 
   return (
     <section
-      ref={rootRef}
-      className="relative overflow-hidden bg-background text-ink"
+      ref={scrollRef}
+      className="relative h-[450vh] w-full bg-background"
+      id="securitizadora-scroll"
     >
       <div
-        aria-hidden
-        className="pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full opacity-30 blur-3xl"
-        style={{ background: "radial-gradient(circle, var(--primary-glow), transparent 60%)" }}
-      />
-
-      <div className="container-page relative py-28 md:py-36">
-        {/* Cabeçalho editorial */}
-        <div className="max-w-3xl" data-reveal>
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-primary">
-            O que é uma securitizadora
-          </p>
-          <h2 className="mt-6 font-display text-4xl leading-[1.05] text-ink md:text-6xl">
-            Transformamos <em className="italic text-primary">recebíveis</em> em capital,
-            com a disciplina de um mercado regulado.
-          </h2>
-          <p className="mt-8 max-w-2xl text-lg text-ink-soft">
-            Somos uma securitizadora: adquirimos direitos creditórios do seu negócio,
-            emitimos títulos lastreados nessas operações e devolvemos para você
-            aquilo que mais importa — <span className="text-ink">caixa hoje, previsibilidade amanhã</span>.
-          </p>
+        ref={pinRef}
+        className="relative flex h-screen w-full items-center justify-center overflow-hidden bg-background"
+      >
+        {/* Atmosfera de fundo sutil (clara) */}
+        <div className="pointer-events-none absolute inset-0 opacity-60">
+          <div
+            className="absolute left-[25%] top-[15%] h-[35vw] w-[35vw] rounded-full blur-[130px]"
+            style={{ background: "var(--primary-glow, rgba(15,42,30,0.10))" }}
+          />
+          <div className="absolute bottom-[15%] right-[15%] h-[40vw] w-[40vw] rounded-full bg-primary/10 blur-[150px]" />
         </div>
 
-        {/* Capítulos */}
-        <div className="mt-20 grid gap-10 md:mt-28 md:grid-cols-3">
-          <Chapter
-            n="I"
-            title="Origem"
-            kicker="O recebível"
-            copy="Duplicatas, contratos e boletos que sua empresa gera todos os dias. Um patrimônio invisível, esperando para ser destravado."
-            icon={<Layers className="h-5 w-5" />}
-          />
-          <Chapter
-            n="II"
-            title="Estrutura"
-            kicker="A securitização"
-            copy="Estruturamos a operação, emitimos títulos (CRs) e distribuímos o risco entre investidores institucionais — com auditoria e governança."
-            icon={<ShieldCheck className="h-5 w-5" />}
-          />
-          <Chapter
-            n="III"
-            title="Resultado"
-            kicker="O seu caixa"
-            copy="Você recebe antecipado, com taxas competitivas e sem a burocracia de um banco. Continua vendendo — nós cuidamos do resto."
-            icon={<Sparkles className="h-5 w-5" />}
-          />
-        </div>
-
-        {/* Manifesto */}
+        {/* TEXTO I */}
         <div
-          className="mt-24 rounded-3xl border border-border bg-surface p-10 shadow-[0_30px_80px_-40px_rgba(15,42,30,0.18)] md:mt-32 md:p-16"
-          data-reveal
+          id="textBlock1"
+          className="pointer-events-none absolute w-full select-none px-6 text-center"
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-primary">
-            Manifesto
-          </p>
-          <p className="mt-6 font-display text-3xl leading-tight text-ink md:text-5xl">
-            Crédito não é favor. É <span className="italic text-primary">engenharia financeira</span>
-            <br className="hidden md:block" />
-            a serviço de quem produz.
-          </p>
-          <p className="mt-6 max-w-2xl text-ink-soft">
-            Cada operação é desenhada sob medida, com transparência total sobre custos,
-            prazos e garantias. Sem letras miúdas, sem surpresas — só o rigor de uma
-            securitizadora que respeita o tempo do seu negócio.
+          <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.6em] text-primary md:text-sm">
+            Capítulo I
+          </span>
+          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter text-ink md:text-9xl lg:text-[11rem]">
+            Recebíveis
+          </h2>
+          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest text-ink-soft md:text-sm">
+            O patrimônio invisível gerado todos os dias pelo seu negócio.
           </p>
         </div>
-      </div>
 
-      <style>{`
-        [data-reveal] {
-          opacity: 0;
-          transform: translateY(28px);
-          transition: opacity 900ms cubic-bezier(0.22, 1, 0.36, 1),
-                      transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
-        }
-        [data-reveal].is-in {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      `}</style>
+        {/* TEXTO II */}
+        <div
+          id="textBlock2"
+          className="pointer-events-none absolute w-full translate-y-20 scale-95 select-none px-6 text-center opacity-0"
+        >
+          <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.6em] text-primary md:text-sm">
+            Capítulo II
+          </span>
+          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter text-ink md:text-9xl lg:text-[11rem]">
+            Securitização
+          </h2>
+          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest text-ink-soft md:text-sm">
+            Estruturamos, emitimos títulos e distribuímos o risco com governança.
+          </p>
+        </div>
+
+        {/* TEXTO III */}
+        <div
+          id="textBlock3"
+          className="pointer-events-none absolute w-full translate-y-20 scale-95 select-none px-6 text-center opacity-0"
+        >
+          <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.6em] text-primary md:text-sm">
+            Capítulo III
+          </span>
+          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter text-ink md:text-9xl lg:text-[11rem]">
+            Caixa
+          </h2>
+          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest text-ink-soft md:text-sm">
+            Antecipação com taxas competitivas — sem a burocracia de um banco.
+          </p>
+        </div>
+
+        {/* REVELAÇÃO DA IMAGEM */}
+        <div
+          id="imageRevealWrapper"
+          className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center opacity-0"
+        >
+          <div
+            id="imageMask"
+            className="relative h-full w-full overflow-hidden"
+            style={{
+              clipPath: "inset(20% 25% round 24px)",
+              willChange: "clip-path, transform",
+            }}
+          >
+            <img
+              id="revealImage"
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80"
+              alt="Estrutura financeira"
+              className="h-full w-full origin-center scale-[1.3] object-cover"
+            />
+            <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/85 via-black/30 to-transparent p-8 md:p-24">
+              <div
+                id="captionText"
+                className="max-w-xl translate-y-10 opacity-0"
+              >
+                <span className="mb-3 block text-xs font-semibold uppercase tracking-[0.4em] text-primary-foreground/90">
+                  Manifesto
+                </span>
+                <h3 className="mb-6 font-display text-3xl font-medium leading-tight text-white md:text-6xl">
+                  Crédito é engenharia a serviço de quem produz.
+                </h3>
+                <p className="text-xs font-light leading-relaxed tracking-wide text-white/80 md:text-base">
+                  Cada operação é desenhada sob medida, com transparência total sobre
+                  custos, prazos e garantias. Sem letras miúdas — só o rigor de uma
+                  securitizadora que respeita o tempo do seu negócio.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-  );
-}
-
-function Chapter({
-  n,
-  title,
-  kicker,
-  copy,
-  icon,
-}: {
-  n: string;
-  title: string;
-  kicker: string;
-  copy: string;
-  icon: React.ReactNode;
-}) {
-  return (
-    <article className="group relative" data-reveal>
-      <div className="flex items-center gap-4 text-primary">
-        <span className="font-display text-5xl italic">{n}</span>
-        <span className="h-px flex-1 bg-border" />
-        <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-surface">
-          {icon}
-        </span>
-      </div>
-      <p className="mt-8 text-xs font-semibold uppercase tracking-[0.3em] text-ink-soft">
-        Capítulo — {kicker}
-      </p>
-      <h3 className="mt-3 font-display text-3xl text-ink md:text-4xl">{title}</h3>
-      <p className="mt-4 text-ink-soft">{copy}</p>
-    </article>
   );
 }
