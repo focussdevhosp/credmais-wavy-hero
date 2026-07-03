@@ -210,15 +210,16 @@ export function SecuritizadoraStory() {
           id="textBlock1"
           className="pointer-events-none absolute w-full select-none px-6 text-center"
         >
-          <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.6em] md:text-sm" style={{ color: "oklch(0.45 0.16 148)" }}>
+          <span className="mb-4 block text-xs font-semibold uppercase tracking-[0.6em] md:text-sm" style={{ color: "oklch(0.20 0.08 150)" }}>
             Capítulo I
           </span>
-          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]" style={{ color: "oklch(0.22 0.08 150)" }}>
+          <h2 className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]" style={{ color: "oklch(0.15 0.06 150)" }}>
             Recebíveis
           </h2>
-          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm" style={{ color: "oklch(0.38 0.08 150)" }}>
+          <p className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm" style={{ color: "oklch(0.25 0.08 150)" }}>
             O patrimônio invisível gerado todos os dias pelo seu negócio.
           </p>
+
 
         </div>
 
