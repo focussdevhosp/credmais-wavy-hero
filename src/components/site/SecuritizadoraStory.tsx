@@ -215,9 +215,6 @@ export function SecuritizadoraStory() {
                 <span className="mb-3 block text-xs font-semibold uppercase tracking-[0.4em] text-primary-foreground/90">
                   Manifesto
                 </span>
-                <h3 className="mb-6 font-display text-3xl font-medium leading-tight text-white md:text-6xl">
-                  Crédito é engenharia a serviço de quem produz.
-                </h3>
                 <p className="text-xs font-light leading-relaxed tracking-wide text-white/80 md:text-base">
                   Cada operação é desenhada sob medida, com transparência total sobre
                   custos, prazos e garantias. Sem letras miúdas — só o rigor de uma
