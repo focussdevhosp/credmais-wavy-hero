@@ -80,6 +80,19 @@ export function Navbar() {
           </div>
         </div>
       )}
+
+      {/* Onda inferior */}
+      <svg
+        aria-hidden
+        viewBox="0 0 1440 24"
+        preserveAspectRatio="none"
+        className="pointer-events-none absolute inset-x-0 -bottom-6 h-6 w-full text-background"
+      >
+        <path
+          fill="currentColor"
+          d="M0,0 C360,24 720,24 1080,0 C1260,-12 1380,-12 1440,0 L1440,24 L0,24 Z"
+        />
+      </svg>
     </header>
   );
 }
