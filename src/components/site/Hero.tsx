@@ -111,9 +111,24 @@ export function Hero() {
       ref={root}
       className="relative isolate overflow-hidden bg-ink pt-28 md:pt-32"
     >
-      {/* Dark background — vídeo removido */}
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-ink via-[oklch(0.16_0.03_155)] to-[oklch(0.14_0.04_145)]" />
-      <div className="pointer-events-none absolute -right-24 top-24 -z-10 h-[28rem] w-[28rem] rounded-full bg-primary/10 blur-3xl" />
+      {/* Vídeo de fundo full-bleed — object-cover mantém o enquadramento em qualquer tela */}
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-ink">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster=""
+          className="absolute inset-0 h-full w-full object-cover object-[65%_center] md:object-center"
+        >
+          <source src={(heroVideo as { url: string }).url} type="video/mp4" />
+        </video>
+        {/* Overlays para legibilidade do texto */}
+        <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/70 to-ink/40 md:from-ink/85 md:via-ink/55 md:to-ink/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
+        <div className="absolute -right-24 top-24 h-[28rem] w-[28rem] rounded-full bg-primary/10 blur-3xl" />
+      </div>
 
       <div className="container-page relative grid items-center gap-14 pb-32 md:grid-cols-[1.1fr_0.9fr] md:pb-44 md:pt-16">
         {/* TEXT COL */}
