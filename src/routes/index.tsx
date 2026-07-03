@@ -45,8 +45,8 @@ function Index() {
         </div>
       </section>
 
-      <section className="bg-surface-alt py-24">
-        <div className="container-page grid gap-10 md:grid-cols-3">
+      <section className="bg-background py-24">
+        <div className="container-page grid gap-6 md:grid-cols-3">
           {[
             { icon: <Clock3 className="h-5 w-5" />, t: "Onboarding em 48h", d: "Cadastro digital, análise de crédito e primeiro desembolso na mesma semana." },
             { icon: <LineChart className="h-5 w-5" />, t: "Limite que cresce com você", d: "Reavaliação automática do limite conforme seu histórico de operações." },
