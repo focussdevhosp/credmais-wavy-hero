@@ -3,7 +3,6 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight, ShieldCheck, Zap, CheckCircle2 } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import heroVideo from "@/assets/hero-woman.asset.json";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -111,19 +110,9 @@ export function Hero() {
       ref={root}
       className="relative isolate overflow-hidden bg-ink pt-28 md:pt-32"
     >
-      {/* FULL-BLEED VIDEO BACKGROUND */}
-      <video
-        src={heroVideo.url}
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover"
-      />
-      {/* Overlays for legibility */}
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-r from-ink/85 via-ink/65 to-ink/30" />
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-t from-ink/90 via-ink/20 to-ink/40" />
-      <div className="pointer-events-none absolute -right-24 top-24 -z-10 h-[28rem] w-[28rem] rounded-full bg-primary/15 blur-3xl" />
+      {/* Dark background — vídeo removido */}
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-ink via-[oklch(0.16_0.03_155)] to-[oklch(0.14_0.04_145)]" />
+      <div className="pointer-events-none absolute -right-24 top-24 -z-10 h-[28rem] w-[28rem] rounded-full bg-primary/10 blur-3xl" />
 
       <div className="container-page relative grid items-center gap-14 pb-32 md:grid-cols-[1.1fr_0.9fr] md:pb-44 md:pt-16">
         {/* TEXT COL */}
@@ -180,7 +169,7 @@ export function Hero() {
           </div>
         </div>
 
-        {/* FLOATING CARD (glass) — sem thumbnail, video já é o fundo */}
+        {/* FLOATING CARD (glass) — fundo escuro sólido */}
         <div className="relative md:justify-self-end">
           <div
             data-hero-card
