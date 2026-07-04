@@ -50,6 +50,8 @@ function Index() {
         </section>
       </ParallaxSection>
 
+      <WavyMarquee />
+
       <TextParallaxContentExample />
 
 
