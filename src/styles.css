@@ -126,5 +126,15 @@
   50% { transform: translateY(-8px); }
 }
 
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+  width: max-content;
+}
+
 .reveal-line { overflow: hidden; display: block; }
 .reveal-line > span { display: inline-block; will-change: transform; }
