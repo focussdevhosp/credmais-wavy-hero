@@ -152,13 +152,19 @@ export function SecuritizadoraStory() {
           >
             <h2
               className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]"
-              style={{ color: "oklch(0.45 0.18 145)" }}
+              style={{
+                color: "oklch(1 0 0)",
+                textShadow: "0 2px 24px rgba(0, 0, 0, 0.32)",
+              }}
             >
               Recebíveis
             </h2>
             <p
               className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm"
-              style={{ color: "oklch(0.35 0.10 145)" }}
+              style={{
+                color: "oklch(1 0 0 / 0.95)",
+                textShadow: "0 1px 12px rgba(0, 0, 0, 0.3)",
+              }}
             >
               O patrimônio invisível gerado todos os dias pelo seu negócio.
             </p>
@@ -171,13 +177,19 @@ export function SecuritizadoraStory() {
           >
             <h2
               className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]"
-              style={{ color: "oklch(0.45 0.20 300)" }}
+              style={{
+                color: "oklch(1 0 0)",
+                textShadow: "0 2px 24px rgba(0, 0, 0, 0.32)",
+              }}
             >
               Securitização
             </h2>
             <p
               className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm"
-              style={{ color: "oklch(0.32 0.12 300)" }}
+              style={{
+                color: "oklch(1 0 0 / 0.95)",
+                textShadow: "0 1px 12px rgba(0, 0, 0, 0.3)",
+              }}
             >
               Estruturamos, emitimos títulos e distribuímos o risco com governança.
             </p>
@@ -190,13 +202,19 @@ export function SecuritizadoraStory() {
           >
             <h2
               className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]"
-              style={{ color: "oklch(0.85 0.16 85)" }}
+              style={{
+                color: "oklch(1 0 0)",
+                textShadow: "0 2px 24px rgba(0, 0, 0, 0.32)",
+              }}
             >
               Caixa
             </h2>
             <p
               className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm"
-              style={{ color: "oklch(0.72 0.10 85)" }}
+              style={{
+                color: "oklch(1 0 0 / 0.95)",
+                textShadow: "0 1px 12px rgba(0, 0, 0, 0.3)",
+              }}
             >
               Antecipação com taxas competitivas — sem a burocracia de um banco.
             </p>
