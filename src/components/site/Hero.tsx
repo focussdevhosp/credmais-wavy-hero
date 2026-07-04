@@ -53,10 +53,60 @@ export function Hero() {
           });
         });
       }, 1.2);
+
+      // Parallax + scroll hint driven by ScrollTrigger, aligned to 40% of the section
+      const section = root.current!;
+      const hint = section.querySelector<HTMLElement>("[data-hero-hint]");
+      const glows = section.querySelectorAll<HTMLElement>("[data-hero-glow]");
+
+      // Image parallax — subtle vertical drift as the section scrolls out
+      if (image) {
+        gsap.to(image, {
+          yPercent: -12,
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
+      }
+
+      // Ambient glow parallax — moves slower for depth
+      if (glows.length) {
+        gsap.to(glows, {
+          yPercent: -25,
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
+      }
+
+      // Scroll hint — visible at top, fades out by 40% of the section
+      if (hint) {
+        gsap.set(hint, { opacity: 1, y: 0 });
+        gsap.to(hint, {
+          opacity: 0,
+          y: 12,
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top top",
+            end: "40% top",
+            scrub: true,
+          },
+        });
+      }
     }, root);
 
     return () => ctx.revert();
   }, []);
+
 
   return (
     <section
