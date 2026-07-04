@@ -209,8 +209,18 @@ export function Hero() {
             </div>
           </div>
         </div>
+
+        {/* Scroll hint — fades out by 40% of the section */}
+        <div
+          data-hero-hint
+          className="pointer-events-none absolute inset-x-0 bottom-4 z-20 hidden flex-col items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-foreground/60 md:flex"
+        >
+          <span>Role para explorar</span>
+          <ChevronDown className="h-4 w-4 animate-bounce text-primary" />
+        </div>
       </div>
     </section>
+
   );
 }
 
