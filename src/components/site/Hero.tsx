@@ -114,8 +114,9 @@ export function Hero() {
       className="relative overflow-hidden bg-background pt-28 pb-16 md:pt-36 md:pb-24"
     >
       {/* Ambient glow */}
-      <div className="pointer-events-none absolute -top-24 -left-24 h-96 w-96 rounded-full bg-primary/15 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-32 right-0 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
+      <div data-hero-glow className="pointer-events-none absolute -top-24 -left-24 h-96 w-96 rounded-full bg-primary/15 blur-3xl" />
+      <div data-hero-glow className="pointer-events-none absolute -bottom-32 right-0 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
+
 
       <div className="container-page relative">
         <div className="relative grid grid-cols-1 items-stretch overflow-hidden rounded-3xl bg-surface shadow-[0_40px_100px_-40px_rgba(60,40,20,0.35)] lg:grid-cols-12">
