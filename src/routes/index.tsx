@@ -25,23 +25,8 @@ function Index() {
 
 
 
-      <section className="bg-background py-24">
-        <div className="container-page grid gap-6 md:grid-cols-3">
-          {[
-            { icon: <Clock3 className="h-5 w-5" />, t: "Onboarding em 48h", d: "Cadastro digital, análise de crédito e primeiro desembolso na mesma semana." },
-            { icon: <LineChart className="h-5 w-5" />, t: "Limite que cresce com você", d: "Reavaliação automática do limite conforme seu histórico de operações." },
-            { icon: <ShieldCheck className="h-5 w-5" />, t: "Governança de securitizadora", d: "Emissão de CRs, auditoria independente e transparência total." },
-          ].map((f) => (
-            <div key={f.t} className="rounded-2xl border border-border bg-surface p-6">
-              <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                {f.icon}
-              </div>
-              <h3 className="mt-4 text-lg font-semibold text-ink">{f.t}</h3>
-              <p className="mt-2 text-sm text-ink-soft">{f.d}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <FlipFeatures />
+
 
       <section className="container-page py-24">
         <div className="rounded-3xl border border-border bg-surface p-10 shadow-[0_30px_80px_-40px_rgba(15,42,30,0.18)] md:p-14">
