@@ -200,13 +200,13 @@ function Metric({
 }) {
   return (
     <div>
-      <p className="text-2xl font-semibold text-background md:text-3xl">
+      <p className="text-2xl font-semibold text-background text-shadow-lg md:text-3xl">
         <span data-counter={value} data-decimals={decimals}>
           0
         </span>
         <span className="text-primary-glow">{suffix}</span>
       </p>
-      <p className="mt-1 text-[11px] leading-tight text-background/65">{label}</p>
+      <p className="mt-1 text-[11px] leading-tight text-background/65 text-shadow-soft">{label}</p>
     </div>
   );
 }
