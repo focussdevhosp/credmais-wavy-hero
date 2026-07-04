@@ -116,6 +116,18 @@
   @apply mx-auto w-full max-w-[1200px] px-6 md:px-10;
 }
 
+@utility text-shadow-lg {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.55), 0 6px 22px rgba(0,0,0,0.45);
+}
+
+@utility text-shadow-soft {
+  text-shadow: 0 1px 1px rgba(0,0,0,0.35), 0 2px 10px rgba(0,0,0,0.22);
+}
+
+@utility text-shadow-none {
+  text-shadow: none;
+}
+
 @keyframes pulse-line {
   0%, 100% { transform: scaleY(0.6); opacity: 0.4; }
   50% { transform: scaleY(1); opacity: 1; }
