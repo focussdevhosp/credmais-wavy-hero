@@ -97,8 +97,8 @@ export function Hero() {
           className="absolute inset-0 h-full w-full object-cover object-center md:object-[right_center]"
         />
         {/* Overlays para garantir legibilidade do texto sobre imagem clara */}
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/75 to-ink/20 md:via-ink/60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-ink/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/55 to-transparent md:via-ink/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-ink/30" />
         <div className="absolute -right-24 top-24 h-[28rem] w-[28rem] rounded-full bg-primary/10 blur-3xl" />
       </div>
 
