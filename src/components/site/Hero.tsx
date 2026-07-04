@@ -94,7 +94,7 @@ export function Hero() {
         <img
           src={(heroImage as { url: string }).url}
           alt="Executiva gerenciando antecipação de recebíveis"
-          className="absolute inset-0 h-full w-full translate-x-[14%] scale-125 object-cover object-right"
+          className="absolute inset-0 h-full w-full translate-x-[18%] scale-[1.35] object-cover object-right"
         />
         {/* Leve degradê lateral apenas para legibilidade do texto */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent" />
