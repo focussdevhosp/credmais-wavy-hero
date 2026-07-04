@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Hero } from "@/components/site/Hero";
 import { SecuritizadoraStory } from "@/components/site/SecuritizadoraStory";
 import { ParallaxSection } from "@/components/ui/parallax-scrolling";
+import { TextParallaxContentExample } from "@/components/ui/text-parallax-content-scroll";
 import { ArrowRight, Banknote, ShieldCheck, Clock3, LineChart } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -47,6 +48,10 @@ function Index() {
           </div>
         </section>
       </ParallaxSection>
+
+      <TextParallaxContentExample />
+
+
 
 
       <section className="bg-background py-24">
