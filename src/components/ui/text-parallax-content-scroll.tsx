@@ -115,21 +115,21 @@ export const TextParallaxContentExample = () => {
   return (
     <div className="bg-white">
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&auto=format&fit=crop&q=80"
+        imgUrl={parallax3.url}
         subheading="Antecipação"
         heading="Caixa em até 24h."
       >
         <ExampleContent />
       </TextParallaxContent>
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&auto=format&fit=crop&q=80"
+        imgUrl={parallax1.url}
         subheading="Garantia"
         heading="Boleto sem inadimplência."
       >
         <ExampleContent />
       </TextParallaxContent>
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1600&auto=format&fit=crop&q=80"
+        imgUrl={parallax2.url}
         subheading="Governança"
         heading="Securitizadora ao seu lado."
       >
