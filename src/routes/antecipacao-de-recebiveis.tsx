@@ -79,7 +79,7 @@ function Page() {
           </ol>
           <Link
             to="/contato"
-            className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary-glow"
+            className="mt-6 w-full btn-cta-base btn-cta-primary px-5 py-3"
           >
             Simular agora <ArrowRight className="h-4 w-4" />
           </Link>

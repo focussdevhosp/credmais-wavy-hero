@@ -85,7 +85,7 @@ function Page() {
           </div>
           <Link
             to="/contato"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary-glow"
+            className="mt-8 btn-cta-base btn-cta-primary px-5 py-3"
           >
             Quero uma proposta <ArrowRight className="h-4 w-4" />
           </Link>

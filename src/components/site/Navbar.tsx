@@ -73,7 +73,7 @@ export function Navbar() {
           <div className="flex items-center gap-2">
             <Link
               to="/contato"
-              className="hidden rounded-xl bg-ink px-5 py-2.5 text-sm font-semibold text-background shadow-[0_10px_24px_-10px_rgba(15,42,30,0.55)] transition-all duration-300 hover:-translate-y-[1px] hover:bg-ink/90 active:scale-[0.98] md:inline-flex"
+              className="hidden btn-cta-base btn-cta-dark rounded-xl px-5 py-2.5 md:inline-flex"
             >
               Simular agora
             </Link>
@@ -112,7 +112,7 @@ export function Navbar() {
               <Link
                 to="/contato"
                 onClick={() => setOpen(false)}
-                className="mt-2 inline-flex items-center justify-center rounded-xl bg-ink px-5 py-2.5 text-sm font-semibold text-background transition hover:bg-ink/90"
+                className="mt-2 btn-cta-base btn-cta-dark rounded-xl px-5 py-2.5"
               >
                 Simular agora
               </Link>

@@ -51,7 +51,7 @@ function Page() {
           </label>
           <button
             type="submit"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary-glow"
+            className="w-full btn-cta-base btn-cta-primary px-5 py-3"
           >
             <Send className="h-4 w-4" /> Enviar mensagem
           </button>
