@@ -94,7 +94,7 @@ export function Hero() {
         <img
           src={(heroImage as { url: string }).url}
           alt="Experto em antecipação de recebíveis"
-          className="absolute inset-0 h-full w-full object-cover object-[75%_20%] md:object-[right_35%]"
+          className="absolute inset-0 h-full w-full object-cover object-[80%_12%] sm:object-[right_25%] md:object-[right_35%]"
         />
         {/* Subtle overlay only to anchor bottom text */}
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
