@@ -87,14 +87,14 @@ export function Hero() {
   return (
     <section
       ref={root}
-      className="relative isolate overflow-hidden bg-ink pt-28 md:pt-32"
+      className="relative isolate overflow-hidden rounded-b-3xl bg-ink pt-28 md:rounded-b-[48px] md:pt-32"
     >
       {/* Imagem de fundo full-bleed */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-ink">
         <img
           src={(heroImage as { url: string }).url}
           alt="Experto em antecipação de recebíveis"
-          className="absolute inset-0 h-full w-full object-cover object-[75%_20%] md:object-right-top"
+          className="absolute inset-0 h-full w-full object-cover object-[75%_20%] md:object-[right_35%]"
         />
         {/* Subtle overlay only to anchor bottom text */}
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
