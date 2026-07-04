@@ -18,8 +18,6 @@ function Index() {
       <SecuritizadoraStory />
 
 
-      <WavyMarquee />
-
       <TextParallaxContentExample />
 
 
