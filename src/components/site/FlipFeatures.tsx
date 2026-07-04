@@ -136,8 +136,7 @@ export function FlipFeatures() {
                     className="backface-hidden rotate-y-180 absolute inset-0 flex flex-col justify-between overflow-hidden rounded-3xl border border-primary/30 bg-primary p-8 text-primary-foreground shadow-[0_30px_80px_-40px_rgba(15,42,30,0.55)]"
                     style={{
                       backgroundImage:
-                        "linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(135deg, color-mix(in oklab, var(--primary) 92%, black) 0%, color-mix(in oklab, var(--primary) 70%, black) 100%)",
-                      backgroundSize: "40px 40px, 40px 40px, 100% 100%",
+                        "linear-gradient(135deg, color-mix(in oklab, var(--primary) 92%, black) 0%, color-mix(in oklab, var(--primary) 70%, black) 100%)",
                     }}
                   >
                     <div className="flex items-start justify-between">
