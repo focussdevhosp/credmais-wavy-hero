@@ -143,61 +143,64 @@ export function SecuritizadoraStory() {
           }
         `}</style>
 
-        {/* TEXTO I */}
-        <div
-          id="textBlock1"
-          className="pointer-events-none absolute w-full select-none px-6 text-center"
-        >
-          <h2
-            className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]"
-            style={{ color: "oklch(0.45 0.18 145)" }}
+        {/* TEXTO I, II, III — agrupados e levemente subidos para reduzir o vazio entre a onda e a palavra */}
+        <div className="pointer-events-none absolute inset-0 flex -translate-y-12 items-center justify-center md:-translate-y-20">
+          {/* TEXTO I */}
+          <div
+            id="textBlock1"
+            className="pointer-events-none absolute w-full select-none px-6 text-center"
           >
-            Recebíveis
-          </h2>
-          <p
-            className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm"
-            style={{ color: "oklch(0.35 0.10 145)" }}
-          >
-            O patrimônio invisível gerado todos os dias pelo seu negócio.
-          </p>
-        </div>
+            <h2
+              className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]"
+              style={{ color: "oklch(0.45 0.18 145)" }}
+            >
+              Recebíveis
+            </h2>
+            <p
+              className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm"
+              style={{ color: "oklch(0.35 0.10 145)" }}
+            >
+              O patrimônio invisível gerado todos os dias pelo seu negócio.
+            </p>
+          </div>
 
-        {/* TEXTO II */}
-        <div
-          id="textBlock2"
-          className="pointer-events-none absolute w-full translate-y-20 scale-95 select-none px-6 text-center opacity-0"
-        >
-          <h2
-            className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]"
-            style={{ color: "oklch(0.45 0.20 300)" }}
+          {/* TEXTO II */}
+          <div
+            id="textBlock2"
+            className="pointer-events-none absolute w-full translate-y-20 scale-95 select-none px-6 text-center opacity-0"
           >
-            Securitização
-          </h2>
-          <p
-            className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm"
-            style={{ color: "oklch(0.32 0.12 300)" }}
-          >
-            Estruturamos, emitimos títulos e distribuímos o risco com governança.
-          </p>
-        </div>
+            <h2
+              className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]"
+              style={{ color: "oklch(0.45 0.20 300)" }}
+            >
+              Securitização
+            </h2>
+            <p
+              className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm"
+              style={{ color: "oklch(0.32 0.12 300)" }}
+            >
+              Estruturamos, emitimos títulos e distribuímos o risco com governança.
+            </p>
+          </div>
 
-        {/* TEXTO III */}
-        <div
-          id="textBlock3"
-          className="pointer-events-none absolute w-full translate-y-20 scale-95 select-none px-6 text-center opacity-0"
-        >
-          <h2
-            className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]"
-            style={{ color: "oklch(0.85 0.16 85)" }}
+          {/* TEXTO III */}
+          <div
+            id="textBlock3"
+            className="pointer-events-none absolute w-full translate-y-20 scale-95 select-none px-6 text-center opacity-0"
           >
-            Caixa
-          </h2>
-          <p
-            className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm"
-            style={{ color: "oklch(0.72 0.10 85)" }}
-          >
-            Antecipação com taxas competitivas — sem a burocracia de um banco.
-          </p>
+            <h2
+              className="font-display text-5xl font-bold uppercase leading-none tracking-tighter md:text-9xl lg:text-[11rem]"
+              style={{ color: "oklch(0.85 0.16 85)" }}
+            >
+              Caixa
+            </h2>
+            <p
+              className="mx-auto mt-6 max-w-xs text-xs font-light uppercase tracking-widest md:text-sm"
+              style={{ color: "oklch(0.72 0.10 85)" }}
+            >
+              Antecipação com taxas competitivas — sem a burocracia de um banco.
+            </p>
+          </div>
         </div>
 
         {/* REVELAÇÃO DA IMAGEM */}
