@@ -96,9 +96,8 @@ export function Hero() {
           alt="Experto em antecipação de recebíveis"
           className="absolute inset-0 h-full w-full object-cover object-[65%_center] md:object-center"
         />
-        {/* Overlays para legibilidade do texto */}
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-ink/30 md:from-ink/95 md:via-ink/75 md:to-ink/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-transparent" />
+        {/* Subtle overlay only to anchor bottom text */}
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
         <div className="absolute -right-24 top-24 h-[28rem] w-[28rem] rounded-full bg-primary/10 blur-3xl" />
       </div>
 
@@ -113,7 +112,7 @@ export function Hero() {
             Securitizadora registrada · CVM
           </div>
 
-          <h1 className="mt-6 text-[40px] font-semibold leading-[1.02] text-background drop-shadow-[0_2px_20px_rgba(0,0,0,0.35)] md:text-[64px]">
+          <h1 className="mt-6 text-[40px] font-semibold leading-[1.02] text-background md:text-[64px]">
             {H1_LINES.map((l, i) => (
               <span key={i} data-hero-line className="reveal-line">
                 <span>{l}</span>
