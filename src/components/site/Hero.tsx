@@ -112,7 +112,7 @@ export function Hero() {
             Securitizadora registrada · CVM
           </div>
 
-          <h1 className="mt-6 text-[40px] font-semibold leading-[1.02] text-background drop-shadow-[0_2px_20px_rgba(0,0,0,0.35)] md:text-[64px]">
+          <h1 className="mt-6 text-[40px] font-semibold leading-[1.02] text-background md:text-[64px]">
             {H1_LINES.map((l, i) => (
               <span key={i} data-hero-line className="reveal-line">
                 <span>{l}</span>
