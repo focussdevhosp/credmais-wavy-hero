@@ -96,12 +96,8 @@ export function Hero() {
           alt="Executiva gerenciando antecipação de recebíveis"
           className="absolute inset-0 h-full w-full object-cover object-center md:object-[right_center]"
         />
-        {/* Overlays para garantir legibilidade do texto sobre imagem clara */}
-        <div className="absolute inset-0 bg-black/45" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/55 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/25" />
-        <div className="absolute -right-24 top-24 h-[28rem] w-[28rem] rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute -right-24 top-24 h-[28rem] w-[28rem] rounded-full bg-primary/10 blur-3xl" />
+        {/* Leve degradê lateral apenas para legibilidade do texto */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent" />
       </div>
 
       <div className="container-page relative pb-20 md:pb-28 md:pt-16">
