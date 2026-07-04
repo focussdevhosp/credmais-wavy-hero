@@ -81,7 +81,7 @@ const TextParallaxContent = ({
 }: TextParallaxContentProps) => {
   return (
     <div style={{ paddingLeft: IMG_PADDING, paddingRight: IMG_PADDING }}>
-      <div className="relative h-[110vh]">
+      <div className="relative h-[90vh]">
         <StickyImage imgUrl={imgUrl} />
         <OverlayCopy heading={heading} subheading={subheading} />
       </div>
