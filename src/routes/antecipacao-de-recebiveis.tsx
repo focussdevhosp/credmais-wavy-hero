@@ -29,7 +29,7 @@ function Page() {
       intro="Antecipe duplicatas, cheques, contratos e recebíveis de cartão com uma securitizadora que entende do seu segmento."
     >
       <div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr]">
-        <div className="space-y-6 text-ink-soft">
+        <div className="space-y-6 body-text">
           <p>
             A operação de antecipação da Credmais é estruturada sob a forma de aquisição de
             direitos creditórios, com emissão de CR (Certificado de Recebíveis) quando aplicável.
@@ -49,7 +49,7 @@ function Page() {
               "Recebíveis de cartão e maquininhas",
               "CCB e CCE lastreadas",
             ].map((i) => (
-              <div key={i} className="flex items-center gap-3 rounded-xl border border-border bg-surface p-4">
+              <div key={i} className="flex items-center gap-3 card-surface p-4">
                 <CheckCircle2 className="h-4 w-4 text-primary" />
                 <span className="text-ink">{i}</span>
               </div>
@@ -57,7 +57,7 @@ function Page() {
           </div>
         </div>
 
-        <aside className="h-fit rounded-3xl border border-border bg-surface p-6 shadow-[var(--shadow-soft)]">
+        <aside className="h-fit card-surface-lg p-6">
           <p className="text-xs font-semibold uppercase tracking-wider text-primary">Como funciona</p>
           <ol className="mt-4 space-y-4">
             {[
@@ -72,7 +72,7 @@ function Page() {
                 </span>
                 <div>
                   <p className="font-semibold text-ink">{t}</p>
-                  <p className="text-sm text-ink-soft">{d}</p>
+                  <p className="body-sm">{d}</p>
                 </div>
               </li>
             ))}
