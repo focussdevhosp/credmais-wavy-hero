@@ -131,7 +131,15 @@ export function FlipFeatures() {
                         {f.desc}
                       </p>
                     </div>
-                    <div className="flex items-center justify-between border-t border-border/70 pt-4 text-xs uppercase tracking-widest text-ink-soft">
+                    <div className="relative mt-4 flex-1 min-h-0 overflow-hidden rounded-2xl">
+                      <img
+                        src={f.image}
+                        alt=""
+                        loading="lazy"
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className="mt-4 flex items-center justify-between border-t border-border/70 pt-4 text-xs uppercase tracking-widest text-ink-soft">
                       <span>Vire para saber mais</span>
                       <span className="text-primary">→</span>
                     </div>
