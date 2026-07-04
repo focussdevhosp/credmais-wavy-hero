@@ -4,7 +4,8 @@ import { SecuritizadoraStory } from "@/components/site/SecuritizadoraStory";
 import { ParallaxSection } from "@/components/ui/parallax-scrolling";
 import { TextParallaxContentExample } from "@/components/ui/text-parallax-content-scroll";
 import { WavyMarquee } from "@/components/site/WavyMarquee";
-import { ArrowRight, ShieldCheck, Clock3, LineChart } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { FlipFeatures } from "@/components/site/FlipFeatures";
 
 export const Route = createFileRoute("/")({
   component: Index,
