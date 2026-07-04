@@ -245,9 +245,6 @@ export function SecuritizadoraStory() {
                 id="captionText"
                 className="max-w-xl translate-y-10 opacity-0"
               >
-                <span className="mb-3 block text-xs font-semibold uppercase tracking-[0.4em] text-primary-foreground/90">
-                  Manifesto
-                </span>
                 <p className="text-xs font-light leading-relaxed tracking-wide text-white/80 md:text-base">
                   Cada operação é desenhada sob medida, com transparência total sobre
                   custos, prazos e garantias. Sem letras miúdas — só o rigor de uma
