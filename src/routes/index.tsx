@@ -15,11 +15,7 @@ function Index() {
       <Hero />
       <SecuritizadoraStory />
 
-
-      <TextParallaxContentExample />
-
-
-
+      <StickyScrollReveal />
 
       <FlipFeatures />
 
