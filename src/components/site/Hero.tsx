@@ -170,16 +170,16 @@ export function Hero() {
         />
       </div>
 
-      {/* Wave */}
+      {/* Wave — transição suave para a próxima seção */}
       <svg
         aria-hidden
-        viewBox="0 0 1440 140"
+        viewBox="0 0 1440 120"
         preserveAspectRatio="none"
-        className="absolute inset-x-0 bottom-0 h-10 w-full text-background md:h-14"
+        className="absolute inset-x-0 -bottom-px h-14 w-full md:h-20"
       >
         <path
-          fill="currentColor"
-          d="M0,64 C240,140 480,140 720,90 C960,40 1200,40 1440,90 L1440,140 L0,140 Z"
+          fill="var(--background)"
+          d="M0,0 L0,120 L1440,120 L1440,0 C1200,90 960,120 720,60 C480,0 240,30 0,80 Z"
         />
       </svg>
     </section>
