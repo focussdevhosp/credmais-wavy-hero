@@ -87,7 +87,7 @@ export function Hero() {
   return (
     <section
       ref={root}
-      className="relative isolate overflow-hidden rounded-b-3xl bg-ink pt-28 md:rounded-b-[48px] md:pt-32"
+      className="relative isolate overflow-hidden bg-ink pt-28 md:pt-32"
     >
       {/* Imagem de fundo full-bleed */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-ink">
@@ -170,16 +170,16 @@ export function Hero() {
         />
       </div>
 
-      {/* Wave */}
+      {/* Wave — transição suave para a próxima seção */}
       <svg
         aria-hidden
-        viewBox="0 0 1440 140"
+        viewBox="0 0 1440 120"
         preserveAspectRatio="none"
-        className="absolute inset-x-0 bottom-0 h-10 w-full text-background md:h-14"
+        className="absolute inset-x-0 -bottom-px h-14 w-full md:h-20"
       >
         <path
-          fill="currentColor"
-          d="M0,64 C240,140 480,140 720,90 C960,40 1200,40 1440,90 L1440,140 L0,140 Z"
+          fill="var(--background)"
+          d="M0,120 L0,60 C240,10 480,-20 720,40 C960,100 1200,70 1440,20 L1440,120 Z"
         />
       </svg>
     </section>
