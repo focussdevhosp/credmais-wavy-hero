@@ -202,6 +202,56 @@
   }
 }
 
+/* ============ Section / Card / Text tokens ============ */
+
+@utility eyebrow-chip {
+  @apply inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-3 py-1.5 text-xs font-medium text-primary;
+}
+
+@utility section-title {
+  @apply text-3xl font-semibold leading-tight text-ink md:text-4xl;
+}
+
+@utility section-subtitle {
+  @apply text-2xl font-semibold text-ink md:text-3xl;
+}
+
+@utility card-title {
+  @apply text-lg font-semibold text-ink;
+}
+
+@utility body-text {
+  @apply text-ink-soft;
+}
+
+@utility body-sm {
+  @apply text-sm text-ink-soft;
+}
+
+@utility card-surface {
+  @apply rounded-2xl border border-border bg-surface p-6;
+}
+
+@utility card-surface-alt {
+  @apply rounded-2xl border border-border bg-surface-alt p-6;
+}
+
+@utility card-surface-lg {
+  @apply rounded-3xl border border-border bg-surface p-8 shadow-[var(--shadow-soft)];
+}
+
+@utility card-dark {
+  @apply rounded-3xl border border-border bg-ink p-8 text-background;
+}
+
+@utility icon-badge {
+  @apply inline-flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-primary/10 text-primary;
+}
+
+@utility field-input {
+  @apply w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-ink outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/25;
+}
+
 @keyframes pulse-line {
   0%, 100% { transform: scaleY(0.6); opacity: 0.4; }
   50% { transform: scaleY(1); opacity: 1; }

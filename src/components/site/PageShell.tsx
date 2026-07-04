@@ -16,13 +16,11 @@ export function PageShell({
       <section className="relative overflow-hidden bg-gradient-to-b from-background to-surface-alt pt-32 pb-16">
         <div className="pointer-events-none absolute -right-24 top-10 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
         <div className="container-page relative">
-          <p className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/8 px-3 py-1.5 text-xs font-medium text-primary">
-            {eyebrow}
-          </p>
+          <p className="eyebrow-chip">{eyebrow}</p>
           <h1 className="mt-6 max-w-3xl text-4xl font-semibold leading-tight text-ink md:text-5xl">
             {title}
           </h1>
-          {intro && <p className="mt-5 max-w-2xl text-lg text-ink-soft">{intro}</p>}
+          {intro && <p className="mt-5 max-w-2xl text-lg body-text">{intro}</p>}
         </div>
         <svg
           aria-hidden
