@@ -2,6 +2,9 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Clock3, LineChart, ShieldCheck, Quote } from "lucide-react";
+import featureVelocity from "@/assets/feature-velocity.png.asset.json";
+import featureScale from "@/assets/feature-scale.png.asset.json";
+import featureTrust from "@/assets/feature-trust.png.asset.json";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,6 +16,7 @@ const features = [
     detail:
       "Do primeiro contato ao dinheiro na conta em até 48 horas — sem papelada, sem burocracia.",
     tag: "Velocidade",
+    image: featureVelocity.url,
   },
   {
     icon: LineChart,
@@ -21,6 +25,7 @@ const features = [
     detail:
       "Quanto mais você opera, maior seu limite. Um motor de crédito inteligente acompanhando sua evolução.",
     tag: "Escala",
+    image: featureScale.url,
   },
   {
     icon: ShieldCheck,
@@ -29,6 +34,7 @@ const features = [
     detail:
       "Estrutura regulada pela CVM, com relatórios auditados e rastreabilidade completa de cada operação.",
     tag: "Confiança",
+    image: featureTrust.url,
   },
 ];
 
@@ -125,7 +131,15 @@ export function FlipFeatures() {
                         {f.desc}
                       </p>
                     </div>
-                    <div className="flex items-center justify-between border-t border-border/70 pt-4 text-xs uppercase tracking-widest text-ink-soft">
+                    <div className="relative mt-4 flex-1 min-h-0 overflow-hidden rounded-2xl">
+                      <img
+                        src={f.image}
+                        alt=""
+                        loading="lazy"
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className="mt-4 flex items-center justify-between border-t border-border/70 pt-4 text-xs uppercase tracking-widest text-ink-soft">
                       <span>Vire para saber mais</span>
                       <span className="text-primary">→</span>
                     </div>
