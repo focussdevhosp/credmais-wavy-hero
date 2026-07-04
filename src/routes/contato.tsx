@@ -33,7 +33,7 @@ function Page() {
             e.preventDefault();
             setSent(true);
           }}
-          className="space-y-4 rounded-3xl border border-border bg-surface p-8 shadow-[var(--shadow-soft)]"
+          className="space-y-4 card-surface-lg"
         >
           <Field label="Empresa" name="empresa" required />
           <Field label="Nome do responsável" name="nome" required />
@@ -45,7 +45,7 @@ function Page() {
             <span className="mb-1 block font-medium text-ink">Sobre sua necessidade</span>
             <textarea
               rows={4}
-              className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition focus:border-primary"
+              className="field-input"
               placeholder="Ex.: Faturamos R$ 1M/mês em duplicatas, gostaria de simular antecipação."
             />
           </label>
@@ -76,7 +76,7 @@ function Page() {
             title="Endereço"
             content="Av. Faria Lima, 1000 · São Paulo/SP"
           />
-          <div className="rounded-3xl bg-ink p-6 text-background">
+          <div className="card-dark p-6">
             <p className="text-sm text-background/70">Horário de atendimento</p>
             <p className="mt-2 font-semibold">Seg a Sex · 8h às 19h</p>
             <p className="text-background/70">Sábado · 9h às 13h</p>
@@ -105,7 +105,7 @@ function Field({
         name={name}
         type={type}
         required={required}
-        className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition focus:border-primary"
+        className="field-input"
       />
     </label>
   );
@@ -113,10 +113,8 @@ function Field({
 
 function InfoCard({ icon, title, content }: { icon: React.ReactNode; title: string; content: string }) {
   return (
-    <div className="flex items-start gap-4 rounded-2xl border border-border bg-surface p-5">
-      <span className="inline-flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-primary/10 text-primary">
-        {icon}
-      </span>
+    <div className="flex items-start gap-4 card-surface p-5">
+      <span className="icon-badge">{icon}</span>
       <div>
         <p className="text-xs font-medium uppercase tracking-wider text-ink-soft">{title}</p>
         <p className="mt-1 font-semibold text-ink">{content}</p>
