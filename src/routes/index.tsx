@@ -1,9 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Hero } from "@/components/site/Hero";
 import { SecuritizadoraStory } from "@/components/site/SecuritizadoraStory";
-import { ParallaxSection } from "@/components/ui/parallax-scrolling";
-import { TextParallaxContentExample } from "@/components/ui/text-parallax-content-scroll";
-
+import { StickyScrollReveal } from "@/components/ui/sticky-scroll";
 import { ArrowRight } from "lucide-react";
 import { FlipFeatures } from "@/components/site/FlipFeatures";
 
@@ -17,11 +15,7 @@ function Index() {
       <Hero />
       <SecuritizadoraStory />
 
-
-      <TextParallaxContentExample />
-
-
-
+      <StickyScrollReveal />
 
       <FlipFeatures />
 
