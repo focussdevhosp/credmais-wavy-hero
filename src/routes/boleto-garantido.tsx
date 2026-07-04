@@ -39,7 +39,6 @@ function Page() {
             icon: <Zap className="h-5 w-5" />,
             t: "Régua de cobrança",
             d: "Régua multicanal (SMS, e-mail, WhatsApp) e negativação por conta da Credmais.",
-            featured: true,
           },
           {
             icon: <Cog className="h-5 w-5" />,
@@ -47,49 +46,19 @@ function Page() {
             d: "API REST, webhooks e conectores para os principais ERPs e gateways do mercado.",
           },
         ].map((f) => (
-          <div
-            key={f.t}
-            className={
-              f.featured
-                ? "group relative overflow-hidden rounded-2xl bg-ink p-6 text-background shadow-[0_30px_60px_-30px_rgba(60,40,20,0.45)] transition hover:-translate-y-1"
-                : "group card-surface transition hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]"
-            }
-          >
-            {f.featured && (
-              <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-primary/25 blur-3xl" />
-            )}
-            <div
-              className={
-                f.featured
-                  ? "inline-flex h-10 w-10 items-center justify-center rounded-xl bg-background/10 text-primary-glow"
-                  : "icon-badge"
-              }
-            >
+          <div key={f.t} className="rounded-2xl border border-border bg-surface p-6">
+            <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
               {f.icon}
             </div>
-            <h3
-              className={
-                f.featured
-                  ? "mt-4 font-display text-lg font-semibold text-background"
-                  : "mt-4 card-title"
-              }
-            >
-              {f.t}
-            </h3>
-            <p
-              className={
-                f.featured ? "mt-2 text-sm text-background/70" : "mt-2 body-sm"
-              }
-            >
-              {f.d}
-            </p>
+            <h3 className="mt-4 text-lg font-semibold text-ink">{f.t}</h3>
+            <p className="mt-2 text-sm text-ink-soft">{f.d}</p>
           </div>
         ))}
       </div>
 
       <div className="mt-16 grid gap-10 md:grid-cols-2 md:items-center">
         <div>
-          <h2 className="section-title">Para quem faz sentido?</h2>
+          <h2 className="text-3xl font-semibold text-ink">Para quem faz sentido?</h2>
           <ul className="mt-6 space-y-3 text-ink">
             {[
               "Distribuidoras e atacados com carteira pulverizada",
@@ -104,7 +73,7 @@ function Page() {
             ))}
           </ul>
         </div>
-        <div className="card-dark">
+        <div className="rounded-3xl border border-border bg-ink p-8 text-background">
           <p className="text-sm text-background/70">Exemplo de operação</p>
           <p className="mt-3 text-3xl font-semibold">R$ 100.000</p>
           <p className="text-background/70">em boletos emitidos no mês</p>
@@ -116,7 +85,7 @@ function Page() {
           </div>
           <Link
             to="/contato"
-            className="mt-8 btn-cta-base btn-cta-primary px-5 py-3"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary-glow"
           >
             Quero uma proposta <ArrowRight className="h-4 w-4" />
           </Link>

@@ -47,60 +47,57 @@
 :root {
   --radius: 0.9rem;
 
-  /* Paleta: marrom claro, dourado e branco */
-  --background: oklch(0.985 0.008 75);
-  --foreground: oklch(0.24 0.04 55);
-  --ink: oklch(0.20 0.04 55);
-  --ink-soft: oklch(0.46 0.03 60);
+  /* Credmais: verde institucional */
+  --background: oklch(0.985 0.008 150);
+  --foreground: oklch(0.18 0.03 165);
+  --ink: oklch(0.14 0.03 165);
+  --ink-soft: oklch(0.42 0.02 165);
 
   --surface: oklch(1 0 0);
-  --surface-alt: oklch(0.96 0.02 78);
+  --surface-alt: oklch(0.97 0.015 155);
 
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.24 0.04 55);
+  --card-foreground: oklch(0.18 0.03 165);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.24 0.04 55);
+  --popover-foreground: oklch(0.18 0.03 165);
 
-  /* Dourado como primária */
-  --primary: oklch(0.72 0.13 82);
-  --primary-glow: oklch(0.82 0.14 85);
-  --primary-foreground: oklch(0.20 0.04 55);
+  --primary: oklch(0.58 0.16 148);
+  --primary-glow: oklch(0.72 0.19 145);
+  --primary-foreground: oklch(0.99 0.005 150);
 
-  /* Marrom claro como secundária */
-  --secondary: oklch(0.9 0.035 70);
-  --secondary-foreground: oklch(0.26 0.05 55);
+  --secondary: oklch(0.95 0.02 150);
+  --secondary-foreground: oklch(0.22 0.04 165);
 
-  --muted: oklch(0.95 0.02 75);
-  --muted-foreground: oklch(0.5 0.03 60);
+  --muted: oklch(0.96 0.012 155);
+  --muted-foreground: oklch(0.48 0.02 165);
 
-  --accent: oklch(0.88 0.06 78);
-  --accent-foreground: oklch(0.26 0.05 55);
+  --accent: oklch(0.94 0.05 145);
+  --accent-foreground: oklch(0.22 0.05 160);
 
   --destructive: oklch(0.6 0.22 27);
   --destructive-foreground: oklch(0.99 0 0);
 
-  --border: oklch(0.88 0.025 75);
-  --input: oklch(0.88 0.025 75);
-  --ring: oklch(0.72 0.13 82);
+  --border: oklch(0.9 0.015 155);
+  --input: oklch(0.9 0.015 155);
+  --ring: oklch(0.58 0.16 148);
 }
 
 .dark {
-  --background: oklch(0.18 0.02 55);
-  --foreground: oklch(0.97 0.015 80);
-  --ink: oklch(0.97 0.015 80);
-  --ink-soft: oklch(0.75 0.025 75);
-  --surface: oklch(0.22 0.025 55);
-  --surface-alt: oklch(0.26 0.03 55);
-  --card: oklch(0.24 0.025 55);
-  --card-foreground: oklch(0.97 0.015 80);
-  --primary: oklch(0.78 0.14 85);
-  --primary-glow: oklch(0.86 0.14 88);
-  --primary-foreground: oklch(0.18 0.02 55);
+  --background: oklch(0.14 0.02 165);
+  --foreground: oklch(0.97 0.01 150);
+  --ink: oklch(0.97 0.01 150);
+  --ink-soft: oklch(0.72 0.02 155);
+  --surface: oklch(0.18 0.025 165);
+  --surface-alt: oklch(0.22 0.03 165);
+  --card: oklch(0.2 0.025 165);
+  --card-foreground: oklch(0.97 0.01 150);
+  --primary: oklch(0.72 0.18 145);
+  --primary-glow: oklch(0.82 0.19 143);
+  --primary-foreground: oklch(0.14 0.02 165);
   --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 14%);
-  --ring: oklch(0.78 0.14 85);
+  --ring: oklch(0.72 0.18 145);
 }
-
 
 @layer base {
   * { border-color: var(--color-border); }
@@ -129,127 +126,6 @@
 
 @utility text-shadow-none {
   text-shadow: none;
-}
-
-/* ============ CTA System (gold / brown / white) ============ */
-
-@utility btn-cta-base {
-  @apply inline-flex items-center justify-center gap-2 rounded-full text-sm font-semibold transition-all duration-300 outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:opacity-60 disabled:pointer-events-none active:scale-[0.98];
-}
-
-@utility btn-cta-primary {
-  background-image: linear-gradient(135deg, var(--primary) 0%, var(--primary-glow) 100%);
-  color: var(--primary-foreground);
-  box-shadow:
-    0 10px 24px -12px color-mix(in oklab, var(--primary) 55%, transparent),
-    inset 0 1px 0 color-mix(in oklab, white 35%, transparent);
-  &:hover {
-    filter: brightness(1.04);
-    transform: translateY(-1px);
-    box-shadow:
-      0 16px 32px -14px color-mix(in oklab, var(--primary) 70%, transparent),
-      inset 0 1px 0 color-mix(in oklab, white 45%, transparent);
-  }
-  &:focus-visible {
-    --tw-ring-color: color-mix(in oklab, var(--primary) 65%, transparent);
-    box-shadow:
-      0 0 0 3px color-mix(in oklab, var(--primary) 45%, transparent),
-      0 10px 24px -12px color-mix(in oklab, var(--primary) 55%, transparent);
-  }
-}
-
-@utility btn-cta-outline {
-  background-color: color-mix(in oklab, var(--primary) 6%, transparent);
-  color: var(--ink);
-  border: 1px solid color-mix(in oklab, var(--primary) 45%, transparent);
-  &:hover {
-    background-color: color-mix(in oklab, var(--primary) 14%, transparent);
-    border-color: var(--primary);
-    transform: translateY(-1px);
-  }
-  &:focus-visible {
-    box-shadow: 0 0 0 3px color-mix(in oklab, var(--primary) 40%, transparent);
-  }
-}
-
-@utility btn-cta-dark {
-  background-color: var(--ink);
-  color: var(--background);
-  box-shadow: 0 10px 24px -12px color-mix(in oklab, var(--ink) 55%, transparent);
-  &:hover {
-    background-color: color-mix(in oklab, var(--ink) 85%, var(--primary));
-    color: var(--primary-glow);
-    transform: translateY(-1px);
-    box-shadow: 0 16px 32px -14px color-mix(in oklab, var(--ink) 65%, transparent);
-  }
-  &:focus-visible {
-    box-shadow: 0 0 0 3px color-mix(in oklab, var(--primary) 50%, transparent);
-  }
-}
-
-@utility btn-cta-ghost-light {
-  background-color: color-mix(in oklab, white 10%, transparent);
-  color: var(--background);
-  border: 1px solid color-mix(in oklab, white 30%, transparent);
-  backdrop-filter: blur(8px);
-  &:hover {
-    background-color: color-mix(in oklab, white 18%, transparent);
-    border-color: color-mix(in oklab, white 55%, transparent);
-    transform: translateY(-1px);
-  }
-  &:focus-visible {
-    box-shadow: 0 0 0 3px color-mix(in oklab, var(--primary-glow) 55%, transparent);
-  }
-}
-
-/* ============ Section / Card / Text tokens ============ */
-
-@utility eyebrow-chip {
-  @apply inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-3 py-1.5 text-xs font-medium text-primary;
-}
-
-@utility section-title {
-  @apply text-3xl font-semibold leading-tight text-ink md:text-4xl;
-}
-
-@utility section-subtitle {
-  @apply text-2xl font-semibold text-ink md:text-3xl;
-}
-
-@utility card-title {
-  @apply text-lg font-semibold text-ink;
-}
-
-@utility body-text {
-  @apply text-ink-soft;
-}
-
-@utility body-sm {
-  @apply text-sm text-ink-soft;
-}
-
-@utility card-surface {
-  @apply rounded-2xl border border-border bg-surface p-6;
-}
-
-@utility card-surface-alt {
-  @apply rounded-2xl border border-border bg-surface-alt p-6;
-}
-
-@utility card-surface-lg {
-  @apply rounded-3xl border border-border bg-surface p-8 shadow-[var(--shadow-soft)];
-}
-
-@utility card-dark {
-  @apply rounded-3xl border border-border bg-ink p-8 text-background;
-}
-
-@utility icon-badge {
-  @apply inline-flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-primary/10 text-primary;
-}
-
-@utility field-input {
-  @apply w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-ink outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/25;
 }
 
 @keyframes pulse-line {

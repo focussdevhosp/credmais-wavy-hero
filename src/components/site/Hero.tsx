@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, ChevronDown, ShieldCheck, Zap } from "lucide-react";
+import { ArrowRight, ShieldCheck, Zap } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import heroImage from "@/assets/hero-businessman.png.asset.json";
@@ -8,7 +8,6 @@ import heroImage from "@/assets/hero-businessman.png.asset.json";
 gsap.registerPlugin(ScrollTrigger);
 
 const H1_LINES = ["Antecipe recebíveis", "com a segurança de", "uma securitizadora."];
-
 
 export function Hero() {
   const root = useRef<HTMLDivElement>(null);
@@ -21,21 +20,22 @@ export function Hero() {
       const sub = root.current!.querySelector("[data-hero-sub]");
       const ctas = root.current!.querySelectorAll("[data-hero-cta]");
       const counters = root.current!.querySelectorAll<HTMLElement>("[data-counter]");
-      const image = root.current!.querySelector("[data-hero-image]");
+      const scrollHint = root.current!.querySelector("[data-scroll-hint]");
+      const textCol = root.current!.querySelector("[data-hero-text-col]");
 
       gsap.set(lines, { yPercent: 110 });
       gsap.set([sub, ...ctas], { y: 20, opacity: 0 });
       gsap.set(eyebrow, { clipPath: "inset(0 100% 0 0)" });
-      gsap.set(image, { scale: 1.08, opacity: 0 });
+      gsap.set(scrollHint, { opacity: 0, scaleY: 0.4, transformOrigin: "top center" });
 
-      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-      if (nav) tl.from(nav, { y: -20, opacity: 0, duration: 0.6 }, 0.0);
-      tl.to(image, { scale: 1, opacity: 1, duration: 1.4, ease: "power2.out" }, 0.1);
-      tl.to(eyebrow, { clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power2.out" }, 0.2);
-      tl.to(lines, { yPercent: 0, duration: 0.85, stagger: 0.12 }, 0.3);
-      tl.to([sub, ...ctas], { y: 0, opacity: 1, duration: 0.7, stagger: 0.1 }, 0.7);
+      const tlHero = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-      tl.add(() => {
+      if (nav) tlHero.from(nav, { y: -20, opacity: 0, duration: 0.6 }, 0.0);
+      tlHero.to(eyebrow, { clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power2.out" }, 0.1);
+      tlHero.to(lines, { yPercent: 0, duration: 0.85, stagger: 0.12, ease: "power3.out" }, 0.25);
+      tlHero.to([sub, ...ctas], { y: 0, opacity: 1, duration: 0.7, stagger: 0.1 }, 0.6);
+
+      tlHero.add(() => {
         counters.forEach((el) => {
           const target = Number(el.dataset.counter || "0");
           const decimals = Number(el.dataset.decimals || "0");
@@ -54,18 +54,12 @@ export function Hero() {
         });
       }, 1.2);
 
-      // Parallax + scroll hint driven by ScrollTrigger, aligned to 40% of the section
-      const section = root.current!;
-      const hint = section.querySelector<HTMLElement>("[data-hero-hint]");
-      const glows = section.querySelectorAll<HTMLElement>("[data-hero-glow]");
-
-      // Image parallax — subtle vertical drift as the section scrolls out
-      if (image) {
-        gsap.to(image, {
-          yPercent: -12,
+      if (textCol) {
+        gsap.to(textCol, {
+          yPercent: -6,
           ease: "none",
           scrollTrigger: {
-            trigger: section,
+            trigger: root.current,
             start: "top top",
             end: "bottom top",
             scrub: true,
@@ -73,154 +67,123 @@ export function Hero() {
         });
       }
 
-      // Ambient glow parallax — moves slower for depth
-      if (glows.length) {
-        gsap.to(glows, {
-          yPercent: -25,
-          ease: "none",
-          scrollTrigger: {
-            trigger: section,
-            start: "top top",
-            end: "bottom top",
-            scrub: true,
-          },
-        });
-      }
-
-      // Scroll hint — visible at top, fades out by 40% of the section
-      if (hint) {
-        gsap.set(hint, { opacity: 1, y: 0 });
-        gsap.to(hint, {
-          opacity: 0,
-          y: 12,
-          ease: "none",
-          scrollTrigger: {
-            trigger: section,
-            start: "top top",
-            end: "40% top",
-            scrub: true,
-          },
-        });
-      }
+      ScrollTrigger.create({
+        trigger: root.current,
+        start: "top top",
+        end: "bottom top",
+        onUpdate: (self) => {
+          if (self.progress > 0.4) {
+            gsap.to(scrollHint, { opacity: 1, scaleY: 1, duration: 0.4 });
+          } else {
+            gsap.to(scrollHint, { opacity: 0, scaleY: 0.4, duration: 0.3 });
+          }
+        },
+      });
     }, root);
 
     return () => ctx.revert();
   }, []);
 
-
   return (
     <section
       ref={root}
-      className="relative overflow-hidden bg-background pt-28 pb-16 md:pt-36 md:pb-24"
+      className="relative isolate overflow-hidden bg-ink pt-28 md:pt-32"
     >
-      {/* Ambient glow */}
-      <div data-hero-glow className="pointer-events-none absolute -top-24 -left-24 h-96 w-96 rounded-full bg-primary/15 blur-3xl" />
-      <div data-hero-glow className="pointer-events-none absolute -bottom-32 right-0 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
+      {/* Imagem de fundo full-bleed */}
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-ink">
+        <img
+          src={(heroImage as { url: string }).url}
+          alt="Experto em antecipação de recebíveis"
+          className="absolute inset-0 h-full w-full object-cover object-right-top md:object-right-top"
+        />
+        {/* Subtle overlay only to anchor bottom text */}
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
+        <div className="absolute -right-24 top-24 h-[28rem] w-[28rem] rounded-full bg-primary/10 blur-3xl" />
+      </div>
 
+      <div className="container-page relative pb-20 md:pb-28 md:pt-16">
+        {/* TEXT COL */}
+        <div data-hero-text-col className="relative text-background">
+          <div
+            data-hero-eyebrow
+            className="inline-flex items-center gap-2 rounded-full border border-primary-glow/40 bg-primary/15 px-3 py-1.5 text-xs font-medium text-primary-glow text-shadow-soft backdrop-blur-md"
+          >
+            <ShieldCheck className="h-3.5 w-3.5" />
+            Securitizadora registrada · CVM
+          </div>
 
-      <div className="container-page relative">
-        <div className="relative grid grid-cols-1 items-stretch overflow-hidden rounded-3xl bg-surface shadow-[0_40px_100px_-40px_rgba(60,40,20,0.35)] lg:grid-cols-12">
-          {/* LEFT — dark contrast panel */}
-          <div className="relative z-10 bg-ink p-8 md:p-14 lg:col-span-6 lg:p-16">
-            {/* subtle inner glow */}
-            <div
-              aria-hidden
-              className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-primary/20 blur-3xl"
-            />
-
-            <div className="relative">
-              <span
-                data-hero-eyebrow
-                className="inline-flex items-center gap-2 border-l-2 border-primary pl-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary"
-              >
-                <ShieldCheck className="h-3.5 w-3.5" />
-                Securitizadora registrada · CVM
+          <h1 className="mt-6 text-[40px] font-semibold leading-[1.02] text-background text-shadow-lg md:text-[64px]">
+            {H1_LINES.map((l, i) => (
+              <span key={i} data-hero-line className="reveal-line">
+                <span>{l}</span>
               </span>
+            ))}
+          </h1>
 
-              <h1 className="mt-8 font-display text-4xl font-bold leading-[1.05] text-background md:text-5xl lg:text-[56px]">
-                {H1_LINES.map((l, i) => (
-                  <span key={i} data-hero-line className="reveal-line">
-                    <span>
-                      {i === 2 ? (
-                        <>
-                          uma <span className="text-primary">securitizadora.</span>
-                        </>
-                      ) : (
-                        l
-                      )}
-                    </span>
-                  </span>
-                ))}
-              </h1>
+          <p
+            data-hero-sub
+            className="mt-6 max-w-lg text-base text-background/80 text-shadow-soft md:text-lg"
+          >
+            Transforme boletos e recebíveis em caixa hoje. A Credmais estrutura operações
+            sob medida — do PME ao middle market — com liquidação em D+0 e cobrança 100%
+            garantida.
+          </p>
 
-              <p
-                data-hero-sub
-                className="mt-6 max-w-md text-base leading-relaxed text-background/70 md:text-lg"
-              >
-                Transforme boletos e recebíveis em caixa hoje. A Credmais estrutura operações
-                sob medida — do PME ao middle market — com liquidação em D+0 e cobrança 100%
-                garantida.
-              </p>
-
-              <div className="mt-10 flex flex-wrap items-center gap-3">
-                <Link
-                  to="/antecipacao-de-recebiveis"
-                  data-hero-cta
-                  className="group btn-cta-base btn-cta-primary px-7 py-3.5"
-                >
-                  Simular antecipação
-                  <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
-                </Link>
-                <Link
-                  to="/boleto-garantido"
-                  data-hero-cta
-                  className="btn-cta-base btn-cta-ghost-light px-7 py-3.5"
-                >
-                  <Zap className="h-4 w-4 text-primary-glow" />
-                  Conhecer Boleto Garantido
-                </Link>
-              </div>
-
-              {/* Trust line — counters */}
-              <div className="mt-12 grid grid-cols-3 gap-6 border-t border-background/15 pt-6">
-                <Metric value={2.8} decimals={1} suffix="B" label="antecipados em 2025" />
-                <Metric value={12000} decimals={0} suffix="+" label="empresas atendidas" />
-                <Metric value={99.7} decimals={1} suffix="%" label="cobrança liquidada" />
-              </div>
-            </div>
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <Link
+              to="/antecipacao-de-recebiveis"
+              data-hero-cta
+              className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground text-shadow-soft shadow-[var(--shadow-soft)] transition hover:bg-primary-glow"
+            >
+              Simular antecipação
+              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
+            </Link>
+            <Link
+              to="/boleto-garantido"
+              data-hero-cta
+              className="inline-flex items-center gap-2 rounded-full border border-background/25 bg-background/10 px-6 py-3 text-sm font-semibold text-background text-shadow-soft backdrop-blur-md transition hover:border-background/50 hover:bg-background/15"
+            >
+              <Zap className="h-4 w-4 text-primary-glow" />
+              Conhecer Boleto Garantido
+            </Link>
           </div>
 
-          {/* RIGHT — editorial image panel */}
-          <div className="relative min-h-[340px] bg-ink lg:col-span-6 lg:min-h-[640px]">
-            <img
-              data-hero-image
-              src={(heroImage as { url: string }).url}
-              alt="Executivo Credmais — antecipação de recebíveis"
-              className="absolute inset-0 h-full w-full object-cover object-center"
-            />
-            {/* Left-to-right seam blending into dark panel */}
-            <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-ink to-transparent lg:w-56" />
-            {/* Bottom fade for polish */}
-            <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink/60 to-transparent" />
-            {/* Gold hairline accent */}
-            <div className="pointer-events-none absolute right-6 top-6 hidden items-center gap-2 rounded-full border border-primary/40 bg-ink/50 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-primary-glow backdrop-blur-md md:inline-flex">
-              <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-              Liquidação D+0
-            </div>
+          {/* Trust line — counters */}
+          <div className="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-background/15 pt-6">
+            <Metric value={2.8} decimals={1} suffix="B" label="antecipados em 2025" />
+            <Metric value={12000} decimals={0} suffix="+" label="empresas atendidas" />
+            <Metric value={99.7} decimals={1} suffix="%" label="cobrança liquidada" />
           </div>
-        </div>
-
-        {/* Scroll hint — fades out by 40% of the section */}
-        <div
-          data-hero-hint
-          className="pointer-events-none absolute inset-x-0 bottom-4 z-20 hidden flex-col items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-foreground/60 md:flex"
-        >
-          <span>Role para explorar</span>
-          <ChevronDown className="h-4 w-4 animate-bounce text-primary" />
         </div>
       </div>
-    </section>
 
+      {/* Scroll hint */}
+      <div
+        data-scroll-hint
+        className="pointer-events-none absolute bottom-10 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2"
+      >
+        <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-primary-glow">
+          scroll
+        </span>
+        <span
+          className="block h-16 w-px bg-gradient-to-b from-primary-glow to-transparent"
+          style={{ animation: "pulse-line 1.6s ease-in-out infinite" }}
+        />
+      </div>
+
+      {/* Wave */}
+      <svg
+        aria-hidden
+        viewBox="0 0 1440 140"
+        preserveAspectRatio="none"
+        className="absolute inset-x-0 bottom-0 h-10 w-full text-background md:h-14"
+      >
+        <path
+          fill="currentColor"
+          d="M0,64 C240,140 480,140 720,90 C960,40 1200,40 1440,90 L1440,140 L0,140 Z"
+        />
+      </svg>
+    </section>
   );
 }
 
@@ -237,13 +200,13 @@ function Metric({
 }) {
   return (
     <div>
-      <p className="font-display text-2xl font-bold text-background md:text-3xl">
+      <p className="text-2xl font-semibold text-background text-shadow-lg md:text-3xl">
         <span data-counter={value} data-decimals={decimals}>
           0
         </span>
-        <span className="text-primary">{suffix}</span>
+        <span className="text-primary-glow">{suffix}</span>
       </p>
-      <p className="mt-1 text-[11px] leading-tight text-background/60">{label}</p>
+      <p className="mt-1 text-[11px] leading-tight text-background/65 text-shadow-soft">{label}</p>
     </div>
   );
 }

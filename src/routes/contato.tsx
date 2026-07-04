@@ -33,7 +33,7 @@ function Page() {
             e.preventDefault();
             setSent(true);
           }}
-          className="space-y-4 card-surface-lg"
+          className="space-y-4 rounded-3xl border border-border bg-surface p-8 shadow-[var(--shadow-soft)]"
         >
           <Field label="Empresa" name="empresa" required />
           <Field label="Nome do responsável" name="nome" required />
@@ -45,13 +45,13 @@ function Page() {
             <span className="mb-1 block font-medium text-ink">Sobre sua necessidade</span>
             <textarea
               rows={4}
-              className="field-input"
+              className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition focus:border-primary"
               placeholder="Ex.: Faturamos R$ 1M/mês em duplicatas, gostaria de simular antecipação."
             />
           </label>
           <button
             type="submit"
-            className="w-full btn-cta-base btn-cta-primary px-5 py-3"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary-glow"
           >
             <Send className="h-4 w-4" /> Enviar mensagem
           </button>
@@ -76,7 +76,7 @@ function Page() {
             title="Endereço"
             content="Av. Faria Lima, 1000 · São Paulo/SP"
           />
-          <div className="card-dark p-6">
+          <div className="rounded-3xl bg-ink p-6 text-background">
             <p className="text-sm text-background/70">Horário de atendimento</p>
             <p className="mt-2 font-semibold">Seg a Sex · 8h às 19h</p>
             <p className="text-background/70">Sábado · 9h às 13h</p>
@@ -105,7 +105,7 @@ function Field({
         name={name}
         type={type}
         required={required}
-        className="field-input"
+        className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none transition focus:border-primary"
       />
     </label>
   );
@@ -113,8 +113,10 @@ function Field({
 
 function InfoCard({ icon, title, content }: { icon: React.ReactNode; title: string; content: string }) {
   return (
-    <div className="flex items-start gap-4 card-surface p-5">
-      <span className="icon-badge">{icon}</span>
+    <div className="flex items-start gap-4 rounded-2xl border border-border bg-surface p-5">
+      <span className="inline-flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-primary/10 text-primary">
+        {icon}
+      </span>
       <div>
         <p className="text-xs font-medium uppercase tracking-wider text-ink-soft">{title}</p>
         <p className="mt-1 font-semibold text-ink">{content}</p>

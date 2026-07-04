@@ -25,7 +25,7 @@ function Page() {
       intro="A Credmais nasceu para preencher o espaço entre bancos tradicionais e fintechs de balcão: securitização séria, ágil e transparente."
     >
       <div className="grid gap-16 md:grid-cols-[1fr_1fr]">
-        <div className="space-y-6 body-text">
+        <div className="space-y-6 text-ink-soft">
           <p>
             Estruturamos operações de securitização desde 2016, com atuação em todo o território
             nacional. Nossa mesa é formada por profissionais oriundos de bancos, factorings e
@@ -48,49 +48,25 @@ function Page() {
             ["27 estados", "cobertura nacional"],
             ["0,4%", "taxa média de inadimplência líquida"],
           ].map(([n, d]) => (
-            <div key={n} className="card-surface">
+            <div key={n} className="rounded-2xl border border-border bg-surface p-6">
               <p className="text-3xl font-semibold text-ink">{n}</p>
-              <p className="mt-1 body-sm">{d}</p>
+              <p className="mt-1 text-sm text-ink-soft">{d}</p>
             </div>
           ))}
         </div>
       </div>
 
       <div className="mt-20">
-        <h2 className="section-subtitle">Nossos princípios</h2>
+        <h2 className="text-2xl font-semibold text-ink md:text-3xl">Nossos princípios</h2>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {[
-            ["Transparência", "Contratos claros, taxas explícitas e sem letras miúdas.", false],
-            ["Velocidade", "Decisão de crédito em horas, liquidação em D+0.", true],
-            ["Parceria", "Consultor humano do cadastro à renovação do limite.", false],
-          ].map(([t, d, featured]) => (
-            <div
-              key={t as string}
-              className={
-                featured
-                  ? "relative overflow-hidden rounded-2xl bg-ink p-6 text-background shadow-[0_30px_60px_-30px_rgba(60,40,20,0.45)]"
-                  : "card-surface-alt"
-              }
-            >
-              {featured && (
-                <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-primary/25 blur-3xl" />
-              )}
-              <p
-                className={
-                  featured
-                    ? "font-display text-lg font-semibold text-background"
-                    : "card-title"
-                }
-              >
-                {t}
-              </p>
-              <p
-                className={
-                  featured ? "mt-2 text-sm text-background/70" : "mt-2 body-sm"
-                }
-              >
-                {d}
-              </p>
+            ["Transparência", "Contratos claros, taxas explícitas e sem letras miúdas."],
+            ["Velocidade", "Decisão de crédito em horas, liquidação em D+0."],
+            ["Parceria", "Consultor humano do cadastro à renovação do limite."],
+          ].map(([t, d]) => (
+            <div key={t} className="rounded-2xl border border-border bg-surface-alt p-6">
+              <p className="text-lg font-semibold text-ink">{t}</p>
+              <p className="mt-2 text-sm text-ink-soft">{d}</p>
             </div>
           ))}
         </div>
