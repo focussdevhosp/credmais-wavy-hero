@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight, ShieldCheck, Zap } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import heroImage from "@/assets/hero-businessman.png.asset.json";
+import heroImage from "@/assets/hero-woman.png.asset.json";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -93,11 +93,14 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-ink">
         <img
           src={(heroImage as { url: string }).url}
-          alt="Experto em antecipação de recebíveis"
-          className="absolute inset-0 h-full w-full object-cover object-[80%_12%] sm:object-[right_25%] md:object-[right_35%]"
+          alt="Executiva gerenciando antecipação de recebíveis"
+          className="absolute inset-0 h-full w-full object-cover object-center md:object-[right_center]"
         />
-        {/* Subtle overlay only to anchor bottom text */}
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
+        {/* Overlays para garantir legibilidade do texto sobre imagem clara */}
+        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/55 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/25" />
+        <div className="absolute -right-24 top-24 h-[28rem] w-[28rem] rounded-full bg-primary/10 blur-3xl" />
         <div className="absolute -right-24 top-24 h-[28rem] w-[28rem] rounded-full bg-primary/10 blur-3xl" />
       </div>
 
