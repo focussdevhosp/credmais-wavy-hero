@@ -60,13 +60,37 @@ function Page() {
         <h2 className="section-subtitle">Nossos princípios</h2>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {[
-            ["Transparência", "Contratos claros, taxas explícitas e sem letras miúdas."],
-            ["Velocidade", "Decisão de crédito em horas, liquidação em D+0."],
-            ["Parceria", "Consultor humano do cadastro à renovação do limite."],
-          ].map(([t, d]) => (
-            <div key={t} className="card-surface-alt">
-              <p className="card-title">{t}</p>
-              <p className="mt-2 body-sm">{d}</p>
+            ["Transparência", "Contratos claros, taxas explícitas e sem letras miúdas.", false],
+            ["Velocidade", "Decisão de crédito em horas, liquidação em D+0.", true],
+            ["Parceria", "Consultor humano do cadastro à renovação do limite.", false],
+          ].map(([t, d, featured]) => (
+            <div
+              key={t as string}
+              className={
+                featured
+                  ? "relative overflow-hidden rounded-2xl bg-ink p-6 text-background shadow-[0_30px_60px_-30px_rgba(60,40,20,0.45)]"
+                  : "card-surface-alt"
+              }
+            >
+              {featured && (
+                <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-primary/25 blur-3xl" />
+              )}
+              <p
+                className={
+                  featured
+                    ? "font-display text-lg font-semibold text-background"
+                    : "card-title"
+                }
+              >
+                {t}
+              </p>
+              <p
+                className={
+                  featured ? "mt-2 text-sm text-background/70" : "mt-2 body-sm"
+                }
+              >
+                {d}
+              </p>
             </div>
           ))}
         </div>
