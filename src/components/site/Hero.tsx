@@ -93,11 +93,12 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-ink">
         <img
           src={(heroImage as { url: string }).url}
-          alt="Experto em antecipação de recebíveis"
-          className="absolute inset-0 h-full w-full object-cover object-[80%_12%] sm:object-[right_25%] md:object-[right_35%]"
+          alt="Executiva gerenciando antecipação de recebíveis"
+          className="absolute inset-0 h-full w-full object-cover object-center md:object-[right_center]"
         />
-        {/* Subtle overlay only to anchor bottom text */}
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
+        {/* Overlays para garantir legibilidade do texto sobre imagem clara */}
+        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/75 to-ink/20 md:via-ink/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-ink/40" />
         <div className="absolute -right-24 top-24 h-[28rem] w-[28rem] rounded-full bg-primary/10 blur-3xl" />
       </div>
 
