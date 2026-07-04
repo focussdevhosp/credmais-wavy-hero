@@ -3,7 +3,7 @@ import { Hero } from "@/components/site/Hero";
 import { SecuritizadoraStory } from "@/components/site/SecuritizadoraStory";
 import { ParallaxSection } from "@/components/ui/parallax-scrolling";
 import { TextParallaxContentExample } from "@/components/ui/text-parallax-content-scroll";
-import { WavyMarquee } from "@/components/site/WavyMarquee";
+
 import { ArrowRight } from "lucide-react";
 import { FlipFeatures } from "@/components/site/FlipFeatures";
 
@@ -17,8 +17,6 @@ function Index() {
       <Hero />
       <SecuritizadoraStory />
 
-
-      <WavyMarquee />
 
       <TextParallaxContentExample />
 
