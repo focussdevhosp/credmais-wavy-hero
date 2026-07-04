@@ -79,7 +79,7 @@ export function ParallaxSection({ children, className = '' }: ParallaxSectionPro
         <div
           data-parallax-layer="2"
           aria-hidden
-          className="pointer-events-none absolute right-[-6rem] top-40 h-[360px] w-[360px] rounded-full bg-emerald-300/25 blur-3xl"
+          className="pointer-events-none absolute right-[-6rem] top-40 h-[360px] w-[360px] rounded-full bg-amber-200/25 blur-3xl"
         />
         <div
           data-parallax-layer="3"
