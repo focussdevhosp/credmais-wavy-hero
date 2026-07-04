@@ -49,6 +49,10 @@ function Index() {
         </section>
       </ParallaxSection>
 
+      <TextParallaxContentExample />
+
+
+
 
       <section className="bg-background py-24">
         <div className="container-page grid gap-6 md:grid-cols-3">
