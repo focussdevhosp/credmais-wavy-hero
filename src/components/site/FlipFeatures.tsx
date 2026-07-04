@@ -16,6 +16,7 @@ const features = [
     detail:
       "Do primeiro contato ao dinheiro na conta em até 48 horas — sem papelada, sem burocracia.",
     tag: "Velocidade",
+    image: featureVelocity.url,
   },
   {
     icon: LineChart,
@@ -24,6 +25,7 @@ const features = [
     detail:
       "Quanto mais você opera, maior seu limite. Um motor de crédito inteligente acompanhando sua evolução.",
     tag: "Escala",
+    image: featureScale.url,
   },
   {
     icon: ShieldCheck,
@@ -32,6 +34,7 @@ const features = [
     detail:
       "Estrutura regulada pela CVM, com relatórios auditados e rastreabilidade completa de cada operação.",
     tag: "Confiança",
+    image: featureTrust.url,
   },
 ];
 
