@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useRef, useState, type ReactNode } from "react";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
@@ -65,117 +65,93 @@ const linearGradients = [
 
 function StickyScroll({ content }: { content: StickyScrollContent[] }) {
   const [activeCard, setActiveCard] = useState(0);
-  const [backgroundGradient, setBackgroundGradient] = useState(linearGradients[0]);
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
-    target: ref,
+    container: ref,
     offset: ["start start", "end end"],
   });
 
-  useEffect(() => {
-    setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
-  }, [activeCard]);
-
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     const cardsBreakpoints = content.map((_, index) => index / content.length);
-    const closestBreakpointIndex = cardsBreakpoints.reduce(
-      (acc, breakpoint, index) => {
-        const distance = Math.abs(latest - breakpoint);
-        if (distance < Math.abs(latest - cardsBreakpoints[acc])) {
-          return index;
-        }
-        return acc;
-      },
-      0,
-    );
-    setActiveCard(closestBreakpointIndex);
+    const closest = cardsBreakpoints.reduce((acc, breakpoint, index) => {
+      const distance = Math.abs(latest - breakpoint);
+      if (distance < Math.abs(latest - cardsBreakpoints[acc])) return index;
+      return acc;
+    }, 0);
+    setActiveCard(closest);
   });
 
+  const backgroundGradient = linearGradients[activeCard % linearGradients.length];
+
   return (
-    <motion.section
-      ref={ref}
-      className="relative min-h-[300vh] overflow-hidden"
-      animate={{
-        backgroundColor: backgroundColors[activeCard % backgroundColors.length],
-      }}
-      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-    >
-      <div className="container-page relative z-10 grid grid-cols-1 gap-16 py-24 lg:grid-cols-2 lg:gap-24">
-        {/* Texto */}
-        <div className="relative z-10 flex flex-col">
-          {content.map((item, index) => (
-            <div
-              key={item.title + index}
-              className="flex min-h-[80vh] flex-col justify-center py-12 lg:min-h-screen"
-            >
-              {/* Imagem visível apenas no mobile */}
-              <div className="mb-8 block aspect-[4/3] w-full overflow-hidden rounded-2xl lg:hidden">
-                {item.content}
-              </div>
-
-              <motion.h2
-                animate={{
-                  opacity: activeCard === index ? 1 : 0.3,
-                }}
-                transition={{ duration: 0.5 }}
-                className="font-display text-4xl font-bold leading-tight tracking-tight text-primary-foreground md:text-5xl lg:text-6xl"
-              >
-                {item.title}
-              </motion.h2>
-
-              <motion.p
-                animate={{
-                  opacity: activeCard === index ? 1 : 0.35,
-                }}
-                transition={{ duration: 0.5 }}
-                className="mt-6 max-w-md text-lg leading-relaxed text-primary-foreground/70 md:text-xl"
-              >
-                {item.description}
-              </motion.p>
-            </div>
-          ))}
-
-          <div className="flex min-h-[40vh] flex-col justify-center py-12">
-            <p className="max-w-md text-lg text-primary-foreground/70">
-              Descubra em 2 minutos quanto sua empresa pode antecipar, com resposta de um consultor humano.
-            </p>
-            <Link
-              to="/contato"
-              className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary-glow"
-            >
-              Fazer simulação <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
+    <section className="bg-[oklch(0.08_0.02_165)] py-24">
+      <div className="container-page">
+        <div className="mb-12 max-w-2xl">
+          <h2 className="font-display text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl">
+            Soluções que giram seu caixa
+          </h2>
+          <p className="mt-4 text-lg text-primary-foreground/70">
+            Role dentro do quadro para conhecer cada frente de crédito.
+          </p>
         </div>
 
-        {/* Painel sticky desktop */}
-        <div className="hidden lg:sticky lg:top-32 lg:flex lg:h-[560px] lg:items-center lg:justify-center">
-          <div className="relative h-[420px] w-full max-w-sm overflow-hidden rounded-3xl bg-primary-foreground shadow-2xl">
-            {/* Gradiente que muda conforme o card ativo */}
-            <motion.div
-              animate={{
-                background: backgroundGradient,
-              }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute -inset-[80px] opacity-70 blur-3xl"
-            />
+        <motion.div
+          animate={{ backgroundColor: backgroundColors[activeCard % backgroundColors.length] }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          ref={ref}
+          className="relative flex h-[30rem] justify-center space-x-10 overflow-y-auto rounded-3xl p-10 shadow-2xl ring-1 ring-primary-foreground/10 scrollbar-thin scrollbar-thumb-primary-foreground/20"
+        >
+          <div className="relative flex items-start px-4">
+            <div className="max-w-2xl">
+              {content.map((item, index) => (
+                <div key={item.title + index} className="my-20">
+                  <motion.h3
+                    animate={{ opacity: activeCard === index ? 1 : 0.3 }}
+                    transition={{ duration: 0.4 }}
+                    className="text-2xl font-bold text-primary-foreground md:text-3xl"
+                  >
+                    {item.title}
+                  </motion.h3>
+                  <motion.p
+                    animate={{ opacity: activeCard === index ? 1 : 0.3 }}
+                    transition={{ duration: 0.4 }}
+                    className="mt-4 max-w-sm text-base leading-relaxed text-primary-foreground/70 md:text-lg"
+                  >
+                    {item.description}
+                  </motion.p>
+                </div>
+              ))}
+              <div className="my-20">
+                <p className="max-w-sm text-base text-primary-foreground/70">
+                  Descubra em 2 minutos quanto sua empresa pode antecipar.
+                </p>
+                <Link
+                  to="/contato"
+                  className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary-glow"
+                >
+                  Fazer simulação <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
 
+          <motion.div
+            style={{ background: backgroundGradient }}
+            className="sticky top-10 hidden h-60 w-96 overflow-hidden rounded-2xl bg-primary-foreground shadow-xl lg:block"
+          >
             <motion.div
               key={activeCard}
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 1.02 }}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="relative h-full w-full"
+              className="h-full w-full"
             >
               {content[activeCard]?.content}
             </motion.div>
-
-            <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-primary-foreground/20" />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
-    </motion.section>
+    </section>
   );
 }
 
