@@ -87,7 +87,7 @@ export function Hero() {
   return (
     <section
       ref={root}
-      className="relative isolate overflow-hidden rounded-b-3xl bg-ink pt-28 md:rounded-b-[48px] md:pt-32"
+      className="relative isolate overflow-hidden bg-ink pt-28 md:pt-32"
     >
       {/* Imagem de fundo full-bleed */}
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden bg-ink">
