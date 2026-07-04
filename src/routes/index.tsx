@@ -3,6 +3,7 @@ import { Hero } from "@/components/site/Hero";
 import { SecuritizadoraStory } from "@/components/site/SecuritizadoraStory";
 import { ParallaxSection } from "@/components/ui/parallax-scrolling";
 import { TextParallaxContentExample } from "@/components/ui/text-parallax-content-scroll";
+import { WavyMarquee } from "@/components/site/WavyMarquee";
 import { ArrowRight, Banknote, ShieldCheck, Clock3, LineChart } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -48,6 +49,8 @@ function Index() {
           </div>
         </section>
       </ParallaxSection>
+
+      <WavyMarquee />
 
       <TextParallaxContentExample />
 
