@@ -109,7 +109,7 @@ export function SecuritizadoraStory() {
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(120% 90% at 20% 20%, oklch(0.99 0.01 150) 0%, oklch(0.95 0.02 148) 45%, oklch(0.90 0.02 145) 100%)",
+              "radial-gradient(120% 90% at 20% 20%, oklch(0.99 0.01 80) 0%, oklch(0.95 0.03 78) 45%, oklch(0.90 0.04 75) 100%)",
             animation: "securiFloat1 14s ease-in-out infinite alternate",
           }}
         />
