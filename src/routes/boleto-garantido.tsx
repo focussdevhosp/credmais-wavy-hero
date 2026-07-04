@@ -39,6 +39,7 @@ function Page() {
             icon: <Zap className="h-5 w-5" />,
             t: "Régua de cobrança",
             d: "Régua multicanal (SMS, e-mail, WhatsApp) e negativação por conta da Credmais.",
+            featured: true,
           },
           {
             icon: <Cog className="h-5 w-5" />,
@@ -46,12 +47,42 @@ function Page() {
             d: "API REST, webhooks e conectores para os principais ERPs e gateways do mercado.",
           },
         ].map((f) => (
-          <div key={f.t} className="card-surface">
-            <div className="icon-badge">
+          <div
+            key={f.t}
+            className={
+              f.featured
+                ? "group relative overflow-hidden rounded-2xl bg-ink p-6 text-background shadow-[0_30px_60px_-30px_rgba(60,40,20,0.45)] transition hover:-translate-y-1"
+                : "group card-surface transition hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]"
+            }
+          >
+            {f.featured && (
+              <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 rounded-full bg-primary/25 blur-3xl" />
+            )}
+            <div
+              className={
+                f.featured
+                  ? "inline-flex h-10 w-10 items-center justify-center rounded-xl bg-background/10 text-primary-glow"
+                  : "icon-badge"
+              }
+            >
               {f.icon}
             </div>
-            <h3 className="mt-4 card-title">{f.t}</h3>
-            <p className="mt-2 body-sm">{f.d}</p>
+            <h3
+              className={
+                f.featured
+                  ? "mt-4 font-display text-lg font-semibold text-background"
+                  : "mt-4 card-title"
+              }
+            >
+              {f.t}
+            </h3>
+            <p
+              className={
+                f.featured ? "mt-2 text-sm text-background/70" : "mt-2 body-sm"
+              }
+            >
+              {f.d}
+            </p>
           </div>
         ))}
       </div>
