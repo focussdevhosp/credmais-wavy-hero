@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, ShieldCheck, Zap } from "lucide-react";
+import { ArrowRight, ChevronDown, ShieldCheck, Zap } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import heroImage from "@/assets/hero-businessman.png.asset.json";
@@ -8,6 +8,7 @@ import heroImage from "@/assets/hero-businessman.png.asset.json";
 gsap.registerPlugin(ScrollTrigger);
 
 const H1_LINES = ["Antecipe recebíveis", "com a segurança de", "uma securitizadora."];
+
 
 export function Hero() {
   const root = useRef<HTMLDivElement>(null);
