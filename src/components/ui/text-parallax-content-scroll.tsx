@@ -5,7 +5,7 @@ import parallax1 from "@/assets/parallax/parallax-new-1.png.asset.json";
 import parallax2 from "@/assets/parallax/parallax-new-2.png.asset.json";
 import parallax3 from "@/assets/parallax/parallax-new-3.png.asset.json";
 
-const IMG_PADDING = 12;
+const IMG_PADDING = 8;
 
 type TextParallaxContentProps = {
   imgUrl: string;
@@ -30,12 +30,12 @@ const StickyImage = ({ imgUrl }: { imgUrl: string }) => {
         backgroundImage: `url(${imgUrl})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        height: `calc(100vh - ${IMG_PADDING * 2}px)`,
+        height: `calc(45vh - ${IMG_PADDING * 2}px)`,
         top: IMG_PADDING,
         scale,
       }}
       ref={targetRef}
-      className="sticky z-0 overflow-hidden rounded-3xl"
+      className="sticky z-0 overflow-hidden rounded-2xl"
     >
       <motion.div
         className="absolute inset-0 bg-neutral-950/70"
@@ -81,7 +81,7 @@ const TextParallaxContent = ({
 }: TextParallaxContentProps) => {
   return (
     <div style={{ paddingLeft: IMG_PADDING, paddingRight: IMG_PADDING }}>
-      <div className="relative h-[150vh]">
+      <div className="relative h-[90vh]">
         <StickyImage imgUrl={imgUrl} />
         <OverlayCopy heading={heading} subheading={subheading} />
       </div>
@@ -91,20 +91,20 @@ const TextParallaxContent = ({
 };
 
 const ExampleContent = () => (
-  <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-    <h2 className="col-span-1 text-3xl font-bold md:col-span-4">
+  <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 px-4 pb-16 pt-8 md:grid-cols-12">
+    <h2 className="col-span-1 text-2xl font-bold md:col-span-4">
       Recebíveis que viram caixa, sem fricção.
     </h2>
     <div className="col-span-1 md:col-span-8">
-      <p className="mb-4 text-xl text-neutral-600 md:text-2xl">
+      <p className="mb-3 text-lg text-neutral-600 md:text-xl">
         Antecipamos duplicatas, cheques e contratos com análise em horas e
         liquidação no mesmo dia — para você focar no que importa: crescer.
       </p>
-      <p className="mb-8 text-xl text-neutral-600 md:text-2xl">
+      <p className="mb-6 text-lg text-neutral-600 md:text-xl">
         Governança de securitizadora, cobrança integrada e limites que evoluem
         com o seu histórico.
       </p>
-      <button className="w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit">
+      <button className="w-full rounded bg-neutral-900 px-7 py-3 text-lg text-white transition-colors hover:bg-neutral-700 md:w-fit">
         Saiba mais <FiArrowUpRight className="inline" />
       </button>
     </div>
