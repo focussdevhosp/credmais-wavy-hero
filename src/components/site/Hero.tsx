@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, ShieldCheck, Zap } from "lucide-react";
+import { ArrowRight, ChevronDown, ShieldCheck, Zap } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import heroImage from "@/assets/hero-businessman.png.asset.json";
@@ -8,6 +8,7 @@ import heroImage from "@/assets/hero-businessman.png.asset.json";
 gsap.registerPlugin(ScrollTrigger);
 
 const H1_LINES = ["Antecipe recebíveis", "com a segurança de", "uma securitizadora."];
+
 
 export function Hero() {
   const root = useRef<HTMLDivElement>(null);
@@ -52,10 +53,60 @@ export function Hero() {
           });
         });
       }, 1.2);
+
+      // Parallax + scroll hint driven by ScrollTrigger, aligned to 40% of the section
+      const section = root.current!;
+      const hint = section.querySelector<HTMLElement>("[data-hero-hint]");
+      const glows = section.querySelectorAll<HTMLElement>("[data-hero-glow]");
+
+      // Image parallax — subtle vertical drift as the section scrolls out
+      if (image) {
+        gsap.to(image, {
+          yPercent: -12,
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
+      }
+
+      // Ambient glow parallax — moves slower for depth
+      if (glows.length) {
+        gsap.to(glows, {
+          yPercent: -25,
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
+      }
+
+      // Scroll hint — visible at top, fades out by 40% of the section
+      if (hint) {
+        gsap.set(hint, { opacity: 1, y: 0 });
+        gsap.to(hint, {
+          opacity: 0,
+          y: 12,
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top top",
+            end: "40% top",
+            scrub: true,
+          },
+        });
+      }
     }, root);
 
     return () => ctx.revert();
   }, []);
+
 
   return (
     <section
@@ -63,8 +114,9 @@ export function Hero() {
       className="relative overflow-hidden bg-background pt-28 pb-16 md:pt-36 md:pb-24"
     >
       {/* Ambient glow */}
-      <div className="pointer-events-none absolute -top-24 -left-24 h-96 w-96 rounded-full bg-primary/15 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-32 right-0 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
+      <div data-hero-glow className="pointer-events-none absolute -top-24 -left-24 h-96 w-96 rounded-full bg-primary/15 blur-3xl" />
+      <div data-hero-glow className="pointer-events-none absolute -bottom-32 right-0 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
+
 
       <div className="container-page relative">
         <div className="relative grid grid-cols-1 items-stretch overflow-hidden rounded-3xl bg-surface shadow-[0_40px_100px_-40px_rgba(60,40,20,0.35)] lg:grid-cols-12">
@@ -157,8 +209,18 @@ export function Hero() {
             </div>
           </div>
         </div>
+
+        {/* Scroll hint — fades out by 40% of the section */}
+        <div
+          data-hero-hint
+          className="pointer-events-none absolute inset-x-0 bottom-4 z-20 hidden flex-col items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-foreground/60 md:flex"
+        >
+          <span>Role para explorar</span>
+          <ChevronDown className="h-4 w-4 animate-bounce text-primary" />
+        </div>
       </div>
     </section>
+
   );
 }
 
