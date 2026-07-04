@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight, ShieldCheck, Zap } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import heroVideo from "@/assets/hero-woman.asset.json";
+import heroImage from "@/assets/hero-businessman.png.asset.json";
 
 gsap.registerPlugin(ScrollTrigger);
 
