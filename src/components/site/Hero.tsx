@@ -106,13 +106,13 @@ export function Hero() {
         <div data-hero-text-col className="relative text-background">
           <div
             data-hero-eyebrow
-            className="inline-flex items-center gap-2 rounded-full border border-primary-glow/40 bg-primary/15 px-3 py-1.5 text-xs font-medium text-primary-glow backdrop-blur-md"
+            className="inline-flex items-center gap-2 rounded-full border border-primary-glow/40 bg-primary/15 px-3 py-1.5 text-xs font-medium text-primary-glow text-shadow-soft backdrop-blur-md"
           >
             <ShieldCheck className="h-3.5 w-3.5" />
             Securitizadora registrada · CVM
           </div>
 
-          <h1 className="mt-6 text-[40px] font-semibold leading-[1.02] text-background md:text-[64px]">
+          <h1 className="mt-6 text-[40px] font-semibold leading-[1.02] text-background text-shadow-lg md:text-[64px]">
             {H1_LINES.map((l, i) => (
               <span key={i} data-hero-line className="reveal-line">
                 <span>{l}</span>
@@ -122,7 +122,7 @@ export function Hero() {
 
           <p
             data-hero-sub
-            className="mt-6 max-w-lg text-base text-background/80 md:text-lg"
+            className="mt-6 max-w-lg text-base text-background/80 text-shadow-soft md:text-lg"
           >
             Transforme boletos e recebíveis em caixa hoje. A Credmais estrutura operações
             sob medida — do PME ao middle market — com liquidação em D+0 e cobrança 100%
@@ -133,7 +133,7 @@ export function Hero() {
             <Link
               to="/antecipacao-de-recebiveis"
               data-hero-cta
-              className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition hover:bg-primary-glow"
+              className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground text-shadow-soft shadow-[var(--shadow-soft)] transition hover:bg-primary-glow"
             >
               Simular antecipação
               <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
@@ -141,7 +141,7 @@ export function Hero() {
             <Link
               to="/boleto-garantido"
               data-hero-cta
-              className="inline-flex items-center gap-2 rounded-full border border-background/25 bg-background/10 px-6 py-3 text-sm font-semibold text-background backdrop-blur-md transition hover:border-background/50 hover:bg-background/15"
+              className="inline-flex items-center gap-2 rounded-full border border-background/25 bg-background/10 px-6 py-3 text-sm font-semibold text-background text-shadow-soft backdrop-blur-md transition hover:border-background/50 hover:bg-background/15"
             >
               <Zap className="h-4 w-4 text-primary-glow" />
               Conhecer Boleto Garantido
