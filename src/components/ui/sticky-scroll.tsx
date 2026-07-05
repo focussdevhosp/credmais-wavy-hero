@@ -52,9 +52,9 @@ const content: StickyScrollContent[] = [
 ];
 
 const backgroundColors = [
-  "oklch(0.16 0.03 165)",
-  "oklch(0.14 0.03 165)",
-  "oklch(0.12 0.03 165)",
+  "#0d1512",
+  "#0a110f",
+  "#080e0c",
 ];
 
 const linearGradients = [
