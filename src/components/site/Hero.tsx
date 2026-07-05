@@ -19,7 +19,6 @@ export function Hero() {
       const lines = root.current!.querySelectorAll("[data-hero-line] > span");
       const sub = root.current!.querySelector("[data-hero-sub]");
       const ctas = root.current!.querySelectorAll("[data-hero-cta]");
-      const counters = root.current!.querySelectorAll<HTMLElement>("[data-counter]");
       const scrollHint = root.current!.querySelector("[data-scroll-hint]");
       const textCol = root.current!.querySelector("[data-hero-text-col]");
 
@@ -34,25 +33,6 @@ export function Hero() {
       tlHero.to(eyebrow, { clipPath: "inset(0 0% 0 0)", duration: 0.5, ease: "power2.out" }, 0.1);
       tlHero.to(lines, { yPercent: 0, duration: 0.85, stagger: 0.12, ease: "power3.out" }, 0.25);
       tlHero.to([sub, ...ctas], { y: 0, opacity: 1, duration: 0.7, stagger: 0.1 }, 0.6);
-
-      tlHero.add(() => {
-        counters.forEach((el) => {
-          const target = Number(el.dataset.counter || "0");
-          const decimals = Number(el.dataset.decimals || "0");
-          const obj = { v: 0 };
-          gsap.to(obj, {
-            v: target,
-            duration: 1.6,
-            ease: "power2.out",
-            onUpdate: () => {
-              el.textContent = obj.v.toLocaleString("pt-BR", {
-                minimumFractionDigits: decimals,
-                maximumFractionDigits: decimals,
-              });
-            },
-          });
-        });
-      }, 1.2);
 
       if (textCol) {
         gsap.to(textCol, {
@@ -146,13 +126,6 @@ export function Hero() {
               Conhecer Boleto Garantido
             </Link>
           </div>
-
-          {/* Trust line — counters */}
-          <div className="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-background/15 pt-6">
-            <Metric value={2.8} decimals={1} suffix="B" label="antecipados em 2025" />
-            <Metric value={12000} decimals={0} suffix="+" label="empresas atendidas" />
-            <Metric value={99.7} decimals={1} suffix="%" label="cobrança liquidada" />
-          </div>
         </div>
       </div>
 
@@ -183,29 +156,5 @@ export function Hero() {
         />
       </svg>
     </section>
-  );
-}
-
-function Metric({
-  value,
-  decimals,
-  suffix,
-  label,
-}: {
-  value: number;
-  decimals: number;
-  suffix: string;
-  label: string;
-}) {
-  return (
-    <div>
-      <p className="text-2xl font-semibold text-background text-shadow-lg md:text-3xl">
-        <span data-counter={value} data-decimals={decimals}>
-          0
-        </span>
-        <span className="text-primary-glow">{suffix}</span>
-      </p>
-      <p className="mt-1 text-[11px] leading-tight text-background/65 text-shadow-soft">{label}</p>
-    </div>
   );
 }
