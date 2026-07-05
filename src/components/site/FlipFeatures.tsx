@@ -41,18 +41,21 @@ export function FlipFeatures() {
     if (!section) return;
 
     const ctx = gsap.context(() => {
-      gsap.from(cardsRef.current, {
-        y: 40,
-        opacity: 0,
+      const targets = cardsRef.current.filter(Boolean);
+      gsap.set(targets, { y: 40, opacity: 0 });
+      gsap.to(targets, {
+        y: 0,
+        opacity: 1,
         duration: 0.8,
         stagger: 0.12,
         ease: "power3.out",
         scrollTrigger: {
           trigger: section,
-          start: "top 75%",
-          toggleActions: "play none none reverse",
+          start: "top 85%",
+          once: true,
         },
       });
+      ScrollTrigger.refresh();
     }, section);
 
     return () => ctx.revert();
