@@ -147,13 +147,6 @@ export function Hero() {
             </Link>
           </div>
 
-          {/* Trust line — counters */}
-          <div className="mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-background/15 pt-6">
-            <Metric value={2.8} decimals={1} suffix="B" label="antecipados em 2025" />
-            <Metric value={12000} decimals={0} suffix="+" label="empresas atendidas" />
-            <Metric value={99.7} decimals={1} suffix="%" label="cobrança liquidada" />
-          </div>
-        </div>
       </div>
 
       {/* Scroll hint */}
