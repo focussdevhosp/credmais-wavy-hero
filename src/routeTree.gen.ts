@@ -10,7 +10,10 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as GestaoDeContasRouteImport } from './routes/gestao-de-contas'
+import { Route as CrediarioRouteImport } from './routes/crediario'
 import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as ConsultoriaRouteImport } from './routes/consultoria'
 import { Route as BoletoGarantidoRouteImport } from './routes/boleto-garantido'
 import { Route as AntecipacaoDeRecebiveisRouteImport } from './routes/antecipacao-de-recebiveis'
 import { Route as IndexRouteImport } from './routes/index'
@@ -20,9 +23,24 @@ const SobreRoute = SobreRouteImport.update({
   path: '/sobre',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GestaoDeContasRoute = GestaoDeContasRouteImport.update({
+  id: '/gestao-de-contas',
+  path: '/gestao-de-contas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CrediarioRoute = CrediarioRouteImport.update({
+  id: '/crediario',
+  path: '/crediario',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContatoRoute = ContatoRouteImport.update({
   id: '/contato',
   path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsultoriaRoute = ConsultoriaRouteImport.update({
+  id: '/consultoria',
+  path: '/consultoria',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BoletoGarantidoRoute = BoletoGarantidoRouteImport.update({
@@ -45,14 +63,20 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/antecipacao-de-recebiveis': typeof AntecipacaoDeRecebiveisRoute
   '/boleto-garantido': typeof BoletoGarantidoRoute
+  '/consultoria': typeof ConsultoriaRoute
   '/contato': typeof ContatoRoute
+  '/crediario': typeof CrediarioRoute
+  '/gestao-de-contas': typeof GestaoDeContasRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/antecipacao-de-recebiveis': typeof AntecipacaoDeRecebiveisRoute
   '/boleto-garantido': typeof BoletoGarantidoRoute
+  '/consultoria': typeof ConsultoriaRoute
   '/contato': typeof ContatoRoute
+  '/crediario': typeof CrediarioRoute
+  '/gestao-de-contas': typeof GestaoDeContasRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRoutesById {
@@ -60,7 +84,10 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/antecipacao-de-recebiveis': typeof AntecipacaoDeRecebiveisRoute
   '/boleto-garantido': typeof BoletoGarantidoRoute
+  '/consultoria': typeof ConsultoriaRoute
   '/contato': typeof ContatoRoute
+  '/crediario': typeof CrediarioRoute
+  '/gestao-de-contas': typeof GestaoDeContasRoute
   '/sobre': typeof SobreRoute
 }
 export interface FileRouteTypes {
@@ -69,21 +96,30 @@ export interface FileRouteTypes {
     | '/'
     | '/antecipacao-de-recebiveis'
     | '/boleto-garantido'
+    | '/consultoria'
     | '/contato'
+    | '/crediario'
+    | '/gestao-de-contas'
     | '/sobre'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/antecipacao-de-recebiveis'
     | '/boleto-garantido'
+    | '/consultoria'
     | '/contato'
+    | '/crediario'
+    | '/gestao-de-contas'
     | '/sobre'
   id:
     | '__root__'
     | '/'
     | '/antecipacao-de-recebiveis'
     | '/boleto-garantido'
+    | '/consultoria'
     | '/contato'
+    | '/crediario'
+    | '/gestao-de-contas'
     | '/sobre'
   fileRoutesById: FileRoutesById
 }
@@ -91,7 +127,10 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AntecipacaoDeRecebiveisRoute: typeof AntecipacaoDeRecebiveisRoute
   BoletoGarantidoRoute: typeof BoletoGarantidoRoute
+  ConsultoriaRoute: typeof ConsultoriaRoute
   ContatoRoute: typeof ContatoRoute
+  CrediarioRoute: typeof CrediarioRoute
+  GestaoDeContasRoute: typeof GestaoDeContasRoute
   SobreRoute: typeof SobreRoute
 }
 
@@ -104,11 +143,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SobreRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/gestao-de-contas': {
+      id: '/gestao-de-contas'
+      path: '/gestao-de-contas'
+      fullPath: '/gestao-de-contas'
+      preLoaderRoute: typeof GestaoDeContasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/crediario': {
+      id: '/crediario'
+      path: '/crediario'
+      fullPath: '/crediario'
+      preLoaderRoute: typeof CrediarioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contato': {
       id: '/contato'
       path: '/contato'
       fullPath: '/contato'
       preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consultoria': {
+      id: '/consultoria'
+      path: '/consultoria'
+      fullPath: '/consultoria'
+      preLoaderRoute: typeof ConsultoriaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/boleto-garantido': {
@@ -139,7 +199,10 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AntecipacaoDeRecebiveisRoute: AntecipacaoDeRecebiveisRoute,
   BoletoGarantidoRoute: BoletoGarantidoRoute,
+  ConsultoriaRoute: ConsultoriaRoute,
   ContatoRoute: ContatoRoute,
+  CrediarioRoute: CrediarioRoute,
+  GestaoDeContasRoute: GestaoDeContasRoute,
   SobreRoute: SobreRoute,
 }
 export const routeTree = rootRouteImport
