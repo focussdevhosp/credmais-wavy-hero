@@ -698,7 +698,7 @@ function HomeHero() {
   return (
     <section className="relative isolate w-full bg-[#f5f5f7] py-6 lg:py-12">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12">
-        <div className="relative flex flex-col overflow-hidden rounded-[2.5rem] bg-white shadow-2xl shadow-[#0a192f]/10">
+        <div className="relative flex flex-col overflow-hidden rounded-[2.5rem] bg-white text-[#080510] shadow-2xl shadow-[#0a192f]/10">
           <div className="flex min-h-[600px] flex-col lg:flex-row">
             {/* Content Column */}
             <div className="z-10 flex w-full flex-col justify-center p-8 sm:p-10 lg:w-7/12 lg:p-16 xl:p-24">
