@@ -1,6 +1,7 @@
 import React, { ComponentType, CSSProperties, ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import heroWomanNew from "@/assets/hero-woman-new.png.asset.json";
 import logoNew from "@/assets/credmais-logo-new.png.asset.json";
+import baseOperacional from "@/assets/base-operacional.png.asset.json";
 import { useRouterState } from "@tanstack/react-router";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -756,7 +757,7 @@ function HomeProofSection() {
           <p>Os indicadores aparecem junto de pessoas, operacao e contexto para a marca parecer proxima e confiavel.</p>
         </div>
         <div className="home-proof-media float-layer">
-          <img src="/assets/home-proof-finance.png" alt="" loading="lazy" decoding="async" />
+          <img src={baseOperacional.url} alt="" loading="lazy" decoding="async" />
           <div className="home-proof-badge">operacao acompanhada</div>
         </div>
         <div className="home-proof-grid">
