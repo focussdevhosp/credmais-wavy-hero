@@ -694,6 +694,88 @@ function WebGLFinanceField() {
   return <canvas ref={canvasRef} className="webgl-canvas" aria-hidden="true" />;
 }
 
+function HomeHero() {
+  return (
+    <section className="relative isolate w-full bg-[#f5f5f7] py-6 lg:py-12">
+      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12">
+        <div className="relative flex flex-col overflow-hidden rounded-[2.5rem] bg-white shadow-2xl shadow-[#0a192f]/10">
+          <div className="flex min-h-[600px] flex-col lg:flex-row">
+            {/* Content Column */}
+            <div className="z-10 flex w-full flex-col justify-center p-8 sm:p-10 lg:w-7/12 lg:p-16 xl:p-24">
+              <div className="space-y-6">
+                <div className="flex items-center space-x-3">
+                  <span className="h-px w-8 bg-[#ff5b00]" />
+                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#ff5b00]">Base Operacional Credmais</span>
+                </div>
+                <h1 className="text-4xl font-extrabold leading-[1.05] tracking-tight text-[#080510] sm:text-5xl lg:text-6xl xl:text-7xl">
+                  Crédito com <span className="text-[#ff5b00]">ritmo</span> e leitura de decisão.
+                </h1>
+                <p className="max-w-lg text-base leading-relaxed text-[#625a6c] sm:text-lg lg:text-xl">
+                  A Credmais potencializa o fluxo de caixa de empresas através de soluções inteligentes em antecipação de recebíveis e gestão financeira estratégica.
+                </p>
+              </div>
+
+              <div className="mt-8 flex flex-wrap gap-4 sm:gap-5 lg:mt-10">
+                <Link
+                  to="/antecipacao-de-recebiveis"
+                  className="inline-flex items-center justify-center rounded-2xl bg-[#080510] px-6 py-4 text-sm font-bold text-white shadow-xl shadow-[#080510]/20 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#ff5b00] sm:px-10 sm:text-base"
+                >
+                  Antecipar Recebíveis
+                </Link>
+                <Link
+                  to="/consultoria"
+                  className="inline-flex items-center justify-center rounded-2xl border-2 border-[#e8e4dd] px-6 py-4 text-sm font-bold text-[#080510] transition-all duration-300 hover:border-[#080510] hover:bg-[#080510] hover:text-white sm:px-10 sm:text-base"
+                >
+                  Nossas Soluções
+                </Link>
+              </div>
+            </div>
+
+            {/* Visual Column */}
+            <div className="relative w-full lg:w-5/12">
+              <div className="absolute inset-0 bg-gradient-to-r from-white via-white/20 to-transparent lg:from-white/40" aria-hidden="true" />
+              <img src={HERO_IMAGE} alt="Profissionais Credmais" className="h-full w-full object-cover object-center" />
+
+              {/* Floating Badge */}
+              <div className="absolute bottom-8 left-8 hidden items-center gap-4 rounded-2xl border border-white/30 bg-white/90 p-4 shadow-xl backdrop-blur-md sm:flex lg:bottom-12 lg:left-12">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#ff5b00]">
+                  <CheckCircle2 className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <div className="text-sm font-bold leading-none text-[#080510]">Credibilidade</div>
+                  <div className="mt-1 text-xs text-[#625a6c]">Gestão Credmais</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Metrics Bar */}
+          <div className="grid w-full grid-cols-2 border-t border-[#e8e4dd] bg-[#080510] lg:grid-cols-4">
+            {[
+              { value: "D+1", label: "liberação em\noperações elegíveis" },
+              { value: "5", label: "soluções integradas\npara o caixa" },
+              { value: "360", label: "visão do contas\na receber" },
+              { value: "Risco", label: "analisado antes\nda decisão" },
+            ].map((metric, index) => (
+              <div
+                key={metric.value}
+                className={`group flex flex-col items-center p-6 transition-colors hover:bg-[#16001f] sm:p-8 lg:items-start lg:p-10 ${index < 3 ? "border-r border-[#e8e4dd]/15" : ""}`}
+              >
+                <div className="mb-2 text-3xl font-extrabold text-white transition-colors group-hover:text-[#ff5b00] sm:text-4xl lg:text-5xl">
+                  {metric.value}
+                </div>
+                <p className="whitespace-pre-line text-center text-[10px] font-semibold uppercase leading-relaxed tracking-widest text-[#a0aec0] lg:text-left lg:text-xs">
+                  {metric.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function HomePage() {
   useHomeMotion();
   return (
