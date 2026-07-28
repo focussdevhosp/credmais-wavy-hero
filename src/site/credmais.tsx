@@ -97,7 +97,7 @@ const solutionVisualSets: Partial<Record<string, SolutionVisualSet>> = {
   },
 };
 
-const solutions: Solution[] = [
+export const solutions: Solution[] = [
   {
     slug: "antecipacao-de-recebiveis",
     title: "Antecipacao de Recebiveis",
@@ -693,7 +693,7 @@ function WebGLFinanceField() {
   return <canvas ref={canvasRef} className="webgl-canvas" aria-hidden="true" />;
 }
 
-function HomePage() {
+export function HomePage() {
   useHomeMotion();
   return (
     <>
@@ -976,7 +976,7 @@ function SolutionCard({ solution, index }: { solution: Solution; index: number }
   );
 }
 
-function SolutionPage({ solution }: { solution: Solution }) {
+export function SolutionPage({ solution }: { solution: Solution }) {
   const theme = solutionThemes[solution.slug];
   const visualSet = getSolutionVisualSet(solution);
   const heroCopy: Record<string, { titleStart: string; titleBridge: string; words: string[] }> = {
@@ -1217,7 +1217,7 @@ function SolutionFaqSection({ solution, theme }: { solution: Solution; theme: So
   );
 }
 
-function AboutPage() {
+export function AboutPage() {
   return (
     <>
       <CampaignHero image={ABOUT_IMAGE} eyebrow="Sobre a Credmais" titleStart="Credito humano." titleBridge="Crescimento com" words={["confianca.", "clareza.", "parceria."]} description="Uma securitizadora feita para simplificar capital, proteger operacoes e acompanhar empresas em cada fase." ctaText="Fomento, recebiveis, boletos, crediario, consultoria e gestao de contas para empresas que precisam de caixa claro." buttonText="Falar com a Credmais" buttonHref={CONTACT_WHATSAPP_URL} />
@@ -1259,7 +1259,7 @@ function AboutIntroSection() {
   );
 }
 
-function ContactPage() {
+export function ContactPage() {
   return (
     <>
       <CampaignHero image={CONTACT_IMAGE} eyebrow="Contato Credmais" titleStart="Vamos conversar." titleBridge="Sua empresa com" words={["capital.", "apoio.", "direcao."]} description="Conte o que sua empresa precisa. A Credmais avalia a melhor estrutura para o seu fluxo." ctaText="Envie sua necessidade: caixa imediato, boleto protegido, credito para vender mais, consultoria ou organizacao de contas." buttonText="Chamar no WhatsApp" buttonHref={CONTACT_WHATSAPP_URL} />
@@ -1380,7 +1380,7 @@ function ContactLine({ icon: Icon, value, href }: { icon: IconComponent; value: 
   return <span className="flex items-center gap-3">{content}</span>;
 }
 
-function Footer() {
+export function SiteFooter() {
   return (
     <footer className="border-t border-white/10 bg-[#07020c] px-5 py-10 text-white md:px-[10%]">
       <span className="brand-logo-shell">
