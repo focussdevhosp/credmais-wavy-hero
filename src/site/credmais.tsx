@@ -149,7 +149,7 @@ export const solutions: Solution[] = [
     detail: "Conecte sua venda ao financiamento do cliente final com analise, documentacao e acompanhamento da carteira.",
     icon: CircleDollarSign,
     bullets: ["Parcelamento para vender mais", "Jornada simples", "Acompanhamento de carteira"],
-    image: "/assets/solution-crediario-lavender.png",
+    image: cardCrediario.url,
     metric: "Mais conversao",
     accent: "#2d4a6e",
   },
