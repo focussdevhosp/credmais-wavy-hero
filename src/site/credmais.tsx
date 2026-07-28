@@ -1,5 +1,6 @@
 import React, { ComponentType, CSSProperties, ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import heroWomanNew from "@/assets/hero-woman-new.png.asset.json";
+import logoNew from "@/assets/credmais-logo-new.png.asset.json";
 import { useRouterState } from "@tanstack/react-router";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -59,7 +60,7 @@ type SolutionTheme = {
 const HERO_IMAGE = heroWomanNew.url;
 const ABOUT_IMAGE = "/assets/credmais-campaign-about.png";
 const CONTACT_IMAGE = "/assets/credmais-humanized-finance.png";
-const LOGO_IMAGE = "/assets/credmais-logo.avif";
+const LOGO_IMAGE = logoNew.url;
 const CONTACT_EMAIL = "contato@credmaissecuritizadora.com.br";
 const CONTACT_WHATSAPP_DISPLAY = "(11) 94089-3852";
 const CONTACT_WHATSAPP_URL = "https://wa.me/5511940893852";
@@ -109,7 +110,7 @@ export const solutions: Solution[] = [
     bullets: ["Taxas competitivas", "Analise de duplicatas, boletos e contratos", "Fluxo de caixa imediato"],
     image: "/assets/solution-antecipacao-red.png",
     metric: "Caixa imediato",
-    accent: "#ef1717",
+    accent: "#ddbd70",
   },
   {
     slug: "boleto-garantido",
@@ -121,7 +122,7 @@ export const solutions: Solution[] = [
     bullets: ["Risco reduzido de perda", "Gestao de cobranca inclusa", "Previsibilidade no contas a receber"],
     image: "/assets/solution-boleto-red.png",
     metric: "Recebimento protegido",
-    accent: "#e5161d",
+    accent: "#c9a84c",
   },
   {
     slug: "consultoria",
@@ -133,7 +134,7 @@ export const solutions: Solution[] = [
     bullets: ["Diagnostico de fluxo", "Estrategia de capital de giro", "Reestruturacao com dados"],
     image: "/assets/solution-consultoria-purple.png",
     metric: "Decisao orientada",
-    accent: "#8b23d8",
+    accent: "#1e3a5f",
   },
   {
     slug: "crediario",
@@ -145,7 +146,7 @@ export const solutions: Solution[] = [
     bullets: ["Parcelamento para vender mais", "Jornada simples", "Acompanhamento de carteira"],
     image: "/assets/solution-crediario-lavender.png",
     metric: "Mais conversao",
-    accent: "#a638e8",
+    accent: "#2d4a6e",
   },
   {
     slug: "gestao-de-contas",
@@ -157,7 +158,7 @@ export const solutions: Solution[] = [
     bullets: ["Rotina organizada", "Conciliacao de recebiveis", "Visao clara de entradas e saidas"],
     image: "/assets/solution-gestao-blue.png",
     metric: "Fluxo sob controle",
-    accent: "#1f7be8",
+    accent: "#3b6fa0",
   },
 ];
 
@@ -380,7 +381,7 @@ export function SiteHeader() {
           <NavLink href="/sobre" active={pathname === "/sobre"} scrolled={scrolled}>Sobre</NavLink>
           <NavLink href="/contato" active={pathname === "/contato"} scrolled={scrolled}>Contato</NavLink>
         </div>
-        <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer" className={`hidden items-center gap-2 rounded-2xl px-5 py-3 text-xs font-black uppercase tracking-[0.16em] transition md:inline-flex ${scrolled ? "bg-[#16001f] text-white" : "bg-white text-[#16001f]"}`}>
+        <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer" className={`hidden items-center gap-2 rounded-2xl px-5 py-3 text-xs font-black uppercase tracking-[0.16em] transition md:inline-flex ${scrolled ? "bg-[#142946] text-white" : "bg-white text-[#142946]"}`}>
           Diagnosticar caixa <ArrowUpRight className="h-4 w-4" />
         </a>
         <button className={`grid h-11 w-11 place-items-center rounded-full border md:hidden ${scrolled ? "border-black/10 bg-[#f6f7fb]" : "border-white/18 bg-white/12 text-white"}`} onClick={() => setOpen((value) => !value)}>
@@ -390,7 +391,7 @@ export function SiteHeader() {
       {open && (
         <div className="mobile-menu-panel mx-5 mb-4 grid gap-2 rounded-[28px] border border-black/10 bg-white p-3 text-[#09111f] shadow-2xl md:hidden">
           <MobileLink href="/" onClick={() => setOpen(false)}>Inicio</MobileLink>
-          <span className="px-4 pt-3 text-[10px] font-black uppercase tracking-[0.24em] text-[#ff5b00]">Solucoes</span>
+          <span className="px-4 pt-3 text-[10px] font-black uppercase tracking-[0.24em] text-[#ddbd70]">Solucoes</span>
           {solutions.map((solution) => <MobileLink key={solution.slug} href={`/${solution.slug}`} onClick={() => setOpen(false)}>{solution.title}</MobileLink>)}
           <MobileLink href="/sobre" onClick={() => setOpen(false)}>Sobre</MobileLink>
           <MobileLink href="/contato" onClick={() => setOpen(false)}>Contato</MobileLink>
@@ -404,13 +405,13 @@ function SolutionsDropdown({ pathname, scrolled }: { pathname: string; scrolled:
   const active = solutions.some((item) => pathname === `/${item.slug}`);
   return (
     <div className="group relative">
-      <a href="/#solucoes" className={`inline-flex items-center gap-2 py-3 transition ${active ? "text-[#ff5b00]" : scrolled ? "text-[#293041]/68" : "text-white/72"}`}>
+      <a href="/#solucoes" className={`inline-flex items-center gap-2 py-3 transition ${active ? "text-[#ddbd70]" : scrolled ? "text-[#293041]/68" : "text-white/72"}`}>
         Solucoes <span className="grid h-5 w-5 place-items-center rounded-full border border-current/20 transition group-hover:rotate-180"><ChevronDown className="h-3 w-3" /></span>
       </a>
       <div className="pointer-events-none absolute left-1/2 top-full z-50 w-[340px] -translate-x-1/2 translate-y-3 pt-3 opacity-0 transition duration-200 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
         <div className="solutions-menu solutions-menu-compact overflow-hidden rounded-[24px] border border-white/60 bg-white p-2 text-[#09111f] shadow-[0_24px_70px_rgba(10,4,22,0.22)]">
           <div className="px-3 pb-2 pt-2">
-            <span className="text-[10px] font-black uppercase tracking-[0.24em] text-[#ff5b00]">Solucoes</span>
+            <span className="text-[10px] font-black uppercase tracking-[0.24em] text-[#ddbd70]">Solucoes</span>
             <p className="mt-1 text-xs font-bold leading-5 text-[#6b7280]">Escolha a melhor frente para seu fluxo.</p>
           </div>
           <div className="grid gap-1">
@@ -433,7 +434,7 @@ function SolutionsDropdown({ pathname, scrolled }: { pathname: string; scrolled:
 }
 
 function NavLink({ href, active, scrolled, children }: { href: string; active: boolean; scrolled: boolean; children: ReactNode }) {
-  return <a href={href} className={`transition ${active ? "text-[#ff5b00]" : scrolled ? "text-[#293041]/68" : "text-white/72"}`}>{children}</a>;
+  return <a href={href} className={`transition ${active ? "text-[#ddbd70]" : scrolled ? "text-[#293041]/68" : "text-white/72"}`}>{children}</a>;
 }
 
 function MobileLink({ href, onClick, children }: { href: string; onClick: () => void; children: ReactNode }) {
@@ -702,7 +703,7 @@ export function HomePage() {
       <HomeProofSection />
       <WebGLEngineSection />
       <PinnedJourneySection />
-      <section id="solucoes" className="solutions-showcase relative px-5 py-24 text-[#080510] md:px-[8%] md:py-32">
+      <section id="solucoes" className="solutions-showcase relative px-5 py-24 text-[#0b1628] md:px-[8%] md:py-32">
         <div className="solutions-showcase-bg" aria-hidden="true" />
         <div className="relative z-10 mx-auto max-w-7xl">
           <div className="solutions-scroll-layout">
@@ -1271,7 +1272,7 @@ export function ContactPage() {
 
 function CampaignHero({ image, eyebrow, titleStart, titleBridge, words, description, ctaText, buttonText, buttonHref }: { image: string; eyebrow: string; titleStart: string; titleBridge: string; words: string[]; description: string; ctaText: string; buttonText: string; buttonHref: string }) {
   return (
-    <section className="campaign-hero relative isolate min-h-screen overflow-hidden bg-[#07020c]">
+    <section className="campaign-hero relative isolate min-h-screen overflow-hidden bg-[#0b1628]">
       <div className="hero-bg-image absolute inset-0 -z-10" aria-hidden="true">
         <img src={image} alt="" className="hero-full-image" />
       </div>
@@ -1315,9 +1316,9 @@ function CampaignHero({ image, eyebrow, titleStart, titleBridge, words, descript
 
 function ContactSection({ compact = false }: { compact?: boolean }) {
   return (
-    <section id="contato" className={`bg-[#16001f] px-5 text-white md:px-[10%] ${compact ? "py-24" : "py-32"}`}>
+    <section id="contato" className={`bg-[#142946] px-5 text-white md:px-[10%] ${compact ? "py-24" : "py-32"}`}>
       <div className="mx-auto max-w-6xl text-center">
-        <p className="mb-6 text-xs font-black uppercase tracking-[0.36em] text-[#ffc6a3]">Contato</p>
+        <p className="mb-6 text-xs font-black uppercase tracking-[0.36em] text-[#ddbd70]">Contato</p>
         <h2 className="text-5xl font-black leading-none tracking-[-0.06em] md:text-8xl">O que sua empresa precisa resolver?</h2>
         <p className="mx-auto mt-6 max-w-3xl text-base font-bold leading-relaxed text-white/58 md:text-lg">
           Fale com a Credmais sobre falta de caixa, venda a prazo, inadimplencia, dificuldade de credito, boleto garantido, crediario ou gestao de contas.
@@ -1365,7 +1366,7 @@ function ContactInput({ placeholder, type = "text" }: { placeholder: string; typ
 function ContactLine({ icon: Icon, value, href }: { icon: IconComponent; value: string; href?: string }) {
   const content = (
     <>
-      <Icon className="h-4 w-4 text-[#ff5b00]" />
+      <Icon className="h-4 w-4 text-[#ddbd70]" />
       {value}
     </>
   );
@@ -1383,7 +1384,7 @@ function ContactLine({ icon: Icon, value, href }: { icon: IconComponent; value: 
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-white/10 bg-[#07020c] px-5 py-10 text-white md:px-[10%]">
+    <footer className="border-t border-white/10 bg-[#0b1628] px-5 py-10 text-white md:px-[10%]">
       <span className="brand-logo-shell">
         <img src={LOGO_IMAGE} alt="Credmais Securitizadora" />
       </span>

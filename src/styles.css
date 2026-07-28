@@ -2,13 +2,13 @@
 
 
 :root {
-  --color-primary: #ff5b00;
-  --color-secondary: #8b23d8;
-  --color-ink: #080510;
-  --color-deep: #16001f;
-  --color-muted: #625a6c;
+  --color-primary: #ddbd70;
+  --color-secondary: #1e3a5f;
+  --color-ink: #0b1628;
+  --color-deep: #142946;
+  --color-muted: #7a8fa8;
   --color-surface: #ffffff;
-  --shadow-soft: 0 24px 80px rgb(35 15 58 / 0.12);
+  --shadow-soft: 0 24px 80px rgb(11 22 40 / 0.18);
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -18,7 +18,7 @@
 
 html {
   scroll-behavior: smooth;
-  background: #16001f;
+  background: #142946;
 }
 
 html,
@@ -29,7 +29,7 @@ body,
 
 body {
   margin: 0;
-  background: #16001f;
+  background: #142946;
   color: #ffffff;
   font-family: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   overflow-x: hidden;
@@ -143,7 +143,7 @@ li {
   border-radius: 999px;
   background: rgb(0 0 0 / 0.16);
   padding: 0.62rem 0.86rem;
-  color: #ff9a4a;
+  color: #ddbd70;
   font-size: 0.7rem;
   font-weight: 900;
   letter-spacing: 0.24em;
@@ -174,7 +174,7 @@ li {
   display: block;
   width: min(100%, 14ch);
   min-height: 1em;
-  color: #ff5b00;
+  color: #ddbd70;
 }
 
 .hero-word-rotator i {
@@ -217,7 +217,7 @@ li {
   gap: 1rem;
   border: 1px solid rgb(255 255 255 / 0.18);
   border-radius: 28px;
-  background: linear-gradient(135deg, rgb(12 4 22 / 0.66), rgb(12 4 22 / 0.38));
+  background: linear-gradient(135deg, rgb(11 22 40 / 0.66), rgb(11 22 40 / 0.38));
   padding: 0.95rem;
   padding-left: 1.25rem;
   box-shadow: 0 26px 80px rgb(0 0 0 / 0.24);
@@ -232,7 +232,7 @@ li {
 .hero-cta-copy span {
   display: block;
   margin-bottom: 0.28rem;
-  color: #ffb37e;
+  color: #ddbd70;
   font-size: 0.72rem;
   font-weight: 950;
   letter-spacing: 0.2em;
@@ -285,7 +285,7 @@ li {
   justify-content: center;
   gap: 0.7rem;
   border-radius: 999px;
-  background: #ff5b00;
+  background: #ddbd70;
   padding: 1rem 1.35rem;
   color: #ffffff;
   font-size: 0.78rem;
@@ -302,7 +302,7 @@ li {
 .hero-cta-button:hover {
   transform: translateY(-2px) scale(1.03);
   background: #ffffff;
-  color: #16001f;
+  color: #142946;
 }
 
 .hero-cta-action {
@@ -356,7 +356,7 @@ li {
     radial-gradient(circle at 90% 12%, rgb(255 91 0 / 0.12), transparent 32%),
     linear-gradient(180deg, #ffffff, #fff5ee);
   padding: clamp(4rem, 7vw, 6rem) 5vw;
-  color: #080510;
+  color: #0b1628;
 }
 
 .home-proof-shell {
@@ -376,7 +376,7 @@ li {
 }
 
 .home-proof-copy span {
-  color: #ff5b00;
+  color: #ddbd70;
   font-size: 0.72rem;
   font-weight: 950;
   letter-spacing: 0.3em;
@@ -469,7 +469,7 @@ li {
 
 .home-proof-card strong {
   display: block;
-  color: #16001f;
+  color: #142946;
   font-size: clamp(2.4rem, 4.2vw, 4.6rem);
   font-weight: 950;
   letter-spacing: -0.07em;
@@ -495,7 +495,7 @@ li {
   min-height: 105vh;
   overflow: hidden;
   align-items: center;
-  background: #07020c;
+  background: #0b1628;
   gap: clamp(2rem, 5vw, 5.5rem);
   padding: clamp(7rem, 11vw, 10rem) 5vw;
   grid-template-columns: minmax(22rem, 0.86fr) minmax(28rem, 1fr);
@@ -528,7 +528,7 @@ li {
 .webgl-engine-copy span,
 .motion-rail-heading span,
 .home-pin-copy span {
-  color: #ff9a4a;
+  color: #ddbd70;
   font-size: 0.72rem;
   font-weight: 950;
   letter-spacing: 0.3em;
@@ -568,7 +568,7 @@ li {
   align-items: center;
   gap: 0.7rem;
   border-radius: 999px;
-  background: #ff5b00;
+  background: #ddbd70;
   padding: 1rem 1.35rem;
   color: #ffffff;
   font-size: 0.78rem;
@@ -582,7 +582,7 @@ li {
 .webgl-engine-copy a:hover {
   transform: translateY(-2px);
   background: #ffffff;
-  color: #16001f;
+  color: #142946;
 }
 
 .engine-mini-proof {
@@ -822,7 +822,7 @@ li {
   align-items: start;
   background:
     radial-gradient(circle at 18% 14%, rgb(255 91 0 / 0.16), transparent 30%),
-    linear-gradient(180deg, #100019, #07020c);
+    linear-gradient(180deg, #0b1628, #0b1628);
   padding: clamp(6rem, 10vw, 9rem) 5vw;
   grid-template-columns: minmax(18rem, 0.78fr) minmax(0, 1fr);
 }
@@ -874,7 +874,7 @@ li {
 .home-pin-card span {
   position: relative;
   z-index: 1;
-  color: #ff9a4a;
+  color: #ddbd70;
   font-size: 0.82rem;
   font-weight: 950;
   letter-spacing: 0.24em;
@@ -906,7 +906,7 @@ li {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  background: #080510;
+  background: #0b1628;
   padding: clamp(5rem, 8vw, 7rem) 0;
 }
 
@@ -1006,7 +1006,7 @@ li {
   width: 100%;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, #ff5b00, #a638e8, #1f7be8);
+  background: linear-gradient(90deg, #ddbd70, #2d4a6e, #3b6fa0);
   transform: scaleX(var(--rail-progress));
   transform-origin: left;
   transition: transform 120ms linear;
@@ -1153,7 +1153,7 @@ li {
   transform: translateX(2px);
   border-color: rgb(255 91 0 / 0.16);
   background: #fff5ef;
-  color: #16001f;
+  color: #142946;
 }
 
 .solutions-showcase {
@@ -1202,7 +1202,7 @@ li {
 }
 
 .solutions-eyebrow {
-  color: #ff5b00;
+  color: #ddbd70;
   font-size: 0.72rem;
   font-weight: 950;
   letter-spacing: 0.3em;
@@ -1211,7 +1211,7 @@ li {
 
 .solutions-scroll-copy h2 {
   margin-top: 1rem;
-  color: #080510;
+  color: #0b1628;
   font-size: clamp(3rem, 4.45vw, 4.75rem);
   font-weight: 950;
   letter-spacing: -0.045em;
@@ -1260,7 +1260,7 @@ li {
 }
 
 .solutions-metrics strong {
-  color: #080510;
+  color: #0b1628;
   font-size: clamp(1.8rem, 2.7vw, 2.5rem);
   font-weight: 950;
   letter-spacing: -0.05em;
@@ -1280,7 +1280,7 @@ li {
   width: 52%;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, #ff5b00, #a638e8, #1f7be8);
+  background: linear-gradient(90deg, #ddbd70, #2d4a6e, #3b6fa0);
   animation: rail-pulse 2.4s ease-in-out infinite alternate;
 }
 
@@ -1424,7 +1424,7 @@ li {
 }
 
 .solution-card-kicker {
-  color: color-mix(in srgb, var(--accent) 78%, #080510 22%);
+  color: color-mix(in srgb, var(--accent) 78%, #0b1628 22%);
   font-size: 0.72rem;
   font-weight: 950;
   letter-spacing: 0.2em;
@@ -1433,7 +1433,7 @@ li {
 
 .solution-card-body h3 {
   margin-top: 1.1rem;
-  color: #080510;
+  color: #0b1628;
   font-size: clamp(1.85rem, 2.55vw, 2.65rem);
   font-weight: 950;
   letter-spacing: -0.055em;
@@ -1466,7 +1466,7 @@ li {
 
 .solution-card-points svg {
   flex: none;
-  color: color-mix(in srgb, var(--accent) 88%, #080510 12%);
+  color: color-mix(in srgb, var(--accent) 88%, #0b1628 12%);
 }
 
 .solution-card-link {
@@ -1477,7 +1477,7 @@ li {
   margin-top: auto;
   border-radius: 999px;
   border: 1px solid rgb(8 5 16 / 0.08);
-  background: #080510;
+  background: #0b1628;
   padding: 0.9rem 1.04rem;
   color: #ffffff;
   font-size: 0.72rem;
@@ -1489,7 +1489,7 @@ li {
 
 .solution-showcase-card:hover .solution-card-link {
   transform: translateY(-1px);
-  background: color-mix(in srgb, var(--accent) 92%, #080510 8%);
+  background: color-mix(in srgb, var(--accent) 92%, #0b1628 8%);
 }
 
 .solution-detail-intro {
@@ -1500,7 +1500,7 @@ li {
     radial-gradient(circle at 86% 15%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 34%),
     linear-gradient(135deg, #fffafa 0%, color-mix(in srgb, var(--accent) 7%, #f8f3ff 93%) 100%);
   padding: clamp(4rem, 6.2vw, 5.8rem) 5vw;
-  color: #080510;
+  color: #0b1628;
 }
 
 .solution-detail-intro::before {
@@ -1542,7 +1542,7 @@ li {
 }
 
 .solution-detail-copy p {
-  color: color-mix(in srgb, var(--accent) 86%, #080510 14%);
+  color: color-mix(in srgb, var(--accent) 86%, #0b1628 14%);
   font-size: 0.72rem;
   font-weight: 950;
   letter-spacing: 0.32em;
@@ -1598,7 +1598,7 @@ li {
   inset: auto 1.25rem 1.25rem 1.25rem;
   height: 3px;
   border-radius: 999px;
-  background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 86%, #080510 14%), transparent);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 86%, #0b1628 14%), transparent);
   opacity: 0.28;
 }
 
@@ -1618,14 +1618,14 @@ li {
   position: absolute;
   left: 1.25rem;
   top: 1.25rem;
-  color: color-mix(in srgb, var(--accent) 86%, #080510 14%);
+  color: color-mix(in srgb, var(--accent) 86%, #0b1628 14%);
 }
 
 .solution-bullet-card small {
   position: absolute;
   right: 1.25rem;
   top: 1.25rem;
-  color: color-mix(in srgb, var(--accent) 76%, #080510 24%);
+  color: color-mix(in srgb, var(--accent) 76%, #0b1628 24%);
   font-size: 0.72rem;
   font-weight: 950;
   letter-spacing: 0.18em;
@@ -1683,7 +1683,7 @@ li {
 .solution-proof-strip {
   display: grid;
   gap: 1px;
-  background: color-mix(in srgb, var(--accent) 28%, #080510 72%);
+  background: color-mix(in srgb, var(--accent) 28%, #0b1628 72%);
   color: #ffffff;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -1723,7 +1723,7 @@ li {
     linear-gradient(135deg, color-mix(in srgb, var(--accent) 10%, #ffffff 90%), #ffffff 60%),
     #ffffff;
   padding: clamp(4rem, 7vw, 6rem) 5vw;
-  color: #080510;
+  color: #0b1628;
   grid-template-columns: minmax(18rem, 0.88fr) minmax(0, 1.12fr);
 }
 
@@ -1737,7 +1737,7 @@ li {
   border-radius: 36px;
   background:
     radial-gradient(circle at 12% 14%, color-mix(in srgb, var(--accent) 32%, transparent), transparent 36%),
-    linear-gradient(180deg, #16001f, #080510);
+    linear-gradient(180deg, #142946, #0b1628);
   padding: clamp(1.5rem, 4vw, 3rem);
   color: #ffffff;
 }
@@ -1770,7 +1770,7 @@ li {
   background:
     radial-gradient(circle at 24% 22%, color-mix(in srgb, var(--accent) 42%, transparent), transparent 18%),
     radial-gradient(circle at 80% 72%, rgb(255 91 0 / 0.22), transparent 22%),
-    linear-gradient(135deg, color-mix(in srgb, var(--accent) 28%, #16001f 72%), #080510);
+    linear-gradient(135deg, color-mix(in srgb, var(--accent) 28%, #142946 72%), #0b1628);
 }
 
 .solution-theme-signal::before,
@@ -1917,7 +1917,7 @@ li {
 .solution-theme-case span {
   position: relative;
   z-index: 1;
-  color: color-mix(in srgb, var(--accent) 82%, #080510 18%);
+  color: color-mix(in srgb, var(--accent) 82%, #0b1628 18%);
   font-size: 0.76rem;
   font-weight: 950;
   letter-spacing: 0.24em;
@@ -1951,7 +1951,7 @@ li {
   overflow: hidden;
   background:
     radial-gradient(circle at 18% 14%, color-mix(in srgb, var(--accent) 26%, transparent), transparent 34%),
-    linear-gradient(180deg, #080510, #11041b 54%, #080510);
+    linear-gradient(180deg, #0b1628, #11041b 54%, #0b1628);
   padding: clamp(4rem, 7vw, 6rem) 5vw;
   color: #ffffff;
   grid-template-columns: minmax(18rem, 0.82fr) minmax(0, 1.18fr);
@@ -2108,7 +2108,7 @@ li {
 }
 
 .solution-experience {
-  background: #080510;
+  background: #0b1628;
   color: #ffffff;
   overflow: hidden;
 }
@@ -2143,7 +2143,7 @@ li {
   background:
     radial-gradient(circle at 15% 20%, color-mix(in srgb, var(--accent) 38%, transparent), transparent 34%),
     radial-gradient(circle at 85% 78%, rgb(166 56 232 / 0.28), transparent 34%),
-    linear-gradient(180deg, #080510, #12051d 72%, #080510);
+    linear-gradient(180deg, #0b1628, #12051d 72%, #0b1628);
   pointer-events: none;
 }
 
@@ -2203,7 +2203,7 @@ li {
 .solution-banner-copy a:hover {
   transform: translateY(-2px);
   background: #ffffff;
-  color: #080510;
+  color: #0b1628;
 }
 
 .solution-banner-media {
@@ -2412,7 +2412,7 @@ li {
   padding-left: clamp(1.5rem, 4.2vw, 4rem);
   background:
     radial-gradient(circle at 18% 28%, color-mix(in srgb, var(--accent) 34%, transparent), transparent 34%),
-    linear-gradient(160deg, #2b001a 0%, #150016 48%, #080510 100%);
+    linear-gradient(160deg, #2b001a 0%, #150016 48%, #0b1628 100%);
 }
 
 .solution-theme-protection .solution-theme-copy h2 {
@@ -2436,7 +2436,7 @@ li {
   background:
     radial-gradient(circle at 90% 28%, color-mix(in srgb, var(--accent) 38%, transparent), transparent 34%),
     radial-gradient(circle at 12% 14%, rgb(255 91 0 / 0.18), transparent 30%),
-    linear-gradient(155deg, #2a073c 0%, #16001f 48%, #080510 100%);
+    linear-gradient(155deg, #1e3a5f 0%, #142946 48%, #0b1628 100%);
   padding-right: clamp(1.5rem, 4.2vw, 4rem);
 }
 
@@ -2477,7 +2477,7 @@ li {
 .solution-theme-control .solution-theme-copy {
   background:
     radial-gradient(circle at 80% 18%, color-mix(in srgb, var(--accent) 42%, transparent), transparent 36%),
-    linear-gradient(180deg, #061225, #080510);
+    linear-gradient(180deg, #061225, #0b1628);
 }
 
 .solution-visual-grid {
@@ -2528,7 +2528,7 @@ li {
   border-radius: 28px;
   background:
     radial-gradient(circle at 20% 15%, rgb(255 255 255 / 0.2), transparent 36%),
-    color-mix(in srgb, var(--accent) 76%, #080510 24%);
+    color-mix(in srgb, var(--accent) 76%, #0b1628 24%);
   box-shadow: 0 28px 80px color-mix(in srgb, var(--accent) 26%, transparent);
 }
 
@@ -2542,7 +2542,7 @@ li {
   place-items: center;
   border-radius: 999px;
   background: #ffffff;
-  color: #080510;
+  color: #0b1628;
   font-size: 0.72rem;
   font-weight: 950;
   letter-spacing: 0;
@@ -2574,7 +2574,7 @@ li {
     radial-gradient(circle at 90% 8%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 32%),
     #ffffff;
   padding: clamp(4rem, 7vw, 6rem) 5vw;
-  color: #080510;
+  color: #0b1628;
   grid-template-columns: minmax(18rem, 0.78fr) minmax(0, 1fr);
 }
 
@@ -2604,7 +2604,7 @@ li {
   position: absolute;
   inset: 0 auto 0 0;
   width: 4px;
-  background: color-mix(in srgb, var(--accent) 82%, #080510 18%);
+  background: color-mix(in srgb, var(--accent) 82%, #0b1628 18%);
 }
 
 .solution-faq-item h3 {
@@ -2627,7 +2627,7 @@ li {
   justify-content: center;
   gap: 0.7rem;
   border-radius: 999px;
-  background: color-mix(in srgb, var(--accent) 92%, #080510 8%);
+  background: color-mix(in srgb, var(--accent) 92%, #0b1628 8%);
   padding: 1rem 1.25rem;
   color: #ffffff;
   font-size: 0.78rem;
@@ -2875,7 +2875,7 @@ li {
 }
 
 .contact-input:focus {
-  border-color: #ff5b00;
+  border-color: #ddbd70;
 }
 
 .about-intro-section {
@@ -3097,7 +3097,7 @@ li {
   border-radius: 18px;
   background:
     radial-gradient(circle at 20% 14%, rgb(255 255 255 / 0.22), transparent 44%),
-    color-mix(in srgb, var(--accent) 72%, #16001f 28%);
+    color-mix(in srgb, var(--accent) 72%, #142946 28%);
   box-shadow: 0 18px 44px color-mix(in srgb, var(--accent) 22%, transparent);
   transition: transform 220ms ease;
 }
