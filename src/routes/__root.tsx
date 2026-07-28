@@ -79,24 +79,27 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Credmais Securitizadora | Antecipação de Recebíveis e Boleto Garantido" },
+      { title: "Credmais Securitizadora | Capital, boleto e crediario" },
       {
         name: "description",
         content:
-          "Credmais é uma securitizadora que antecipa recebíveis e garante boletos para empresas de todos os portes. Fluxo de caixa em D+0 com cobrança 100% garantida.",
+          "Antecipe recebiveis, proteja boletos, organize contas e venda mais com credito estruturado.",
       },
       { name: "author", content: "Credmais Securitizadora" },
-      { property: "og:title", content: "Credmais Securitizadora" },
+      { property: "og:title", content: "Credmais Securitizadora | Capital, boleto e crediario" },
       {
         property: "og:description",
-        content: "Antecipação de recebíveis e boleto garantido para transformar vendas em caixa hoje.",
+        content: "Antecipe recebiveis, proteja boletos, organize contas e venda mais com credito estruturado.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Credmais Securitizadora | Capital, boleto e crediario" },
+      { name: "twitter:description", content: "Antecipe recebiveis, proteja boletos, organize contas e venda mais com credito estruturado." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/0XILPRqqUbSOh99ow53X5OBDOCC3/social-images/social-1785282701978-ChatGPT_Image_17_de_jul._de_2026,_02_07_43.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/0XILPRqqUbSOh99ow53X5OBDOCC3/social-images/social-1785282701978-ChatGPT_Image_17_de_jul._de_2026,_02_07_43.webp" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.png", type: "image/png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
       {
