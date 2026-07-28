@@ -3,6 +3,7 @@ import heroWomanNew from "@/assets/hero-woman-new.png.asset.json";
 import logoNew from "@/assets/credmais-logo-new.png.asset.json";
 import baseOperacional from "@/assets/base-operacional.png.asset.json";
 import cardAntecipacao from "@/assets/card-antecipacao.png.asset.json";
+import cardBoleto from "@/assets/boleto-garantido-card.png.asset.json";
 import { useRouterState } from "@tanstack/react-router";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -122,7 +123,7 @@ export const solutions: Solution[] = [
     detail: "Proteja o recebimento da operacao e simplifique a gestao de risco comercial.",
     icon: FileText,
     bullets: ["Risco reduzido de perda", "Gestao de cobranca inclusa", "Previsibilidade no contas a receber"],
-    image: "/assets/solution-boleto-red.png",
+    image: cardBoleto.url,
     metric: "Recebimento protegido",
     accent: "#c9a84c",
   },
