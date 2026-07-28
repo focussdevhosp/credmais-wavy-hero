@@ -5,6 +5,7 @@ import baseOperacional from "@/assets/base-operacional.png.asset.json";
 import cardAntecipacao from "@/assets/card-antecipacao.png.asset.json";
 import cardBoleto from "@/assets/boleto-garantido-card.png.asset.json";
 import cardConsultoria from "@/assets/consultoria-card.png.asset.json";
+import cardCrediario from "@/assets/crediario-card.png.asset.json";
 import { useRouterState } from "@tanstack/react-router";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -148,7 +149,7 @@ export const solutions: Solution[] = [
     detail: "Conecte sua venda ao financiamento do cliente final com analise, documentacao e acompanhamento da carteira.",
     icon: CircleDollarSign,
     bullets: ["Parcelamento para vender mais", "Jornada simples", "Acompanhamento de carteira"],
-    image: "/assets/solution-crediario-lavender.png",
+    image: cardCrediario.url,
     metric: "Mais conversao",
     accent: "#2d4a6e",
   },
