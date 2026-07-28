@@ -136,7 +136,7 @@ export const solutions: Solution[] = [
     detail: "Avaliamos contratos, recebiveis, prazos, garantias e rotina financeira para montar uma estrategia aderente ao fluxo.",
     icon: LineChart,
     bullets: ["Diagnostico de fluxo", "Estrategia de capital de giro", "Reestruturacao com dados"],
-    image: "/assets/solution-consultoria-purple.png",
+    image: cardConsultoria.url,
     metric: "Decisao orientada",
     accent: "#1e3a5f",
   },
