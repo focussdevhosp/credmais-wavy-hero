@@ -1,5 +1,6 @@
 import React, { ComponentType, CSSProperties, ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import heroWomanNew from "@/assets/hero-woman-new.png.asset.json";
+import logoNew from "@/assets/credmais-logo-new.png.asset.json";
 import { useRouterState } from "@tanstack/react-router";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
