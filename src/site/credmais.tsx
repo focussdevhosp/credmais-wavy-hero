@@ -110,7 +110,7 @@ export const solutions: Solution[] = [
     bullets: ["Taxas competitivas", "Analise de duplicatas, boletos e contratos", "Fluxo de caixa imediato"],
     image: "/assets/solution-antecipacao-red.png",
     metric: "Caixa imediato",
-    accent: "#ef1717",
+    accent: "#ddbd70",
   },
   {
     slug: "boleto-garantido",
@@ -122,7 +122,7 @@ export const solutions: Solution[] = [
     bullets: ["Risco reduzido de perda", "Gestao de cobranca inclusa", "Previsibilidade no contas a receber"],
     image: "/assets/solution-boleto-red.png",
     metric: "Recebimento protegido",
-    accent: "#e5161d",
+    accent: "#c9a84c",
   },
   {
     slug: "consultoria",
@@ -134,7 +134,7 @@ export const solutions: Solution[] = [
     bullets: ["Diagnostico de fluxo", "Estrategia de capital de giro", "Reestruturacao com dados"],
     image: "/assets/solution-consultoria-purple.png",
     metric: "Decisao orientada",
-    accent: "#8b23d8",
+    accent: "#1e3a5f",
   },
   {
     slug: "crediario",
@@ -146,7 +146,7 @@ export const solutions: Solution[] = [
     bullets: ["Parcelamento para vender mais", "Jornada simples", "Acompanhamento de carteira"],
     image: "/assets/solution-crediario-lavender.png",
     metric: "Mais conversao",
-    accent: "#a638e8",
+    accent: "#2d4a6e",
   },
   {
     slug: "gestao-de-contas",
@@ -158,7 +158,7 @@ export const solutions: Solution[] = [
     bullets: ["Rotina organizada", "Conciliacao de recebiveis", "Visao clara de entradas e saidas"],
     image: "/assets/solution-gestao-blue.png",
     metric: "Fluxo sob controle",
-    accent: "#1f7be8",
+    accent: "#3b6fa0",
   },
 ];
 
