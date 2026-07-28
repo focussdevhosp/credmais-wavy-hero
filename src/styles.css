@@ -2,13 +2,13 @@
 
 
 :root {
-  --color-primary: #ff5b00;
-  --color-secondary: #8b23d8;
-  --color-ink: #080510;
-  --color-deep: #16001f;
-  --color-muted: #625a6c;
+  --color-primary: #ddbd70;
+  --color-secondary: #1e3a5f;
+  --color-ink: #0b1628;
+  --color-deep: #142946;
+  --color-muted: #7a8fa8;
   --color-surface: #ffffff;
-  --shadow-soft: 0 24px 80px rgb(35 15 58 / 0.12);
+  --shadow-soft: 0 24px 80px rgb(11 22 40 / 0.18);
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
