@@ -123,7 +123,7 @@ export const solutions: Solution[] = [
     detail: "Proteja o recebimento da operacao e simplifique a gestao de risco comercial.",
     icon: FileText,
     bullets: ["Risco reduzido de perda", "Gestao de cobranca inclusa", "Previsibilidade no contas a receber"],
-    image: "/assets/solution-boleto-red.png",
+    image: cardBoleto.url,
     metric: "Recebimento protegido",
     accent: "#c9a84c",
   },
