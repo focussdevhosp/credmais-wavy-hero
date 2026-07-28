@@ -850,10 +850,14 @@ function PinnedJourneySection() {
       <div className="home-pin-stack">
         {steps.map((step, index) => (
           <article key={step.title} className="home-pin-card">
-            <img src={step.image} alt="" loading="lazy" decoding="async" />
-            <span>{String(index + 1).padStart(2, "0")}</span>
-            <h3>{step.title}</h3>
-            <p>{step.text}</p>
+            <div className="home-pin-card-body">
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
+            </div>
+            <div className="home-pin-card-media">
+              <img src={step.image} alt="" loading="lazy" decoding="async" />
+            </div>
           </article>
         ))}
       </div>
