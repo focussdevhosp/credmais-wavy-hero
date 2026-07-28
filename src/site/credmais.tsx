@@ -1,4 +1,5 @@
 import React, { ComponentType, CSSProperties, ReactNode, useEffect, useMemo, useRef, useState } from "react";
+import heroWomanNew from "@/assets/hero-woman-new.png.asset.json";
 import { useRouterState } from "@tanstack/react-router";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -55,7 +56,7 @@ type SolutionTheme = {
   faq: { q: string; a: string }[];
 };
 
-const HERO_IMAGE = "/assets/credmais-campaign-hero.png";
+const HERO_IMAGE = heroWomanNew.url;
 const ABOUT_IMAGE = "/assets/credmais-campaign-about.png";
 const CONTACT_IMAGE = "/assets/credmais-humanized-finance.png";
 const LOGO_IMAGE = "/assets/credmais-logo.avif";
