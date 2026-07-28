@@ -4431,11 +4431,15 @@ li {
   .solution-flow-step,
   .solution-visual-card,
   .solution-faq-item,
-  .home-pin-card,
   .home-proof-card,
   .testimonial-card {
     border-radius: 24px;
     padding: 1.15rem;
+  }
+
+  .home-pin-card {
+    border-radius: 24px;
+    padding: 0;
   }
 
   .solution-bullet-card {
