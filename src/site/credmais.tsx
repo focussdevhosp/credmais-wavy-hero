@@ -740,10 +740,10 @@ export function HomePage() {
 
 function HomeProofSection() {
   const stats = [
-    { value: "D+1", label: "liberacao em operacoes elegiveis" },
-    { value: "5", label: "solucoes integradas para o caixa" },
-    { value: "360", label: "visao do contas a receber" },
-    { value: "Risco", label: "analisado antes da decisao" },
+    { value: "D+1", label: "liberação em até 24 horas" },
+    { value: "5", label: "soluções de crédito para o caixa" },
+    { value: "360°", label: "visão completa do contas a receber" },
+    { value: "100%", label: "risco analisado antes da decisão" },
   ];
 
   return (
