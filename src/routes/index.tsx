@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Hero } from "@/components/site/Hero";
-import { SecuritizadoraStory } from "@/components/site/SecuritizadoraStory";
 import { StickyScrollReveal } from "@/components/ui/sticky-scroll";
 import { ArrowRight } from "lucide-react";
 import { FlipFeatures } from "@/components/site/FlipFeatures";
+
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -13,9 +13,9 @@ function Index() {
   return (
     <>
       <Hero />
-      <SecuritizadoraStory />
 
       <StickyScrollReveal />
+
 
       <FlipFeatures />
 
