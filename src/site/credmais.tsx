@@ -1272,7 +1272,7 @@ export function ContactPage() {
 
 function CampaignHero({ image, eyebrow, titleStart, titleBridge, words, description, ctaText, buttonText, buttonHref }: { image: string; eyebrow: string; titleStart: string; titleBridge: string; words: string[]; description: string; ctaText: string; buttonText: string; buttonHref: string }) {
   return (
-    <section className="campaign-hero relative isolate min-h-screen overflow-hidden bg-[#07020c]">
+    <section className="campaign-hero relative isolate min-h-screen overflow-hidden bg-[#0b1628]">
       <div className="hero-bg-image absolute inset-0 -z-10" aria-hidden="true">
         <img src={image} alt="" className="hero-full-image" />
       </div>
@@ -1318,7 +1318,7 @@ function ContactSection({ compact = false }: { compact?: boolean }) {
   return (
     <section id="contato" className={`bg-[#142946] px-5 text-white md:px-[10%] ${compact ? "py-24" : "py-32"}`}>
       <div className="mx-auto max-w-6xl text-center">
-        <p className="mb-6 text-xs font-black uppercase tracking-[0.36em] text-[#ffc6a3]">Contato</p>
+        <p className="mb-6 text-xs font-black uppercase tracking-[0.36em] text-[#ddbd70]">Contato</p>
         <h2 className="text-5xl font-black leading-none tracking-[-0.06em] md:text-8xl">O que sua empresa precisa resolver?</h2>
         <p className="mx-auto mt-6 max-w-3xl text-base font-bold leading-relaxed text-white/58 md:text-lg">
           Fale com a Credmais sobre falta de caixa, venda a prazo, inadimplencia, dificuldade de credito, boleto garantido, crediario ou gestao de contas.
@@ -1384,7 +1384,7 @@ function ContactLine({ icon: Icon, value, href }: { icon: IconComponent; value: 
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-white/10 bg-[#07020c] px-5 py-10 text-white md:px-[10%]">
+    <footer className="border-t border-white/10 bg-[#0b1628] px-5 py-10 text-white md:px-[10%]">
       <span className="brand-logo-shell">
         <img src={LOGO_IMAGE} alt="Credmais Securitizadora" />
       </span>

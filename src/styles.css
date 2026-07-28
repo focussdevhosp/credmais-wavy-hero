@@ -143,7 +143,7 @@ li {
   border-radius: 999px;
   background: rgb(0 0 0 / 0.16);
   padding: 0.62rem 0.86rem;
-  color: #ff9a4a;
+  color: #ddbd70;
   font-size: 0.7rem;
   font-weight: 900;
   letter-spacing: 0.24em;
@@ -217,7 +217,7 @@ li {
   gap: 1rem;
   border: 1px solid rgb(255 255 255 / 0.18);
   border-radius: 28px;
-  background: linear-gradient(135deg, rgb(12 4 22 / 0.66), rgb(12 4 22 / 0.38));
+  background: linear-gradient(135deg, rgb(11 22 40 / 0.66), rgb(11 22 40 / 0.38));
   padding: 0.95rem;
   padding-left: 1.25rem;
   box-shadow: 0 26px 80px rgb(0 0 0 / 0.24);
@@ -232,7 +232,7 @@ li {
 .hero-cta-copy span {
   display: block;
   margin-bottom: 0.28rem;
-  color: #ffb37e;
+  color: #ddbd70;
   font-size: 0.72rem;
   font-weight: 950;
   letter-spacing: 0.2em;
@@ -495,7 +495,7 @@ li {
   min-height: 105vh;
   overflow: hidden;
   align-items: center;
-  background: #07020c;
+  background: #0b1628;
   gap: clamp(2rem, 5vw, 5.5rem);
   padding: clamp(7rem, 11vw, 10rem) 5vw;
   grid-template-columns: minmax(22rem, 0.86fr) minmax(28rem, 1fr);
@@ -528,7 +528,7 @@ li {
 .webgl-engine-copy span,
 .motion-rail-heading span,
 .home-pin-copy span {
-  color: #ff9a4a;
+  color: #ddbd70;
   font-size: 0.72rem;
   font-weight: 950;
   letter-spacing: 0.3em;
@@ -822,7 +822,7 @@ li {
   align-items: start;
   background:
     radial-gradient(circle at 18% 14%, rgb(255 91 0 / 0.16), transparent 30%),
-    linear-gradient(180deg, #100019, #07020c);
+    linear-gradient(180deg, #0b1628, #0b1628);
   padding: clamp(6rem, 10vw, 9rem) 5vw;
   grid-template-columns: minmax(18rem, 0.78fr) minmax(0, 1fr);
 }
@@ -874,7 +874,7 @@ li {
 .home-pin-card span {
   position: relative;
   z-index: 1;
-  color: #ff9a4a;
+  color: #ddbd70;
   font-size: 0.82rem;
   font-weight: 950;
   letter-spacing: 0.24em;
