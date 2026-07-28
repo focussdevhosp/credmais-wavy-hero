@@ -820,9 +820,8 @@ li {
   min-height: 120vh;
   gap: clamp(2rem, 5vw, 5rem);
   align-items: start;
-  background:
-    radial-gradient(circle at 18% 14%, rgb(255 91 0 / 0.16), transparent 30%),
-    linear-gradient(180deg, #0b1628, #0b1628);
+  background: #f5f0e8;
+  color: #142946;
   padding: clamp(6rem, 10vw, 9rem) 5vw;
   grid-template-columns: minmax(18rem, 0.78fr) minmax(0, 1fr);
 }
@@ -830,6 +829,15 @@ li {
 .home-pin-copy {
   position: sticky;
   top: 8rem;
+}
+
+.home-pin-copy h2,
+.home-pin-copy p {
+  color: #142946;
+}
+
+.home-pin-copy p {
+  color: rgb(20 41 70 / 0.72);
 }
 
 .home-pin-stack {
@@ -841,33 +849,45 @@ li {
 
 .home-pin-card {
   position: relative;
+  display: grid;
   min-height: clamp(240px, 34vh, 360px);
   overflow: hidden;
-  border: 1px solid rgb(255 255 255 / 0.12);
+  border: 1px solid rgb(20 41 70 / 0.08);
   border-radius: 32px;
-  background:
-    radial-gradient(circle at 0% 0%, rgb(255 91 0 / 0.2), transparent 34%),
-    rgb(255 255 255 / 0.07);
-  padding: clamp(1.4rem, 3vw, 2.6rem);
-  box-shadow: 0 38px 110px rgb(0 0 0 / 0.25);
-  backdrop-filter: blur(18px);
+  background: #ffffff;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0 24px 70px rgb(20 41 70 / 0.08);
 }
 
-.home-pin-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgb(8 5 16 / 0.82), rgb(8 5 16 / 0.28));
-  pointer-events: none;
+.home-pin-card:nth-child(even) {
+  direction: rtl;
 }
 
-.home-pin-card img {
+.home-pin-card:nth-child(even) > * {
+  direction: ltr;
+}
+
+.home-pin-card-body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(1.6rem, 3vw, 2.8rem);
+}
+
+.home-pin-card-media {
+  position: relative;
+  overflow: hidden;
+  min-height: 12rem;
+}
+
+.home-pin-card-media img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.46;
   transform: scale(1.04);
 }
 
@@ -884,6 +904,7 @@ li {
   position: relative;
   z-index: 1;
   margin-top: 1rem;
+  color: #142946;
   font-size: clamp(2.4rem, 4.8vw, 5.3rem);
   font-weight: 950;
   letter-spacing: -0.07em;
@@ -895,7 +916,7 @@ li {
   z-index: 1;
   margin-top: 1.15rem;
   max-width: 36rem;
-  color: rgb(255 255 255 / 0.66);
+  color: rgb(20 41 70 / 0.72);
   font-size: clamp(1rem, 1.3vw, 1.16rem);
   font-weight: 700;
   line-height: 1.7;
