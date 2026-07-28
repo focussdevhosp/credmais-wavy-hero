@@ -3549,6 +3549,11 @@ li {
 
   .home-pin-card {
     min-height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .home-pin-card-media {
+    min-height: 14rem;
   }
 
   .motion-rail-section {
