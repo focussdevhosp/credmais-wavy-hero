@@ -4,6 +4,7 @@ import logoNew from "@/assets/credmais-logo-new.png.asset.json";
 import baseOperacional from "@/assets/base-operacional.png.asset.json";
 import cardAntecipacao from "@/assets/card-antecipacao.png.asset.json";
 import cardBoleto from "@/assets/boleto-garantido-card.png.asset.json";
+import cardConsultoria from "@/assets/consultoria-card.png.asset.json";
 import { useRouterState } from "@tanstack/react-router";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -135,7 +136,7 @@ export const solutions: Solution[] = [
     detail: "Avaliamos contratos, recebiveis, prazos, garantias e rotina financeira para montar uma estrategia aderente ao fluxo.",
     icon: LineChart,
     bullets: ["Diagnostico de fluxo", "Estrategia de capital de giro", "Reestruturacao com dados"],
-    image: "/assets/solution-consultoria-purple.png",
+    image: cardConsultoria.url,
     metric: "Decisao orientada",
     accent: "#1e3a5f",
   },
