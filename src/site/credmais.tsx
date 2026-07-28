@@ -56,7 +56,7 @@ type SolutionTheme = {
   faq: { q: string; a: string }[];
 };
 
-const HERO_IMAGE = "/assets/credmais-campaign-hero.png";
+const HERO_IMAGE = heroWomanNew.url;
 const ABOUT_IMAGE = "/assets/credmais-campaign-about.png";
 const CONTACT_IMAGE = "/assets/credmais-humanized-finance.png";
 const LOGO_IMAGE = "/assets/credmais-logo.avif";
