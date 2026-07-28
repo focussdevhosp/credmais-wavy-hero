@@ -353,36 +353,8 @@ const solutionThemes: Record<string, SolutionTheme> = {
   },
 };
 
-function usePathname() {
-  const [pathname, setPathname] = useState(() => window.location.pathname.replace(/\/+$/, "") || "/");
-  useEffect(() => {
-    const update = () => setPathname(window.location.pathname.replace(/\/+$/, "") || "/");
-    window.addEventListener("popstate", update);
-    return () => window.removeEventListener("popstate", update);
-  }, []);
-  return pathname;
-}
-
-function App() {
-  const pathname = usePathname();
-  const page = useMemo(() => {
-    const solution = solutions.find((item) => pathname === `/${item.slug}`);
-    if (solution) return <SolutionPage solution={solution} />;
-    if (pathname === "/sobre") return <AboutPage />;
-    if (pathname === "/contato") return <ContactPage />;
-    return <HomePage />;
-  }, [pathname]);
-
-  return (
-    <div className="min-h-screen bg-[#16001f] text-white">
-      <Header pathname={pathname} />
-      <main>{page}</main>
-      <Footer />
-    </div>
-  );
-}
-
-function Header({ pathname }: { pathname: string }) {
+export function SiteHeader() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname }) || "/";
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -394,6 +366,7 @@ function Header({ pathname }: { pathname: string }) {
 
   return (
     <header className={`fixed inset-x-0 top-0 z-50 px-4 transition-all ${scrolled ? "py-2" : "py-4"}`}>
+
       <nav className={`mx-auto flex max-w-7xl items-center justify-between rounded-[28px] px-5 py-3 backdrop-blur-2xl transition-all md:px-7 ${scrolled ? "border border-black/10 bg-white/92 text-[#09111f]" : "border border-white/18 bg-black/18 text-white"}`}>
         <a href="/" className="flex items-center gap-3">
           <span className={`brand-logo-shell ${scrolled ? "is-scrolled" : ""}`}>
