@@ -2,6 +2,7 @@ import React, { ComponentType, CSSProperties, ReactNode, useEffect, useMemo, use
 import heroWomanNew from "@/assets/hero-woman-new.png.asset.json";
 import logoNew from "@/assets/credmais-logo-new.png.asset.json";
 import baseOperacional from "@/assets/base-operacional.png.asset.json";
+import cardAntecipacao from "@/assets/card-antecipacao.png.asset.json";
 import { useRouterState } from "@tanstack/react-router";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -109,7 +110,7 @@ export const solutions: Solution[] = [
     detail: "Compra de recebiveis comerciais com analise objetiva, documentacao clara e pagamento agil.",
     icon: HandCoins,
     bullets: ["Taxas competitivas", "Analise de duplicatas, boletos e contratos", "Fluxo de caixa imediato"],
-    image: "/assets/solution-antecipacao-red.png",
+    image: cardAntecipacao.url,
     metric: "Caixa imediato",
     accent: "#ddbd70",
   },
