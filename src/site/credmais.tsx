@@ -110,7 +110,7 @@ export const solutions: Solution[] = [
     detail: "Compra de recebiveis comerciais com analise objetiva, documentacao clara e pagamento agil.",
     icon: HandCoins,
     bullets: ["Taxas competitivas", "Analise de duplicatas, boletos e contratos", "Fluxo de caixa imediato"],
-    image: "/assets/solution-antecipacao-red.png",
+    image: cardAntecipacao.url,
     metric: "Caixa imediato",
     accent: "#ddbd70",
   },
