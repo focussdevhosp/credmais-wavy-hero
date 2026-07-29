@@ -165,14 +165,14 @@ export const solutions: Solution[] = [
   {
     slug: "gestao-de-contas",
     title: "Gestão de Contas",
-    headline: "Controle total do seu fluxo financeiro.",
-    summary: "Acompanhe contas a receber, contas a pagar e conciliação em uma rotina clara, sem depender de planilhas soltas.",
-    detail: "Apoio operacional para consolidar contas, conciliar movimentações e prever o caixa antes das decisões críticas.",
+    headline: "Recebemos suas dívidas para você.",
+    summary: "Deixe a cobrança conosco. Cuidamos da recuperação dos seus recebíveis com estratégia, respeito e resultados, enquanto você foca no crescimento do negócio.",
+    detail: "Assumimos o recebimento das suas dívidas com processo estruturado, equipe especializada e acompanhamento transparente, preservando o relacionamento com seu cliente.",
     icon: Workflow,
-    bullets: ["Rotina financeira organizada", "Conciliação sem retrabalho", "Visão 360° de entradas e saídas"],
+    bullets: ["Cobrança ativa e estruturada", "Relatórios claros de recuperação", "Preservamos a relação com o cliente"],
     image: "/assets/solution-gestao-blue.png",
-    metric: "Fluxo sob controle",
-    accent: "#3b6fa0",
+    metric: "Dívidas recebidas por você",
+    accent: "#ddbd70",
   },
 ];
 
@@ -199,7 +199,7 @@ const testimonials = [
 const homeFaq = [
   {
     q: "Por onde devo começar?",
-    a: "Comece pela sua prioridade: caixa imediato, proteção do boleto, crediário para vender mais, consultoria estratégica ou gestão de contas. Nós indicamos o melhor caminho.",
+    a: "Comece pela sua prioridade: caixa imediato, proteção do boleto, crediário para vender mais, consultoria estratégica, gestão de contas ou recebimento de dívidas. Nós indicamos o melhor caminho.",
   },
   {
     q: "Como funciona a análise antes da proposta?",
@@ -315,27 +315,27 @@ const solutionThemes: Record<string, SolutionTheme> = {
   },
   "gestao-de-contas": {
     proof: [
-      { value: "360°", label: "de visão sobre o fluxo financeiro" },
-      { value: "Rotina", label: "organizada e sem retrabalho" },
-      { value: "Conciliação", label: "de entradas, saídas e previsões" },
+      { value: "Cobrança", label: "ativada após análise" },
+      { value: "Recuperação", label: "acompanhada de perto" },
+      { value: "Resultado", label: "com relatório mensal" },
     ],
-    audience: "Para empresas que precisam enxergar contas a receber, contas a pagar e conciliação em uma rotina simples e confiável.",
-    operatingTitle: "Rotina financeira visível para agir antes de o problema aparecer.",
-    operatingText: "Entradas, saídas, previsão e decisão conectadas em um único painel de controle — sem planilhas soltas.",
+    audience: "Para empresas que têm recebíveis em atraso e precisam de uma operação especializada para recuperar valores sem desgaste interno.",
+    operatingTitle: "Recebemos suas dívidas e cuidamos de toda a recuperação.",
+    operatingText: "Assumimos o contato, a negociação e o acompanhamento das dívidas, com relatórios claros e uma abordagem que preserva a relação com seu cliente.",
     operating: [
-      { title: "Consolidação", text: "Contas, prazos e pendências saem de leituras dispersas e entram em uma base única." },
-      { title: "Conciliação", text: "Reduzimos divergências entre o que foi vendido, recebido e pago no dia a dia." },
-      { title: "Decisão diária", text: "A visão do fluxo mostra quando antecipar, proteger, renegociar ou segurar o caixa." },
+      { title: "Análise da carteira", text: "Mapeamos valores, prazos, perfil dos devedores e histórico para montar a melhor estratégia de recuperação." },
+      { title: "Cobrança estruturada", text: "Atuamos com ritmo, canais definidos e comunicação profissional, sem expor a marca de forma negativa." },
+      { title: "Recuperação com acompanhamento", text: "Você acompanha resultados, acordos e valores recebidos em relatórios simples e transparentes." },
     ],
     flow: [
-      { title: "Organização", text: "Mapeamento de contas, categorias, prazos e responsáveis." },
-      { title: "Conciliação", text: "Entradas e saídas acompanhadas para reduzir divergências e retrabalho." },
-      { title: "Decisão", text: "O fluxo vira base para antecipar, proteger ou ajustar capital com segurança." },
+      { title: "Entrega da carteira", text: "Você encaminha os recebíveis em atraso e definimos juntos a estratégia de atuação." },
+      { title: "Cobrança ativa", text: "Contatos, negociações e acordos conduzidos pela nossa equipe com respeito e consistência." },
+      { title: "Recuperação e repasse", text: "Valores recebidos são repassados com previsibilidade e o status fica sempre atualizado." },
     ],
     faq: [
-      { q: "Substitui meu financeiro?", a: "Não. Apoiamos a rotina do seu time e melhoramos a visão para cada decisão." },
-      { q: "Ajuda com conciliação?", a: "Sim. Esse é um dos focos principais para reduzir erros e retrabalho no dia a dia." },
-      { q: "Conecta com outras soluções?", a: "Sim. A leitura do fluxo indica quando antecipar, proteger com boleto garantido ou acionar consultoria." },
+      { q: "A CredMais compra os recebíveis em atraso?", a: "Podemos assumir a gestão e recuperação da carteira. A melhor estrutura — gestão, aquisição ou antecipação — é definida após a análise dos títulos." },
+      { q: "Como acompanho os resultados?", a: "Você recebe relatórios claros com status dos títulos, acordos firmados e valores recuperados." },
+      { q: "A cobrança prejudica a relação com meu cliente?", a: "Não. Nosso approach é profissional e respeitoso, com foco em recuperar o valor sem desgastar o relacionamento." },
     ],
   },
 };
@@ -617,13 +617,13 @@ export function HomePage() {
               <p className="solutions-eyebrow">Soluções Credmais</p>
               <h2>Soluções que giram o seu caixa.</h2>
               <p>
-                Uma esteira financeira completa para vender a prazo com segurança, antecipar recebíveis, proteger boletos e organizar contas com previsibilidade real.
+                Uma esteira financeira completa para vender a prazo com segurança, antecipar recebíveis, proteger boletos, organizar contas e recuperar dívidas com previsibilidade real.
               </p>
 
               <div className="solutions-metrics" aria-label="Indicadores das soluções">
                 <span><strong>5</strong> frentes financeiras integradas</span>
                 <span><strong>D+1</strong> nas operações elegíveis</span>
-                <span><strong>360°</strong> de visão sobre o contas a receber</span>
+                <span><strong>Recuperação</strong> ativa de dívidas em atraso</span>
               </div>
 
               <div className="solutions-scroll-rail" aria-hidden="true">
@@ -755,9 +755,9 @@ export function SolutionPage({ solution }: { solution: Solution }) {
       words: ["crediário.", "conversão.", "controle."],
     },
     "gestao-de-contas": {
-      titleStart: "Organize contas.",
-      titleBridge: "Tenha",
-      words: ["visão clara.", "fluxo.", "controle."],
+      titleStart: "Dívidas recebidas.",
+      titleBridge: "Você com",
+      words: ["fôlego.", "resultado.", "controle."],
     },
   };
   const copy = heroCopy[solution.slug] ?? {
@@ -968,7 +968,7 @@ function ContactSection({ compact = false }: { compact?: boolean }) {
         <p className="mb-6 text-xs font-black uppercase tracking-[0.36em] text-[#ddbd70]">Contato</p>
         <h2 className="text-5xl font-black leading-none tracking-[-0.06em] md:text-8xl">O que sua empresa precisa resolver?</h2>
         <p className="mx-auto mt-6 max-w-3xl text-base font-bold leading-relaxed text-white/58 md:text-lg">
-          Fale com a Credmais sobre falta de caixa, venda a prazo, inadimplência, dificuldade de crédito, boleto garantido, crediário ou gestão de contas — respondemos rápido e com clareza.
+          Fale com a Credmais sobre falta de caixa, venda a prazo, inadimplência, dificuldade de crédito, boleto garantido, crediário, gestão de contas ou recebimento de dívidas — respondemos rápido e com clareza.
         </p>
         <div className="contact-service-grid" aria-label="Soluções para contato">
           {solutions.map((solution) => {
