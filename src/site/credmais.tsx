@@ -1379,9 +1379,9 @@ function ContactSection({ compact = false }: { compact?: boolean }) {
         <p className="mb-6 text-xs font-black uppercase tracking-[0.36em] text-[#ddbd70]">Contato</p>
         <h2 className="text-5xl font-black leading-none tracking-[-0.06em] md:text-8xl">O que sua empresa precisa resolver?</h2>
         <p className="mx-auto mt-6 max-w-3xl text-base font-bold leading-relaxed text-white/58 md:text-lg">
-          Fale com a Credmais sobre falta de caixa, venda a prazo, inadimplencia, dificuldade de credito, boleto garantido, crediario ou gestao de contas.
+          Fale com a Credmais sobre falta de caixa, venda a prazo, inadimplência, dificuldade de crédito, boleto garantido, crediário ou gestão de contas — respondemos rápido e com clareza.
         </p>
-        <div className="contact-service-grid" aria-label="Servicos para contato">
+        <div className="contact-service-grid" aria-label="Soluções para contato">
           {solutions.map((solution) => {
             const Icon = solution.icon;
             return (
@@ -1396,7 +1396,7 @@ function ContactSection({ compact = false }: { compact?: boolean }) {
         <form className="mt-16 grid gap-10 text-left">
           <div className="grid gap-10 md:grid-cols-2"><ContactInput placeholder="Seu nome" /><ContactInput placeholder="Seu e-mail" type="email" /></div>
           <ContactInput placeholder="Sua empresa" />
-          <textarea className="contact-input min-h-36 resize-none" placeholder="Conte sua necessidade: antecipar recebiveis, proteger boleto, organizar contas, vender no crediario ou estruturar capital." />
+          <textarea className="contact-input min-h-36 resize-none" placeholder="Conte sua necessidade: antecipar recebíveis, proteger boleto, organizar contas, vender no crediário ou estruturar capital." />
           <div className="grid gap-8 pt-4 md:grid-cols-[1fr_auto] md:items-center">
             <div className="grid gap-3 text-sm text-white/55 md:text-left">
               <ContactLine icon={Phone} value={`WhatsApp ${CONTACT_WHATSAPP_DISPLAY}`} href={CONTACT_WHATSAPP_URL} />
