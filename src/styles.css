@@ -2374,29 +2374,13 @@ li {
 .solution-page-banner {
   position: relative;
   display: grid;
-  gap: clamp(2rem, 5vw, 5rem);
+  gap: clamp(2.5rem, 5.5vw, 5.5rem);
   align-items: center;
   min-height: auto;
-  padding: clamp(4rem, 7vw, 6rem) 5vw;
+  padding: clamp(5rem, 8vw, 7rem) 5vw;
   grid-template-columns: minmax(0, 0.9fr) minmax(18rem, 1.1fr);
-}
-
-.solution-page-banner {
   background: transparent;
   color: #0b1628;
-}
-
-.solution-page-banner::after {
-  content: "";
-  position: absolute;
-  right: -6vw;
-  bottom: -14vw;
-  width: min(42vw, 620px);
-  aspect-ratio: 1;
-  border-radius: 999px;
-  border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
-  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 22%, transparent), transparent 68%);
-  pointer-events: none;
 }
 
 .solution-page-banner::before {
@@ -2404,9 +2388,23 @@ li {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 12% 18%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 40%),
-    radial-gradient(circle at 88% 82%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 44%),
-    linear-gradient(180deg, #faf7f1 0%, #f4ede1 55%, #efe6d4 100%);
+    radial-gradient(circle at 14% 22%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 38%),
+    radial-gradient(circle at 86% 78%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 46%),
+    linear-gradient(180deg, #faf8f4 0%, #f6f0e7 55%, #efe7d8 100%);
+  pointer-events: none;
+}
+
+.solution-page-banner::after {
+  content: "";
+  position: absolute;
+  right: -8vw;
+  bottom: -16vw;
+  width: min(46vw, 680px);
+  aspect-ratio: 1;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 16%, transparent), transparent 70%);
+  opacity: 0.8;
   pointer-events: none;
 }
 
