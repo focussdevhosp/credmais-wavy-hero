@@ -2197,7 +2197,7 @@ li {
 .solution-operating-copy p {
   margin-top: 1.5rem;
   max-width: 33rem;
-  color: rgb(255 255 255 / 0.72);
+  color: rgb(255 255 255 / 0.82);
   font-size: clamp(1rem, 1.4vw, 1.18rem);
   font-weight: 500;
   line-height: 1.75;
