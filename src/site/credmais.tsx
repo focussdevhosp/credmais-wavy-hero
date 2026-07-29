@@ -781,9 +781,9 @@ export function HomePage() {
 function HomeProofSection() {
   const stats = [
     { value: "D+1", label: "liberação em até 24 horas" },
-    { value: "5", label: "soluções de crédito para o caixa" },
-    { value: "360°", label: "visão completa do contas a receber" },
-    { value: "100%", label: "risco analisado antes da decisão" },
+    { value: "5", label: "soluções de crédito para o seu caixa" },
+    { value: "360°", label: "de visão sobre o contas a receber" },
+    { value: "100%", label: "das operações analisadas antes da decisão" },
   ];
 
   return (
@@ -791,12 +791,12 @@ function HomeProofSection() {
       <div className="home-proof-shell">
         <div className="home-proof-copy gsap-reveal">
           <span>Base operacional</span>
-          <h2>Credito com imagem, ritmo e leitura de decisao.</h2>
-          <p>Os indicadores aparecem junto de pessoas, operacao e contexto para a marca parecer proxima e confiavel.</p>
+          <h2>Números que traduzem o resultado no seu dia a dia.</h2>
+          <p>Cada indicador nasce de operações reais: análise de carteira, liberação rápida e acompanhamento próximo para você decidir com segurança.</p>
         </div>
         <div className="home-proof-media float-layer">
           <img src={baseOperacional.url} alt="" loading="lazy" decoding="async" />
-          <div className="home-proof-badge">operacao acompanhada</div>
+          <div className="home-proof-badge">operação acompanhada</div>
         </div>
         <div className="home-proof-grid">
           {stats.map((item) => (
@@ -810,6 +810,7 @@ function HomeProofSection() {
     </section>
   );
 }
+
 
 function WebGLEngineSection() {
   const stats = [
