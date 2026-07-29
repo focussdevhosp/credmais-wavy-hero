@@ -2,6 +2,7 @@ import React, { ComponentType, CSSProperties, ReactNode, useEffect, useMemo, use
 import heroExecutivos from "@/assets/hero-executivos-credmais.webp.asset.json";
 import heroWomanNew from "@/assets/hero-woman-v3.webp.asset.json";
 import heroAntecipacao from "@/assets/hero-antecipacao.webp.asset.json";
+import heroBoletoGarantido from "@/assets/hero-boleto-garantido.webp.asset.json";
 import heroConsultoria from "@/assets/hero-consultoria.webp.asset.json";
 import logoNew from "@/assets/credmais-logo.png.asset.json";
 
