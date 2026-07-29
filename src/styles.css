@@ -323,8 +323,8 @@ li {
 
 .brand-logo-shell {
   display: inline-flex;
-  height: 42px;
-  max-width: min(46vw, 180px);
+  height: 46px;
+  max-width: min(50vw, 200px);
   align-items: center;
   border: none;
   border-radius: 16px;
@@ -336,10 +336,10 @@ li {
 
 @media (min-width: 1024px) {
   .brand-logo-shell {
-    height: 46px;
+    height: 52px;
     border-radius: 18px;
     padding: 0.42rem 0.75rem;
-    max-width: 210px;
+    max-width: 230px;
   }
 }
 
