@@ -814,9 +814,9 @@ function HomeProofSection() {
 
 function WebGLEngineSection() {
   const stats = [
-    { label: "Carteira analisada", value: "94%", note: "leitura de recebiveis" },
-    { label: "Risco protegido", value: "baixo", note: "decisao acompanhada" },
-    { label: "Pagamento", value: "D+1", note: "operacoes elegiveis" },
+    { label: "Carteira analisada", value: "94%", note: "leitura minuciosa de recebíveis" },
+    { label: "Risco protegido", value: "baixo", note: "decisão acompanhada de perto" },
+    { label: "Pagamento", value: "D+1", note: "nas operações elegíveis" },
   ];
 
   return (
@@ -829,18 +829,18 @@ function WebGLEngineSection() {
       </div>
       <div className="webgl-engine-copy gsap-reveal">
         <span>Motor financeiro</span>
-        <h2>Analise, protecao e capital em um fluxo claro.</h2>
+        <h2>Análise, proteção e capital em um único fluxo claro.</h2>
         <p>
-          Uma leitura visual da operacao: carteira validada, risco acompanhado e liberacao organizada para a empresa vender sem perder previsibilidade.
+          Enxergue a operação inteira em um só lugar: carteira validada, risco monitorado e capital liberado com a previsibilidade que a sua empresa precisa para crescer.
         </p>
         <div className="engine-actions">
           <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer">
-            Diagnosticar minha operacao
+            Diagnosticar minha operação
             <ArrowUpRight className="h-4 w-4" />
           </a>
           <div className="engine-mini-proof">
             <strong>3 etapas</strong>
-            <span>analise, estrutura e caixa</span>
+            <span>análise, estrutura e caixa</span>
           </div>
         </div>
       </div>
@@ -849,8 +849,8 @@ function WebGLEngineSection() {
         <div className="engine-human-card float-layer">
           <img src="/assets/credmais-comerciante.jpg" alt="" loading="lazy" decoding="async" />
           <div className="engine-human-caption">
-            <span>analise humana + tecnologia</span>
-            <strong>Operacao acompanhada</strong>
+            <span>análise humana + tecnologia</span>
+            <strong>Operação acompanhada</strong>
           </div>
         </div>
         <div className="engine-flow-line" aria-hidden="true">
@@ -874,17 +874,17 @@ function WebGLEngineSection() {
 
 function PinnedJourneySection() {
   const steps = [
-    { title: "Diagnostico", text: "Leitura da carteira, prazos, boletos, contratos e urgencia de capital.", image: "/assets/credmais-pessoal.jpg" },
-    { title: "Estrutura", text: "A Credmais define melhor solucao, taxa, garantia e documentos necessarios.", image: "/assets/home-journey-estrutura.png" },
-    { title: "Liberacao", text: "O caixa entra com acompanhamento para a empresa vender e operar sem pausa.", image: "/assets/home-journey-liberacao.png" },
+    { title: "Diagnóstico", text: "Fazemos a leitura da carteira, prazos, boletos, contratos e da real urgência de capital.", image: "/assets/credmais-pessoal.jpg" },
+    { title: "Estrutura", text: "Desenhamos a melhor solução, com taxa, garantia e documentos definidos com transparência.", image: "/assets/home-journey-estrutura.png" },
+    { title: "Liberação", text: "O caixa entra na sua conta com acompanhamento próximo para você vender e operar sem pausa.", image: "/assets/home-journey-liberacao.png" },
   ];
 
   return (
     <section className="home-pin-section">
       <div className="home-pin-copy gsap-reveal">
         <span>Jornada Credmais</span>
-        <h2>Uma esteira que acompanha o scroll e o fluxo da empresa.</h2>
-        <p>Cada etapa foi organizada para parecer simples na tela, mas robusta por tras da operacao.</p>
+        <h2>Do diagnóstico ao caixa em três passos simples.</h2>
+        <p>Uma jornada leve na tela, robusta por trás da operação: cada etapa é conduzida por especialistas com o foco no crescimento da sua empresa.</p>
       </div>
       <div className="home-pin-stack">
         {steps.map((step, index) => (
@@ -903,6 +903,7 @@ function PinnedJourneySection() {
     </section>
   );
 }
+
 
 function MotionRailSection() {
   const items = [
