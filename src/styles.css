@@ -2793,23 +2793,25 @@ li {
 
 .solution-visual-card {
   position: relative;
-  display: grid;
-  min-height: clamp(280px, 28vw, 380px);
-  align-content: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2.5rem;
+  min-height: clamp(280px, 26vw, 340px);
   overflow: hidden;
-  border: 1px solid rgb(255 255 255 / 0.08);
-  border-radius: 32px;
+  border: 1px solid rgb(255 255 255 / 0.06);
+  border-radius: 28px;
   background:
-    radial-gradient(circle at 100% 0%, color-mix(in srgb, var(--accent) 32%, transparent), transparent 40%),
-    linear-gradient(160deg, rgb(255 255 255 / 0.08), rgb(255 255 255 / 0.02));
-  padding-top: 5rem;
+    radial-gradient(circle at 100% 0%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 50%),
+    linear-gradient(160deg, rgb(255 255 255 / 0.05), rgb(255 255 255 / 0.015));
+  padding: clamp(1.75rem, 2.4vw, 2.25rem);
   transition: transform 320ms ease, border-color 320ms ease, box-shadow 320ms ease;
 }
 
 .solution-visual-card:hover {
   transform: translateY(-6px);
-  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
-  box-shadow: 0 40px 120px rgb(0 0 0 / 0.5);
+  border-color: color-mix(in srgb, var(--accent) 35%, transparent);
+  box-shadow: 0 40px 100px rgb(0 0 0 / 0.5);
 }
 
 .solution-visual-card::before {
@@ -2818,10 +2820,9 @@ li {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(140deg, color-mix(in srgb, var(--accent) 45%, transparent), transparent 55%);
+  background: linear-gradient(140deg, color-mix(in srgb, var(--accent) 40%, transparent), transparent 55%);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
   mask-composite: exclude;
   pointer-events: none;
   z-index: 2;
@@ -2830,63 +2831,75 @@ li {
 .solution-visual-card::after {
   content: "";
   position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 42%, rgb(8 5 16 / 0.58));
+  right: -30%;
+  top: -30%;
+  width: 70%;
+  aspect-ratio: 1;
+  border-radius: 999px;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 18%, transparent), transparent 65%);
   pointer-events: none;
 }
 
-.solution-visual-card div {
+.solution-visual-card > div {
   position: relative;
   z-index: 1;
-  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0;
 }
 
 .solution-visual-orb {
-  position: absolute;
-  left: 1.25rem;
-  top: 1.25rem;
-  display: flex;
-  width: 5.25rem;
-  aspect-ratio: 1;
+  position: relative;
+  display: inline-flex;
+  align-self: flex-start;
+  width: 3rem;
+  height: 3rem;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgb(255 255 255 / 0.16);
-  border-radius: 28px;
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  border-radius: 14px;
   background:
-    radial-gradient(circle at 20% 15%, rgb(255 255 255 / 0.2), transparent 36%),
-    color-mix(in srgb, var(--accent) 76%, #0b1628 24%);
-  box-shadow: 0 28px 80px color-mix(in srgb, var(--accent) 26%, transparent);
+    radial-gradient(circle at 30% 25%, rgb(255 255 255 / 0.28), transparent 60%),
+    color-mix(in srgb, var(--accent) 22%, #0b1628 78%);
+  color: color-mix(in srgb, var(--accent) 82%, #ffffff 18%);
+  box-shadow: 0 12px 30px color-mix(in srgb, var(--accent) 26%, transparent);
 }
 
 .solution-visual-orb span {
   position: absolute;
-  right: -0.7rem;
-  bottom: -0.7rem;
+  right: -0.5rem;
+  bottom: -0.5rem;
   display: grid;
-  width: 2.25rem;
-  aspect-ratio: 1;
+  min-width: 1.6rem;
+  height: 1.6rem;
+  padding: 0 0.35rem;
   place-items: center;
   border-radius: 999px;
-  background: #ffffff;
+  background: var(--accent);
   color: #0b1628;
-  font-size: 0.72rem;
-  font-weight: 950;
-  letter-spacing: 0;
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--accent) 40%, transparent);
 }
 
 .solution-visual-card h3 {
-  margin-top: 0.8rem;
-  font-size: clamp(1.7rem, 2.6vw, 2.7rem);
-  font-weight: 950;
-  letter-spacing: -0.055em;
-  line-height: 0.98;
+  margin: 0;
+  font-size: clamp(1.25rem, 1.7vw, 1.55rem);
+  font-weight: 850;
+  letter-spacing: -0.02em;
+  line-height: 1.18;
+  color: #ffffff;
+  text-wrap: balance;
 }
 
 .solution-visual-card p {
-  margin-top: 0.8rem;
-  color: rgb(255 255 255 / 0.64);
-  font-weight: 650;
-  line-height: 1.62;
+  margin: 0;
+  color: rgb(255 255 255 / 0.66);
+  font-size: 0.98rem;
+  font-weight: 500;
+  line-height: 1.6;
 }
 
 .solution-animated {
