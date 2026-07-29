@@ -623,7 +623,7 @@ export function HomePage() {
               <div className="solutions-metrics" aria-label="Indicadores das soluções">
                 <span><strong>5</strong> frentes financeiras integradas</span>
                 <span><strong>D+1</strong> nas operações elegíveis</span>
-                <span><strong>360°</strong> de visão sobre o contas a receber</span>
+                <span><strong>Recuperação</strong> ativa de dívidas em atraso</span>
               </div>
 
               <div className="solutions-scroll-rail" aria-hidden="true">
