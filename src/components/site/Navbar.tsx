@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import logoAsset from "@/assets/credmais-logo-transparent.png.asset.json";
+import logoAsset from "@/assets/credmais-logo.png.asset.json";
+
 
 const mainLinks = [
   { to: "/", label: "INÍCIO" },
