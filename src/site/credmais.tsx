@@ -17,6 +17,16 @@ import railCapital from "@/assets/rail-capital.webp.asset.json";
 import railBoleto from "@/assets/rail-boleto.webp.asset.json";
 import railCrediario from "@/assets/rail-crediario.webp.asset.json";
 import railGestao from "@/assets/rail-gestao.webp.asset.json";
+import brandRecepcao from "@/assets/brand-1.webp.asset.json";
+import brandAssinatura from "@/assets/brand-2.webp.asset.json";
+import brandRooftop from "@/assets/brand-3.webp.asset.json";
+import brandAtendimento from "@/assets/brand-4.webp.asset.json";
+import brandIndustria from "@/assets/brand-5.webp.asset.json";
+import brandVarejo from "@/assets/brand-6.webp.asset.json";
+import brandRestaurante from "@/assets/brand-7.webp.asset.json";
+import brandAgro from "@/assets/brand-8.webp.asset.json";
+import brandPredio from "@/assets/brand-9.webp.asset.json";
+import brandConcessionaria from "@/assets/brand-10.webp.asset.json";
 import { useRouterState } from "@tanstack/react-router";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -71,9 +81,9 @@ type SolutionTheme = {
   faq: { q: string; a: string }[];
 };
 
-const HERO_IMAGE = heroExecutivos.url;
-const ABOUT_IMAGE = "/assets/credmais-campaign-about.png";
-const CONTACT_IMAGE = "/assets/credmais-humanized-finance.png";
+const HERO_IMAGE = brandRooftop.url;
+const ABOUT_IMAGE = brandPredio.url;
+const CONTACT_IMAGE = brandAtendimento.url;
 const LOGO_IMAGE = logoNew.url;
 const CONTACT_EMAIL = "contato@credmaissecuritizadora.com.br";
 const CONTACT_WHATSAPP_DISPLAY = "(11) 94089-3852";
@@ -82,31 +92,31 @@ const CONTACT_CNPJ = "67.859.471/0001-20";
 
 const solutionVisualSets: Partial<Record<string, SolutionVisualSet>> = {
   "antecipacao-de-recebiveis": {
-    hero: heroAntecipacao.url,
+    hero: brandIndustria.url,
     banner: "/assets/page-antecipacao-banner.png",
     flow: "/assets/page-antecipacao-flow.png",
     layout: "capital",
   },
   "boleto-garantido": {
-    hero: heroBoletoGarantido.url,
+    hero: brandRestaurante.url,
     banner: "/assets/page-boleto-banner.png",
     flow: "/assets/page-boleto-flow.png",
     layout: "protection",
   },
   consultoria: {
-    hero: heroConsultoria.url,
+    hero: brandAssinatura.url,
     banner: "/assets/page-consultoria-banner.png",
     flow: "/assets/page-consultoria-flow.png",
     layout: "advisory",
   },
   crediario: {
-    hero: heroCrediario.url,
+    hero: brandConcessionaria.url,
     banner: "/assets/page-crediario-banner.png",
     flow: "/assets/page-crediario-flow.png",
     layout: "retail",
   },
   "gestao-de-contas": {
-    hero: "/assets/page-gestao-hero.png",
+    hero: brandRecepcao.url,
     banner: "/assets/page-gestao-banner.png",
     flow: "/assets/page-gestao-flow.png",
     layout: "control",
@@ -122,7 +132,7 @@ export const solutions: Solution[] = [
     detail: "Compra de recebíveis comerciais com análise objetiva, condições transparentes e liberação ágil para manter sua operação girando.",
     icon: HandCoins,
     bullets: ["Taxas competitivas e sem surpresas", "Análise de duplicatas, boletos e contratos", "Caixa disponível em até 24 horas"],
-    image: cardAntecipacao.url,
+    image: brandAgro.url,
     metric: "Caixa em D+1",
     accent: "#4a7fb5",
   },
@@ -134,7 +144,7 @@ export const solutions: Solution[] = [
     detail: "Uma camada de proteção que blinda seu recebimento, organiza a cobrança e devolve previsibilidade ao contas a receber.",
     icon: FileText,
     bullets: ["Proteção contra inadimplência", "Cobrança acompanhada de ponta a ponta", "Previsibilidade real no contas a receber"],
-    image: cardBoleto.url,
+    image: brandRestaurante.url,
     metric: "Recebimento protegido",
     accent: "#5f93c8",
   },
@@ -146,7 +156,7 @@ export const solutions: Solution[] = [
     detail: "Analisamos contratos, recebíveis, prazos, garantias e rotina financeira para montar um plano executável e aderente ao seu fluxo.",
     icon: LineChart,
     bullets: ["Diagnóstico completo do fluxo de caixa", "Plano de capital de giro com dados", "Reestruturação clara e mensurável"],
-    image: cardConsultoria.url,
+    image: brandAssinatura.url,
     metric: "Decisão com clareza",
     accent: "#3b6fa0",
   },
@@ -158,7 +168,7 @@ export const solutions: Solution[] = [
     detail: "Conectamos sua venda ao financiamento do cliente com análise, documentação e acompanhamento da carteira do início ao fim.",
     icon: CircleDollarSign,
     bullets: ["Mais conversão no ponto de venda", "Jornada simples para o comprador", "Carteira acompanhada e organizada"],
-    image: cardCrediario.url,
+    image: brandVarejo.url,
     metric: "Mais conversão",
     accent: "#2d6fb0",
   },
@@ -170,7 +180,7 @@ export const solutions: Solution[] = [
     detail: "Assumimos o recebimento das suas dívidas com processo estruturado, equipe especializada e acompanhamento transparente, preservando o relacionamento com seu cliente.",
     icon: Workflow,
     bullets: ["Cobrança ativa e estruturada", "Relatórios claros de recuperação", "Preservamos a relação com o cliente"],
-    image: "/assets/solution-gestao-blue.png",
+    image: brandRecepcao.url,
     metric: "Dívidas recebidas por você",
     accent: "#6fa3d4",
   },
@@ -913,7 +923,7 @@ function AboutIntroSection() {
         <p>Humanizamos o crédito e desenhamos estruturas financeiras para empresas evoluírem com previsibilidade. Operação, cobrança e capital deixam de ser blocos separados e passam a trabalhar juntos pelo seu resultado.</p>
       </div>
       <div className="about-intro-media">
-        <img src="/assets/credmais-refer.jpg" alt="" loading="lazy" decoding="async" />
+        <img src={brandPredio.url} alt="" loading="lazy" decoding="async" />
       </div>
       <div className="about-principles">
         {principles.map((item) => (
