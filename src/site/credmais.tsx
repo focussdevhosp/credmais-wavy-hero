@@ -617,7 +617,7 @@ export function HomePage() {
               <p className="solutions-eyebrow">Soluções Credmais</p>
               <h2>Soluções que giram o seu caixa.</h2>
               <p>
-                Uma esteira financeira completa para vender a prazo com segurança, antecipar recebíveis, proteger boletos e organizar contas com previsibilidade real.
+                Uma esteira financeira completa para vender a prazo com segurança, antecipar recebíveis, proteger boletos, organizar contas e recuperar dívidas com previsibilidade real.
               </p>
 
               <div className="solutions-metrics" aria-label="Indicadores das soluções">
