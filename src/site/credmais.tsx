@@ -199,7 +199,7 @@ const testimonials = [
 const homeFaq = [
   {
     q: "Por onde devo começar?",
-    a: "Comece pela sua prioridade: caixa imediato, proteção do boleto, crediário para vender mais, consultoria estratégica ou gestão de contas. Nós indicamos o melhor caminho.",
+    a: "Comece pela sua prioridade: caixa imediato, proteção do boleto, crediário para vender mais, consultoria estratégica, gestão de contas ou recebimento de dívidas. Nós indicamos o melhor caminho.",
   },
   {
     q: "Como funciona a análise antes da proposta?",
