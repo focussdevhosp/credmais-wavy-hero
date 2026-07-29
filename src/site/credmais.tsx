@@ -1,6 +1,6 @@
 import React, { ComponentType, CSSProperties, ReactNode, useEffect, useMemo, useRef, useState } from "react";
-import heroWomanNew from "@/assets/hero-woman-new.png.asset.json";
-import logoNew from "@/assets/credmais-logo-transparent.png.asset.json";
+import logoNew from "@/assets/credmais-logo.png.asset.json";
+
 import baseOperacional from "@/assets/base-operacional.png.asset.json";
 import cardAntecipacao from "@/assets/card-antecipacao.png.asset.json";
 import cardBoleto from "@/assets/boleto-garantido-card.png.asset.json";
