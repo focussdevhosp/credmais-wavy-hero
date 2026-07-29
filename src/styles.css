@@ -4413,6 +4413,10 @@ li {
     transform: none !important;
   }
 
+  .hero-full-image {
+    object-position: 68% center;
+  }
+
   .hero-animated-copy {
     top: clamp(5.9rem, 13svh, 7rem);
     right: 1rem;
