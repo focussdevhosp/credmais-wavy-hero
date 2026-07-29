@@ -932,7 +932,7 @@ function AboutIntroSection() {
         <p>Humanizamos o crédito e desenhamos estruturas financeiras para empresas evoluírem com previsibilidade. Operação, cobrança e capital deixam de ser blocos separados e passam a trabalhar juntos pelo seu resultado.</p>
       </div>
       <div className="about-intro-media">
-        <img src={wide3.url} alt="" loading="lazy" decoding="async" />
+        <img src={baseOperacional.url} alt="" loading="lazy" decoding="async" />
       </div>
       <div className="about-principles">
         {principles.map((item) => (
