@@ -1349,10 +1349,10 @@ function CampaignHero({ image, eyebrow, titleStart, titleBridge, words, descript
       <div className="hero-cta">
         <div className="hero-cta-panel">
           <div className="hero-cta-copy">
-            <span>Operacao Credmais</span>
+            <span>Soluções Credmais</span>
             <p>{ctaText}</p>
           </div>
-          <div className="hero-service-links" aria-label="Servicos Credmais">
+          <div className="hero-service-links" aria-label="Soluções Credmais">
             {solutions.map((solution) => (
               <a key={solution.slug} href={`/${solution.slug}`} style={{ "--accent": solution.accent } as CSSProperties}>
                 {solution.title}
@@ -1364,7 +1364,7 @@ function CampaignHero({ image, eyebrow, titleStart, titleBridge, words, descript
               {buttonText}
               <ArrowUpRight className="h-4 w-4" />
             </a>
-            <small>Resposta pelo canal oficial da Credmais.</small>
+            <small>Atendimento direto pelo canal oficial da Credmais.</small>
           </div>
         </div>
       </div>
