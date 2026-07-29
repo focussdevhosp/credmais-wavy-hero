@@ -4615,6 +4615,7 @@ li {
     object-position: 70% 0%;
     height: 120%;
     max-height: 120%;
+    transform: translateY(5%);
   }
 
   .hero-animated-copy {
