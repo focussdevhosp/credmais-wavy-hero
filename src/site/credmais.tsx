@@ -1,4 +1,5 @@
 import React, { ComponentType, CSSProperties, ReactNode, useEffect, useMemo, useRef, useState } from "react";
+import heroExecutivos from "@/assets/hero-executivos-credmais.webp.asset.json";
 import heroWomanNew from "@/assets/hero-woman-v3.webp.asset.json";
 import heroAntecipacao from "@/assets/hero-antecipacao.webp.asset.json";
 import heroBoletoGarantido from "@/assets/hero-boleto-garantido.webp.asset.json";
@@ -68,7 +69,7 @@ type SolutionTheme = {
   faq: { q: string; a: string }[];
 };
 
-const HERO_IMAGE = heroWomanNew.url;
+const HERO_IMAGE = heroExecutivos.url;
 const ABOUT_IMAGE = "/assets/credmais-campaign-about.png";
 const CONTACT_IMAGE = "/assets/credmais-humanized-finance.png";
 const LOGO_IMAGE = logoNew.url;
@@ -605,7 +606,7 @@ export function HomePage() {
   useHomeMotion();
   return (
     <>
-      <CampaignHero image={HERO_IMAGE} eyebrow="Credmais Securitizadora" titleStart="Venda a prazo." titleBridge="Receba com" words={["liquidez.", "segurança.", "previsibilidade."]} description="Capital para sua empresa crescer sem depender do vencimento dos recebíveis nem da burocracia dos bancos." />
+      <CampaignHero className="home-hero" image={HERO_IMAGE} eyebrow="Credmais Securitizadora" titleStart="Venda a prazo." titleBridge="Receba com" words={["liquidez.", "segurança.", "previsibilidade."]} description="Capital para sua empresa crescer sem depender do vencimento dos recebíveis nem da burocracia dos bancos." />
       <section id="solucoes" className="solutions-showcase relative px-5 py-24 text-[#0b1628] md:px-[8%] md:py-32">
         <div className="solutions-showcase-bg" aria-hidden="true" />
         <div className="relative z-10 mx-auto max-w-7xl">
@@ -936,9 +937,9 @@ export function ContactPage() {
   );
 }
 
-function CampaignHero({ image, eyebrow, titleStart, titleBridge, words, description }: { image: string; eyebrow: string; titleStart: string; titleBridge: string; words: string[]; description: string }) {
+function CampaignHero({ className, image, eyebrow, titleStart, titleBridge, words, description }: { className?: string; image: string; eyebrow: string; titleStart: string; titleBridge: string; words: string[]; description: string }) {
   return (
-    <section className="campaign-hero relative isolate min-h-screen overflow-hidden bg-[#0b1628]">
+    <section className={`campaign-hero relative isolate min-h-screen overflow-hidden bg-[#0b1628] ${className || ""}`}>
       <div className="hero-bg-image absolute inset-0 -z-10" aria-hidden="true">
         <img src={image} alt="" className="hero-full-image" fetchPriority="high" decoding="async" />
       </div>

@@ -102,9 +102,25 @@ li {
   inset: 0;
   z-index: -5;
   background:
-    linear-gradient(90deg, rgb(7 2 12 / 0.18), transparent 42%, rgb(7 2 12 / 0.08)),
-    radial-gradient(circle at 18% 26%, rgb(255 91 0 / 0.18), transparent 34%);
+    linear-gradient(90deg, rgb(7 2 12 / 0.42), transparent 42%, rgb(7 2 12 / 0.18)),
+    radial-gradient(circle at 18% 26%, rgb(255 91 0 / 0.12), transparent 34%);
   pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .campaign-hero::before {
+    background:
+      linear-gradient(90deg, rgb(7 2 12 / 0.62), rgb(7 2 12 / 0.28) 55%, transparent 100%),
+      radial-gradient(circle at 18% 26%, rgb(255 91 0 / 0.08), transparent 34%);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .campaign-hero::before {
+    background:
+      linear-gradient(90deg, rgb(7 2 12 / 0.52), rgb(7 2 12 / 0.22) 50%, transparent 100%),
+      radial-gradient(circle at 18% 26%, rgb(255 91 0 / 0.1), transparent 34%);
+  }
 }
 
 @media (min-width: 768px) {
@@ -4595,8 +4611,8 @@ li {
     transform: none !important;
   }
 
-  .hero-full-image {
-    object-position: 68% center;
+  .home-hero .hero-full-image {
+    object-position: 58% center;
   }
 
   .hero-animated-copy {
