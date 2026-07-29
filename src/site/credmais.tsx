@@ -388,7 +388,7 @@ export function SiteHeader() {
           </span>
         </a>
 
-        <div className="hidden items-center gap-8 text-[11px] font-black uppercase tracking-[0.2em] md:flex">
+        <div className="hidden items-center gap-4 text-[11px] font-black uppercase tracking-[0.18em] md:flex lg:gap-8 lg:tracking-[0.2em]">
           <NavLink href="/" active={pathname === "/"} scrolled={scrolled}>Início</NavLink>
           <SolutionsDropdown pathname={pathname} scrolled={scrolled} />
           <NavLink href="/sobre" active={pathname === "/sobre"} scrolled={scrolled}>Sobre</NavLink>
@@ -399,7 +399,7 @@ export function SiteHeader() {
           href={CONTACT_WHATSAPP_URL}
           target="_blank"
           rel="noreferrer"
-          className="hidden items-center justify-center rounded-full bg-white px-6 py-2.5 text-[11px] font-black uppercase tracking-[0.18em] !text-[#142946] shadow-[0_10px_28px_-12px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-[1px] hover:bg-white/90 active:scale-[0.98] md:inline-flex"
+          className="hidden shrink-0 items-center justify-center rounded-full bg-white px-4 py-2.5 text-[10px] font-black uppercase tracking-[0.14em] !text-[#142946] shadow-[0_10px_28px_-12px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-[1px] hover:bg-white/90 active:scale-[0.98] md:inline-flex lg:px-6 lg:text-[11px] lg:tracking-[0.18em]"
         >
           Simular agora
         </a>
