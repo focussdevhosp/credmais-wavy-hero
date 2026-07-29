@@ -1098,7 +1098,6 @@ export function SolutionPage({ solution }: { solution: Solution }) {
           </div>
         </div>
       </section>
-      <SolutionThemeMosaic solution={solution} theme={theme} visualSet={visualSet} />
       <SolutionOperatingPanel solution={solution} theme={theme} visualSet={visualSet} />
       <SolutionExperience solution={solution} theme={theme} visualSet={visualSet} />
       <SolutionFaqSection solution={solution} theme={theme} />
@@ -1129,31 +1128,6 @@ function SolutionProofStrip({ solution, theme }: { solution: Solution; theme: So
   );
 }
 
-function SolutionThemeMosaic({ solution, theme, visualSet }: { solution: Solution; theme: SolutionTheme; visualSet: SolutionVisualSet }) {
-  return (
-    <section className={`solution-theme-mosaic solution-theme-${visualSet.layout}`} style={{ "--accent": solution.accent } as CSSProperties}>
-      <div className="solution-theme-copy solution-animated">
-        <div className="solution-theme-signal float-layer" aria-hidden="true">
-          <span />
-          <span />
-          <span />
-        </div>
-        <span>{solution.title}</span>
-        <h2>{theme.promise}</h2>
-        <div className="solution-theme-badge">{solution.metric}</div>
-      </div>
-      <div className="solution-theme-cases">
-        {theme.cases.map((item, index) => (
-          <article key={item.title} className="solution-theme-case solution-animated">
-            <span>{String(index + 1).padStart(2, "0")}</span>
-            <h3>{item.title}</h3>
-            <p>{item.text}</p>
-          </article>
-        ))}
-      </div>
-    </section>
-  );
-}
 
 function SolutionOperatingPanel({ solution, theme, visualSet }: { solution: Solution; theme: SolutionTheme; visualSet: SolutionVisualSet }) {
   const Icon = solution.icon;
