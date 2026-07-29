@@ -793,6 +793,14 @@ function SolutionOperatingPanel({ solution, theme, visualSet }: { solution: Solu
         <span>Plano operacional</span>
         <h2>{theme.operatingTitle}</h2>
         <p>{theme.operatingText}</p>
+        <ul className="solution-operating-bullets">
+          {solution.bullets.map((bullet) => (
+            <li key={bullet}>
+              <CheckCircle2 className="h-5 w-5" />
+              <span>{bullet}</span>
+            </li>
+          ))}
+        </ul>
         <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer">
           Quero estruturar {solution.title}
           <ArrowUpRight className="h-4 w-4" />
