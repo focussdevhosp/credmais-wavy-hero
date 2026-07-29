@@ -742,7 +742,7 @@ export function HomePage() {
   useHomeMotion();
   return (
     <>
-      <CampaignHero image={HERO_IMAGE} eyebrow="Credmais Securitizadora" titleStart="Venda a prazo." titleBridge="Receba com" words={["liquidez.", "segurança.", "previsibilidade."]} description="Capital para sua empresa crescer sem depender do vencimento dos recebíveis nem da burocracia dos bancos." ctaText="Antecipe recebíveis, proteja boletos, organize contas e venda mais com crédito estruturado — sem depender de banco próprio." buttonText="Quero meu diagnóstico gratuito" buttonHref={CONTACT_WHATSAPP_URL} />
+      <CampaignHero image={HERO_IMAGE} eyebrow="Credmais Securitizadora" titleStart="Venda a prazo." titleBridge="Receba com" words={["liquidez.", "segurança.", "previsibilidade."]} description="Capital para sua empresa crescer sem depender do vencimento dos recebíveis nem da burocracia dos bancos." />
       <HomeProofSection />
       <WebGLEngineSection />
       <PinnedJourneySection />
@@ -1078,7 +1078,7 @@ export function SolutionPage({ solution }: { solution: Solution }) {
 
   return (
     <>
-      <CampaignHero image={visualSet.hero} eyebrow={solution.metric} titleStart={copy.titleStart} titleBridge={copy.titleBridge} words={copy.words} description={solution.summary} ctaText={`${solution.headline} Avaliamos documentos, risco, prazo e a melhor estrutura para sua operação — sem burocracia bancária.`} buttonText={`Quero contratar ${solution.title}`} buttonHref={CONTACT_WHATSAPP_URL} />
+      <CampaignHero image={visualSet.hero} eyebrow={solution.metric} titleStart={copy.titleStart} titleBridge={copy.titleBridge} words={copy.words} description={solution.summary} />
       <SolutionProofStrip solution={solution} theme={theme} />
       <section className={`solution-detail-intro solution-detail-${visualSet.layout}`} style={{ "--accent": solution.accent } as CSSProperties}>
         <div className="solution-detail-shell">
@@ -1284,7 +1284,7 @@ function SolutionFaqSection({ solution, theme }: { solution: Solution; theme: So
 export function AboutPage() {
   return (
     <>
-      <CampaignHero image={ABOUT_IMAGE} eyebrow="Sobre a Credmais" titleStart="Crédito humano." titleBridge="Crescimento com" words={["confiança.", "clareza.", "parceria."]} description="Uma securitizadora criada para simplificar o capital, proteger operações e caminhar junto com sua empresa em cada fase do crescimento." ctaText="Fomento, recebíveis, boletos, crediário, consultoria e gestão de contas para empresas que buscam previsibilidade financeira." buttonText="Falar com a Credmais" buttonHref={CONTACT_WHATSAPP_URL} />
+      <CampaignHero image={ABOUT_IMAGE} eyebrow="Sobre a Credmais" titleStart="Crédito humano." titleBridge="Crescimento com" words={["confiança.", "clareza.", "parceria."]} description="Uma securitizadora criada para simplificar o capital, proteger operações e caminhar junto com sua empresa em cada fase do crescimento." />
       <AboutIntroSection />
       <ContactSection compact />
     </>
@@ -1326,13 +1326,13 @@ function AboutIntroSection() {
 export function ContactPage() {
   return (
     <>
-      <CampaignHero image={CONTACT_IMAGE} eyebrow="Fale com a Credmais" titleStart="Vamos conversar." titleBridge="Sua empresa com" words={["capital.", "apoio.", "direção."]} description="Conte para nós o que sua empresa precisa. Avaliamos o cenário e apresentamos a melhor estrutura para o seu fluxo financeiro." ctaText="Envie o seu desafio: caixa imediato, boleto protegido, crédito para vender mais, consultoria ou organização de contas." buttonText="Chamar no WhatsApp" buttonHref={CONTACT_WHATSAPP_URL} />
+      <CampaignHero image={CONTACT_IMAGE} eyebrow="Fale com a Credmais" titleStart="Vamos conversar." titleBridge="Sua empresa com" words={["capital.", "apoio.", "direção."]} description="Conte para nós o que sua empresa precisa. Avaliamos o cenário e apresentamos a melhor estrutura para o seu fluxo financeiro." />
       <ContactSection compact />
     </>
   );
 }
 
-function CampaignHero({ image, eyebrow, titleStart, titleBridge, words, description, ctaText, buttonText, buttonHref }: { image: string; eyebrow: string; titleStart: string; titleBridge: string; words: string[]; description: string; ctaText: string; buttonText: string; buttonHref: string }) {
+function CampaignHero({ image, eyebrow, titleStart, titleBridge, words, description }: { image: string; eyebrow: string; titleStart: string; titleBridge: string; words: string[]; description: string }) {
   return (
     <section className="campaign-hero relative isolate min-h-screen overflow-hidden bg-[#0b1628]">
       <div className="hero-bg-image absolute inset-0 -z-10" aria-hidden="true">
@@ -1349,32 +1349,6 @@ function CampaignHero({ image, eyebrow, titleStart, titleBridge, words, descript
           </span>
         </h1>
         <p>{description}</p>
-      </div>
-      <div className="hero-cta">
-        <div className="hero-cta-panel">
-          <div className="hero-cta-copy">
-            <span>Soluções Credmais</span>
-            <p>{ctaText}</p>
-          </div>
-          <div className="hero-cta-action">
-            <a href={buttonHref} className="hero-cta-button" target={buttonHref.startsWith("http") ? "_blank" : undefined} rel={buttonHref.startsWith("http") ? "noreferrer" : undefined}>
-              {buttonText}
-              <ArrowUpRight className="h-4 w-4" />
-            </a>
-            <small>Atendimento direto pelo canal oficial da Credmais.</small>
-          </div>
-          <div className="hero-service-links" aria-label="Soluções Credmais">
-            {solutions.map((solution) => {
-              const Icon = solution.icon;
-              return (
-                <a key={solution.slug} href={`/${solution.slug}`} className={solution.slug} style={{ "--accent": solution.accent } as CSSProperties}>
-                  <Icon className="h-3.5 w-3.5" />
-                  {solution.title}
-                </a>
-              );
-            })}
-          </div>
-        </div>
       </div>
     </section>
   );
