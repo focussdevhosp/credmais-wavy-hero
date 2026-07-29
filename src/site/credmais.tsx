@@ -218,7 +218,6 @@ const solutionThemes: Record<string, SolutionTheme> = {
     ],
     audience: "Para empresas que vendem a prazo e não podem parar de comprar, pagar folha, repor estoque ou expandir enquanto esperam o vencimento.",
     operatingTitle: "Liquidez imediata sem comprometer sua política comercial.",
-    operatingTitle: "Liquidez imediata sem comprometer sua política comercial.",
     operatingText: "Mostramos o caminho do recebível até o caixa com foco em velocidade, margem preservada e previsibilidade a cada operação.",
     operating: [
       { title: "Escolha do lote", text: "Você decide quais recebíveis antecipar e preserva os demais para o fluxo futuro." },
