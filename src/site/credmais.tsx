@@ -1067,7 +1067,7 @@ export function SolutionPage({ solution }: { solution: Solution }) {
         </div>
       </section>
       <SolutionOperatingPanel solution={solution} theme={theme} visualSet={visualSet} />
-      <SolutionExperience solution={solution} theme={theme} visualSet={visualSet} />
+      <SolutionExperience solution={solution} visualSet={visualSet} />
       <SolutionFaqSection solution={solution} theme={theme} />
       <ContactSection compact />
     </>
@@ -1126,13 +1126,8 @@ function SolutionOperatingPanel({ solution, theme, visualSet }: { solution: Solu
   );
 }
 
-function SolutionExperience({ solution, theme, visualSet }: { solution: Solution; theme: SolutionTheme; visualSet: SolutionVisualSet }) {
+function SolutionExperience({ solution, visualSet }: { solution: Solution; visualSet: SolutionVisualSet }) {
   const Icon = solution.icon;
-  const visuals = [
-    { title: solution.metric, text: solution.headline },
-    { title: "Atendimento humano", text: "Consultores acompanham sua empresa em cada etapa, com clareza e sem enrolação." },
-    { title: "Operação organizada", text: "Visão integrada de recebíveis, risco, contas e oportunidades comerciais em um só lugar." },
-  ];
 
   return (
     <div className={`solution-experience solution-layout-${visualSet.layout}`} style={{ "--accent": solution.accent } as CSSProperties}>
@@ -1159,23 +1154,6 @@ function SolutionExperience({ solution, theme, visualSet }: { solution: Solution
             <small>agenda acompanhada</small>
           </div>
         </div>
-      </section>
-
-
-      <section className="solution-visual-grid">
-        {visuals.map((item, index) => (
-          <article key={item.title} className="solution-visual-card solution-animated">
-            <div className="solution-visual-orb" aria-hidden="true">
-              <Icon className="h-6 w-6" />
-              <span>{String(index + 1).padStart(2, "0")}</span>
-            </div>
-            <div>
-              <span>Credmais</span>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </div>
-          </article>
-        ))}
       </section>
     </div>
   );
