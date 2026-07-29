@@ -1,17 +1,17 @@
 import React, { ComponentType, CSSProperties, ReactNode, useEffect, useMemo, useRef, useState } from "react";
-import heroWomanNew from "@/assets/hero-woman-v3.png.asset.json";
+import heroWomanNew from "@/assets/hero-woman-v3.webp.asset.json";
 import logoNew from "@/assets/credmais-logo.png.asset.json";
 
 
-import baseOperacional from "@/assets/base-operacional.png.asset.json";
-import cardAntecipacao from "@/assets/card-antecipacao.png.asset.json";
-import cardBoleto from "@/assets/boleto-garantido-card.png.asset.json";
-import cardConsultoria from "@/assets/consultoria-card.png.asset.json";
-import cardCrediario from "@/assets/crediario-card.png.asset.json";
-import railCapital from "@/assets/rail-capital.png.asset.json";
-import railBoleto from "@/assets/rail-boleto.png.asset.json";
-import railCrediario from "@/assets/rail-crediario.png.asset.json";
-import railGestao from "@/assets/rail-gestao.png.asset.json";
+import baseOperacional from "@/assets/base-operacional.webp.asset.json";
+import cardAntecipacao from "@/assets/card-antecipacao.webp.asset.json";
+import cardBoleto from "@/assets/boleto-garantido-card.webp.asset.json";
+import cardConsultoria from "@/assets/consultoria-card.webp.asset.json";
+import cardCrediario from "@/assets/crediario-card.webp.asset.json";
+import railCapital from "@/assets/rail-capital.webp.asset.json";
+import railBoleto from "@/assets/rail-boleto.webp.asset.json";
+import railCrediario from "@/assets/rail-crediario.webp.asset.json";
+import railGestao from "@/assets/rail-gestao.webp.asset.json";
 import { useRouterState } from "@tanstack/react-router";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -1334,7 +1334,7 @@ function CampaignHero({ image, eyebrow, titleStart, titleBridge, words, descript
   return (
     <section className="campaign-hero relative isolate min-h-screen overflow-hidden bg-[#0b1628]">
       <div className="hero-bg-image absolute inset-0 -z-10" aria-hidden="true">
-        <img src={image} alt="" className="hero-full-image" />
+        <img src={image} alt="" className="hero-full-image" fetchPriority="high" decoding="async" />
       </div>
       <div className="hero-animated-copy">
         <span>{eyebrow}</span>

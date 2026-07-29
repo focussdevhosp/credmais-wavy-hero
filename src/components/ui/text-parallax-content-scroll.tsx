@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
-import parallax1 from "@/assets/parallax/parallax-new-1.png.asset.json";
-import parallax2 from "@/assets/parallax/parallax-new-2.png.asset.json";
-import parallax3 from "@/assets/parallax/parallax-new-3.png.asset.json";
+import parallax1 from "@/assets/parallax/parallax-new-1.webp.asset.json";
+import parallax2 from "@/assets/parallax/parallax-new-2.webp.asset.json";
+import parallax3 from "@/assets/parallax/parallax-new-3.webp.asset.json";
 
 const IMG_PADDING = 8;
 

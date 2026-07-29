@@ -2,9 +2,9 @@ import { useRef, useState, type ReactNode } from "react";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
-import parallax1 from "@/assets/parallax/parallax-new-1.png.asset.json";
-import parallax2 from "@/assets/parallax/parallax-new-2.png.asset.json";
-import parallax3 from "@/assets/parallax/parallax-new-3.png.asset.json";
+import parallax1 from "@/assets/parallax/parallax-new-1.webp.asset.json";
+import parallax2 from "@/assets/parallax/parallax-new-2.webp.asset.json";
+import parallax3 from "@/assets/parallax/parallax-new-3.webp.asset.json";
 
 type StickyScrollContent = {
   title: string;
