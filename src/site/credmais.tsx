@@ -1067,7 +1067,7 @@ export function SolutionPage({ solution }: { solution: Solution }) {
         </div>
       </section>
       <SolutionOperatingPanel solution={solution} theme={theme} visualSet={visualSet} />
-      <SolutionExperience solution={solution} theme={theme} visualSet={visualSet} />
+      <SolutionExperience solution={solution} visualSet={visualSet} />
       <SolutionFaqSection solution={solution} theme={theme} />
       <ContactSection compact />
     </>
@@ -1126,7 +1126,7 @@ function SolutionOperatingPanel({ solution, theme, visualSet }: { solution: Solu
   );
 }
 
-function SolutionExperience({ solution, theme, visualSet }: { solution: Solution; theme: SolutionTheme; visualSet: SolutionVisualSet }) {
+function SolutionExperience({ solution, visualSet }: { solution: Solution; visualSet: SolutionVisualSet }) {
   const Icon = solution.icon;
 
   return (
