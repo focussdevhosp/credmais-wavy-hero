@@ -1043,27 +1043,27 @@ export function SolutionPage({ solution }: { solution: Solution }) {
     "antecipacao-de-recebiveis": {
       titleStart: "Antecipe vendas.",
       titleBridge: "Receba com",
-      words: ["liquidez.", "folego.", "controle."],
+      words: ["liquidez.", "fôlego.", "controle."],
     },
     "boleto-garantido": {
       titleStart: "Boleto protegido.",
       titleBridge: "Venda com",
-      words: ["seguranca.", "garantia.", "controle."],
+      words: ["segurança.", "garantia.", "controle."],
     },
     consultoria: {
       titleStart: "Decida melhor.",
-      titleBridge: "Cresca com",
-      words: ["estrategia.", "clareza.", "dados."],
+      titleBridge: "Cresça com",
+      words: ["estratégia.", "clareza.", "dados."],
     },
     crediario: {
       titleStart: "Parcele mais.",
       titleBridge: "Venda com",
-      words: ["crediario.", "conversao.", "controle."],
+      words: ["crediário.", "conversão.", "controle."],
     },
     "gestao-de-contas": {
       titleStart: "Organize contas.",
       titleBridge: "Tenha",
-      words: ["visao clara.", "fluxo.", "controle."],
+      words: ["visão clara.", "fluxo.", "controle."],
     },
   };
   const copy = heroCopy[solution.slug] ?? {
@@ -1074,7 +1074,7 @@ export function SolutionPage({ solution }: { solution: Solution }) {
 
   return (
     <>
-      <CampaignHero image={visualSet.hero} eyebrow={solution.metric} titleStart={copy.titleStart} titleBridge={copy.titleBridge} words={copy.words} description={solution.summary} ctaText={`${solution.headline} A Credmais avalia documentos, risco, prazo e melhor estrutura para sua operacao, sem modelo de banco proprio.`} buttonText={`Avaliar ${solution.title}`} buttonHref={CONTACT_WHATSAPP_URL} />
+      <CampaignHero image={visualSet.hero} eyebrow={solution.metric} titleStart={copy.titleStart} titleBridge={copy.titleBridge} words={copy.words} description={solution.summary} ctaText={`${solution.headline} Avaliamos documentos, risco, prazo e a melhor estrutura para sua operação — sem burocracia bancária.`} buttonText={`Quero contratar ${solution.title}`} buttonHref={CONTACT_WHATSAPP_URL} />
       <SolutionProofStrip solution={solution} theme={theme} />
       <section className={`solution-detail-intro solution-detail-${visualSet.layout}`} style={{ "--accent": solution.accent } as CSSProperties}>
         <div className="solution-detail-shell">
