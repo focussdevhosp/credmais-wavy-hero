@@ -424,7 +424,7 @@ export function SiteHeader() {
             href={CONTACT_WHATSAPP_URL}
             target="_blank"
             rel="noreferrer"
-            className="mt-1 inline-flex items-center justify-center rounded-full bg-[#142946] px-5 py-3 text-sm font-black uppercase tracking-[0.16em] text-white"
+            className="mt-1 inline-flex items-center justify-center rounded-full bg-[#142946] px-5 py-3 text-sm font-black uppercase tracking-[0.16em] !text-white"
           >
             Simular agora
           </a>
