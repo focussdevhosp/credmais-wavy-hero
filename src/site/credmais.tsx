@@ -243,7 +243,6 @@ const solutionThemes: Record<string, SolutionTheme> = {
     ],
     audience: "Para empresas que vendem por boleto e querem receber com segurança, sem travar a venda para os clientes.",
     operatingTitle: "Uma camada de proteção para vender por boleto com muito menos risco.",
-    operatingTitle: "Uma camada de proteção para vender por boleto com muito menos risco.",
     operatingText: "Emissão, análise de risco e acompanhamento em um só processo — para você saber exatamente onde reduzimos sua incerteza.",
     operating: [
       { title: "Política de risco clara", text: "Avaliamos cliente, valor, prazo e histórico antes de garantir cada boleto." },
@@ -268,7 +267,6 @@ const solutionThemes: Record<string, SolutionTheme> = {
       { value: "Dados", label: "para decidir com confiança" },
     ],
     audience: "Para empresas que precisam entender qual estrutura financeira faz sentido antes de contratar qualquer capital.",
-    operatingTitle: "Diagnóstico financeiro para decidir antes de contratar capital.",
     operatingTitle: "Diagnóstico financeiro para decidir antes de contratar capital.",
     operatingText: "Uma leitura estratégica com cenários, prioridades e um plano de execução — não apenas um relatório com recomendações genéricas.",
     operating: [
@@ -295,7 +293,6 @@ const solutionThemes: Record<string, SolutionTheme> = {
     ],
     audience: "Para empresas que querem vender mais oferecendo parcelamento direto ao cliente final, sem fricção e sem burocracia bancária.",
     operatingTitle: "Parcelamento como ferramenta comercial — nunca como improviso.",
-    operatingTitle: "Parcelamento como ferramenta comercial — nunca como improviso.",
     operatingText: "Uma jornada clara de venda, aprovação e acompanhamento para você faturar mais sem perder de vista a carteira.",
     operating: [
       { title: "Oferta no momento certo", text: "O parcelamento entra em cena quando o preço à vista trava a decisão do cliente." },
@@ -320,7 +317,6 @@ const solutionThemes: Record<string, SolutionTheme> = {
       { value: "Conciliação", label: "de entradas, saídas e previsões" },
     ],
     audience: "Para empresas que precisam enxergar contas a receber, contas a pagar e conciliação em uma rotina simples e confiável.",
-    operatingTitle: "Rotina financeira visível para agir antes de o problema aparecer.",
     operatingTitle: "Rotina financeira visível para agir antes de o problema aparecer.",
     operatingText: "Entradas, saídas, previsão e decisão conectadas em um único painel de controle — sem planilhas soltas.",
     operating: [
