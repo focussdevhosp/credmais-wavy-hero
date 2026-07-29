@@ -61,11 +61,9 @@ type SolutionVisualSet = {
 type SolutionTheme = {
   proof: { value: string; label: string }[];
   audience: string;
-  promise: string;
   operatingTitle: string;
   operatingText: string;
   operating: { title: string; text: string }[];
-  cases: { title: string; text: string }[];
   flow: { title: string; text: string }[];
   faq: { q: string; a: string }[];
 };
@@ -219,18 +217,13 @@ const solutionThemes: Record<string, SolutionTheme> = {
       { value: "Carteira", label: "analisada antes de cada oferta" },
     ],
     audience: "Para empresas que vendem a prazo e não podem parar de comprar, pagar folha, repor estoque ou expandir enquanto esperam o vencimento.",
-    promise: "Transforme duplicatas, boletos e contratos em capital de giro com condições transparentes e leitura clara de risco.",
+    operatingTitle: "Liquidez imediata sem comprometer sua política comercial.",
     operatingTitle: "Liquidez imediata sem comprometer sua política comercial.",
     operatingText: "Mostramos o caminho do recebível até o caixa com foco em velocidade, margem preservada e previsibilidade a cada operação.",
     operating: [
       { title: "Escolha do lote", text: "Você decide quais recebíveis antecipar e preserva os demais para o fluxo futuro." },
       { title: "Custo transparente", text: "Taxa, prazo e valor líquido aparecem antes de qualquer assinatura." },
       { title: "Caixa direcionado", text: "Use o capital para estoque, folha, fornecedor ou campanha sem perder controle do ciclo." },
-    ],
-    cases: [
-      { title: "Estoque e compras", text: "Aproveite oportunidades comerciais com capital dos recebíveis futuros, sem travar o giro." },
-      { title: "Folha e fornecedores", text: "Antecipe entradas previstas para honrar compromissos sem recorrer a crédito caro." },
-      { title: "Expansão comercial", text: "Continue vendendo a prazo mantendo capital para financiar o crescimento." },
     ],
     flow: [
       { title: "Análise", text: "Recebíveis, cedentes, sacados e prazos entram na primeira leitura da carteira." },
@@ -250,18 +243,13 @@ const solutionThemes: Record<string, SolutionTheme> = {
       { value: "Previsão", label: "mais confiável no recebimento" },
     ],
     audience: "Para empresas que vendem por boleto e querem receber com segurança, sem travar a venda para os clientes.",
-    promise: "Blindamos seu fluxo de caixa, melhoramos a previsibilidade e reduzimos a pressão da inadimplência do dia a dia.",
+    operatingTitle: "Uma camada de proteção para vender por boleto com muito menos risco.",
     operatingTitle: "Uma camada de proteção para vender por boleto com muito menos risco.",
     operatingText: "Emissão, análise de risco e acompanhamento em um só processo — para você saber exatamente onde reduzimos sua incerteza.",
     operating: [
       { title: "Política de risco clara", text: "Avaliamos cliente, valor, prazo e histórico antes de garantir cada boleto." },
       { title: "Cobrança acompanhada", text: "O status do boleto deixa de ficar solto na rotina e ganha ritmo profissional." },
       { title: "Previsibilidade real", text: "Você planeja entradas com muito menos surpresa e menor exposição à inadimplência." },
-    ],
-    cases: [
-      { title: "Venda B2B", text: "Mantenha prazo comercial para seus clientes sem carregar todo o risco sozinho." },
-      { title: "Carteira pulverizada", text: "Organize cobrança e recebimento quando há muitos boletos em aberto." },
-      { title: "Fluxo previsível", text: "Planeje o caixa com muito mais clareza sobre riscos e datas." },
     ],
     flow: [
       { title: "Emissão", text: "Consideramos dados do boleto, do cliente e do histórico de recebimento." },
@@ -281,18 +269,13 @@ const solutionThemes: Record<string, SolutionTheme> = {
       { value: "Dados", label: "para decidir com confiança" },
     ],
     audience: "Para empresas que precisam entender qual estrutura financeira faz sentido antes de contratar qualquer capital.",
-    promise: "Traduzimos recebíveis, contratos, prazos e garantias em uma estratégia financeira clara e pronta para executar.",
+    operatingTitle: "Diagnóstico financeiro para decidir antes de contratar capital.",
     operatingTitle: "Diagnóstico financeiro para decidir antes de contratar capital.",
     operatingText: "Uma leitura estratégica com cenários, prioridades e um plano de execução — não apenas um relatório com recomendações genéricas.",
     operating: [
       { title: "Mapa do fluxo", text: "Entradas, saídas, contratos e gargalos aparecem em uma única leitura integrada." },
       { title: "Cenários comparados", text: "Você entende o impacto de cada prazo, taxa, garantia e da real necessidade de capital." },
       { title: "Plano de ação", text: "A recomendação vira uma sequência prática para ajustar rotina, crédito e resultado." },
-    ],
-    cases: [
-      { title: "Reestruturação", text: "Organize compromissos, vencimentos e fontes de capital com muito menos improviso." },
-      { title: "Crescimento", text: "Planeje a expansão sem comprometer margem, caixa e relação com clientes." },
-      { title: "Decisão de crédito", text: "Compare alternativas com custo, prazo e impacto operacional lado a lado." },
     ],
     flow: [
       { title: "Raio-X", text: "Mapeamento do fluxo, contratos, recebíveis e gargalos de caixa." },
@@ -312,18 +295,13 @@ const solutionThemes: Record<string, SolutionTheme> = {
       { value: "Carteira", label: "acompanhada de perto" },
     ],
     audience: "Para empresas que querem vender mais oferecendo parcelamento direto ao cliente final, sem fricção e sem burocracia bancária.",
-    promise: "Amplie o ticket médio, aumente a conversão e mantenha o controle total sobre a carteira de crediário gerada.",
+    operatingTitle: "Parcelamento como ferramenta comercial — nunca como improviso.",
     operatingTitle: "Parcelamento como ferramenta comercial — nunca como improviso.",
     operatingText: "Uma jornada clara de venda, aprovação e acompanhamento para você faturar mais sem perder de vista a carteira.",
     operating: [
       { title: "Oferta no momento certo", text: "O parcelamento entra em cena quando o preço à vista trava a decisão do cliente." },
       { title: "Aprovação simples", text: "Dados e documentos tratados em uma jornada rápida para o comprador dizer sim." },
       { title: "Carteira sob controle", text: "Você vende mais mantendo visibilidade total sobre parcelas e recebimentos." },
-    ],
-    cases: [
-      { title: "Varejo e serviços", text: "Ofereça prazo ao comprador sem depender de uma jornada bancária longa e desgastante." },
-      { title: "Ticket maior", text: "Converta compras maiores em parcelas acessíveis e feche mais vendas." },
-      { title: "Venda assistida", text: "Sua equipe comercial ganha uma opção clara para fechar oportunidades no balcão." },
     ],
     flow: [
       { title: "Proposta", text: "O cliente escolhe o parcelamento dentro de regras comerciais e financeiras definidas por você." },
@@ -343,18 +321,13 @@ const solutionThemes: Record<string, SolutionTheme> = {
       { value: "Conciliação", label: "de entradas, saídas e previsões" },
     ],
     audience: "Para empresas que precisam enxergar contas a receber, contas a pagar e conciliação em uma rotina simples e confiável.",
-    promise: "Menos ruído operacional, mais clareza sobre o caixa antes de qualquer decisão importante.",
+    operatingTitle: "Rotina financeira visível para agir antes de o problema aparecer.",
     operatingTitle: "Rotina financeira visível para agir antes de o problema aparecer.",
     operatingText: "Entradas, saídas, previsão e decisão conectadas em um único painel de controle — sem planilhas soltas.",
     operating: [
       { title: "Consolidação", text: "Contas, prazos e pendências saem de leituras dispersas e entram em uma base única." },
       { title: "Conciliação", text: "Reduzimos divergências entre o que foi vendido, recebido e pago no dia a dia." },
       { title: "Decisão diária", text: "A visão do fluxo mostra quando antecipar, proteger, renegociar ou segurar o caixa." },
-    ],
-    cases: [
-      { title: "Rotina diária", text: "Acompanhe entradas, saídas e pendências sem depender de planilhas frágeis." },
-      { title: "Previsão de caixa", text: "Tenha visão clara do que entra, do que vence e do que exige ação." },
-      { title: "Operação integrada", text: "Conecte recebíveis, boletos, contas e oportunidades de capital em um mesmo lugar." },
     ],
     flow: [
       { title: "Organização", text: "Mapeamento de contas, categorias, prazos e responsáveis." },
