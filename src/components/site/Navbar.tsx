@@ -62,10 +62,10 @@ export function Navbar() {
               : "border-white/25 bg-[#142946]/70 shadow-[0_8px_32px_-16px_rgba(0,0,0,0.25)]",
           ].join(" ")}
         >
-          {/* Logo em pill branco */}
+          {/* Logo transparente */}
           <Link
             to="/"
-            className="flex shrink-0 items-center gap-2 rounded-full bg-white px-3 py-1.5 shadow-sm md:px-4 md:py-2"
+            className="flex shrink-0 items-center gap-2 rounded-full px-3 py-1.5 md:px-4 md:py-2"
           >
             <img
               src={logoAsset.url}
