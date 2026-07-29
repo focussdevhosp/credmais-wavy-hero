@@ -12,6 +12,8 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader, SiteFooter } from "@/site/credmais";
+import { Toaster } from "@/components/ui/sonner";
+
 
 
 function NotFoundComponent() {
@@ -140,8 +142,10 @@ function RootComponent() {
           <Outlet />
         </main>
         <SiteFooter />
+        <Toaster position="top-center" richColors />
       </div>
     </QueryClientProvider>
+
   );
 }
 
