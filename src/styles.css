@@ -4733,9 +4733,28 @@ li {
   }
 
   .solution-floating-card {
-    max-width: calc(100% - 1.5rem);
+    max-width: calc(100% - 2rem);
     border-radius: 18px;
-    padding: 0.78rem;
+    padding: 0.78rem 1rem;
+    gap: 0.6rem;
+  }
+
+  .solution-floating-card-icon {
+    width: 2.1rem;
+    border-radius: 12px;
+  }
+
+  .solution-floating-card strong,
+  .solution-floating-card span {
+    font-size: 1rem;
+  }
+
+  .solution-floating-card small {
+    font-size: 0.62rem;
+  }
+
+  .solution-floating-card-b {
+    align-items: flex-start;
   }
 
   .motion-rail-track {
