@@ -111,24 +111,24 @@ const solutionVisualSets: Partial<Record<string, SolutionVisualSet>> = {
 export const solutions: Solution[] = [
   {
     slug: "antecipacao-de-recebiveis",
-    title: "Antecipacao de Recebiveis",
+    title: "Antecipação de Recebíveis",
     headline: "Transforme vendas a prazo em caixa hoje.",
-    summary: "Vendeu a prazo? Receba a vista. A Credmais encurta o ciclo financeiro para sua empresa investir onde importa.",
-    detail: "Compra de recebiveis comerciais com analise objetiva, documentacao clara e pagamento agil.",
+    summary: "Antecipe duplicatas, boletos e contratos com análise justa e liberação rápida — sem esperar o vencimento para operar.",
+    detail: "Compra de recebíveis comerciais com análise objetiva, condições transparentes e liberação ágil para manter sua operação girando.",
     icon: HandCoins,
-    bullets: ["Taxas competitivas", "Analise de duplicatas, boletos e contratos", "Fluxo de caixa imediato"],
+    bullets: ["Taxas competitivas e sem surpresas", "Análise de duplicatas, boletos e contratos", "Caixa disponível em até 24 horas"],
     image: cardAntecipacao.url,
-    metric: "Caixa imediato",
+    metric: "Caixa em D+1",
     accent: "#ddbd70",
   },
   {
     slug: "boleto-garantido",
     title: "Boleto Garantido",
-    headline: "Recebimento garantido, sem risco de inadimplencia.",
-    summary: "Seguranca para vender com boleto e reduzir o impacto financeiro de atrasos e inadimplencia.",
-    detail: "Proteja o recebimento da operacao e simplifique a gestao de risco comercial.",
+    headline: "Venda por boleto com a segurança de receber.",
+    summary: "Reduza a inadimplência, planeje o caixa e mantenha o crédito comercial sem carregar o risco sozinho.",
+    detail: "Uma camada de proteção que blinda seu recebimento, organiza a cobrança e devolve previsibilidade ao contas a receber.",
     icon: FileText,
-    bullets: ["Risco reduzido de perda", "Gestao de cobranca inclusa", "Previsibilidade no contas a receber"],
+    bullets: ["Proteção contra inadimplência", "Cobrança acompanhada de ponta a ponta", "Previsibilidade real no contas a receber"],
     image: cardBoleto.url,
     metric: "Recebimento protegido",
     accent: "#c9a84c",
@@ -136,75 +136,76 @@ export const solutions: Solution[] = [
   {
     slug: "consultoria",
     title: "Consultoria",
-    headline: "Estruturacao financeira sob medida.",
-    summary: "Especialistas para desenhar a melhor estrutura de capital para o momento real do seu negocio.",
-    detail: "Avaliamos contratos, recebiveis, prazos, garantias e rotina financeira para montar uma estrategia aderente ao fluxo.",
+    headline: "Estrutura financeira sob medida para crescer.",
+    summary: "Especialistas ao seu lado para desenhar a estrutura de capital ideal para o momento real do seu negócio.",
+    detail: "Analisamos contratos, recebíveis, prazos, garantias e rotina financeira para montar um plano executável e aderente ao seu fluxo.",
     icon: LineChart,
-    bullets: ["Diagnostico de fluxo", "Estrategia de capital de giro", "Reestruturacao com dados"],
+    bullets: ["Diagnóstico completo do fluxo de caixa", "Plano de capital de giro com dados", "Reestruturação clara e mensurável"],
     image: cardConsultoria.url,
-    metric: "Decisao orientada",
+    metric: "Decisão com clareza",
     accent: "#1e3a5f",
   },
   {
     slug: "crediario",
-    title: "Crediario",
-    headline: "Ofereca parcelamento ao seu cliente final.",
-    summary: "Venda mais com parcelamento direto, sem uma jornada bancaria pesada para o comprador.",
-    detail: "Conecte sua venda ao financiamento do cliente final com analise, documentacao e acompanhamento da carteira.",
+    title: "Crediário",
+    headline: "Ofereça parcelamento e venda mais.",
+    summary: "Parcele direto para o cliente final e aumente sua conversão, sem depender de uma jornada bancária pesada.",
+    detail: "Conectamos sua venda ao financiamento do cliente com análise, documentação e acompanhamento da carteira do início ao fim.",
     icon: CircleDollarSign,
-    bullets: ["Parcelamento para vender mais", "Jornada simples", "Acompanhamento de carteira"],
+    bullets: ["Mais conversão no ponto de venda", "Jornada simples para o comprador", "Carteira acompanhada e organizada"],
     image: cardCrediario.url,
-    metric: "Mais conversao",
+    metric: "Mais conversão",
     accent: "#2d4a6e",
   },
   {
     slug: "gestao-de-contas",
-    title: "Gestao de Contas",
-    headline: "Controle e conciliacao do seu fluxo.",
-    summary: "Controle total do contas a receber e a pagar em uma rotina mais clara, intuitiva e humana.",
-    detail: "Apoio no controle operacional de contas, conciliacoes e previsoes para melhorar a tomada de decisao financeira.",
+    title: "Gestão de Contas",
+    headline: "Controle total do seu fluxo financeiro.",
+    summary: "Acompanhe contas a receber, contas a pagar e conciliação em uma rotina clara, sem depender de planilhas soltas.",
+    detail: "Apoio operacional para consolidar contas, conciliar movimentações e prever o caixa antes das decisões críticas.",
     icon: Workflow,
-    bullets: ["Rotina organizada", "Conciliacao de recebiveis", "Visao clara de entradas e saidas"],
+    bullets: ["Rotina financeira organizada", "Conciliação sem retrabalho", "Visão 360° de entradas e saídas"],
     image: "/assets/solution-gestao-blue.png",
     metric: "Fluxo sob controle",
     accent: "#3b6fa0",
   },
 ];
 
-const trustProfiles = ["Varejo B2B", "Servicos", "Distribuicao", "Industria", "Operacoes recorrentes"];
+const trustProfiles = ["Varejo B2B", "Serviços", "Distribuição", "Indústria", "Operações recorrentes"];
 
 const testimonials = [
   {
-    quote: "A Credmais ajudou nossa equipe a entender onde antecipar, onde proteger e como planejar o caixa sem improviso.",
+    quote: "A Credmais nos ajudou a enxergar onde antecipar, onde proteger e como planejar o caixa sem improviso. Ganhamos tempo e previsibilidade.",
     author: "Diretoria financeira",
-    company: "Empresa de distribuicao",
+    company: "Empresa de distribuição",
   },
   {
-    quote: "O atendimento deixou a operacao simples: recebiveis, boletos e prazos ficaram claros antes da decisao.",
-    author: "Gestao comercial",
-    company: "Rede de servicos",
+    quote: "O atendimento simplificou nossa operação: recebíveis, boletos e prazos ficaram claros antes de qualquer decisão. Recomendo.",
+    author: "Gestão comercial",
+    company: "Rede de serviços",
   },
   {
-    quote: "Conseguimos oferecer prazo ao cliente mantendo visibilidade sobre risco, cobranca e recebimento.",
-    author: "Operacao financeira",
+    quote: "Passamos a oferecer prazo ao cliente com total visibilidade sobre risco, cobrança e recebimento. Vendemos mais com menos dor de cabeça.",
+    author: "Operação financeira",
     company: "Varejo B2B",
   },
 ];
 
 const homeFaq = [
   {
-    q: "Qual solucao escolher primeiro?",
-    a: "Comece pelo objetivo: caixa imediato, protecao do boleto, crediario para vender mais, consultoria ou gestao de contas.",
+    q: "Por onde devo começar?",
+    a: "Comece pela sua prioridade: caixa imediato, proteção do boleto, crediário para vender mais, consultoria estratégica ou gestão de contas. Nós indicamos o melhor caminho.",
   },
   {
-    q: "A Credmais avalia minha operacao antes da proposta?",
-    a: "Sim. A analise considera recebiveis, prazos, documentos, risco e necessidade real de capital.",
+    q: "Como funciona a análise antes da proposta?",
+    a: "Avaliamos recebíveis, prazos, documentos, risco e a real necessidade de capital do seu negócio. Só apresentamos condições depois de entender sua operação.",
   },
   {
-    q: "Preciso contratar todos os servicos?",
-    a: "Nao. A estrutura pode comecar por uma frente e evoluir conforme a rotina financeira da empresa.",
+    q: "Preciso contratar todas as soluções?",
+    a: "Não. Você começa por onde faz mais sentido agora e amplia conforme a rotina financeira da empresa evolui.",
   },
 ];
+
 
 const solutionThemes: Record<string, SolutionTheme> = {
   "antecipacao-de-recebiveis": {
