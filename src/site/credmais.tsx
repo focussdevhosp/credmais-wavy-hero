@@ -165,14 +165,14 @@ export const solutions: Solution[] = [
   {
     slug: "gestao-de-contas",
     title: "Gestão de Contas",
-    headline: "Controle total do seu fluxo financeiro.",
-    summary: "Acompanhe contas a receber, contas a pagar e conciliação em uma rotina clara, sem depender de planilhas soltas.",
-    detail: "Apoio operacional para consolidar contas, conciliar movimentações e prever o caixa antes das decisões críticas.",
+    headline: "Recebemos suas dívidas para você.",
+    summary: "Deixe a cobrança conosco. Cuidamos da recuperação dos seus recebíveis com estratégia, respeito e resultados, enquanto você foca no crescimento do negócio.",
+    detail: "Assumimos o recebimento das suas dívidas com processo estruturado, equipe especializada e acompanhamento transparente, preservando o relacionamento com seu cliente.",
     icon: Workflow,
-    bullets: ["Rotina financeira organizada", "Conciliação sem retrabalho", "Visão 360° de entradas e saídas"],
+    bullets: ["Cobrança ativa e estruturada", "Relatórios claros de recuperação", "Preservamos a relação com o cliente"],
     image: "/assets/solution-gestao-blue.png",
-    metric: "Fluxo sob controle",
-    accent: "#3b6fa0",
+    metric: "Dívidas recebidas por você",
+    accent: "#ddbd70",
   },
 ];
 
