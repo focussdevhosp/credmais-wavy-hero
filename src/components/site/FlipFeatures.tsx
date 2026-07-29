@@ -2,9 +2,9 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Clock3, LineChart, ShieldCheck, ArrowRight } from "lucide-react";
-import featureVelocity from "@/assets/feature-velocity.png.asset.json";
-import featureScale from "@/assets/feature-scale.png.asset.json";
-import featureTrust from "@/assets/feature-trust.png.asset.json";
+import featureVelocity from "@/assets/feature-velocity.webp.asset.json";
+import featureScale from "@/assets/feature-scale.webp.asset.json";
+import featureTrust from "@/assets/feature-trust.webp.asset.json";
 
 gsap.registerPlugin(ScrollTrigger);
 
