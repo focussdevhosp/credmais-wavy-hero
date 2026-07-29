@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logoAsset from "@/assets/credmais-logo-transparent.png.asset.json";
+import logoAsset from "@/assets/credmais-logo.png.asset.json";
 
 export function Footer() {
   return (
