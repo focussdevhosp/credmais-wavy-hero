@@ -1,5 +1,6 @@
 import React, { ComponentType, CSSProperties, ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import heroWomanNew from "@/assets/hero-woman-v3.webp.asset.json";
+import heroAntecipacao from "@/assets/hero-antecipacao.webp.asset.json";
 import logoNew from "@/assets/credmais-logo.png.asset.json";
 
 
