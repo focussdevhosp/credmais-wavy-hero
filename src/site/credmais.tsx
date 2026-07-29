@@ -1,5 +1,5 @@
 import React, { ComponentType, CSSProperties, ReactNode, useEffect, useMemo, useRef, useState } from "react";
-import heroExecutivos from "@/assets/hero-executivos-credmais.webp.asset.json";
+import heroExecutivos from "@/assets/hero-credmais-rooftop.webp.asset.json";
 import heroWomanNew from "@/assets/hero-woman-v3.webp.asset.json";
 import heroAntecipacao from "@/assets/hero-antecipacao.webp.asset.json";
 import heroBoletoGarantido from "@/assets/hero-boleto-garantido.webp.asset.json";
