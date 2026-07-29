@@ -4394,7 +4394,6 @@ li {
 .solution-banner-copy,
 .solution-banner-media,
 .solution-flow-step,
-.solution-visual-card,
 .home-pin-card,
 .home-proof-media,
 .engine-human-card,
@@ -4406,7 +4405,6 @@ li {
 .solution-theme-case h3,
 .solution-operating-card h3,
 .solution-flow-step h3,
-.solution-visual-card h3,
 .home-pin-card h3,
 .motion-rail-card h3,
 .hero-animated-copy h1 {
@@ -4590,7 +4588,6 @@ li {
   .solution-operating-panel,
   .solution-page-banner,
   .solution-flow-section,
-  .solution-visual-grid,
   .solution-faq-section,
   .home-proof-shell,
   .webgl-engine,
@@ -4603,7 +4600,6 @@ li {
   .solution-theme-copy,
   .solution-operating-card,
   .solution-flow-step,
-  .solution-visual-card,
   .solution-faq-item,
   .home-proof-card,
   .testimonial-card {
@@ -4626,8 +4622,7 @@ li {
   .solution-bullet-card:first-child span,
   .solution-flow-step h3,
   .solution-operating-card h3,
-  .solution-theme-case h3,
-  .solution-visual-card h3 {
+  .solution-theme-case h3 {
     max-width: 100%;
     font-size: clamp(1.35rem, 7vw, 2.15rem);
     line-height: 1.06;
@@ -4650,8 +4645,7 @@ li {
 
   .solution-flow-step p,
   .solution-operating-card p,
-  .solution-theme-case p,
-  .solution-visual-card p {
+  .solution-theme-case p {
     max-width: none;
     font-size: 0.95rem;
     line-height: 1.55;
