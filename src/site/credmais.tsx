@@ -1184,8 +1184,8 @@ function SolutionExperience({ solution, theme, visualSet }: { solution: Solution
   const Icon = solution.icon;
   const visuals = [
     { title: solution.metric, text: solution.headline },
-    { title: "Atendimento humano", text: "Acompanhamento consultivo para a empresa entender cada etapa." },
-    { title: "Operacao organizada", text: "Visao integrada de recebiveis, risco, contas e oportunidade comercial." },
+    { title: "Atendimento humano", text: "Consultores acompanham sua empresa em cada etapa, com clareza e sem enrolação." },
+    { title: "Operação organizada", text: "Visão integrada de recebíveis, risco, contas e oportunidades comerciais em um só lugar." },
   ];
 
   return (
@@ -1193,12 +1193,12 @@ function SolutionExperience({ solution, theme, visualSet }: { solution: Solution
       <section className="solution-page-banner">
         <div className="solution-banner-copy solution-animated">
           <span>{solution.title}</span>
-          <h2>Escolha a estrutura certa antes do caixa apertar.</h2>
+          <h2>Estruture o financeiro antes do caixa apertar.</h2>
           <p>
-            Se a dor e falta de liquidez, inadimplencia, venda a prazo ou controle financeiro, a Credmais organiza a alternativa certa e acompanha a operacao.
+            Falta de liquidez, inadimplência, venda a prazo ou controle financeiro: qualquer que seja a dor, a Credmais organiza a alternativa certa e acompanha a operação até o resultado.
           </p>
           <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer">
-            Receber orientacao Credmais
+            Falar com um especialista
             <ArrowUpRight className="h-4 w-4" />
           </a>
         </div>
@@ -1258,8 +1258,8 @@ function SolutionFaqSection({ solution, theme }: { solution: Solution; theme: So
   return (
     <section className="solution-faq-section" style={{ "--accent": solution.accent } as CSSProperties}>
       <div className="solution-faq-heading solution-animated">
-        <span>Duvidas frequentes</span>
-        <h2>O que avaliar antes de escolher {solution.title.toLowerCase()}.</h2>
+        <span>Perguntas frequentes</span>
+        <h2>O que você precisa saber antes de contratar {solution.title.toLowerCase()}.</h2>
       </div>
       <div className="solution-faq-list">
         {theme.faq.map((item) => (
@@ -1270,7 +1270,7 @@ function SolutionFaqSection({ solution, theme }: { solution: Solution; theme: So
         ))}
       </div>
       <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer" className="solution-faq-cta">
-        Tirar duvidas no WhatsApp
+        Tirar dúvidas no WhatsApp
         <ArrowUpRight className="h-4 w-4" />
       </a>
     </section>
