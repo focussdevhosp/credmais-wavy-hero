@@ -1219,25 +1219,6 @@ function SolutionExperience({ solution, theme, visualSet }: { solution: Solution
         </div>
       </section>
 
-      <section className="solution-flow-section">
-        <div className="solution-flow-sticky solution-animated">
-          <span>Como funciona</span>
-          <h2>Do pedido ao caixa, sem perder visibilidade.</h2>
-          <p>{solution.detail}</p>
-          <div className="solution-flow-image">
-            <img src={visualSet.flow} alt="" loading="lazy" decoding="async" />
-          </div>
-        </div>
-        <div className="solution-flow-steps">
-          {theme.flow.map((item, index) => (
-            <article key={item.title} className="solution-flow-step solution-animated">
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
 
       <section className="solution-visual-grid">
         {visuals.map((item, index) => (
