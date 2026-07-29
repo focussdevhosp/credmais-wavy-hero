@@ -3974,6 +3974,12 @@ li {
     white-space: normal;
   }
 
+  .hero-cta-action,
+  .contact-submit,
+  .contact-submit-wrap {
+    width: 100%;
+  }
+
   .testimonial-grid,
   .home-faq-section {
     grid-template-columns: 1fr;
