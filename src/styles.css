@@ -2117,9 +2117,9 @@ li {
   align-items: center;
   overflow: hidden;
   background:
-    radial-gradient(ellipse at 8% 0%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 42%),
-    radial-gradient(ellipse at 92% 100%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 48%),
-    linear-gradient(180deg, #08111f 0%, #0b1628 45%, #0a0f1c 100%);
+    radial-gradient(ellipse at 12% 10%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 36%),
+    radial-gradient(ellipse at 88% 90%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 48%),
+    linear-gradient(160deg, #0b1628 0%, #0f1c2e 42%, #0b1628 100%);
   padding: clamp(4rem, 7vw, 7rem) 5vw;
   color: #ffffff;
   grid-template-columns: minmax(18rem, 1fr) minmax(0, 1fr);
@@ -2129,27 +2129,24 @@ li {
   content: "";
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(rgb(255 255 255 / 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(255 255 255 / 0.04) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: radial-gradient(ellipse at 50% 50%, #000 30%, transparent 78%);
-  -webkit-mask-image: radial-gradient(ellipse at 50% 50%, #000 30%, transparent 78%);
+  background:
+    radial-gradient(ellipse at 0% 0%, color-mix(in srgb, var(--accent) 8%, transparent), transparent 42%),
+    radial-gradient(ellipse at 100% 100%, color-mix(in srgb, var(--accent) 5%, transparent), transparent 50%);
   pointer-events: none;
 }
 
 .solution-operating-panel::after {
   content: "";
   position: absolute;
-  right: -8vw;
-  top: 50%;
-  width: min(38vw, 540px);
+  right: -10vw;
+  top: 45%;
+  width: min(42vw, 580px);
   aspect-ratio: 1;
   transform: translateY(-50%);
   border-radius: 999px;
-  background: conic-gradient(from 140deg, color-mix(in srgb, var(--accent) 32%, transparent), transparent 60%, color-mix(in srgb, var(--accent) 18%, transparent));
-  filter: blur(60px);
-  opacity: 0.55;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 22%, transparent), transparent 62%);
+  filter: blur(80px);
+  opacity: 0.6;
   pointer-events: none;
 }
 
@@ -2162,16 +2159,17 @@ li {
 .solution-operating-copy span {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.45rem 0.9rem;
-  border: 1px solid color-mix(in srgb, var(--accent) 38%, transparent);
+  gap: 0.65rem;
+  padding: 0.55rem 1.05rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 42%, transparent);
   border-radius: 999px;
-  background: color-mix(in srgb, var(--accent) 10%, transparent);
-  color: color-mix(in srgb, var(--accent) 82%, #ffffff 18%);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 12%, transparent), color-mix(in srgb, var(--accent) 5%, transparent));
+  color: color-mix(in srgb, var(--accent) 90%, #ffffff 10%);
   font-size: 0.68rem;
   font-weight: 900;
   letter-spacing: 0.28em;
   text-transform: uppercase;
+  box-shadow: 0 8px 30px color-mix(in srgb, var(--accent) 12%, transparent);
 }
 
 .solution-operating-copy span::before {
@@ -2180,56 +2178,57 @@ li {
   height: 6px;
   border-radius: 999px;
   background: var(--accent);
-  box-shadow: 0 0 12px var(--accent);
+  box-shadow: 0 0 12px var(--accent), 0 0 24px color-mix(in srgb, var(--accent) 50%, transparent);
 }
 
 .solution-operating-copy h2 {
-  margin-top: 1.35rem;
+  margin-top: 1.5rem;
   max-width: 44rem;
-  font-size: clamp(2.6rem, 5vw, 5.4rem);
+  font-size: clamp(2.8rem, 5.4vw, 5.8rem);
   font-weight: 950;
-  letter-spacing: -0.055em;
-  line-height: 0.94;
-  background: linear-gradient(180deg, #ffffff 40%, color-mix(in srgb, var(--accent) 60%, #ffffff 40%));
+  letter-spacing: -0.06em;
+  line-height: 0.92;
+  background: linear-gradient(180deg, #ffffff 35%, color-mix(in srgb, var(--accent) 70%, #ffffff 30%));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .solution-operating-copy p {
-  margin-top: 1.35rem;
+  margin-top: 1.5rem;
   max-width: 33rem;
-  color: rgb(255 255 255 / 0.7);
-  font-size: clamp(1rem, 1.4vw, 1.16rem);
+  color: rgb(255 255 255 / 0.82);
+  font-size: clamp(1rem, 1.4vw, 1.18rem);
   font-weight: 500;
-  line-height: 1.72;
+  line-height: 1.75;
 }
 
 .solution-operating-copy a {
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
-  margin-top: 2.25rem;
+  gap: 0.75rem;
+  margin-top: 2.5rem;
   border-radius: 999px;
-  border: 1px solid color-mix(in srgb, var(--accent) 60%, transparent);
-  background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 70%, #ffffff 30%));
-  padding: 1.05rem 1.6rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 65%, transparent);
+  background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 72%, #ffffff 28%));
+  padding: 1.1rem 1.75rem;
   color: #0b1628;
   font-size: 0.76rem;
   font-weight: 900;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   box-shadow:
-    inset 0 1px 0 rgb(255 255 255 / 0.4),
-    0 22px 60px color-mix(in srgb, var(--accent) 34%, transparent);
-  transition: transform 200ms ease, box-shadow 200ms ease;
+    inset 0 1px 0 rgb(255 255 255 / 0.45),
+    0 20px 55px color-mix(in srgb, var(--accent) 38%, transparent);
+  transition: transform 200ms ease, box-shadow 200ms ease, filter 200ms ease;
 }
 
 .solution-operating-copy a:hover {
   transform: translateY(-2px);
+  filter: brightness(1.08);
   box-shadow:
-    inset 0 1px 0 rgb(255 255 255 / 0.55),
-    0 26px 74px color-mix(in srgb, var(--accent) 44%, transparent);
+    inset 0 1px 0 rgb(255 255 255 / 0.6),
+    0 26px 74px color-mix(in srgb, var(--accent) 48%, transparent);
 }
 
 .solution-operating-stack {
@@ -2254,13 +2253,15 @@ li {
   display: grid;
   min-width: 0;
   overflow: hidden;
-  border: 1px solid rgb(255 255 255 / 0.08);
-  border-radius: 26px;
+  border: 1px solid rgb(255 255 255 / 0.1);
+  border-radius: 28px;
   background:
-    linear-gradient(145deg, rgb(255 255 255 / 0.06), rgb(255 255 255 / 0.02));
-  padding: clamp(1.5rem, 2.4vw, 2rem) clamp(1.5rem, 2.4vw, 2rem) clamp(1.5rem, 2.4vw, 2rem) clamp(4.5rem, 6vw, 5.5rem);
-  box-shadow: 0 24px 70px rgb(0 0 0 / 0.28);
-  backdrop-filter: blur(18px);
+    linear-gradient(145deg, rgb(255 255 255 / 0.08), rgb(255 255 255 / 0.02));
+  padding: clamp(1.5rem, 2.4vw, 2.1rem) clamp(1.5rem, 2.4vw, 2.1rem) clamp(1.5rem, 2.4vw, 2.1rem) clamp(4.8rem, 6.2vw, 5.8rem);
+  box-shadow:
+    0 24px 70px rgb(0 0 0 / 0.28),
+    inset 0 1px 0 rgb(255 255 255 / 0.08);
+  backdrop-filter: blur(20px);
   transition: transform 260ms ease, border-color 260ms ease, box-shadow 260ms ease;
 }
 
@@ -2270,36 +2271,41 @@ li {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(140deg, color-mix(in srgb, var(--accent) 50%, transparent), transparent 45%, color-mix(in srgb, var(--accent) 20%, transparent));
+  background: linear-gradient(140deg, color-mix(in srgb, var(--accent) 55%, transparent), transparent 50%, color-mix(in srgb, var(--accent) 18%, transparent));
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-  opacity: 0.7;
+  opacity: 0.85;
   pointer-events: none;
 }
 
 .solution-operating-card:hover {
-  transform: translateY(-4px);
-  border-color: color-mix(in srgb, var(--accent) 35%, transparent);
-  box-shadow: 0 32px 100px rgb(0 0 0 / 0.4);
+  transform: translateY(-5px);
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  box-shadow:
+    0 36px 110px rgb(0 0 0 / 0.42),
+    0 0 40px color-mix(in srgb, var(--accent) 12%, transparent),
+    inset 0 1px 0 rgb(255 255 255 / 0.12);
 }
 
 .solution-operating-card > div {
   position: absolute;
-  left: clamp(1.25rem, 2vw, 1.5rem);
-  top: clamp(1.25rem, 2vw, 1.5rem);
+  left: clamp(1.25rem, 2vw, 1.6rem);
+  top: clamp(1.25rem, 2vw, 1.6rem);
   display: grid;
-  width: 2.75rem;
+  width: 2.9rem;
   aspect-ratio: 1;
   place-items: center;
-  border-radius: 14px;
-  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+  border-radius: 16px;
+  border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
   background:
-    radial-gradient(circle at 30% 25%, rgb(255 255 255 / 0.28), transparent 60%),
-    color-mix(in srgb, var(--accent) 24%, #0b1628 76%);
-  color: color-mix(in srgb, var(--accent) 82%, #ffffff 18%);
-  box-shadow: 0 12px 30px color-mix(in srgb, var(--accent) 28%, transparent);
+    radial-gradient(circle at 30% 25%, rgb(255 255 255 / 0.35), transparent 55%),
+    color-mix(in srgb, var(--accent) 26%, #0b1628 74%);
+  color: color-mix(in srgb, var(--accent) 88%, #ffffff 12%);
+  box-shadow:
+    0 14px 35px color-mix(in srgb, var(--accent) 32%, transparent),
+    inset 0 1px 0 rgb(255 255 255 / 0.15);
 }
 
 .solution-operating-card > div span {
@@ -2307,8 +2313,8 @@ li {
   right: -0.55rem;
   bottom: -0.55rem;
   display: grid;
-  min-width: 1.6rem;
-  height: 1.6rem;
+  min-width: 1.7rem;
+  height: 1.7rem;
   padding: 0 0.35rem;
   place-items: center;
   border-radius: 999px;
@@ -2317,12 +2323,12 @@ li {
   font-size: 0.62rem;
   font-weight: 900;
   letter-spacing: 0.06em;
-  box-shadow: 0 8px 18px color-mix(in srgb, var(--accent) 40%, transparent);
+  box-shadow: 0 8px 22px color-mix(in srgb, var(--accent) 45%, transparent);
 }
 
 .solution-operating-card h3 {
   margin-top: 0.25rem;
-  font-size: clamp(1.35rem, 1.9vw, 1.75rem);
+  font-size: clamp(1.35rem, 1.9vw, 1.8rem);
   font-weight: 850;
   letter-spacing: -0.02em;
   line-height: 1.15;
@@ -2331,12 +2337,12 @@ li {
 }
 
 .solution-operating-card p {
-  margin-top: 0.65rem;
+  margin-top: 0.7rem;
   max-width: 38rem;
-  color: rgb(255 255 255 / 0.68);
+  color: rgb(255 255 255 / 0.78);
   font-size: 0.98rem;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.62;
 }
 
 .solution-operating-protection,
@@ -4298,8 +4304,6 @@ li {
 
 .motion-rail-card p,
 .home-faq-item p,
-.solution-operating-copy p,
-.solution-operating-card p,
 .solution-banner-copy p,
 .solution-flow-sticky p,
 .solution-flow-step p,
@@ -4311,6 +4315,11 @@ li {
 .engine-human-caption span,
 .solution-floating-card small {
   color: rgb(11 22 40 / 0.6);
+}
+
+.solution-operating-copy p,
+.solution-operating-card p {
+  color: rgb(255 255 255 / 0.82);
 }
 
 .engine-dashboard span,
