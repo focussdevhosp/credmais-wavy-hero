@@ -1001,33 +1001,175 @@ function ContactSection({ compact = false }: { compact?: boolean }) {
             );
           })}
         </div>
-        <form className="mt-16 grid gap-10 text-left">
-          <div className="grid gap-10 md:grid-cols-2"><ContactInput placeholder="Seu nome" /><ContactInput placeholder="Seu e-mail" type="email" /></div>
-          <ContactInput placeholder="Sua empresa" />
-          <textarea className="contact-input min-h-36 resize-none" placeholder="Conte sua necessidade: antecipar recebíveis, proteger boleto, organizar contas, vender no crediário ou estruturar capital." />
-          <div className="grid gap-8 pt-4 md:grid-cols-[1fr_auto] md:items-center">
-            <div className="grid gap-3 text-sm text-white/55 md:text-left">
-              <ContactLine icon={Phone} value={`WhatsApp ${CONTACT_WHATSAPP_DISPLAY}`} href={CONTACT_WHATSAPP_URL} />
-              <ContactLine icon={Mail} value={CONTACT_EMAIL} href={`mailto:${CONTACT_EMAIL}`} />
-              <ContactLine icon={FileText} value={`CNPJ ${CONTACT_CNPJ}`} />
-            </div>
-            <div className="contact-submit-wrap">
-              <a href={CONTACT_WHATSAPP_URL} className="contact-submit" target="_blank" rel="noreferrer">
-                Falar pelo WhatsApp
-                <ArrowUpRight className="h-4 w-4" />
-              </a>
-              <small>Ou envie email para {CONTACT_EMAIL}.</small>
-            </div>
-          </div>
-        </form>
+        <ContactForm />
       </div>
     </section>
   );
 }
 
-function ContactInput({ placeholder, type = "text" }: { placeholder: string; type?: string }) {
-  return <input type={type} placeholder={placeholder} className="contact-input" />;
+const contactSchema = z.object({
+  name: z.string().trim().min(2, "Informe seu nome completo.").max(100, "Nome muito longo."),
+  email: z.string().trim().email("Informe um e-mail válido.").max(255, "E-mail muito longo."),
+  phone: z
+    .string()
+    .trim()
+    .min(10, "Informe um telefone com DDD.")
+    .max(20, "Telefone muito longo.")
+    .regex(/^[0-9()+\-\s]+$/, "Use apenas números, espaços, parênteses e traços."),
+  company: z.string().trim().min(2, "Informe o nome da empresa.").max(120, "Nome muito longo."),
+  interest: z.string().trim().min(1, "Escolha uma solução."),
+  message: z.string().trim().min(10, "Conte um pouco mais sobre a necessidade.").max(1000, "Mensagem muito longa."),
+});
+
+type ContactFormValues = z.infer<typeof contactSchema>;
+type ContactErrors = Partial<Record<keyof ContactFormValues, string>>;
+
+const emptyContact: ContactFormValues = { name: "", email: "", phone: "", company: "", interest: "", message: "" };
+
+function ContactForm() {
+  const [values, setValues] = useState<ContactFormValues>(emptyContact);
+  const [errors, setErrors] = useState<ContactErrors>({});
+  const [sending, setSending] = useState(false);
+
+  const update = (field: keyof ContactFormValues) => (value: string) => {
+    setValues((prev) => ({ ...prev, [field]: value }));
+    setErrors((prev) => (prev[field] ? { ...prev, [field]: undefined } : prev));
+  };
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const result = contactSchema.safeParse(values);
+
+    if (!result.success) {
+      const fieldErrors: ContactErrors = {};
+      for (const issue of result.error.issues) {
+        const key = issue.path[0] as keyof ContactFormValues;
+        if (!fieldErrors[key]) fieldErrors[key] = issue.message;
+      }
+      setErrors(fieldErrors);
+      toast.error("Revise os campos destacados antes de enviar.");
+      return;
+    }
+
+    const data = result.data;
+    setSending(true);
+    const text = [
+      "Olá, Credmais! Vim pelo site.",
+      `Nome: ${data.name}`,
+      `Empresa: ${data.company}`,
+      `E-mail: ${data.email}`,
+      `Telefone: ${data.phone}`,
+      `Solução de interesse: ${data.interest}`,
+      `Necessidade: ${data.message}`,
+    ].join("\n");
+
+    window.open(`${CONTACT_WHATSAPP_URL}?text=${encodeURIComponent(text)}`, "_blank", "noopener,noreferrer");
+    toast.success("Tudo certo! Abrimos o WhatsApp com sua mensagem pronta.");
+    setValues(emptyContact);
+    setSending(false);
+  };
+
+  return (
+    <form className="contact-form" onSubmit={handleSubmit} noValidate>
+      <div className="contact-form-grid">
+        <ContactField id="contact-name" label="Nome completo" placeholder="Como podemos te chamar?" value={values.name} onChange={update("name")} error={errors.name} autoComplete="name" />
+        <ContactField id="contact-email" label="E-mail corporativo" type="email" placeholder="voce@suaempresa.com.br" value={values.email} onChange={update("email")} error={errors.email} autoComplete="email" />
+        <ContactField id="contact-phone" label="WhatsApp / Telefone" type="tel" placeholder="(11) 90000-0000" value={values.phone} onChange={update("phone")} error={errors.phone} autoComplete="tel" />
+        <ContactField id="contact-company" label="Empresa" placeholder="Razão social ou nome fantasia" value={values.company} onChange={update("company")} error={errors.company} autoComplete="organization" />
+      </div>
+
+      <div className="contact-field">
+        <label htmlFor="contact-interest">Solução de interesse</label>
+        <select
+          id="contact-interest"
+          className={`contact-input contact-select${errors.interest ? " contact-input-error" : ""}`}
+          value={values.interest}
+          onChange={(event) => update("interest")(event.target.value)}
+          aria-invalid={Boolean(errors.interest)}
+        >
+          <option value="">Selecione uma solução</option>
+          {solutions.map((solution) => (
+            <option key={solution.slug} value={solution.title}>
+              {solution.title}
+            </option>
+          ))}
+          <option value="Ainda não sei">Ainda não sei / quero orientação</option>
+        </select>
+        {errors.interest ? <span className="contact-error">{errors.interest}</span> : null}
+      </div>
+
+      <div className="contact-field">
+        <label htmlFor="contact-message">Sua necessidade</label>
+        <textarea
+          id="contact-message"
+          className={`contact-input contact-textarea${errors.message ? " contact-input-error" : ""}`}
+          placeholder="Conte o cenário atual: valores, prazos e o que precisa resolver."
+          maxLength={1000}
+          value={values.message}
+          onChange={(event) => update("message")(event.target.value)}
+          aria-invalid={Boolean(errors.message)}
+        />
+        <div className="contact-field-foot">
+          {errors.message ? <span className="contact-error">{errors.message}</span> : <span className="contact-hint">Respondemos em até 1 dia útil.</span>}
+          <span className="contact-counter">{values.message.length}/1000</span>
+        </div>
+      </div>
+
+      <div className="contact-form-actions">
+        <div className="grid gap-3 text-sm text-white/55 md:text-left">
+          <ContactLine icon={Phone} value={`WhatsApp ${CONTACT_WHATSAPP_DISPLAY}`} href={CONTACT_WHATSAPP_URL} />
+          <ContactLine icon={Mail} value={CONTACT_EMAIL} href={`mailto:${CONTACT_EMAIL}`} />
+          <ContactLine icon={FileText} value={`CNPJ ${CONTACT_CNPJ}`} />
+        </div>
+        <div className="contact-submit-wrap">
+          <button type="submit" className="contact-submit" disabled={sending}>
+            {sending ? "Enviando..." : "Enviar e falar no WhatsApp"}
+            <ArrowUpRight className="h-4 w-4" />
+          </button>
+          <small>Seus dados são usados apenas para este atendimento.</small>
+        </div>
+      </div>
+    </form>
+  );
 }
+
+function ContactField({
+  id,
+  label,
+  value,
+  onChange,
+  error,
+  placeholder,
+  type = "text",
+  autoComplete,
+}: {
+  id: string;
+  label: string;
+  value: string;
+  onChange: (value: string) => void;
+  error?: string;
+  placeholder?: string;
+  type?: string;
+  autoComplete?: string;
+}) {
+  return (
+    <div className="contact-field">
+      <label htmlFor={id}>{label}</label>
+      <input
+        id={id}
+        type={type}
+        className={`contact-input${error ? " contact-input-error" : ""}`}
+        placeholder={placeholder}
+        value={value}
+        autoComplete={autoComplete}
+        aria-invalid={Boolean(error)}
+        onChange={(event) => onChange(event.target.value)}
+      />
+      {error ? <span className="contact-error">{error}</span> : null}
+    </div>
+  );
+}
+
 
 function ContactLine({ icon: Icon, value, href }: { icon: IconComponent; value: string; href?: string }) {
   const content = (
