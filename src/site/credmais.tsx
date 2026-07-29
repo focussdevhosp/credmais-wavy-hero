@@ -1146,12 +1146,19 @@ function SolutionExperience({ solution, visualSet }: { solution: Solution; visua
         <div className="solution-banner-media solution-animated">
           <img src={visualSet.banner} alt={solution.title} loading="lazy" decoding="async" />
           <div className="solution-floating-card solution-floating-card-a">
-            <Icon className="h-5 w-5" />
-            <strong>{solution.metric}</strong>
+            <div className="solution-floating-card-icon">
+              <Icon className="h-5 w-5" />
+            </div>
+            <div className="solution-floating-card-body">
+              <strong>{solution.metric}</strong>
+              <small>proteção ativa</small>
+            </div>
           </div>
           <div className="solution-floating-card solution-floating-card-b">
-            <span>D+1</span>
-            <small>agenda acompanhada</small>
+            <div className="solution-floating-card-body">
+              <span>D+1</span>
+              <small>agenda acompanhada</small>
+            </div>
           </div>
         </div>
       </section>
