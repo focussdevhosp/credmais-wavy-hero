@@ -393,7 +393,7 @@ export function SiteHeader() {
       {open && (
         <div className="mx-3 mt-2 grid gap-1 overflow-hidden rounded-[24px] border border-[#142946]/10 bg-white p-3 text-[#142946] shadow-2xl md:hidden">
           <MobileLink href="/" onClick={() => setOpen(false)}>Início</MobileLink>
-          <span className="px-4 pt-3 text-[10px] font-black uppercase tracking-[0.24em] text-[#e9f0fa]">Soluções</span>
+          <span className="px-4 pt-3 text-[10px] font-black uppercase tracking-[0.24em] text-[#142946]/45">Soluções</span>
           {solutions.map((solution) => <MobileLink key={solution.slug} href={`/${solution.slug}`} onClick={() => setOpen(false)}>{solution.title}</MobileLink>)}
           <MobileLink href="/sobre" onClick={() => setOpen(false)}>Sobre</MobileLink>
           <MobileLink href="/contato" onClick={() => setOpen(false)}>Contato</MobileLink>
@@ -415,7 +415,7 @@ function SolutionsDropdown({ pathname, scrolled }: { pathname: string; scrolled:
   const active = solutions.some((item) => pathname === `/${item.slug}`);
   return (
     <div className="group relative">
-      <a href="/#solucoes" className={`inline-flex items-center gap-1.5 py-2 transition ${active ? "text-[#e9f0fa]" : scrolled ? "text-[#142946]/70" : "text-white/80"}`}>
+      <a href="/#solucoes" className={`inline-flex items-center gap-1.5 py-2 transition ${active ? (scrolled ? "text-[#142946]" : "text-white") : scrolled ? "text-[#142946]/70" : "text-white/80"}`}>
         Soluções
         <span className="grid h-5 w-5 place-items-center rounded-full border border-current/25 transition group-hover:rotate-180">
           <ChevronDown className="h-3 w-3" />
@@ -424,7 +424,7 @@ function SolutionsDropdown({ pathname, scrolled }: { pathname: string; scrolled:
       <div className="pointer-events-none absolute left-1/2 top-full z-50 w-[340px] -translate-x-1/2 translate-y-3 pt-3 opacity-0 transition duration-200 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
         <div className="solutions-menu solutions-menu-compact overflow-hidden rounded-[24px] border border-white/40 bg-white/98 p-2 text-[#142946] shadow-[0_24px_70px_rgba(0,0,0,0.25)] backdrop-blur-2xl">
           <div className="px-3 pb-2 pt-2">
-            <span className="text-[10px] font-black uppercase tracking-[0.24em] text-[#e9f0fa]">Soluções</span>
+            <span className="text-[10px] font-black uppercase tracking-[0.24em] text-[#142946]/45">Soluções</span>
             <p className="mt-1 text-xs font-bold leading-5 text-[#142946]/60">Escolha a melhor frente para seu fluxo.</p>
           </div>
           <div className="grid gap-1">
@@ -447,7 +447,7 @@ function SolutionsDropdown({ pathname, scrolled }: { pathname: string; scrolled:
 }
 
 function NavLink({ href, active, scrolled, children }: { href: string; active: boolean; scrolled: boolean; children: ReactNode }) {
-  return <a href={href} className={`transition hover:text-[#e9f0fa] ${active ? "text-[#e9f0fa]" : scrolled ? "text-[#142946]/70" : "text-white/80"}`}>{children}</a>;
+  return <a href={href} className={`transition hover:opacity-100 ${active ? (scrolled ? "text-[#142946]" : "text-white") : scrolled ? "text-[#142946]/70" : "text-white/80"}`}>{children}</a>;
 }
 
 function MobileLink({ href, onClick, children }: { href: string; onClick: () => void; children: ReactNode }) {
