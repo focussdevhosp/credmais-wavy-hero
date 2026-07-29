@@ -968,7 +968,7 @@ function ContactSection({ compact = false }: { compact?: boolean }) {
         <p className="mb-6 text-xs font-black uppercase tracking-[0.36em] text-[#ddbd70]">Contato</p>
         <h2 className="text-5xl font-black leading-none tracking-[-0.06em] md:text-8xl">O que sua empresa precisa resolver?</h2>
         <p className="mx-auto mt-6 max-w-3xl text-base font-bold leading-relaxed text-white/58 md:text-lg">
-          Fale com a Credmais sobre falta de caixa, venda a prazo, inadimplência, dificuldade de crédito, boleto garantido, crediário ou gestão de contas — respondemos rápido e com clareza.
+          Fale com a Credmais sobre falta de caixa, venda a prazo, inadimplência, dificuldade de crédito, boleto garantido, crediário, gestão de contas ou recebimento de dívidas — respondemos rápido e com clareza.
         </p>
         <div className="contact-service-grid" aria-label="Soluções para contato">
           {solutions.map((solution) => {
