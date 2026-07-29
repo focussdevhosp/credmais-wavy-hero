@@ -101,35 +101,36 @@ const CONTACT_CNPJ = "67.859.471/0001-20";
 const solutionVisualSets: Partial<Record<string, SolutionVisualSet>> = {
   "antecipacao-de-recebiveis": {
     hero: wide8.url,
-    banner: "/assets/page-antecipacao-banner.png",
-    flow: "/assets/page-antecipacao-flow.png",
+    banner: brandIndustria.url,
+    flow: wide8.url,
     layout: "capital",
   },
   "boleto-garantido": {
     hero: wide1.url,
-    banner: "/assets/page-boleto-banner.png",
-    flow: "/assets/page-boleto-flow.png",
+    banner: brandConcessionaria.url,
+    flow: wide1.url,
     layout: "protection",
   },
   consultoria: {
     hero: wide2.url,
-    banner: "/assets/page-consultoria-banner.png",
-    flow: "/assets/page-consultoria-flow.png",
+    banner: brandAtendimento.url,
+    flow: wide2.url,
     layout: "advisory",
   },
   crediario: {
     hero: wide7.url,
-    banner: "/assets/page-crediario-banner.png",
-    flow: "/assets/page-crediario-flow.png",
+    banner: brandRooftop.url,
+    flow: wide7.url,
     layout: "retail",
   },
   "gestao-de-contas": {
     hero: wide4.url,
-    banner: "/assets/page-gestao-banner.png",
-    flow: "/assets/page-gestao-flow.png",
+    banner: brandPredio.url,
+    flow: wide4.url,
     layout: "control",
   },
 };
+
 
 export const solutions: Solution[] = [
   {
@@ -931,7 +932,7 @@ function AboutIntroSection() {
         <p>Humanizamos o crédito e desenhamos estruturas financeiras para empresas evoluírem com previsibilidade. Operação, cobrança e capital deixam de ser blocos separados e passam a trabalhar juntos pelo seu resultado.</p>
       </div>
       <div className="about-intro-media">
-        <img src={wide3.url} alt="" loading="lazy" decoding="async" />
+        <img src={baseOperacional.url} alt="" loading="lazy" decoding="async" />
       </div>
       <div className="about-principles">
         {principles.map((item) => (
