@@ -1,5 +1,6 @@
 import React, { ComponentType, CSSProperties, ReactNode, useEffect, useMemo, useRef, useState } from "react";
 import heroWomanNew from "@/assets/hero-woman-v3.webp.asset.json";
+import heroAntecipacao from "@/assets/hero-antecipacao.webp.asset.json";
 import logoNew from "@/assets/credmais-logo.png.asset.json";
 
 
@@ -79,7 +80,7 @@ const CONTACT_CNPJ = "67.859.471/0001-20";
 
 const solutionVisualSets: Partial<Record<string, SolutionVisualSet>> = {
   "antecipacao-de-recebiveis": {
-    hero: "/assets/page-antecipacao-hero.png",
+    hero: heroAntecipacao.url,
     banner: "/assets/page-antecipacao-banner.png",
     flow: "/assets/page-antecipacao-flow.png",
     layout: "capital",
