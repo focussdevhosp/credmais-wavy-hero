@@ -4,6 +4,7 @@ import heroWomanNew from "@/assets/hero-woman-v3.webp.asset.json";
 import heroAntecipacao from "@/assets/hero-antecipacao.webp.asset.json";
 import heroBoletoGarantido from "@/assets/hero-boleto-garantido.webp.asset.json";
 import heroConsultoria from "@/assets/hero-consultoria.webp.asset.json";
+import heroCrediario from "@/assets/hero-crediario.webp.asset.json";
 import logoNew from "@/assets/credmais-logo.png.asset.json";
 
 
@@ -99,7 +100,7 @@ const solutionVisualSets: Partial<Record<string, SolutionVisualSet>> = {
     layout: "advisory",
   },
   crediario: {
-    hero: "/assets/page-crediario-hero.png",
+    hero: heroCrediario.url,
     banner: "/assets/page-crediario-banner.png",
     flow: "/assets/page-crediario-flow.png",
     layout: "retail",
