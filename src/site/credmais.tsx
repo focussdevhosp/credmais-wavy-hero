@@ -124,7 +124,7 @@ export const solutions: Solution[] = [
     bullets: ["Taxas competitivas e sem surpresas", "Análise de duplicatas, boletos e contratos", "Caixa disponível em até 24 horas"],
     image: cardAntecipacao.url,
     metric: "Caixa em D+1",
-    accent: "#e9f0fa",
+    accent: "#4a7fb5",
   },
   {
     slug: "boleto-garantido",
@@ -136,7 +136,7 @@ export const solutions: Solution[] = [
     bullets: ["Proteção contra inadimplência", "Cobrança acompanhada de ponta a ponta", "Previsibilidade real no contas a receber"],
     image: cardBoleto.url,
     metric: "Recebimento protegido",
-    accent: "#c8d8ec",
+    accent: "#5f93c8",
   },
   {
     slug: "consultoria",
@@ -148,7 +148,7 @@ export const solutions: Solution[] = [
     bullets: ["Diagnóstico completo do fluxo de caixa", "Plano de capital de giro com dados", "Reestruturação clara e mensurável"],
     image: cardConsultoria.url,
     metric: "Decisão com clareza",
-    accent: "#1e3a5f",
+    accent: "#3b6fa0",
   },
   {
     slug: "crediario",
@@ -160,7 +160,7 @@ export const solutions: Solution[] = [
     bullets: ["Mais conversão no ponto de venda", "Jornada simples para o comprador", "Carteira acompanhada e organizada"],
     image: cardCrediario.url,
     metric: "Mais conversão",
-    accent: "#2d4a6e",
+    accent: "#2d6fb0",
   },
   {
     slug: "gestao-de-contas",
@@ -172,7 +172,7 @@ export const solutions: Solution[] = [
     bullets: ["Cobrança ativa e estruturada", "Relatórios claros de recuperação", "Preservamos a relação com o cliente"],
     image: "/assets/solution-gestao-blue.png",
     metric: "Dívidas recebidas por você",
-    accent: "#e9f0fa",
+    accent: "#6fa3d4",
   },
 ];
 
