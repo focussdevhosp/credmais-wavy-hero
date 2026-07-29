@@ -783,18 +783,6 @@ function getSolutionVisualSet(solution: Solution): SolutionVisualSet {
   };
 }
 
-function SolutionProofStrip({ solution, theme }: { solution: Solution; theme: SolutionTheme }) {
-  return (
-    <section className="solution-proof-strip" style={{ "--accent": solution.accent } as CSSProperties}>
-      {theme.proof.map((item) => (
-        <article key={item.value}>
-          <strong>{item.value}</strong>
-          <span>{item.label}</span>
-        </article>
-      ))}
-    </section>
-  );
-}
 
 
 function SolutionOperatingPanel({ solution, theme, visualSet }: { solution: Solution; theme: SolutionTheme; visualSet: SolutionVisualSet }) {
