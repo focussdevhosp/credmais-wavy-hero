@@ -2417,8 +2417,7 @@ li {
 }
 
 .solution-banner-copy > span,
-.solution-flow-sticky > span,
-.solution-visual-card span {
+.solution-flow-sticky > span {
   color: color-mix(in srgb, var(--accent) 62%, #0b1628 38%);
   font-size: 0.72rem;
   font-weight: 950;
@@ -2696,18 +2695,6 @@ li {
   order: 2;
 }
 
-.solution-layout-advisory .solution-visual-card:nth-child(1),
-.solution-layout-control .solution-visual-card:nth-child(3) {
-  grid-column: span 2;
-}
-
-.solution-layout-retail .solution-visual-grid {
-  grid-template-columns: 0.82fr 1.18fr 0.82fr;
-}
-
-.solution-layout-retail .solution-visual-card:nth-child(2) {
-  min-height: clamp(340px, 34vw, 460px);
-}
 
 .solution-theme-protection .solution-theme-copy {
   min-height: 620px;
