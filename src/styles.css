@@ -3581,9 +3581,6 @@ li {
   min-height: clamp(440px, 48vw, 560px);
 }
 
-.solution-visual-grid {
-  padding-bottom: clamp(4rem, 5.8vw, 6rem);
-}
 
 .contact-service-grid,
 .home-proof-grid,
@@ -3834,8 +3831,7 @@ li {
   }
 
   .solution-page-banner,
-  .solution-flow-section,
-  .solution-visual-grid {
+  .solution-flow-section {
     grid-template-columns: 1fr;
   }
 
@@ -3843,11 +3839,6 @@ li {
   .solution-layout-retail .solution-banner-media,
   .solution-layout-protection .solution-flow-sticky {
     order: initial;
-  }
-
-  .solution-layout-advisory .solution-visual-card:nth-child(1),
-  .solution-layout-control .solution-visual-card:nth-child(3) {
-    grid-column: auto;
   }
 
   .solution-page-banner {
@@ -3880,18 +3871,6 @@ li {
 
   .solution-flow-step {
     min-height: auto;
-  }
-
-  .solution-visual-card {
-    min-height: auto;
-  }
-
-  .solution-visual-card img {
-    height: 240px;
-  }
-
-  .solution-visual-grid {
-    padding-bottom: 4rem;
   }
 
   .solutions-scroll-layout {
@@ -4122,7 +4101,6 @@ li {
   .solution-operating-panel,
   .solution-page-banner,
   .solution-flow-section,
-  .solution-visual-grid,
   .solution-faq-section {
     grid-template-columns: 1fr;
   }
@@ -4261,7 +4239,6 @@ li {
 .solution-banner-copy p,
 .solution-flow-sticky p,
 .solution-flow-step p,
-.solution-visual-card p,
 .contact-submit-wrap small,
 .contact-service-grid small,
 .engine-flow-node,
@@ -4300,7 +4277,6 @@ li {
 .solution-theme-case h3,
 .solution-operating-card h3,
 .solution-flow-step h3,
-.solution-visual-card h3,
 .home-faq-item h3,
 .testimonial-card p,
 .about-principles h3,
@@ -4343,7 +4319,6 @@ li {
 .solution-faq-heading span,
 .solution-banner-copy > span,
 .solution-flow-sticky > span,
-.solution-visual-card span,
 .home-trust-heading span,
 .home-faq-heading span,
 .about-intro-copy span,
@@ -4384,15 +4359,6 @@ li {
     letter-spacing: 0.08em;
   }
 
-  .solution-layout-retail .solution-visual-grid,
-  .solution-layout-control .solution-visual-grid,
-  .solution-layout-advisory .solution-visual-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .solution-layout-retail .solution-visual-card:nth-child(2) {
-    min-height: auto;
-  }
 
   .solution-layout-protection .solution-page-banner,
   .solution-layout-retail .solution-page-banner,
