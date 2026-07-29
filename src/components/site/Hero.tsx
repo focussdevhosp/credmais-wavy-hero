@@ -76,8 +76,7 @@ export function Hero() {
           alt="Executiva gerenciando antecipação de recebíveis"
           className="absolute inset-0 h-full w-full object-cover object-[35%_center]"
         />
-        {/* Leve degradê lateral apenas para legibilidade do texto */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-ink/25" />
       </div>
 
       <div className="container-page relative pb-20 md:pb-28 md:pt-16">
