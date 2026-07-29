@@ -2388,9 +2388,9 @@ li {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 14% 22%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 38%),
-    radial-gradient(circle at 86% 78%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 46%),
-    linear-gradient(180deg, #faf8f4 0%, #f6f0e7 55%, #efe7d8 100%);
+    radial-gradient(circle at 14% 22%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 40%),
+    radial-gradient(circle at 86% 78%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 48%),
+    linear-gradient(180deg, #f9f6f0 0%, #f4ede3 55%, #efe5d4 100%);
   pointer-events: none;
 }
 
