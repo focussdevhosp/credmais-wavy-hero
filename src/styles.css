@@ -1511,15 +1511,6 @@ li {
   overflow: hidden;
 }
 
-.solution-card-media::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(180deg, transparent 40%, rgb(11 22 40 / 0.52)),
-    radial-gradient(circle at 12% 8%, color-mix(in srgb, var(--accent) 28%, transparent), transparent 38%);
-}
-
 .solution-card-media img {
   width: 100%;
   height: 100%;
@@ -1527,6 +1518,7 @@ li {
   object-fit: cover;
   transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
 }
+
 
 .solution-showcase-card:hover .solution-card-media img {
   transform: scale(1.06);
@@ -3342,7 +3334,6 @@ li {
   min-height: clamp(360px, 42vw, 520px);
   overflow: hidden;
   border-radius: 32px;
-  box-shadow: var(--shadow-soft);
 }
 
 .about-intro-media img {
@@ -3350,6 +3341,7 @@ li {
   height: 100%;
   object-fit: cover;
 }
+
 
 .about-principles {
   display: grid;
@@ -3666,10 +3658,10 @@ li {
   border: 1px solid rgb(255 255 255 / 0.16);
   border-radius: 18px;
   background: rgb(255 255 255 / 0.1);
-  box-shadow: 0 42px 140px rgb(0 0 0 / 0.42);
   transform-origin: center bottom;
   backdrop-filter: blur(20px);
 }
+
 
 .stack-card img {
   width: 100%;
