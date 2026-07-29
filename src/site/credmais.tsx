@@ -3,6 +3,7 @@ import heroExecutivos from "@/assets/hero-executivos-credmais.webp.asset.json";
 import heroWomanNew from "@/assets/hero-woman-v3.webp.asset.json";
 import heroAntecipacao from "@/assets/hero-antecipacao.webp.asset.json";
 import heroBoletoGarantido from "@/assets/hero-boleto-garantido.webp.asset.json";
+import heroConsultoria from "@/assets/hero-consultoria.webp.asset.json";
 import logoNew from "@/assets/credmais-logo.png.asset.json";
 
 
@@ -92,7 +93,7 @@ const solutionVisualSets: Partial<Record<string, SolutionVisualSet>> = {
     layout: "protection",
   },
   consultoria: {
-    hero: "/assets/page-consultoria-hero.png",
+    hero: heroConsultoria.url,
     banner: "/assets/page-consultoria-banner.png",
     flow: "/assets/page-consultoria-flow.png",
     layout: "advisory",
