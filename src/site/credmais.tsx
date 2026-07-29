@@ -1356,19 +1356,23 @@ function CampaignHero({ image, eyebrow, titleStart, titleBridge, words, descript
             <span>Soluções Credmais</span>
             <p>{ctaText}</p>
           </div>
-          <div className="hero-service-links" aria-label="Soluções Credmais">
-            {solutions.map((solution) => (
-              <a key={solution.slug} href={`/${solution.slug}`} style={{ "--accent": solution.accent } as CSSProperties}>
-                {solution.title}
-              </a>
-            ))}
-          </div>
           <div className="hero-cta-action">
             <a href={buttonHref} className="hero-cta-button" target={buttonHref.startsWith("http") ? "_blank" : undefined} rel={buttonHref.startsWith("http") ? "noreferrer" : undefined}>
               {buttonText}
               <ArrowUpRight className="h-4 w-4" />
             </a>
             <small>Atendimento direto pelo canal oficial da Credmais.</small>
+          </div>
+          <div className="hero-service-links" aria-label="Soluções Credmais">
+            {solutions.map((solution) => {
+              const Icon = solution.icon;
+              return (
+                <a key={solution.slug} href={`/${solution.slug}`} className={solution.slug} style={{ "--accent": solution.accent } as CSSProperties}>
+                  <Icon className="h-3.5 w-3.5" />
+                  {solution.title}
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>
