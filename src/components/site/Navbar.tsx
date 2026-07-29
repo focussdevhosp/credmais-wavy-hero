@@ -20,10 +20,10 @@ const productLinks = [
 
 const navLinkBase = [
   "relative py-1 text-[11px] font-bold uppercase tracking-[0.22em] text-white/80",
-  "transition-colors duration-200 hover:text-[#ddbd70]",
+  "transition-colors duration-200 hover:text-[#e9f0fa]",
 ].join(" ");
 
-const navLinkActive = "!text-[#ddbd70]";
+const navLinkActive = "!text-[#e9f0fa]";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -123,9 +123,9 @@ export function Navbar() {
                       to={p.to}
                       onClick={() => setProductsOpen(false)}
                       className="group flex flex-col gap-0.5 rounded-xl px-3 py-2.5 transition-colors hover:bg-white/10"
-                      activeProps={{ className: "bg-[#ddbd70]/10" }}
+                      activeProps={{ className: "bg-[#e9f0fa]/10" }}
                     >
-                      <span className="text-sm font-semibold text-white group-hover:text-[#ddbd70]">
+                      <span className="text-sm font-semibold text-white group-hover:text-[#e9f0fa]">
                         {p.label}
                       </span>
                       <span className="text-xs leading-snug text-white/60">
@@ -176,8 +176,8 @@ export function Navbar() {
               <Link
                 to="/"
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-2.5 text-sm font-bold uppercase tracking-wider text-white/80 hover:bg-white/10 hover:text-[#ddbd70]"
-                activeProps={{ className: "bg-[#ddbd70]/10 !text-[#ddbd70]" }}
+                className="rounded-lg px-3 py-2.5 text-sm font-bold uppercase tracking-wider text-white/80 hover:bg-white/10 hover:text-[#e9f0fa]"
+                activeProps={{ className: "bg-[#e9f0fa]/10 !text-[#e9f0fa]" }}
               >
                 INÍCIO
               </Link>
@@ -185,7 +185,7 @@ export function Navbar() {
               <button
                 type="button"
                 onClick={() => setMobileProductsOpen((s) => !s)}
-                className="flex items-center justify-between rounded-lg px-3 py-2.5 text-left text-sm font-bold uppercase tracking-wider text-white/80 hover:bg-white/10 hover:text-[#ddbd70]"
+                className="flex items-center justify-between rounded-lg px-3 py-2.5 text-left text-sm font-bold uppercase tracking-wider text-white/80 hover:bg-white/10 hover:text-[#e9f0fa]"
               >
                 SOLUÇÕES
                 <ChevronDown
@@ -206,7 +206,7 @@ export function Navbar() {
                         setMobileProductsOpen(false);
                       }}
                       className="rounded-lg px-3 py-2 text-sm text-white/70 hover:bg-white/10 hover:text-white"
-                      activeProps={{ className: "bg-[#ddbd70]/10 !text-[#ddbd70]" }}
+                      activeProps={{ className: "bg-[#e9f0fa]/10 !text-[#e9f0fa]" }}
                     >
                       {p.label}
                     </Link>
@@ -221,8 +221,8 @@ export function Navbar() {
                     key={l.to}
                     to={l.to}
                     onClick={() => setOpen(false)}
-                    className="rounded-lg px-3 py-2.5 text-sm font-bold uppercase tracking-wider text-white/80 hover:bg-white/10 hover:text-[#ddbd70]"
-                    activeProps={{ className: "bg-[#ddbd70]/10 !text-[#ddbd70]" }}
+                    className="rounded-lg px-3 py-2.5 text-sm font-bold uppercase tracking-wider text-white/80 hover:bg-white/10 hover:text-[#e9f0fa]"
+                    activeProps={{ className: "bg-[#e9f0fa]/10 !text-[#e9f0fa]" }}
                   >
                     {l.label}
                   </Link>
