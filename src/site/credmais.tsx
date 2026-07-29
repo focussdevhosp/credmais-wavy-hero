@@ -1280,7 +1280,7 @@ function SolutionFaqSection({ solution, theme }: { solution: Solution; theme: So
 export function AboutPage() {
   return (
     <>
-      <CampaignHero image={ABOUT_IMAGE} eyebrow="Sobre a Credmais" titleStart="Credito humano." titleBridge="Crescimento com" words={["confianca.", "clareza.", "parceria."]} description="Uma securitizadora feita para simplificar capital, proteger operacoes e acompanhar empresas em cada fase." ctaText="Fomento, recebiveis, boletos, crediario, consultoria e gestao de contas para empresas que precisam de caixa claro." buttonText="Falar com a Credmais" buttonHref={CONTACT_WHATSAPP_URL} />
+      <CampaignHero image={ABOUT_IMAGE} eyebrow="Sobre a Credmais" titleStart="Crédito humano." titleBridge="Crescimento com" words={["confiança.", "clareza.", "parceria."]} description="Uma securitizadora criada para simplificar o capital, proteger operações e caminhar junto com sua empresa em cada fase do crescimento." ctaText="Fomento, recebíveis, boletos, crediário, consultoria e gestão de contas para empresas que buscam previsibilidade financeira." buttonText="Falar com a Credmais" buttonHref={CONTACT_WHATSAPP_URL} />
       <AboutIntroSection />
       <ContactSection compact />
     </>
@@ -1289,17 +1289,17 @@ export function AboutPage() {
 
 function AboutIntroSection() {
   const principles = [
-    { value: "01", title: "Leitura humana", text: "Antes da proposta, entendemos rotina, prazos e pressao real do caixa." },
-    { value: "02", title: "Estrutura clara", text: "Cada alternativa mostra custo, prazo, risco e impacto operacional." },
-    { value: "03", title: "Acompanhamento", text: "A empresa nao fica sozinha depois da liberacao ou da decisao financeira." },
+    { value: "01", title: "Leitura humana", text: "Antes de qualquer proposta, entendemos a sua rotina, os seus prazos e a real pressão sobre o caixa." },
+    { value: "02", title: "Estrutura clara", text: "Cada alternativa mostra custo, prazo, risco e impacto operacional — sem letras miúdas nem surpresas." },
+    { value: "03", title: "Acompanhamento", text: "A sua empresa nunca fica sozinha depois da liberação. Estamos ao lado, do primeiro passo à revisão da estratégia." },
   ];
 
   return (
     <section className="about-intro-section">
       <div className="about-intro-copy">
         <span>Como trabalhamos</span>
-        <h2>Mais que uma securitizadora, um parceiro de crescimento.</h2>
-        <p>Humanizamos o credito e organizamos estruturas financeiras para empresas evoluirem com previsibilidade, sem deixar operacao, cobranca e capital em blocos separados.</p>
+        <h2>Mais do que uma securitizadora, um parceiro de crescimento.</h2>
+        <p>Humanizamos o crédito e desenhamos estruturas financeiras para empresas evoluírem com previsibilidade. Operação, cobrança e capital deixam de ser blocos separados e passam a trabalhar juntos pelo seu resultado.</p>
       </div>
       <div className="about-intro-media">
         <img src="/assets/credmais-refer.jpg" alt="" loading="lazy" decoding="async" />
@@ -1322,7 +1322,7 @@ function AboutIntroSection() {
 export function ContactPage() {
   return (
     <>
-      <CampaignHero image={CONTACT_IMAGE} eyebrow="Contato Credmais" titleStart="Vamos conversar." titleBridge="Sua empresa com" words={["capital.", "apoio.", "direcao."]} description="Conte o que sua empresa precisa. A Credmais avalia a melhor estrutura para o seu fluxo." ctaText="Envie sua necessidade: caixa imediato, boleto protegido, credito para vender mais, consultoria ou organizacao de contas." buttonText="Chamar no WhatsApp" buttonHref={CONTACT_WHATSAPP_URL} />
+      <CampaignHero image={CONTACT_IMAGE} eyebrow="Fale com a Credmais" titleStart="Vamos conversar." titleBridge="Sua empresa com" words={["capital.", "apoio.", "direção."]} description="Conte para nós o que sua empresa precisa. Avaliamos o cenário e apresentamos a melhor estrutura para o seu fluxo financeiro." ctaText="Envie o seu desafio: caixa imediato, boleto protegido, crédito para vender mais, consultoria ou organização de contas." buttonText="Chamar no WhatsApp" buttonHref={CONTACT_WHATSAPP_URL} />
       <ContactSection compact />
     </>
   );
