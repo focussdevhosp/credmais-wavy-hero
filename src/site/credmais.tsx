@@ -111,24 +111,24 @@ const solutionVisualSets: Partial<Record<string, SolutionVisualSet>> = {
 export const solutions: Solution[] = [
   {
     slug: "antecipacao-de-recebiveis",
-    title: "Antecipacao de Recebiveis",
+    title: "Antecipação de Recebíveis",
     headline: "Transforme vendas a prazo em caixa hoje.",
-    summary: "Vendeu a prazo? Receba a vista. A Credmais encurta o ciclo financeiro para sua empresa investir onde importa.",
-    detail: "Compra de recebiveis comerciais com analise objetiva, documentacao clara e pagamento agil.",
+    summary: "Antecipe duplicatas, boletos e contratos com análise justa e liberação rápida — sem esperar o vencimento para operar.",
+    detail: "Compra de recebíveis comerciais com análise objetiva, condições transparentes e liberação ágil para manter sua operação girando.",
     icon: HandCoins,
-    bullets: ["Taxas competitivas", "Analise de duplicatas, boletos e contratos", "Fluxo de caixa imediato"],
+    bullets: ["Taxas competitivas e sem surpresas", "Análise de duplicatas, boletos e contratos", "Caixa disponível em até 24 horas"],
     image: cardAntecipacao.url,
-    metric: "Caixa imediato",
+    metric: "Caixa em D+1",
     accent: "#ddbd70",
   },
   {
     slug: "boleto-garantido",
     title: "Boleto Garantido",
-    headline: "Recebimento garantido, sem risco de inadimplencia.",
-    summary: "Seguranca para vender com boleto e reduzir o impacto financeiro de atrasos e inadimplencia.",
-    detail: "Proteja o recebimento da operacao e simplifique a gestao de risco comercial.",
+    headline: "Venda por boleto com a segurança de receber.",
+    summary: "Reduza a inadimplência, planeje o caixa e mantenha o crédito comercial sem carregar o risco sozinho.",
+    detail: "Uma camada de proteção que blinda seu recebimento, organiza a cobrança e devolve previsibilidade ao contas a receber.",
     icon: FileText,
-    bullets: ["Risco reduzido de perda", "Gestao de cobranca inclusa", "Previsibilidade no contas a receber"],
+    bullets: ["Proteção contra inadimplência", "Cobrança acompanhada de ponta a ponta", "Previsibilidade real no contas a receber"],
     image: cardBoleto.url,
     metric: "Recebimento protegido",
     accent: "#c9a84c",
@@ -136,233 +136,235 @@ export const solutions: Solution[] = [
   {
     slug: "consultoria",
     title: "Consultoria",
-    headline: "Estruturacao financeira sob medida.",
-    summary: "Especialistas para desenhar a melhor estrutura de capital para o momento real do seu negocio.",
-    detail: "Avaliamos contratos, recebiveis, prazos, garantias e rotina financeira para montar uma estrategia aderente ao fluxo.",
+    headline: "Estrutura financeira sob medida para crescer.",
+    summary: "Especialistas ao seu lado para desenhar a estrutura de capital ideal para o momento real do seu negócio.",
+    detail: "Analisamos contratos, recebíveis, prazos, garantias e rotina financeira para montar um plano executável e aderente ao seu fluxo.",
     icon: LineChart,
-    bullets: ["Diagnostico de fluxo", "Estrategia de capital de giro", "Reestruturacao com dados"],
+    bullets: ["Diagnóstico completo do fluxo de caixa", "Plano de capital de giro com dados", "Reestruturação clara e mensurável"],
     image: cardConsultoria.url,
-    metric: "Decisao orientada",
+    metric: "Decisão com clareza",
     accent: "#1e3a5f",
   },
   {
     slug: "crediario",
-    title: "Crediario",
-    headline: "Ofereca parcelamento ao seu cliente final.",
-    summary: "Venda mais com parcelamento direto, sem uma jornada bancaria pesada para o comprador.",
-    detail: "Conecte sua venda ao financiamento do cliente final com analise, documentacao e acompanhamento da carteira.",
+    title: "Crediário",
+    headline: "Ofereça parcelamento e venda mais.",
+    summary: "Parcele direto para o cliente final e aumente sua conversão, sem depender de uma jornada bancária pesada.",
+    detail: "Conectamos sua venda ao financiamento do cliente com análise, documentação e acompanhamento da carteira do início ao fim.",
     icon: CircleDollarSign,
-    bullets: ["Parcelamento para vender mais", "Jornada simples", "Acompanhamento de carteira"],
+    bullets: ["Mais conversão no ponto de venda", "Jornada simples para o comprador", "Carteira acompanhada e organizada"],
     image: cardCrediario.url,
-    metric: "Mais conversao",
+    metric: "Mais conversão",
     accent: "#2d4a6e",
   },
   {
     slug: "gestao-de-contas",
-    title: "Gestao de Contas",
-    headline: "Controle e conciliacao do seu fluxo.",
-    summary: "Controle total do contas a receber e a pagar em uma rotina mais clara, intuitiva e humana.",
-    detail: "Apoio no controle operacional de contas, conciliacoes e previsoes para melhorar a tomada de decisao financeira.",
+    title: "Gestão de Contas",
+    headline: "Controle total do seu fluxo financeiro.",
+    summary: "Acompanhe contas a receber, contas a pagar e conciliação em uma rotina clara, sem depender de planilhas soltas.",
+    detail: "Apoio operacional para consolidar contas, conciliar movimentações e prever o caixa antes das decisões críticas.",
     icon: Workflow,
-    bullets: ["Rotina organizada", "Conciliacao de recebiveis", "Visao clara de entradas e saidas"],
+    bullets: ["Rotina financeira organizada", "Conciliação sem retrabalho", "Visão 360° de entradas e saídas"],
     image: "/assets/solution-gestao-blue.png",
     metric: "Fluxo sob controle",
     accent: "#3b6fa0",
   },
 ];
 
-const trustProfiles = ["Varejo B2B", "Servicos", "Distribuicao", "Industria", "Operacoes recorrentes"];
+const trustProfiles = ["Varejo B2B", "Serviços", "Distribuição", "Indústria", "Operações recorrentes"];
 
 const testimonials = [
   {
-    quote: "A Credmais ajudou nossa equipe a entender onde antecipar, onde proteger e como planejar o caixa sem improviso.",
+    quote: "A Credmais nos ajudou a enxergar onde antecipar, onde proteger e como planejar o caixa sem improviso. Ganhamos tempo e previsibilidade.",
     author: "Diretoria financeira",
-    company: "Empresa de distribuicao",
+    company: "Empresa de distribuição",
   },
   {
-    quote: "O atendimento deixou a operacao simples: recebiveis, boletos e prazos ficaram claros antes da decisao.",
-    author: "Gestao comercial",
-    company: "Rede de servicos",
+    quote: "O atendimento simplificou nossa operação: recebíveis, boletos e prazos ficaram claros antes de qualquer decisão. Recomendo.",
+    author: "Gestão comercial",
+    company: "Rede de serviços",
   },
   {
-    quote: "Conseguimos oferecer prazo ao cliente mantendo visibilidade sobre risco, cobranca e recebimento.",
-    author: "Operacao financeira",
+    quote: "Passamos a oferecer prazo ao cliente com total visibilidade sobre risco, cobrança e recebimento. Vendemos mais com menos dor de cabeça.",
+    author: "Operação financeira",
     company: "Varejo B2B",
   },
 ];
 
 const homeFaq = [
   {
-    q: "Qual solucao escolher primeiro?",
-    a: "Comece pelo objetivo: caixa imediato, protecao do boleto, crediario para vender mais, consultoria ou gestao de contas.",
+    q: "Por onde devo começar?",
+    a: "Comece pela sua prioridade: caixa imediato, proteção do boleto, crediário para vender mais, consultoria estratégica ou gestão de contas. Nós indicamos o melhor caminho.",
   },
   {
-    q: "A Credmais avalia minha operacao antes da proposta?",
-    a: "Sim. A analise considera recebiveis, prazos, documentos, risco e necessidade real de capital.",
+    q: "Como funciona a análise antes da proposta?",
+    a: "Avaliamos recebíveis, prazos, documentos, risco e a real necessidade de capital do seu negócio. Só apresentamos condições depois de entender sua operação.",
   },
   {
-    q: "Preciso contratar todos os servicos?",
-    a: "Nao. A estrutura pode comecar por uma frente e evoluir conforme a rotina financeira da empresa.",
+    q: "Preciso contratar todas as soluções?",
+    a: "Não. Você começa por onde faz mais sentido agora e amplia conforme a rotina financeira da empresa evolui.",
   },
 ];
+
 
 const solutionThemes: Record<string, SolutionTheme> = {
   "antecipacao-de-recebiveis": {
     proof: [
-      { value: "D+1", label: "caixa em operacoes elegiveis" },
-      { value: "Prazo", label: "transformado em folego imediato" },
-      { value: "Carteira", label: "avaliada antes da oferta" },
+      { value: "D+1", label: "caixa nas operações elegíveis" },
+      { value: "Prazo", label: "convertido em fôlego imediato" },
+      { value: "Carteira", label: "analisada antes de cada oferta" },
     ],
-    audience: "Para empresas que vendem a prazo e precisam manter compra, folha, estoque ou expansao sem esperar vencimentos.",
-    promise: "A antecipacao organiza duplicatas, boletos ou contratos em uma operacao simples, com leitura clara de risco e custo.",
-    operatingTitle: "Prioridade para liquidez sem desmontar sua venda a prazo.",
-    operatingText: "A pagina de antecipacao mostra o caminho do recebivel ate o caixa com foco em velocidade, margem e previsibilidade.",
+    audience: "Para empresas que vendem a prazo e não podem parar de comprar, pagar folha, repor estoque ou expandir enquanto esperam o vencimento.",
+    promise: "Transforme duplicatas, boletos e contratos em capital de giro com condições transparentes e leitura clara de risco.",
+    operatingTitle: "Liquidez imediata sem comprometer sua política comercial.",
+    operatingText: "Mostramos o caminho do recebível até o caixa com foco em velocidade, margem preservada e previsibilidade a cada operação.",
     operating: [
-      { title: "Selecao do lote", text: "Escolha quais recebiveis fazem sentido antecipar e preserve os demais para o fluxo futuro." },
-      { title: "Custo visivel", text: "Veja taxa, prazo e valor liquido antes de assumir a operacao." },
-      { title: "Caixa direcionado", text: "Use o capital para estoque, folha, fornecedor ou campanha sem perder leitura do ciclo." },
+      { title: "Escolha do lote", text: "Você decide quais recebíveis antecipar e preserva os demais para o fluxo futuro." },
+      { title: "Custo transparente", text: "Taxa, prazo e valor líquido aparecem antes de qualquer assinatura." },
+      { title: "Caixa direcionado", text: "Use o capital para estoque, folha, fornecedor ou campanha sem perder controle do ciclo." },
     ],
     cases: [
-      { title: "Estoque e compra", text: "Use recebiveis futuros para aproveitar oportunidades comerciais sem travar o giro." },
-      { title: "Folha e fornecedores", text: "Antecipe entradas previstas para cumprir compromissos sem recorrer a credito pesado." },
-      { title: "Expansao comercial", text: "Venda mais a prazo mantendo capital para operar o crescimento." },
+      { title: "Estoque e compras", text: "Aproveite oportunidades comerciais com capital dos recebíveis futuros, sem travar o giro." },
+      { title: "Folha e fornecedores", text: "Antecipe entradas previstas para honrar compromissos sem recorrer a crédito caro." },
+      { title: "Expansão comercial", text: "Continue vendendo a prazo mantendo capital para financiar o crescimento." },
     ],
     flow: [
-      { title: "Carteira", text: "Recebiveis, cedentes, sacados e prazos entram na primeira leitura." },
-      { title: "Oferta", text: "Taxa, prazo, documentos e valor liquido ficam claros antes da assinatura." },
-      { title: "Caixa", text: "Com tudo validado, a liberacao acontece com acompanhamento da operacao." },
+      { title: "Análise", text: "Recebíveis, cedentes, sacados e prazos entram na primeira leitura da carteira." },
+      { title: "Proposta", text: "Taxa, prazo, documentos e valor líquido ficam claros antes da assinatura." },
+      { title: "Liberação", text: "Com tudo validado, o caixa é liberado com acompanhamento da operação." },
     ],
     faq: [
-      { q: "Preciso antecipar toda a carteira?", a: "Nao. A operacao pode ser montada por lote, prazo ou necessidade de caixa." },
-      { q: "A taxa aparece antes?", a: "Sim. A proposta deixa custo, valor liquido e condicoes visiveis antes da decisao." },
-      { q: "Serve para vendas recorrentes?", a: "Sim. A Credmais pode acompanhar ciclos recorrentes para dar previsibilidade." },
+      { q: "Preciso antecipar toda a carteira?", a: "Não. A operação pode ser montada por lote, prazo ou necessidade específica de caixa." },
+      { q: "A taxa é apresentada antes?", a: "Sim. A proposta mostra custo, valor líquido e condições completas antes da decisão." },
+      { q: "Funciona para vendas recorrentes?", a: "Sim. Acompanhamos ciclos recorrentes para dar mais previsibilidade ao seu fluxo." },
     ],
   },
   "boleto-garantido": {
     proof: [
-      { value: "Protecao", label: "contra inadimplencia" },
-      { value: "Cobranca", label: "acompanhada pela operacao" },
-      { value: "Previsao", label: "melhor no contas a receber" },
+      { value: "Proteção", label: "contra inadimplência" },
+      { value: "Cobrança", label: "acompanhada pela operação" },
+      { value: "Previsão", label: "mais confiável no recebimento" },
     ],
-    audience: "Para empresas que vendem por boleto e querem reduzir incerteza no recebimento sem travar a venda.",
-    promise: "O boleto garantido protege o fluxo, melhora a previsibilidade e reduz a pressao da inadimplencia.",
-    operatingTitle: "Uma camada de protecao para vender por boleto com menos risco.",
-    operatingText: "A pagina separa emissao, risco e acompanhamento para deixar claro onde a Credmais reduz a incerteza.",
+    audience: "Para empresas que vendem por boleto e querem receber com segurança, sem travar a venda para os clientes.",
+    promise: "Blindamos seu fluxo de caixa, melhoramos a previsibilidade e reduzimos a pressão da inadimplência do dia a dia.",
+    operatingTitle: "Uma camada de proteção para vender por boleto com muito menos risco.",
+    operatingText: "Emissão, análise de risco e acompanhamento em um só processo — para você saber exatamente onde reduzimos sua incerteza.",
     operating: [
-      { title: "Politica de risco", text: "A operacao considera cliente, valor, prazo e historico antes da protecao." },
-      { title: "Acompanhamento", text: "A cobranca e o status do boleto deixam de ficar soltos na rotina." },
-      { title: "Previsibilidade", text: "A empresa planeja entradas com menos surpresa e menor exposicao a inadimplencia." },
+      { title: "Política de risco clara", text: "Avaliamos cliente, valor, prazo e histórico antes de garantir cada boleto." },
+      { title: "Cobrança acompanhada", text: "O status do boleto deixa de ficar solto na rotina e ganha ritmo profissional." },
+      { title: "Previsibilidade real", text: "Você planeja entradas com muito menos surpresa e menor exposição à inadimplência." },
     ],
     cases: [
-      { title: "Venda B2B", text: "Mantenha prazo comercial para clientes sem carregar todo o risco sozinho." },
-      { title: "Carteira pulverizada", text: "Organize cobranca e recebimento quando ha muitos boletos em aberto." },
-      { title: "Fluxo previsivel", text: "Planeje entradas com menos surpresa e mais clareza sobre riscos." },
+      { title: "Venda B2B", text: "Mantenha prazo comercial para seus clientes sem carregar todo o risco sozinho." },
+      { title: "Carteira pulverizada", text: "Organize cobrança e recebimento quando há muitos boletos em aberto." },
+      { title: "Fluxo previsível", text: "Planeje o caixa com muito mais clareza sobre riscos e datas." },
     ],
     flow: [
-      { title: "Emissao", text: "A operacao considera dados do boleto, cliente e historico de recebimento." },
-      { title: "Protecao", text: "O risco e avaliado e o acompanhamento reduz exposicao a atrasos." },
-      { title: "Recebimento", text: "O fluxo fica mais previsivel para tomada de decisao financeira." },
+      { title: "Emissão", text: "Consideramos dados do boleto, do cliente e do histórico de recebimento." },
+      { title: "Proteção", text: "O risco é avaliado e a operação acompanha para reduzir atrasos." },
+      { title: "Recebimento", text: "O fluxo fica previsível e pronto para embasar decisões financeiras." },
     ],
     faq: [
-      { q: "Substitui a cobranca interna?", a: "A estrutura pode complementar sua rotina, com acompanhamento e leitura financeira." },
-      { q: "Ajuda em clientes novos?", a: "Sim, desde que a operacao tenha dados suficientes para analise de risco." },
-      { q: "Melhora o caixa?", a: "Melhora a previsibilidade e pode ser combinada com outras solucoes de capital." },
+      { q: "Substitui minha cobrança interna?", a: "Não. Complementamos sua rotina com acompanhamento e leitura financeira apurada." },
+      { q: "Funciona para clientes novos?", a: "Sim, desde que a operação tenha dados suficientes para uma análise de risco consistente." },
+      { q: "Melhora o meu caixa?", a: "Melhora a previsibilidade e pode ser combinada com outras soluções de capital para amplificar o efeito." },
     ],
   },
   consultoria: {
     proof: [
-      { value: "Diagnostico", label: "do fluxo e da carteira" },
+      { value: "Diagnóstico", label: "do fluxo e da carteira" },
       { value: "Plano", label: "sob medida para capital" },
-      { value: "Dados", label: "para decidir com clareza" },
+      { value: "Dados", label: "para decidir com confiança" },
     ],
-    audience: "Para empresas que precisam entender qual estrutura financeira faz sentido antes de contratar capital.",
-    promise: "A consultoria traduz recebiveis, contratos, prazos e garantias em uma estrategia financeira executavel.",
-    operatingTitle: "Diagnostico financeiro para decidir antes de contratar capital.",
-    operatingText: "A consultoria ganhou uma leitura mais estrategica, mostrando cenarios, prioridades e execucao em vez de apenas servico.",
+    audience: "Para empresas que precisam entender qual estrutura financeira faz sentido antes de contratar qualquer capital.",
+    promise: "Traduzimos recebíveis, contratos, prazos e garantias em uma estratégia financeira clara e pronta para executar.",
+    operatingTitle: "Diagnóstico financeiro para decidir antes de contratar capital.",
+    operatingText: "Uma leitura estratégica com cenários, prioridades e um plano de execução — não apenas um relatório com recomendações genéricas.",
     operating: [
-      { title: "Mapa do fluxo", text: "Entradas, saidas, contratos e gargalos aparecem em uma mesma leitura." },
-      { title: "Cenarios comparados", text: "A empresa entende impacto de prazo, taxa, garantia e necessidade real de capital." },
-      { title: "Plano de acao", text: "A recomendacao vira uma sequencia pratica para ajustar rotina e credito." },
+      { title: "Mapa do fluxo", text: "Entradas, saídas, contratos e gargalos aparecem em uma única leitura integrada." },
+      { title: "Cenários comparados", text: "Você entende o impacto de cada prazo, taxa, garantia e da real necessidade de capital." },
+      { title: "Plano de ação", text: "A recomendação vira uma sequência prática para ajustar rotina, crédito e resultado." },
     ],
     cases: [
-      { title: "Reestruturacao", text: "Organize compromissos, vencimentos e fontes de capital com menos improviso." },
-      { title: "Crescimento", text: "Planeje expansao sem comprometer margem, caixa e relacao com clientes." },
-      { title: "Decisao de credito", text: "Compare alternativas com custo, prazo e impacto operacional claros." },
+      { title: "Reestruturação", text: "Organize compromissos, vencimentos e fontes de capital com muito menos improviso." },
+      { title: "Crescimento", text: "Planeje a expansão sem comprometer margem, caixa e relação com clientes." },
+      { title: "Decisão de crédito", text: "Compare alternativas com custo, prazo e impacto operacional lado a lado." },
     ],
     flow: [
-      { title: "Raio-x", text: "Mapeamento de fluxo, contratos, recebiveis e gargalos de caixa." },
-      { title: "Cenario", text: "Simulacoes de estrutura, custo, prazo e impacto financeiro." },
-      { title: "Execucao", text: "Acompanhamento para transformar plano em rotina financeira." },
+      { title: "Raio-X", text: "Mapeamento do fluxo, contratos, recebíveis e gargalos de caixa." },
+      { title: "Cenários", text: "Simulações de estrutura, custo, prazo e impacto financeiro em cada rota." },
+      { title: "Execução", text: "Acompanhamento para transformar o plano em rotina financeira estável." },
     ],
     faq: [
-      { q: "E apenas para empresas grandes?", a: "Nao. A consultoria atende empresas que precisam estruturar melhor o fluxo." },
-      { q: "Inclui operacao de credito?", a: "Pode incluir, quando fizer sentido dentro do diagnostico." },
-      { q: "Qual e a entrega?", a: "Clareza sobre estrutura, prioridades e caminho financeiro para executar." },
+      { q: "É apenas para grandes empresas?", a: "Não. Atendemos empresas de portes diferentes que precisam estruturar melhor o fluxo financeiro." },
+      { q: "Inclui operações de crédito?", a: "Pode incluir, sempre que fizer sentido dentro do diagnóstico e do momento da empresa." },
+      { q: "Qual é a entrega final?", a: "Clareza sobre estrutura, prioridades e um caminho financeiro pronto para ser executado." },
     ],
   },
   crediario: {
     proof: [
-      { value: "Mais", label: "conversao no ponto de venda" },
-      { value: "Prazo", label: "para o cliente final" },
-      { value: "Carteira", label: "acompanhada pela operacao" },
+      { value: "+", label: "conversão no ponto de venda" },
+      { value: "Prazo", label: "acessível para o cliente final" },
+      { value: "Carteira", label: "acompanhada de perto" },
     ],
-    audience: "Para empresas que querem vender mais oferecendo parcelamento direto ao cliente final com menos friccao.",
-    promise: "O crediario permite ampliar ticket, aumentar conversao e manter controle da carteira gerada.",
-    operatingTitle: "Parcelamento como ferramenta comercial, nao como improviso.",
-    operatingText: "A pagina de crediario diferencia melhor a jornada de venda, aprovacao e acompanhamento da carteira.",
+    audience: "Para empresas que querem vender mais oferecendo parcelamento direto ao cliente final, sem fricção e sem burocracia bancária.",
+    promise: "Amplie o ticket médio, aumente a conversão e mantenha o controle total sobre a carteira de crediário gerada.",
+    operatingTitle: "Parcelamento como ferramenta comercial — nunca como improviso.",
+    operatingText: "Uma jornada clara de venda, aprovação e acompanhamento para você faturar mais sem perder de vista a carteira.",
     operating: [
-      { title: "Oferta no momento certo", text: "O parcelamento entra quando o preco a vista trava a decisao do cliente." },
-      { title: "Aprovacao clara", text: "Dados e documentos sao tratados com uma jornada simples para o comprador." },
-      { title: "Carteira acompanhada", text: "A empresa vende mais sem perder visao sobre parcelas e recebimentos." },
+      { title: "Oferta no momento certo", text: "O parcelamento entra em cena quando o preço à vista trava a decisão do cliente." },
+      { title: "Aprovação simples", text: "Dados e documentos tratados em uma jornada rápida para o comprador dizer sim." },
+      { title: "Carteira sob controle", text: "Você vende mais mantendo visibilidade total sobre parcelas e recebimentos." },
     ],
     cases: [
-      { title: "Varejo e servicos", text: "Ofereca prazo ao comprador sem depender de uma jornada bancaria pesada." },
-      { title: "Ticket maior", text: "Transforme compras maiores em parcelas mais acessiveis para o cliente." },
-      { title: "Venda assistida", text: "Equipe comercial ganha uma opcao clara para fechar oportunidades." },
+      { title: "Varejo e serviços", text: "Ofereça prazo ao comprador sem depender de uma jornada bancária longa e desgastante." },
+      { title: "Ticket maior", text: "Converta compras maiores em parcelas acessíveis e feche mais vendas." },
+      { title: "Venda assistida", text: "Sua equipe comercial ganha uma opção clara para fechar oportunidades no balcão." },
     ],
     flow: [
-      { title: "Proposta", text: "O cliente escolhe parcelamento dentro de regras comerciais e financeiras." },
-      { title: "Analise", text: "A operacao valida dados, documentos e condicoes de aprovacao." },
-      { title: "Venda", text: "A empresa vende com mais previsibilidade e acompanha a carteira." },
+      { title: "Proposta", text: "O cliente escolhe o parcelamento dentro de regras comerciais e financeiras definidas por você." },
+      { title: "Análise", text: "A operação valida dados, documentos e as condições de aprovação em minutos." },
+      { title: "Venda", text: "Você fatura com previsibilidade e acompanha a carteira parcela a parcela." },
     ],
     faq: [
-      { q: "Serve para loja fisica e online?", a: "Sim. A estrutura pode apoiar venda presencial, assistida ou digital." },
-      { q: "O cliente precisa ir ao banco?", a: "A proposta e simplificar a jornada e reduzir friccao para o comprador." },
-      { q: "Ajuda a vender mais?", a: "Sim, principalmente quando o preco a vista limita a decisao do cliente." },
+      { q: "Serve para loja física e online?", a: "Sim. A estrutura apoia venda presencial, assistida e digital com a mesma consistência." },
+      { q: "O cliente precisa ir ao banco?", a: "Não. A proposta é simplificar a jornada e eliminar fricção para o comprador." },
+      { q: "Realmente ajuda a vender mais?", a: "Sim, principalmente quando o preço à vista limita a decisão de compra do cliente." },
     ],
   },
   "gestao-de-contas": {
     proof: [
-      { value: "360", label: "graus do fluxo financeiro" },
-      { value: "Rotina", label: "mais organizada" },
-      { value: "Concilia", label: "entradas, saidas e previsoes" },
+      { value: "360°", label: "de visão sobre o fluxo financeiro" },
+      { value: "Rotina", label: "organizada e sem retrabalho" },
+      { value: "Conciliação", label: "de entradas, saídas e previsões" },
     ],
-    audience: "Para empresas que precisam enxergar contas a receber, contas a pagar e conciliacao em uma rotina mais simples.",
-    promise: "A gestao de contas reduz ruído operacional e melhora a leitura do caixa antes das decisoes.",
-    operatingTitle: "Rotina financeira visivel para agir antes do problema aparecer.",
-    operatingText: "A gestao de contas ganhou uma leitura de controle: entradas, saidas, previsao e decisao conectadas.",
+    audience: "Para empresas que precisam enxergar contas a receber, contas a pagar e conciliação em uma rotina simples e confiável.",
+    promise: "Menos ruído operacional, mais clareza sobre o caixa antes de qualquer decisão importante.",
+    operatingTitle: "Rotina financeira visível para agir antes de o problema aparecer.",
+    operatingText: "Entradas, saídas, previsão e decisão conectadas em um único painel de controle — sem planilhas soltas.",
     operating: [
-      { title: "Consolidacao", text: "Contas, prazos e pendencias saem de leituras soltas e entram em uma base unica." },
-      { title: "Conferencia", text: "A conciliacao reduz divergencias entre o que foi vendido, recebido e pago." },
-      { title: "Decisao diaria", text: "A visao do fluxo mostra quando antecipar, proteger, renegociar ou segurar caixa." },
+      { title: "Consolidação", text: "Contas, prazos e pendências saem de leituras dispersas e entram em uma base única." },
+      { title: "Conciliação", text: "Reduzimos divergências entre o que foi vendido, recebido e pago no dia a dia." },
+      { title: "Decisão diária", text: "A visão do fluxo mostra quando antecipar, proteger, renegociar ou segurar o caixa." },
     ],
     cases: [
-      { title: "Conferencia diaria", text: "Acompanhe entradas, saidas e pendencias sem depender de planilhas soltas." },
-      { title: "Previsao de caixa", text: "Tenha visao clara do que entra, vence e precisa de acao." },
-      { title: "Operacao integrada", text: "Conecte recebiveis, boletos, contas e oportunidades de capital." },
+      { title: "Rotina diária", text: "Acompanhe entradas, saídas e pendências sem depender de planilhas frágeis." },
+      { title: "Previsão de caixa", text: "Tenha visão clara do que entra, do que vence e do que exige ação." },
+      { title: "Operação integrada", text: "Conecte recebíveis, boletos, contas e oportunidades de capital em um mesmo lugar." },
     ],
     flow: [
-      { title: "Organizacao", text: "Mapeamento das contas, categorias, prazos e responsaveis." },
-      { title: "Conciliacao", text: "Entradas e saidas sao acompanhadas para reduzir divergencias." },
-      { title: "Decisao", text: "O fluxo vira base para antecipar, proteger ou ajustar capital." },
+      { title: "Organização", text: "Mapeamento de contas, categorias, prazos e responsáveis." },
+      { title: "Conciliação", text: "Entradas e saídas acompanhadas para reduzir divergências e retrabalho." },
+      { title: "Decisão", text: "O fluxo vira base para antecipar, proteger ou ajustar capital com segurança." },
     ],
     faq: [
-      { q: "Substitui meu financeiro?", a: "Nao. A solucao apoia a rotina e melhora a visao para decisao." },
-      { q: "Ajuda com conciliacao?", a: "Sim. Esse e um dos focos para reduzir erro e retrabalho." },
-      { q: "Conecta com outras solucoes?", a: "Sim. A leitura do fluxo pode indicar antecipacao, boleto ou consultoria." },
+      { q: "Substitui meu financeiro?", a: "Não. Apoiamos a rotina do seu time e melhoramos a visão para cada decisão." },
+      { q: "Ajuda com conciliação?", a: "Sim. Esse é um dos focos principais para reduzir erros e retrabalho no dia a dia." },
+      { q: "Conecta com outras soluções?", a: "Sim. A leitura do fluxo indica quando antecipar, proteger com boleto garantido ou acionar consultoria." },
     ],
   },
 };
+
 
 export function SiteHeader() {
   const pathname = useRouterState({ select: (s) => s.location.pathname }) || "/";
@@ -736,7 +738,7 @@ export function HomePage() {
   useHomeMotion();
   return (
     <>
-      <CampaignHero image={HERO_IMAGE} eyebrow="Credmais Securitizadora" titleStart="Venda a prazo." titleBridge="Receba com" words={["liquidez.", "seguranca.", "previsibilidade."]} description="Capital para sua empresa crescer sem esperar o vencimento dos recebiveis." ctaText="Antecipe recebiveis, proteja boletos, organize contas e venda mais com credito estruturado sem depender de banco proprio." buttonText="Quero diagnostico financeiro" buttonHref={CONTACT_WHATSAPP_URL} />
+      <CampaignHero image={HERO_IMAGE} eyebrow="Credmais Securitizadora" titleStart="Venda a prazo." titleBridge="Receba com" words={["liquidez.", "segurança.", "previsibilidade."]} description="Capital para sua empresa crescer sem depender do vencimento dos recebíveis nem da burocracia dos bancos." ctaText="Antecipe recebíveis, proteja boletos, organize contas e venda mais com crédito estruturado — sem depender de banco próprio." buttonText="Quero meu diagnóstico gratuito" buttonHref={CONTACT_WHATSAPP_URL} />
       <HomeProofSection />
       <WebGLEngineSection />
       <PinnedJourneySection />
@@ -745,16 +747,16 @@ export function HomePage() {
         <div className="relative z-10 mx-auto max-w-7xl">
           <div className="solutions-scroll-layout">
             <div className="solutions-scroll-copy gsap-reveal">
-              <p className="solutions-eyebrow">Solucoes Credmais</p>
-              <h2>Transforme seu caixa.</h2>
+              <p className="solutions-eyebrow">Soluções Credmais</p>
+              <h2>Soluções que giram o seu caixa.</h2>
               <p>
-                Uma esteira financeira para vender a prazo, antecipar recebiveis, proteger boletos e organizar contas com previsibilidade.
+                Uma esteira financeira completa para vender a prazo com segurança, antecipar recebíveis, proteger boletos e organizar contas com previsibilidade real.
               </p>
 
-              <div className="solutions-metrics" aria-label="Indicadores das solucoes">
-                <span><strong>5</strong> frentes financeiras</span>
-                <span><strong>D+1</strong> em operacoes elegiveis</span>
-                <span><strong>360</strong> graus do contas a receber</span>
+              <div className="solutions-metrics" aria-label="Indicadores das soluções">
+                <span><strong>5</strong> frentes financeiras integradas</span>
+                <span><strong>D+1</strong> nas operações elegíveis</span>
+                <span><strong>360°</strong> de visão sobre o contas a receber</span>
               </div>
 
               <div className="solutions-scroll-rail" aria-hidden="true">
@@ -779,9 +781,9 @@ export function HomePage() {
 function HomeProofSection() {
   const stats = [
     { value: "D+1", label: "liberação em até 24 horas" },
-    { value: "5", label: "soluções de crédito para o caixa" },
-    { value: "360°", label: "visão completa do contas a receber" },
-    { value: "100%", label: "risco analisado antes da decisão" },
+    { value: "5", label: "soluções de crédito para o seu caixa" },
+    { value: "360°", label: "de visão sobre o contas a receber" },
+    { value: "100%", label: "das operações analisadas antes da decisão" },
   ];
 
   return (
@@ -789,12 +791,12 @@ function HomeProofSection() {
       <div className="home-proof-shell">
         <div className="home-proof-copy gsap-reveal">
           <span>Base operacional</span>
-          <h2>Credito com imagem, ritmo e leitura de decisao.</h2>
-          <p>Os indicadores aparecem junto de pessoas, operacao e contexto para a marca parecer proxima e confiavel.</p>
+          <h2>Números que traduzem o resultado no seu dia a dia.</h2>
+          <p>Cada indicador nasce de operações reais: análise de carteira, liberação rápida e acompanhamento próximo para você decidir com segurança.</p>
         </div>
         <div className="home-proof-media float-layer">
           <img src={baseOperacional.url} alt="" loading="lazy" decoding="async" />
-          <div className="home-proof-badge">operacao acompanhada</div>
+          <div className="home-proof-badge">operação acompanhada</div>
         </div>
         <div className="home-proof-grid">
           {stats.map((item) => (
@@ -809,11 +811,12 @@ function HomeProofSection() {
   );
 }
 
+
 function WebGLEngineSection() {
   const stats = [
-    { label: "Carteira analisada", value: "94%", note: "leitura de recebiveis" },
-    { label: "Risco protegido", value: "baixo", note: "decisao acompanhada" },
-    { label: "Pagamento", value: "D+1", note: "operacoes elegiveis" },
+    { label: "Carteira analisada", value: "94%", note: "leitura minuciosa de recebíveis" },
+    { label: "Risco protegido", value: "baixo", note: "decisão acompanhada de perto" },
+    { label: "Pagamento", value: "D+1", note: "nas operações elegíveis" },
   ];
 
   return (
@@ -826,18 +829,18 @@ function WebGLEngineSection() {
       </div>
       <div className="webgl-engine-copy gsap-reveal">
         <span>Motor financeiro</span>
-        <h2>Analise, protecao e capital em um fluxo claro.</h2>
+        <h2>Análise, proteção e capital em um único fluxo claro.</h2>
         <p>
-          Uma leitura visual da operacao: carteira validada, risco acompanhado e liberacao organizada para a empresa vender sem perder previsibilidade.
+          Enxergue a operação inteira em um só lugar: carteira validada, risco monitorado e capital liberado com a previsibilidade que a sua empresa precisa para crescer.
         </p>
         <div className="engine-actions">
           <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer">
-            Diagnosticar minha operacao
+            Diagnosticar minha operação
             <ArrowUpRight className="h-4 w-4" />
           </a>
           <div className="engine-mini-proof">
             <strong>3 etapas</strong>
-            <span>analise, estrutura e caixa</span>
+            <span>análise, estrutura e caixa</span>
           </div>
         </div>
       </div>
@@ -846,8 +849,8 @@ function WebGLEngineSection() {
         <div className="engine-human-card float-layer">
           <img src="/assets/credmais-comerciante.jpg" alt="" loading="lazy" decoding="async" />
           <div className="engine-human-caption">
-            <span>analise humana + tecnologia</span>
-            <strong>Operacao acompanhada</strong>
+            <span>análise humana + tecnologia</span>
+            <strong>Operação acompanhada</strong>
           </div>
         </div>
         <div className="engine-flow-line" aria-hidden="true">
@@ -871,17 +874,17 @@ function WebGLEngineSection() {
 
 function PinnedJourneySection() {
   const steps = [
-    { title: "Diagnostico", text: "Leitura da carteira, prazos, boletos, contratos e urgencia de capital.", image: "/assets/credmais-pessoal.jpg" },
-    { title: "Estrutura", text: "A Credmais define melhor solucao, taxa, garantia e documentos necessarios.", image: "/assets/home-journey-estrutura.png" },
-    { title: "Liberacao", text: "O caixa entra com acompanhamento para a empresa vender e operar sem pausa.", image: "/assets/home-journey-liberacao.png" },
+    { title: "Diagnóstico", text: "Fazemos a leitura da carteira, prazos, boletos, contratos e da real urgência de capital.", image: "/assets/credmais-pessoal.jpg" },
+    { title: "Estrutura", text: "Desenhamos a melhor solução, com taxa, garantia e documentos definidos com transparência.", image: "/assets/home-journey-estrutura.png" },
+    { title: "Liberação", text: "O caixa entra na sua conta com acompanhamento próximo para você vender e operar sem pausa.", image: "/assets/home-journey-liberacao.png" },
   ];
 
   return (
     <section className="home-pin-section">
       <div className="home-pin-copy gsap-reveal">
         <span>Jornada Credmais</span>
-        <h2>Uma esteira que acompanha o scroll e o fluxo da empresa.</h2>
-        <p>Cada etapa foi organizada para parecer simples na tela, mas robusta por tras da operacao.</p>
+        <h2>Do diagnóstico ao caixa em três passos simples.</h2>
+        <p>Uma jornada leve na tela, robusta por trás da operação: cada etapa é conduzida por especialistas com o foco no crescimento da sua empresa.</p>
       </div>
       <div className="home-pin-stack">
         {steps.map((step, index) => (
@@ -901,19 +904,20 @@ function PinnedJourneySection() {
   );
 }
 
+
 function MotionRailSection() {
   const items = [
-    { image: railCapital.url, title: "Capital para vender sem esperar", text: "Antecipacao feita para transformar prazo em caixa planejado." },
-    { image: railBoleto.url, title: "Protecao para receber melhor", text: "Boleto, risco e cobranca em uma rotina mais previsivel." },
-    { image: railCrediario.url, title: "Venda parcelada com apoio", text: "Crediario para aumentar conversao no cliente final." },
-    { image: railGestao.url, title: "Gestao que aparece no dia a dia", text: "Contas, conciliacao e fluxo financeiro com leitura simples." },
+    { image: railCapital.url, title: "Capital para vender sem esperar", text: "Antecipe recebíveis e transforme prazo em caixa planejado." },
+    { image: railBoleto.url, title: "Proteção para receber melhor", text: "Boleto, risco e cobrança em uma rotina totalmente previsível." },
+    { image: railCrediario.url, title: "Venda parcelada com apoio", text: "Crediário para aumentar a conversão junto ao cliente final." },
+    { image: railGestao.url, title: "Gestão que aparece no dia a dia", text: "Contas, conciliação e fluxo financeiro com leitura simples e prática." },
   ];
 
   return (
     <section className="motion-rail-section">
       <div className="motion-rail-heading gsap-reveal">
-        <span>Scroll experience</span>
-        <h2>Imagens, ritmo e narrativa para manter a home completa.</h2>
+        <span>Soluções em movimento</span>
+        <h2>Escolha a solução ideal para o momento da sua empresa.</h2>
       </div>
       <div className="motion-rail-viewport">
         <div className="motion-rail-track">
@@ -930,9 +934,9 @@ function MotionRailSection() {
       </div>
       <div className="motion-rail-cta gsap-reveal">
         <div>
-          <span>Pronto para o proximo passo?</span>
+          <span>Pronto para o próximo passo?</span>
           <h3>Monte a sua jornada financeira com a Credmais.</h3>
-          <p>Fale com um especialista e descubra qual combinacao de solucoes encaixa no ritmo da sua operacao.</p>
+          <p>Fale com um especialista e descubra qual combinação de soluções encaixa melhor no ritmo da sua operação.</p>
         </div>
         <div className="motion-rail-cta-actions">
           <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer" className="motion-rail-cta-primary">
@@ -940,7 +944,7 @@ function MotionRailSection() {
             <ArrowUpRight className="h-4 w-4" />
           </a>
           <a href="/#solucoes" className="motion-rail-cta-ghost">
-            Ver todas as solucoes
+            Ver todas as soluções
           </a>
         </div>
       </div>
@@ -952,9 +956,9 @@ function HomeTrustSection() {
   return (
     <section className="home-trust-section">
       <div className="home-trust-heading gsap-reveal">
-        <span>Confianca para decidir</span>
-        <h2>Prova social sem exagero: clareza, acompanhamento e operacao visivel.</h2>
-        <p>Empresas com venda a prazo precisam de previsibilidade antes de assumir qualquer estrutura financeira.</p>
+        <span>Confiança para decidir</span>
+        <h2>Empresas que crescem sem improviso escolhem a Credmais.</h2>
+        <p>Antes de qualquer estrutura financeira, você precisa de clareza, acompanhamento próximo e uma operação totalmente visível.</p>
       </div>
       <div className="trust-profile-row" aria-label="Perfis de empresas atendidas">
         {trustProfiles.map((profile) => (
@@ -973,10 +977,10 @@ function HomeTrustSection() {
         ))}
       </div>
       <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer" className="trust-cta">
-        Avaliar minha operacao
+        Quero avaliar minha operação
         <ArrowUpRight className="h-4 w-4" />
       </a>
-      <p className="cta-microcopy">Sem conta digital propria. A Credmais estrutura capital, risco e contas para sua empresa.</p>
+      <p className="cta-microcopy">Não somos banco digital. A Credmais estrutura capital, risco e contas para a sua empresa crescer com segurança.</p>
     </section>
   );
 }
@@ -985,8 +989,8 @@ function HomeFAQSection() {
   return (
     <section className="home-faq-section">
       <div className="home-faq-heading gsap-reveal">
-        <span>FAQ</span>
-        <h2>Duvidas comuns antes de falar com a Credmais.</h2>
+        <span>Perguntas frequentes</span>
+        <h2>Tire suas dúvidas antes de falar com a Credmais.</h2>
       </div>
       <div className="home-faq-list">
         {homeFaq.map((item) => (
@@ -1039,27 +1043,27 @@ export function SolutionPage({ solution }: { solution: Solution }) {
     "antecipacao-de-recebiveis": {
       titleStart: "Antecipe vendas.",
       titleBridge: "Receba com",
-      words: ["liquidez.", "folego.", "controle."],
+      words: ["liquidez.", "fôlego.", "controle."],
     },
     "boleto-garantido": {
       titleStart: "Boleto protegido.",
       titleBridge: "Venda com",
-      words: ["seguranca.", "garantia.", "controle."],
+      words: ["segurança.", "garantia.", "controle."],
     },
     consultoria: {
       titleStart: "Decida melhor.",
-      titleBridge: "Cresca com",
-      words: ["estrategia.", "clareza.", "dados."],
+      titleBridge: "Cresça com",
+      words: ["estratégia.", "clareza.", "dados."],
     },
     crediario: {
       titleStart: "Parcele mais.",
       titleBridge: "Venda com",
-      words: ["crediario.", "conversao.", "controle."],
+      words: ["crediário.", "conversão.", "controle."],
     },
     "gestao-de-contas": {
       titleStart: "Organize contas.",
       titleBridge: "Tenha",
-      words: ["visao clara.", "fluxo.", "controle."],
+      words: ["visão clara.", "fluxo.", "controle."],
     },
   };
   const copy = heroCopy[solution.slug] ?? {
@@ -1070,7 +1074,7 @@ export function SolutionPage({ solution }: { solution: Solution }) {
 
   return (
     <>
-      <CampaignHero image={visualSet.hero} eyebrow={solution.metric} titleStart={copy.titleStart} titleBridge={copy.titleBridge} words={copy.words} description={solution.summary} ctaText={`${solution.headline} A Credmais avalia documentos, risco, prazo e melhor estrutura para sua operacao, sem modelo de banco proprio.`} buttonText={`Avaliar ${solution.title}`} buttonHref={CONTACT_WHATSAPP_URL} />
+      <CampaignHero image={visualSet.hero} eyebrow={solution.metric} titleStart={copy.titleStart} titleBridge={copy.titleBridge} words={copy.words} description={solution.summary} ctaText={`${solution.headline} Avaliamos documentos, risco, prazo e a melhor estrutura para sua operação — sem burocracia bancária.`} buttonText={`Quero contratar ${solution.title}`} buttonHref={CONTACT_WHATSAPP_URL} />
       <SolutionProofStrip solution={solution} theme={theme} />
       <section className={`solution-detail-intro solution-detail-${visualSet.layout}`} style={{ "--accent": solution.accent } as CSSProperties}>
         <div className="solution-detail-shell">
@@ -1180,8 +1184,8 @@ function SolutionExperience({ solution, theme, visualSet }: { solution: Solution
   const Icon = solution.icon;
   const visuals = [
     { title: solution.metric, text: solution.headline },
-    { title: "Atendimento humano", text: "Acompanhamento consultivo para a empresa entender cada etapa." },
-    { title: "Operacao organizada", text: "Visao integrada de recebiveis, risco, contas e oportunidade comercial." },
+    { title: "Atendimento humano", text: "Consultores acompanham sua empresa em cada etapa, com clareza e sem enrolação." },
+    { title: "Operação organizada", text: "Visão integrada de recebíveis, risco, contas e oportunidades comerciais em um só lugar." },
   ];
 
   return (
@@ -1189,12 +1193,12 @@ function SolutionExperience({ solution, theme, visualSet }: { solution: Solution
       <section className="solution-page-banner">
         <div className="solution-banner-copy solution-animated">
           <span>{solution.title}</span>
-          <h2>Escolha a estrutura certa antes do caixa apertar.</h2>
+          <h2>Estruture o financeiro antes do caixa apertar.</h2>
           <p>
-            Se a dor e falta de liquidez, inadimplencia, venda a prazo ou controle financeiro, a Credmais organiza a alternativa certa e acompanha a operacao.
+            Falta de liquidez, inadimplência, venda a prazo ou controle financeiro: qualquer que seja a dor, a Credmais organiza a alternativa certa e acompanha a operação até o resultado.
           </p>
           <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer">
-            Receber orientacao Credmais
+            Falar com um especialista
             <ArrowUpRight className="h-4 w-4" />
           </a>
         </div>
@@ -1254,8 +1258,8 @@ function SolutionFaqSection({ solution, theme }: { solution: Solution; theme: So
   return (
     <section className="solution-faq-section" style={{ "--accent": solution.accent } as CSSProperties}>
       <div className="solution-faq-heading solution-animated">
-        <span>Duvidas frequentes</span>
-        <h2>O que avaliar antes de escolher {solution.title.toLowerCase()}.</h2>
+        <span>Perguntas frequentes</span>
+        <h2>O que você precisa saber antes de contratar {solution.title.toLowerCase()}.</h2>
       </div>
       <div className="solution-faq-list">
         {theme.faq.map((item) => (
@@ -1266,7 +1270,7 @@ function SolutionFaqSection({ solution, theme }: { solution: Solution; theme: So
         ))}
       </div>
       <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer" className="solution-faq-cta">
-        Tirar duvidas no WhatsApp
+        Tirar dúvidas no WhatsApp
         <ArrowUpRight className="h-4 w-4" />
       </a>
     </section>
@@ -1276,7 +1280,7 @@ function SolutionFaqSection({ solution, theme }: { solution: Solution; theme: So
 export function AboutPage() {
   return (
     <>
-      <CampaignHero image={ABOUT_IMAGE} eyebrow="Sobre a Credmais" titleStart="Credito humano." titleBridge="Crescimento com" words={["confianca.", "clareza.", "parceria."]} description="Uma securitizadora feita para simplificar capital, proteger operacoes e acompanhar empresas em cada fase." ctaText="Fomento, recebiveis, boletos, crediario, consultoria e gestao de contas para empresas que precisam de caixa claro." buttonText="Falar com a Credmais" buttonHref={CONTACT_WHATSAPP_URL} />
+      <CampaignHero image={ABOUT_IMAGE} eyebrow="Sobre a Credmais" titleStart="Crédito humano." titleBridge="Crescimento com" words={["confiança.", "clareza.", "parceria."]} description="Uma securitizadora criada para simplificar o capital, proteger operações e caminhar junto com sua empresa em cada fase do crescimento." ctaText="Fomento, recebíveis, boletos, crediário, consultoria e gestão de contas para empresas que buscam previsibilidade financeira." buttonText="Falar com a Credmais" buttonHref={CONTACT_WHATSAPP_URL} />
       <AboutIntroSection />
       <ContactSection compact />
     </>
@@ -1285,17 +1289,17 @@ export function AboutPage() {
 
 function AboutIntroSection() {
   const principles = [
-    { value: "01", title: "Leitura humana", text: "Antes da proposta, entendemos rotina, prazos e pressao real do caixa." },
-    { value: "02", title: "Estrutura clara", text: "Cada alternativa mostra custo, prazo, risco e impacto operacional." },
-    { value: "03", title: "Acompanhamento", text: "A empresa nao fica sozinha depois da liberacao ou da decisao financeira." },
+    { value: "01", title: "Leitura humana", text: "Antes de qualquer proposta, entendemos a sua rotina, os seus prazos e a real pressão sobre o caixa." },
+    { value: "02", title: "Estrutura clara", text: "Cada alternativa mostra custo, prazo, risco e impacto operacional — sem letras miúdas nem surpresas." },
+    { value: "03", title: "Acompanhamento", text: "A sua empresa nunca fica sozinha depois da liberação. Estamos ao lado, do primeiro passo à revisão da estratégia." },
   ];
 
   return (
     <section className="about-intro-section">
       <div className="about-intro-copy">
         <span>Como trabalhamos</span>
-        <h2>Mais que uma securitizadora, um parceiro de crescimento.</h2>
-        <p>Humanizamos o credito e organizamos estruturas financeiras para empresas evoluirem com previsibilidade, sem deixar operacao, cobranca e capital em blocos separados.</p>
+        <h2>Mais do que uma securitizadora, um parceiro de crescimento.</h2>
+        <p>Humanizamos o crédito e desenhamos estruturas financeiras para empresas evoluírem com previsibilidade. Operação, cobrança e capital deixam de ser blocos separados e passam a trabalhar juntos pelo seu resultado.</p>
       </div>
       <div className="about-intro-media">
         <img src="/assets/credmais-refer.jpg" alt="" loading="lazy" decoding="async" />
@@ -1318,7 +1322,7 @@ function AboutIntroSection() {
 export function ContactPage() {
   return (
     <>
-      <CampaignHero image={CONTACT_IMAGE} eyebrow="Contato Credmais" titleStart="Vamos conversar." titleBridge="Sua empresa com" words={["capital.", "apoio.", "direcao."]} description="Conte o que sua empresa precisa. A Credmais avalia a melhor estrutura para o seu fluxo." ctaText="Envie sua necessidade: caixa imediato, boleto protegido, credito para vender mais, consultoria ou organizacao de contas." buttonText="Chamar no WhatsApp" buttonHref={CONTACT_WHATSAPP_URL} />
+      <CampaignHero image={CONTACT_IMAGE} eyebrow="Fale com a Credmais" titleStart="Vamos conversar." titleBridge="Sua empresa com" words={["capital.", "apoio.", "direção."]} description="Conte para nós o que sua empresa precisa. Avaliamos o cenário e apresentamos a melhor estrutura para o seu fluxo financeiro." ctaText="Envie o seu desafio: caixa imediato, boleto protegido, crédito para vender mais, consultoria ou organização de contas." buttonText="Chamar no WhatsApp" buttonHref={CONTACT_WHATSAPP_URL} />
       <ContactSection compact />
     </>
   );
@@ -1345,10 +1349,10 @@ function CampaignHero({ image, eyebrow, titleStart, titleBridge, words, descript
       <div className="hero-cta">
         <div className="hero-cta-panel">
           <div className="hero-cta-copy">
-            <span>Operacao Credmais</span>
+            <span>Soluções Credmais</span>
             <p>{ctaText}</p>
           </div>
-          <div className="hero-service-links" aria-label="Servicos Credmais">
+          <div className="hero-service-links" aria-label="Soluções Credmais">
             {solutions.map((solution) => (
               <a key={solution.slug} href={`/${solution.slug}`} style={{ "--accent": solution.accent } as CSSProperties}>
                 {solution.title}
@@ -1360,7 +1364,7 @@ function CampaignHero({ image, eyebrow, titleStart, titleBridge, words, descript
               {buttonText}
               <ArrowUpRight className="h-4 w-4" />
             </a>
-            <small>Resposta pelo canal oficial da Credmais.</small>
+            <small>Atendimento direto pelo canal oficial da Credmais.</small>
           </div>
         </div>
       </div>
@@ -1375,9 +1379,9 @@ function ContactSection({ compact = false }: { compact?: boolean }) {
         <p className="mb-6 text-xs font-black uppercase tracking-[0.36em] text-[#ddbd70]">Contato</p>
         <h2 className="text-5xl font-black leading-none tracking-[-0.06em] md:text-8xl">O que sua empresa precisa resolver?</h2>
         <p className="mx-auto mt-6 max-w-3xl text-base font-bold leading-relaxed text-white/58 md:text-lg">
-          Fale com a Credmais sobre falta de caixa, venda a prazo, inadimplencia, dificuldade de credito, boleto garantido, crediario ou gestao de contas.
+          Fale com a Credmais sobre falta de caixa, venda a prazo, inadimplência, dificuldade de crédito, boleto garantido, crediário ou gestão de contas — respondemos rápido e com clareza.
         </p>
-        <div className="contact-service-grid" aria-label="Servicos para contato">
+        <div className="contact-service-grid" aria-label="Soluções para contato">
           {solutions.map((solution) => {
             const Icon = solution.icon;
             return (
@@ -1392,7 +1396,7 @@ function ContactSection({ compact = false }: { compact?: boolean }) {
         <form className="mt-16 grid gap-10 text-left">
           <div className="grid gap-10 md:grid-cols-2"><ContactInput placeholder="Seu nome" /><ContactInput placeholder="Seu e-mail" type="email" /></div>
           <ContactInput placeholder="Sua empresa" />
-          <textarea className="contact-input min-h-36 resize-none" placeholder="Conte sua necessidade: antecipar recebiveis, proteger boleto, organizar contas, vender no crediario ou estruturar capital." />
+          <textarea className="contact-input min-h-36 resize-none" placeholder="Conte sua necessidade: antecipar recebíveis, proteger boleto, organizar contas, vender no crediário ou estruturar capital." />
           <div className="grid gap-8 pt-4 md:grid-cols-[1fr_auto] md:items-center">
             <div className="grid gap-3 text-sm text-white/55 md:text-left">
               <ContactLine icon={Phone} value={`WhatsApp ${CONTACT_WHATSAPP_DISPLAY}`} href={CONTACT_WHATSAPP_URL} />
