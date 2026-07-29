@@ -2203,6 +2203,55 @@ li {
   line-height: 1.75;
 }
 
+.solution-operating-bullets {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 2rem;
+  max-width: 33rem;
+  padding: 0;
+  list-style: none;
+}
+
+.solution-operating-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  border-radius: 16px;
+  border: 1px solid rgb(255 255 255 / 0.1);
+  background: rgb(255 255 255 / 0.04);
+  padding: 0.85rem 1.1rem;
+  color: rgb(255 255 255 / 0.86);
+  font-size: 0.98rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.solution-operating-bullets li span {
+  display: inline;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  padding: 0;
+  box-shadow: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.solution-operating-bullets li span::before {
+  content: none;
+}
+
+.solution-operating-bullets svg {
+  flex: none;
+  margin-top: 0.15rem;
+  color: var(--accent);
+}
+
+
 .solution-operating-copy a {
   display: inline-flex;
   align-items: center;
