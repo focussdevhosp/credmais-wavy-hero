@@ -4612,7 +4612,9 @@ li {
   }
 
   .home-hero .hero-full-image {
-    object-position: 72% 0%;
+    object-position: 75% 25%;
+    height: 110%;
+    max-height: 110%;
   }
 
   .hero-animated-copy {
