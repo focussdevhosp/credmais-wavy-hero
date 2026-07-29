@@ -71,7 +71,7 @@ type SolutionTheme = {
   faq: { q: string; a: string }[];
 };
 
-const HERO_IMAGE = "/assets/hero-executivos-credmais.webp";
+const HERO_IMAGE = heroExecutivos.url;
 const ABOUT_IMAGE = "/assets/credmais-campaign-about.png";
 const CONTACT_IMAGE = "/assets/credmais-humanized-finance.png";
 const LOGO_IMAGE = logoNew.url;
