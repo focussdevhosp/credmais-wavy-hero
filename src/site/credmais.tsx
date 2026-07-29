@@ -27,6 +27,14 @@ import brandRestaurante from "@/assets/brand-7.webp.asset.json";
 import brandAgro from "@/assets/brand-8.webp.asset.json";
 import brandPredio from "@/assets/brand-9.webp.asset.json";
 import brandConcessionaria from "@/assets/brand-10.webp.asset.json";
+import wide1 from "@/assets/wide-1.webp.asset.json";
+import wide2 from "@/assets/wide-2.webp.asset.json";
+import wide3 from "@/assets/wide-3.webp.asset.json";
+import wide4 from "@/assets/wide-4.webp.asset.json";
+import wide5 from "@/assets/wide-5.webp.asset.json";
+import wide6 from "@/assets/wide-6.webp.asset.json";
+import wide7 from "@/assets/wide-7.webp.asset.json";
+import wide8 from "@/assets/wide-8.webp.asset.json";
 import { useRouterState } from "@tanstack/react-router";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -81,9 +89,9 @@ type SolutionTheme = {
   faq: { q: string; a: string }[];
 };
 
-const HERO_IMAGE = brandRooftop.url;
-const ABOUT_IMAGE = brandPredio.url;
-const CONTACT_IMAGE = brandAtendimento.url;
+const HERO_IMAGE = wide5.url;
+const ABOUT_IMAGE = wide3.url;
+const CONTACT_IMAGE = wide6.url;
 const LOGO_IMAGE = logoNew.url;
 const CONTACT_EMAIL = "contato@credmaissecuritizadora.com.br";
 const CONTACT_WHATSAPP_DISPLAY = "(11) 94089-3852";
@@ -92,31 +100,31 @@ const CONTACT_CNPJ = "67.859.471/0001-20";
 
 const solutionVisualSets: Partial<Record<string, SolutionVisualSet>> = {
   "antecipacao-de-recebiveis": {
-    hero: brandIndustria.url,
+    hero: wide8.url,
     banner: "/assets/page-antecipacao-banner.png",
     flow: "/assets/page-antecipacao-flow.png",
     layout: "capital",
   },
   "boleto-garantido": {
-    hero: brandRestaurante.url,
+    hero: wide1.url,
     banner: "/assets/page-boleto-banner.png",
     flow: "/assets/page-boleto-flow.png",
     layout: "protection",
   },
   consultoria: {
-    hero: brandAssinatura.url,
+    hero: wide2.url,
     banner: "/assets/page-consultoria-banner.png",
     flow: "/assets/page-consultoria-flow.png",
     layout: "advisory",
   },
   crediario: {
-    hero: brandConcessionaria.url,
+    hero: wide7.url,
     banner: "/assets/page-crediario-banner.png",
     flow: "/assets/page-crediario-flow.png",
     layout: "retail",
   },
   "gestao-de-contas": {
-    hero: brandRecepcao.url,
+    hero: wide4.url,
     banner: "/assets/page-gestao-banner.png",
     flow: "/assets/page-gestao-flow.png",
     layout: "control",
@@ -923,7 +931,7 @@ function AboutIntroSection() {
         <p>Humanizamos o crédito e desenhamos estruturas financeiras para empresas evoluírem com previsibilidade. Operação, cobrança e capital deixam de ser blocos separados e passam a trabalhar juntos pelo seu resultado.</p>
       </div>
       <div className="about-intro-media">
-        <img src={brandPredio.url} alt="" loading="lazy" decoding="async" />
+        <img src={wide3.url} alt="" loading="lazy" decoding="async" />
       </div>
       <div className="about-principles">
         {principles.map((item) => (
