@@ -124,7 +124,7 @@ export const solutions: Solution[] = [
     bullets: ["Taxas competitivas e sem surpresas", "Análise de duplicatas, boletos e contratos", "Caixa disponível em até 24 horas"],
     image: cardAntecipacao.url,
     metric: "Caixa em D+1",
-    accent: "#ddbd70",
+    accent: "#e9f0fa",
   },
   {
     slug: "boleto-garantido",
@@ -136,7 +136,7 @@ export const solutions: Solution[] = [
     bullets: ["Proteção contra inadimplência", "Cobrança acompanhada de ponta a ponta", "Previsibilidade real no contas a receber"],
     image: cardBoleto.url,
     metric: "Recebimento protegido",
-    accent: "#c9a84c",
+    accent: "#c8d8ec",
   },
   {
     slug: "consultoria",
@@ -172,7 +172,7 @@ export const solutions: Solution[] = [
     bullets: ["Cobrança ativa e estruturada", "Relatórios claros de recuperação", "Preservamos a relação com o cliente"],
     image: "/assets/solution-gestao-blue.png",
     metric: "Dívidas recebidas por você",
-    accent: "#ddbd70",
+    accent: "#e9f0fa",
   },
 ];
 
@@ -393,7 +393,7 @@ export function SiteHeader() {
       {open && (
         <div className="mx-3 mt-2 grid gap-1 overflow-hidden rounded-[24px] border border-[#142946]/10 bg-white p-3 text-[#142946] shadow-2xl md:hidden">
           <MobileLink href="/" onClick={() => setOpen(false)}>Início</MobileLink>
-          <span className="px-4 pt-3 text-[10px] font-black uppercase tracking-[0.24em] text-[#ddbd70]">Soluções</span>
+          <span className="px-4 pt-3 text-[10px] font-black uppercase tracking-[0.24em] text-[#e9f0fa]">Soluções</span>
           {solutions.map((solution) => <MobileLink key={solution.slug} href={`/${solution.slug}`} onClick={() => setOpen(false)}>{solution.title}</MobileLink>)}
           <MobileLink href="/sobre" onClick={() => setOpen(false)}>Sobre</MobileLink>
           <MobileLink href="/contato" onClick={() => setOpen(false)}>Contato</MobileLink>
@@ -415,7 +415,7 @@ function SolutionsDropdown({ pathname, scrolled }: { pathname: string; scrolled:
   const active = solutions.some((item) => pathname === `/${item.slug}`);
   return (
     <div className="group relative">
-      <a href="/#solucoes" className={`inline-flex items-center gap-1.5 py-2 transition ${active ? "text-[#ddbd70]" : scrolled ? "text-[#142946]/70" : "text-white/80"}`}>
+      <a href="/#solucoes" className={`inline-flex items-center gap-1.5 py-2 transition ${active ? "text-[#e9f0fa]" : scrolled ? "text-[#142946]/70" : "text-white/80"}`}>
         Soluções
         <span className="grid h-5 w-5 place-items-center rounded-full border border-current/25 transition group-hover:rotate-180">
           <ChevronDown className="h-3 w-3" />
@@ -424,7 +424,7 @@ function SolutionsDropdown({ pathname, scrolled }: { pathname: string; scrolled:
       <div className="pointer-events-none absolute left-1/2 top-full z-50 w-[340px] -translate-x-1/2 translate-y-3 pt-3 opacity-0 transition duration-200 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
         <div className="solutions-menu solutions-menu-compact overflow-hidden rounded-[24px] border border-white/40 bg-white/98 p-2 text-[#142946] shadow-[0_24px_70px_rgba(0,0,0,0.25)] backdrop-blur-2xl">
           <div className="px-3 pb-2 pt-2">
-            <span className="text-[10px] font-black uppercase tracking-[0.24em] text-[#ddbd70]">Soluções</span>
+            <span className="text-[10px] font-black uppercase tracking-[0.24em] text-[#e9f0fa]">Soluções</span>
             <p className="mt-1 text-xs font-bold leading-5 text-[#142946]/60">Escolha a melhor frente para seu fluxo.</p>
           </div>
           <div className="grid gap-1">
@@ -447,7 +447,7 @@ function SolutionsDropdown({ pathname, scrolled }: { pathname: string; scrolled:
 }
 
 function NavLink({ href, active, scrolled, children }: { href: string; active: boolean; scrolled: boolean; children: ReactNode }) {
-  return <a href={href} className={`transition hover:text-[#ddbd70] ${active ? "text-[#ddbd70]" : scrolled ? "text-[#142946]/70" : "text-white/80"}`}>{children}</a>;
+  return <a href={href} className={`transition hover:text-[#e9f0fa] ${active ? "text-[#e9f0fa]" : scrolled ? "text-[#142946]/70" : "text-white/80"}`}>{children}</a>;
 }
 
 function MobileLink({ href, onClick, children }: { href: string; onClick: () => void; children: ReactNode }) {
@@ -965,7 +965,7 @@ function ContactSection({ compact = false }: { compact?: boolean }) {
   return (
     <section id="contato" className={`bg-[#142946] px-5 text-white md:px-[10%] ${compact ? "py-24" : "py-32"}`}>
       <div className="mx-auto max-w-6xl text-center">
-        <p className="mb-6 text-xs font-black uppercase tracking-[0.36em] text-[#ddbd70]">Contato</p>
+        <p className="mb-6 text-xs font-black uppercase tracking-[0.36em] text-[#e9f0fa]">Contato</p>
         <h2 className="text-5xl font-black leading-none tracking-[-0.06em] md:text-8xl">O que sua empresa precisa resolver?</h2>
         <p className="mx-auto mt-6 max-w-3xl text-base font-bold leading-relaxed text-white/58 md:text-lg">
           Fale com a Credmais sobre falta de caixa, venda a prazo, inadimplência, dificuldade de crédito, boleto garantido, crediário, gestão de contas ou recebimento de dívidas — respondemos rápido e com clareza.
@@ -1013,7 +1013,7 @@ function ContactInput({ placeholder, type = "text" }: { placeholder: string; typ
 function ContactLine({ icon: Icon, value, href }: { icon: IconComponent; value: string; href?: string }) {
   const content = (
     <>
-      <Icon className="h-4 w-4 text-[#ddbd70]" />
+      <Icon className="h-4 w-4 text-[#e9f0fa]" />
       {value}
     </>
   );

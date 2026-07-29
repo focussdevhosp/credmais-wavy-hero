@@ -2,7 +2,7 @@
 
 
 :root {
-  --color-primary: #ddbd70;
+  --color-primary: #e9f0fa;
   --color-secondary: #1e3a5f;
   --color-ink: #0b1628;
   --color-deep: #142946;
@@ -159,7 +159,7 @@ li {
   border-radius: 999px;
   background: rgb(0 0 0 / 0.16);
   padding: 0.62rem 0.86rem;
-  color: #ddbd70;
+  color: #e9f0fa;
   font-size: 0.7rem;
   font-weight: 900;
   letter-spacing: 0.24em;
@@ -190,7 +190,7 @@ li {
   display: block;
   width: min(100%, 14ch);
   min-height: 1em;
-  color: #ddbd70;
+  color: #e9f0fa;
 }
 
 .hero-word-rotator i {
@@ -235,7 +235,7 @@ li {
   border-radius: 32px;
   background:
     linear-gradient(160deg, rgb(11 22 40 / 0.72), rgb(11 22 40 / 0.42)),
-    radial-gradient(120% 80% at 80% 0%, rgb(221 189 112 / 0.14), transparent 50%);
+    radial-gradient(120% 80% at 80% 0%, rgb(190 214 240 / 0.14), transparent 50%);
   padding: 1.25rem;
   padding-left: 1.5rem;
   box-shadow:
@@ -255,7 +255,7 @@ li {
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 0.42rem;
-  color: #ddbd70;
+  color: #e9f0fa;
   font-size: 0.68rem;
   font-weight: 950;
   letter-spacing: 0.24em;
@@ -267,8 +267,8 @@ li {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #ddbd70;
-  box-shadow: 0 0 10px #ddbd70;
+  background: #e9f0fa;
+  box-shadow: 0 0 10px #e9f0fa;
 }
 
 .hero-cta-copy p {
@@ -329,7 +329,7 @@ li {
   justify-content: center;
   gap: 0.7rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, #ddbd70 0%, #c9a84c 100%);
+  background: linear-gradient(135deg, #e9f0fa 0%, #c8d8ec 100%);
   padding: 1rem 1.55rem;
   color: #0b1628;
   font-size: 0.74rem;
@@ -338,16 +338,16 @@ li {
   line-height: 1.15;
   text-align: center;
   text-transform: uppercase;
-  box-shadow: 0 18px 44px rgb(221 189 112 / 0.32);
+  box-shadow: 0 18px 44px rgb(190 214 240 / 0.32);
   transition: transform 180ms ease, background 180ms ease, color 180ms ease, box-shadow 180ms ease;
   white-space: nowrap;
 }
 
 .hero-cta-button:hover {
   transform: translateY(-2px) scale(1.02);
-  background: linear-gradient(135deg, #ffffff 0%, #f0d78c 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f2f7ff 100%);
   color: #0b1628;
-  box-shadow: 0 22px 52px rgb(221 189 112 / 0.42);
+  box-shadow: 0 22px 52px rgb(190 214 240 / 0.42);
 }
 
 .hero-cta-action {
@@ -414,7 +414,7 @@ li {
   overflow: hidden;
   background:
     radial-gradient(circle at 90% 12%, rgb(255 91 0 / 0.12), transparent 32%),
-    linear-gradient(180deg, #ffffff, #fff5ee);
+    linear-gradient(180deg, #ffffff, #f2f6fb);
   padding: clamp(4rem, 7vw, 6rem) 5vw;
   color: #0b1628;
 }
@@ -436,7 +436,7 @@ li {
 }
 
 .home-proof-copy span {
-  color: #ddbd70;
+  color: #e9f0fa;
   font-size: 0.72rem;
   font-weight: 950;
   letter-spacing: 0.3em;
@@ -454,7 +454,7 @@ li {
 .home-proof-copy p {
   margin-top: 1.2rem;
   max-width: 34rem;
-  color: #625a6c;
+  color: #55677f;
   font-size: clamp(1rem, 1.4vw, 1.15rem);
   font-weight: 750;
   line-height: 1.65;
@@ -539,7 +539,7 @@ li {
 .home-proof-card span {
   display: block;
   margin-top: 0.85rem;
-  color: #5e536a;
+  color: #55677f;
   font-size: 0.86rem;
   font-weight: 850;
   line-height: 1.35;
@@ -588,7 +588,7 @@ li {
 .webgl-engine-copy span,
 .motion-rail-heading span,
 .home-pin-copy span {
-  color: #ddbd70;
+  color: #e9f0fa;
   font-size: 0.72rem;
   font-weight: 950;
   letter-spacing: 0.3em;
@@ -628,7 +628,7 @@ li {
   align-items: center;
   gap: 0.7rem;
   border-radius: 999px;
-  background: #ddbd70;
+  background: #e9f0fa;
   padding: 1rem 1.35rem;
   color: #ffffff;
   font-size: 0.78rem;
@@ -811,7 +811,7 @@ li {
   width: 0.72rem;
   aspect-ratio: 1;
   border-radius: 999px;
-  background: #ff8d3d;
+  background: #3b6fa0;
   box-shadow: 0 0 28px rgb(255 91 0 / 0.8);
   transform: translate(-50%, -50%);
   animation: enginePulse 2.8s ease-in-out infinite;
@@ -823,7 +823,7 @@ li {
 
 .engine-flow-line span:nth-child(2) {
   left: 52%;
-  background: #b340ff;
+  background: #1e3a5f;
   animation-delay: 0.35s;
 }
 
@@ -880,7 +880,7 @@ li {
   min-height: 120vh;
   gap: clamp(2rem, 5vw, 5rem);
   align-items: start;
-  background: #f5f0e8;
+  background: #eef2f8;
   color: #142946;
   padding: clamp(6rem, 10vw, 9rem) 5vw;
   grid-template-columns: minmax(18rem, 0.78fr) minmax(0, 1fr);
@@ -954,7 +954,7 @@ li {
 .home-pin-card span {
   position: relative;
   z-index: 1;
-  color: #ddbd70;
+  color: #e9f0fa;
   font-size: 0.82rem;
   font-weight: 950;
   letter-spacing: 0.24em;
@@ -1087,7 +1087,7 @@ li {
   width: 100%;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, #ddbd70, #2d4a6e, #3b6fa0);
+  background: linear-gradient(90deg, #e9f0fa, #2d4a6e, #3b6fa0);
   transform: scaleX(var(--rail-progress));
   transform-origin: left;
   transition: transform 120ms linear;
@@ -1098,7 +1098,7 @@ li {
   margin: clamp(2rem, 5vw, 3.5rem) auto 0;
   padding: clamp(1.75rem, 3vw, 2.75rem) clamp(1.5rem, 3vw, 3rem);
   border-radius: 28px;
-  border: 1px solid rgb(221 189 112 / 0.35);
+  border: 1px solid rgb(190 214 240 / 0.35);
   background: linear-gradient(135deg, rgb(20 41 70 / 0.85), rgb(11 22 40 / 0.95));
   box-shadow: 0 30px 80px -40px rgb(0 0 0 / 0.6), inset 0 1px 0 rgb(255 255 255 / 0.05);
   backdrop-filter: blur(12px);
@@ -1106,7 +1106,7 @@ li {
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: clamp(1.5rem, 3vw, 2.5rem);
-  color: #f7f5ef;
+  color: #eef3fa;
 }
 
 .motion-rail-cta > div:first-child span {
@@ -1115,7 +1115,7 @@ li {
   font-weight: 900;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: #ddbd70;
+  color: #e9f0fa;
   margin-bottom: 0.75rem;
 }
 
@@ -1149,20 +1149,20 @@ li {
   gap: 0.5rem;
   padding: 0.95rem 1.6rem;
   border-radius: 999px;
-  background: #ddbd70;
+  background: #e9f0fa;
   color: #142946;
   font-weight: 900;
   font-size: 12px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  box-shadow: 0 18px 40px -18px rgb(221 189 112 / 0.7);
+  box-shadow: 0 18px 40px -18px rgb(190 214 240 / 0.7);
   transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
 }
 
 .motion-rail-cta-primary:hover {
   transform: translateY(-2px);
-  background: #e6c983;
-  box-shadow: 0 22px 50px -18px rgb(221 189 112 / 0.85);
+  background: #d8e5f5;
+  box-shadow: 0 22px 50px -18px rgb(190 214 240 / 0.85);
 }
 
 .motion-rail-cta-ghost {
@@ -1181,9 +1181,9 @@ li {
 }
 
 .motion-rail-cta-ghost:hover {
-  border-color: #ddbd70;
-  color: #ddbd70;
-  background: rgb(221 189 112 / 0.06);
+  border-color: #e9f0fa;
+  color: #e9f0fa;
+  background: rgb(190 214 240 / 0.06);
 }
 
 @media (max-width: 720px) {
@@ -1336,7 +1336,7 @@ li {
 .mobile-menu-panel a:focus-visible {
   transform: translateX(2px);
   border-color: rgb(255 91 0 / 0.16);
-  background: #fff5ef;
+  background: #f2f6fb;
   color: #142946;
 }
 
@@ -1344,7 +1344,7 @@ li {
   background:
     radial-gradient(circle at 18% 12%, rgb(255 91 0 / 0.12), transparent 30%),
     radial-gradient(circle at 86% 18%, rgb(150 54 255 / 0.14), transparent 34%),
-    linear-gradient(135deg, #fff7f1 0%, #f7efff 48%, #ffffff 100%);
+    linear-gradient(135deg, #f3f7fc 0%, #eef3fa 48%, #ffffff 100%);
   isolation: isolate;
   overflow: visible;
   padding-block: clamp(5rem, 8vw, 8rem);
@@ -1386,7 +1386,7 @@ li {
 }
 
 .solutions-eyebrow {
-  color: #ddbd70;
+  color: #e9f0fa;
   font-size: 0.72rem;
   font-weight: 950;
   letter-spacing: 0.3em;
@@ -1405,7 +1405,7 @@ li {
 .solutions-scroll-copy > p {
   margin-top: 1.4rem;
   max-width: 29rem;
-  color: #5c5368;
+  color: #55677f;
   font-size: clamp(1rem, 1.4vw, 1.18rem);
   font-weight: 750;
   line-height: 1.65;
@@ -1430,7 +1430,7 @@ li {
     radial-gradient(circle at 100% 0%, rgb(255 91 0 / 0.14), transparent 45%),
     rgb(255 255 255 / 0.58);
   padding: 0.9rem;
-  color: #5c5368;
+  color: #55677f;
   font-size: 0.74rem;
   font-weight: 850;
   line-height: 1.24;
@@ -1464,7 +1464,7 @@ li {
   width: 52%;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, #ddbd70, #2d4a6e, #3b6fa0);
+  background: linear-gradient(90deg, #e9f0fa, #2d4a6e, #3b6fa0);
   animation: rail-pulse 2.4s ease-in-out infinite alternate;
 }
 
@@ -1584,7 +1584,7 @@ li {
   flex-direction: column;
   background:
     radial-gradient(circle at 100% 0%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 42%),
-    linear-gradient(180deg, #ffffff 0%, #fffafd 100%),
+    linear-gradient(180deg, #ffffff 0%, #fbfdff 100%),
     #ffffff;
   padding: clamp(1.25rem, 2.2vw, 1.85rem);
 }
@@ -1626,7 +1626,7 @@ li {
 
 .solution-card-body p {
   margin-top: 0.95rem;
-  color: #625a6c;
+  color: #55677f;
   font-size: 0.96rem;
   font-weight: 650;
   line-height: 1.62;
@@ -1642,7 +1642,7 @@ li {
   display: flex;
   align-items: center;
   gap: 0.55rem;
-  color: #332b3f;
+  color: #1e3a5f;
   font-size: 0.84rem;
   font-weight: 850;
   line-height: 1.35;
@@ -1682,7 +1682,7 @@ li {
   background:
     radial-gradient(circle at 11% 18%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 30%),
     radial-gradient(circle at 86% 15%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 34%),
-    linear-gradient(135deg, #fffafa 0%, color-mix(in srgb, var(--accent) 7%, #f8f3ff 93%) 100%);
+    linear-gradient(135deg, #fbfdff 0%, color-mix(in srgb, var(--accent) 7%, #f1f5fb 93%) 100%);
   padding: clamp(4rem, 6.2vw, 5.8rem) 5vw;
   color: #0b1628;
 }
@@ -1747,7 +1747,7 @@ li {
   display: block;
   margin-top: 1.35rem;
   max-width: 42rem;
-  color: #625a6c;
+  color: #55677f;
   font-size: clamp(1rem, 1.6vw, 1.26rem);
   font-weight: 750;
   line-height: 1.7;
@@ -1818,7 +1818,7 @@ li {
 .solution-bullet-card span {
   display: block;
   max-width: 18ch;
-  color: #17111f;
+  color: #0b1628;
   font-size: clamp(1.2rem, 1.55vw, 1.85rem);
   font-weight: 950;
   letter-spacing: -0.035em;
@@ -1875,7 +1875,7 @@ li {
   min-height: 170px;
   background:
     radial-gradient(circle at 0% 0%, color-mix(in srgb, var(--accent) 32%, transparent), transparent 40%),
-    #0b0612;
+    #0b1628;
   padding: clamp(1.3rem, 3vw, 2.2rem);
 }
 
@@ -1998,7 +1998,7 @@ li {
 .solution-theme-signal span:nth-child(3) {
   left: 48%;
   bottom: 20%;
-  background: #ff8d3d;
+  background: #3b6fa0;
   animation-delay: 0.8s;
 }
 
@@ -2121,7 +2121,7 @@ li {
   z-index: 1;
   margin-top: 0.85rem;
   max-width: 36rem;
-  color: #625a6c;
+  color: #55677f;
   font-weight: 750;
   line-height: 1.6;
 }
@@ -2461,7 +2461,7 @@ li {
   background:
     radial-gradient(circle at 14% 22%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 40%),
     radial-gradient(circle at 86% 78%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 48%),
-    linear-gradient(180deg, #f9f6f0 0%, #f4ede3 55%, #efe5d4 100%);
+    linear-gradient(180deg, #f4f7fb 0%, #eaf0f7 55%, #e2eaf4 100%);
   pointer-events: none;
 }
 
@@ -2837,7 +2837,7 @@ li {
   padding-left: clamp(1.5rem, 4.2vw, 4rem);
   background:
     radial-gradient(circle at 18% 28%, color-mix(in srgb, var(--accent) 34%, transparent), transparent 34%),
-    linear-gradient(160deg, #2b001a 0%, #150016 48%, #0b1628 100%);
+    linear-gradient(160deg, #1e3a5f 0%, #0f1c2e 48%, #0b1628 100%);
 }
 
 .solution-theme-protection .solution-theme-copy h2 {
@@ -2958,7 +2958,7 @@ li {
 
 .solution-faq-item p {
   margin-top: 0.7rem;
-  color: #625a6c;
+  color: #55677f;
   font-weight: 750;
   line-height: 1.65;
 }
@@ -2986,7 +2986,7 @@ li {
   background:
     radial-gradient(circle at 8% 8%, rgb(255 91 0 / 0.12), transparent 30%),
     radial-gradient(circle at 88% 18%, rgb(139 35 216 / 0.12), transparent 32%),
-    linear-gradient(180deg, #ffffff, #fff7f1);
+    linear-gradient(180deg, #ffffff, #f3f7fc);
   padding: clamp(5rem, 8vw, 7.5rem) 5vw;
   color: var(--color-ink);
 }
@@ -3039,7 +3039,7 @@ li {
   border-radius: 999px;
   background: rgb(255 255 255 / 0.72);
   padding: 0.72rem 1rem;
-  color: #32263d;
+  color: #1e3a5f;
   font-size: 0.72rem;
   font-weight: 950;
   letter-spacing: 0.14em;
@@ -3078,7 +3078,7 @@ li {
 }
 
 .testimonial-card p {
-  color: #2b2035;
+  color: #1e3a5f;
   font-size: clamp(1rem, 1.2vw, 1.12rem);
   font-weight: 800;
   line-height: 1.65;
@@ -3144,7 +3144,7 @@ li {
   gap: clamp(2rem, 5vw, 4rem);
   background:
     radial-gradient(circle at 10% 12%, rgb(255 91 0 / 0.14), transparent 30%),
-    linear-gradient(180deg, #0b0312, var(--color-deep));
+    linear-gradient(180deg, #0b1628, var(--color-deep));
   padding: clamp(5rem, 8vw, 7rem) 5vw;
   color: #ffffff;
   grid-template-columns: minmax(18rem, 0.8fr) minmax(0, 1.2fr);
@@ -3218,7 +3218,7 @@ li {
 }
 
 .contact-input:focus {
-  border-color: #ddbd70;
+  border-color: #e9f0fa;
 }
 
 .about-intro-section {
@@ -3227,7 +3227,7 @@ li {
   gap: clamp(1rem, 2.5vw, 1.5rem);
   background:
     radial-gradient(circle at 8% 12%, rgb(255 91 0 / 0.1), transparent 30%),
-    linear-gradient(135deg, #ffffff, #fff7f1);
+    linear-gradient(135deg, #ffffff, #f3f7fc);
   padding: clamp(4rem, 6vw, 6rem) 5vw;
   color: var(--color-ink);
   grid-template-columns: minmax(18rem, 0.9fr) minmax(18rem, 1fr);
@@ -3627,7 +3627,7 @@ li {
   border-radius: 6px;
   background: rgb(132 204 22 / 0.16);
   padding: 0.5rem 0.7rem;
-  color: #bef264;
+  color: #e9f0fa;
   font-size: 0.78rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -4408,7 +4408,7 @@ li {
 .testimonial-card span,
 .about-intro-copy p,
 .about-principles p {
-  color: #4c4357;
+  color: #44566e;
 }
 
 .solution-bullet-card span,
