@@ -139,7 +139,7 @@ li {
   height: 100%;
   min-height: inherit;
   object-fit: cover;
-  object-position: 65% center;
+  object-position: 65% 30%;
 }
 
 .hero-animated-copy {
