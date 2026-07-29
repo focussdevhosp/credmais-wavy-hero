@@ -6,6 +6,10 @@ import cardAntecipacao from "@/assets/card-antecipacao.png.asset.json";
 import cardBoleto from "@/assets/boleto-garantido-card.png.asset.json";
 import cardConsultoria from "@/assets/consultoria-card.png.asset.json";
 import cardCrediario from "@/assets/crediario-card.png.asset.json";
+import railCapital from "@/assets/rail-capital.png.asset.json";
+import railBoleto from "@/assets/rail-boleto.png.asset.json";
+import railCrediario from "@/assets/rail-crediario.png.asset.json";
+import railGestao from "@/assets/rail-gestao.png.asset.json";
 import { useRouterState } from "@tanstack/react-router";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -899,10 +903,10 @@ function PinnedJourneySection() {
 
 function MotionRailSection() {
   const items = [
-    { image: "/assets/home-rail-capital.png", title: "Capital para vender sem esperar", text: "Antecipacao feita para transformar prazo em caixa planejado." },
-    { image: "/assets/home-rail-boleto.png", title: "Protecao para receber melhor", text: "Boleto, risco e cobranca em uma rotina mais previsivel." },
-    { image: "/assets/home-rail-crediario.png", title: "Venda parcelada com apoio", text: "Crediario para aumentar conversao no cliente final." },
-    { image: "/assets/home-rail-gestao.png", title: "Gestao que aparece no dia a dia", text: "Contas, conciliacao e fluxo financeiro com leitura simples." },
+    { image: railCapital.url, title: "Capital para vender sem esperar", text: "Antecipacao feita para transformar prazo em caixa planejado." },
+    { image: railBoleto.url, title: "Protecao para receber melhor", text: "Boleto, risco e cobranca em uma rotina mais previsivel." },
+    { image: railCrediario.url, title: "Venda parcelada com apoio", text: "Crediario para aumentar conversao no cliente final." },
+    { image: railGestao.url, title: "Gestao que aparece no dia a dia", text: "Contas, conciliacao e fluxo financeiro com leitura simples." },
   ];
 
   return (
@@ -924,8 +928,21 @@ function MotionRailSection() {
           ))}
         </div>
       </div>
-      <div className="motion-rail-progress" aria-hidden="true">
-        <span />
+      <div className="motion-rail-cta gsap-reveal">
+        <div>
+          <span>Pronto para o proximo passo?</span>
+          <h3>Monte a sua jornada financeira com a Credmais.</h3>
+          <p>Fale com um especialista e descubra qual combinacao de solucoes encaixa no ritmo da sua operacao.</p>
+        </div>
+        <div className="motion-rail-cta-actions">
+          <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer" className="motion-rail-cta-primary">
+            Falar com especialista
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
+          <a href="/#solucoes" className="motion-rail-cta-ghost">
+            Ver todas as solucoes
+          </a>
+        </div>
       </div>
     </section>
   );
