@@ -907,17 +907,17 @@ function PinnedJourneySection() {
 
 function MotionRailSection() {
   const items = [
-    { image: railCapital.url, title: "Capital para vender sem esperar", text: "Antecipacao feita para transformar prazo em caixa planejado." },
-    { image: railBoleto.url, title: "Protecao para receber melhor", text: "Boleto, risco e cobranca em uma rotina mais previsivel." },
-    { image: railCrediario.url, title: "Venda parcelada com apoio", text: "Crediario para aumentar conversao no cliente final." },
-    { image: railGestao.url, title: "Gestao que aparece no dia a dia", text: "Contas, conciliacao e fluxo financeiro com leitura simples." },
+    { image: railCapital.url, title: "Capital para vender sem esperar", text: "Antecipe recebíveis e transforme prazo em caixa planejado." },
+    { image: railBoleto.url, title: "Proteção para receber melhor", text: "Boleto, risco e cobrança em uma rotina totalmente previsível." },
+    { image: railCrediario.url, title: "Venda parcelada com apoio", text: "Crediário para aumentar a conversão junto ao cliente final." },
+    { image: railGestao.url, title: "Gestão que aparece no dia a dia", text: "Contas, conciliação e fluxo financeiro com leitura simples e prática." },
   ];
 
   return (
     <section className="motion-rail-section">
       <div className="motion-rail-heading gsap-reveal">
-        <span>Scroll experience</span>
-        <h2>Imagens, ritmo e narrativa para manter a home completa.</h2>
+        <span>Soluções em movimento</span>
+        <h2>Escolha a solução ideal para o momento da sua empresa.</h2>
       </div>
       <div className="motion-rail-viewport">
         <div className="motion-rail-track">
@@ -934,9 +934,9 @@ function MotionRailSection() {
       </div>
       <div className="motion-rail-cta gsap-reveal">
         <div>
-          <span>Pronto para o proximo passo?</span>
+          <span>Pronto para o próximo passo?</span>
           <h3>Monte a sua jornada financeira com a Credmais.</h3>
-          <p>Fale com um especialista e descubra qual combinacao de solucoes encaixa no ritmo da sua operacao.</p>
+          <p>Fale com um especialista e descubra qual combinação de soluções encaixa melhor no ritmo da sua operação.</p>
         </div>
         <div className="motion-rail-cta-actions">
           <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer" className="motion-rail-cta-primary">
@@ -944,7 +944,7 @@ function MotionRailSection() {
             <ArrowUpRight className="h-4 w-4" />
           </a>
           <a href="/#solucoes" className="motion-rail-cta-ghost">
-            Ver todas as solucoes
+            Ver todas as soluções
           </a>
         </div>
       </div>
@@ -956,9 +956,9 @@ function HomeTrustSection() {
   return (
     <section className="home-trust-section">
       <div className="home-trust-heading gsap-reveal">
-        <span>Confianca para decidir</span>
-        <h2>Prova social sem exagero: clareza, acompanhamento e operacao visivel.</h2>
-        <p>Empresas com venda a prazo precisam de previsibilidade antes de assumir qualquer estrutura financeira.</p>
+        <span>Confiança para decidir</span>
+        <h2>Empresas que crescem sem improviso escolhem a Credmais.</h2>
+        <p>Antes de qualquer estrutura financeira, você precisa de clareza, acompanhamento próximo e uma operação totalmente visível.</p>
       </div>
       <div className="trust-profile-row" aria-label="Perfis de empresas atendidas">
         {trustProfiles.map((profile) => (
@@ -977,10 +977,10 @@ function HomeTrustSection() {
         ))}
       </div>
       <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer" className="trust-cta">
-        Avaliar minha operacao
+        Quero avaliar minha operação
         <ArrowUpRight className="h-4 w-4" />
       </a>
-      <p className="cta-microcopy">Sem conta digital propria. A Credmais estrutura capital, risco e contas para sua empresa.</p>
+      <p className="cta-microcopy">Não somos banco digital. A Credmais estrutura capital, risco e contas para a sua empresa crescer com segurança.</p>
     </section>
   );
 }
@@ -989,8 +989,8 @@ function HomeFAQSection() {
   return (
     <section className="home-faq-section">
       <div className="home-faq-heading gsap-reveal">
-        <span>FAQ</span>
-        <h2>Duvidas comuns antes de falar com a Credmais.</h2>
+        <span>Perguntas frequentes</span>
+        <h2>Tire suas dúvidas antes de falar com a Credmais.</h2>
       </div>
       <div className="home-faq-list">
         {homeFaq.map((item) => (
