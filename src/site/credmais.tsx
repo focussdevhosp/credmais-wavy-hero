@@ -80,7 +80,7 @@ const CONTACT_CNPJ = "67.859.471/0001-20";
 
 const solutionVisualSets: Partial<Record<string, SolutionVisualSet>> = {
   "antecipacao-de-recebiveis": {
-    hero: "/assets/page-antecipacao-hero.png",
+    hero: heroAntecipacao.url,
     banner: "/assets/page-antecipacao-banner.png",
     flow: "/assets/page-antecipacao-flow.png",
     layout: "capital",
