@@ -738,7 +738,7 @@ export function HomePage() {
   useHomeMotion();
   return (
     <>
-      <CampaignHero image={HERO_IMAGE} eyebrow="Credmais Securitizadora" titleStart="Venda a prazo." titleBridge="Receba com" words={["liquidez.", "seguranca.", "previsibilidade."]} description="Capital para sua empresa crescer sem esperar o vencimento dos recebiveis." ctaText="Antecipe recebiveis, proteja boletos, organize contas e venda mais com credito estruturado sem depender de banco proprio." buttonText="Quero diagnostico financeiro" buttonHref={CONTACT_WHATSAPP_URL} />
+      <CampaignHero image={HERO_IMAGE} eyebrow="Credmais Securitizadora" titleStart="Venda a prazo." titleBridge="Receba com" words={["liquidez.", "segurança.", "previsibilidade."]} description="Capital para sua empresa crescer sem depender do vencimento dos recebíveis nem da burocracia dos bancos." ctaText="Antecipe recebíveis, proteja boletos, organize contas e venda mais com crédito estruturado — sem depender de banco próprio." buttonText="Quero meu diagnóstico gratuito" buttonHref={CONTACT_WHATSAPP_URL} />
       <HomeProofSection />
       <WebGLEngineSection />
       <PinnedJourneySection />
