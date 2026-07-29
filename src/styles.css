@@ -446,11 +446,11 @@ li {
   position: relative;
   z-index: 3;
   display: grid;
-  margin-top: -5rem;
+  margin-top: 2.5rem;
   overflow: hidden;
   border: 1px solid rgb(8 5 16 / 0.08);
   border-radius: 30px;
-  background: rgb(255 255 255 / 0.82);
+  background: rgb(255 255 255 / 0.92);
   box-shadow: 0 30px 90px rgb(35 15 58 / 0.11);
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-column: 1 / -1;
