@@ -4304,8 +4304,6 @@ li {
 
 .motion-rail-card p,
 .home-faq-item p,
-.solution-operating-copy p,
-.solution-operating-card p,
 .solution-banner-copy p,
 .solution-flow-sticky p,
 .solution-flow-step p,
@@ -4317,6 +4315,11 @@ li {
 .engine-human-caption span,
 .solution-floating-card small {
   color: rgb(11 22 40 / 0.6);
+}
+
+.solution-operating-copy p,
+.solution-operating-card p {
+  color: rgb(255 255 255 / 0.82);
 }
 
 .engine-dashboard span,
