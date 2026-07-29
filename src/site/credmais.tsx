@@ -87,7 +87,7 @@ const solutionVisualSets: Partial<Record<string, SolutionVisualSet>> = {
     layout: "capital",
   },
   "boleto-garantido": {
-    hero: "/assets/page-boleto-hero.png",
+    hero: heroBoletoGarantido.url,
     banner: "/assets/page-boleto-banner.png",
     flow: "/assets/page-boleto-flow.png",
     layout: "protection",
