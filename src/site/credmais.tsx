@@ -766,25 +766,6 @@ export function SolutionPage({ solution }: { solution: Solution }) {
   return (
     <>
       <CampaignHero image={visualSet.hero} eyebrow={solution.metric} titleStart={copy.titleStart} titleBridge={copy.titleBridge} words={copy.words} description={solution.summary} />
-      <SolutionProofStrip solution={solution} theme={theme} />
-      <section className={`solution-detail-intro solution-detail-${visualSet.layout}`} style={{ "--accent": solution.accent } as CSSProperties}>
-        <div className="solution-detail-shell">
-          <div className="solution-detail-copy solution-animated">
-            <p>{solution.metric}</p>
-            <h2>{solution.title}</h2>
-            <span>{theme.audience}</span>
-          </div>
-          <div className="solution-bullet-grid">
-            {solution.bullets.map((bullet, index) => (
-              <div key={bullet} className="solution-bullet-card solution-animated">
-                <CheckCircle2 className="h-6 w-6" />
-                <small>{String(index + 1).padStart(2, "0")}</small>
-                <span>{bullet}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
       <SolutionOperatingPanel solution={solution} theme={theme} visualSet={visualSet} />
       <SolutionExperience solution={solution} visualSet={visualSet} />
       <SolutionFaqSection solution={solution} theme={theme} />
