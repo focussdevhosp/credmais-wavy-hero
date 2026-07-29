@@ -1334,7 +1334,7 @@ function CampaignHero({ image, eyebrow, titleStart, titleBridge, words, descript
   return (
     <section className="campaign-hero relative isolate min-h-screen overflow-hidden bg-[#0b1628]">
       <div className="hero-bg-image absolute inset-0 -z-10" aria-hidden="true">
-        <img src={image} alt="" className="hero-full-image" />
+        <img src={image} alt="" className="hero-full-image" fetchPriority="high" decoding="async" />
       </div>
       <div className="hero-animated-copy">
         <span>{eyebrow}</span>
