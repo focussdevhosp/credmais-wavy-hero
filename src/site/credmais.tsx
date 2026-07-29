@@ -755,9 +755,9 @@ export function SolutionPage({ solution }: { solution: Solution }) {
       words: ["crediário.", "conversão.", "controle."],
     },
     "gestao-de-contas": {
-      titleStart: "Organize contas.",
-      titleBridge: "Tenha",
-      words: ["visão clara.", "fluxo.", "controle."],
+      titleStart: "Dívidas recebidas.",
+      titleBridge: "Você com",
+      words: ["fôlego.", "resultado.", "controle."],
     },
   };
   const copy = heroCopy[solution.slug] ?? {
