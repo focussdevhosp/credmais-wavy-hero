@@ -1260,7 +1260,7 @@ li {
   overflow: hidden;
   color: #09111f;
   font-size: 0.7rem;
-  font-weight: 950;
+  font-weight: 300;
   letter-spacing: 0.08em;
   line-height: 1.35;
   text-overflow: ellipsis;
@@ -1275,7 +1275,7 @@ li {
   margin-top: 0.16rem;
   color: #5b6578;
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 300;
 }
 
 .solutions-menu-arrow {
@@ -1405,7 +1405,7 @@ li {
   padding: 0.9rem;
   color: #55677f;
   font-size: 0.74rem;
-  font-weight: 850;
+  font-weight: 400;
   line-height: 1.24;
   box-shadow: 0 14px 42px rgb(11 22 40 / 0.07);
 }
@@ -1594,7 +1594,7 @@ li {
   margin-top: 0.95rem;
   color: #55677f;
   font-size: 0.96rem;
-  font-weight: 650;
+  font-weight: 400;
   line-height: 1.62;
 }
 
@@ -1610,7 +1610,7 @@ li {
   gap: 0.55rem;
   color: #1e3a5f;
   font-size: 0.84rem;
-  font-weight: 850;
+  font-weight: 400;
   line-height: 1.35;
 }
 
@@ -1631,7 +1631,7 @@ li {
   padding: 0.9rem 1.04rem;
   color: #ffffff;
   font-size: 0.72rem;
-  font-weight: 950;
+  font-weight: 300;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   transition: background 180ms ease, transform 180ms ease;
@@ -4442,6 +4442,7 @@ li {
 .testimonial-card span,
 .about-intro-copy p,
 .about-principles p {
+  font-weight: 300;
   color: #44566e;
 }
 
