@@ -437,7 +437,7 @@ function SolutionsDropdown({ pathname, scrolled }: { pathname: string; scrolled:
   const active = solutions.some((item) => pathname === `/${item.slug}`);
   return (
     <div className="group relative">
-      <a href="/#solucoes" className={`inline-flex items-center gap-1.5 py-2 transition ${active ? (scrolled ? "text-[#142946]" : "text-white") : scrolled ? "text-[#142946]/70" : "text-white/80"}`}>
+      <a href="/#solucoes" className={`nav-link inline-flex items-center gap-1.5 transition ${active ? "is-active" : ""} ${scrolled ? "is-scrolled" : ""}`}>
         Soluções
         <span className="grid h-5 w-5 place-items-center rounded-full border border-current/25 transition group-hover:rotate-180">
           <ChevronDown className="h-3 w-3" />
@@ -469,7 +469,7 @@ function SolutionsDropdown({ pathname, scrolled }: { pathname: string; scrolled:
 }
 
 function NavLink({ href, active, scrolled, children }: { href: string; active: boolean; scrolled: boolean; children: ReactNode }) {
-  return <a href={href} className={`transition hover:opacity-100 ${active ? (scrolled ? "text-[#142946]" : "text-white") : scrolled ? "text-[#142946]/70" : "text-white/80"}`}>{children}</a>;
+  return <a href={href} className={`nav-link ${active ? "is-active" : ""} ${scrolled ? "is-scrolled" : ""}`} style={{ color: "inherit" }}>{children}</a>;
 }
 
 function MobileLink({ href, onClick, children }: { href: string; onClick: () => void; children: ReactNode }) {
