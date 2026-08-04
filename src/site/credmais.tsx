@@ -379,8 +379,8 @@ export function SiteHeader() {
     : "border border-white/20 bg-[#142946]/25 text-white shadow-[0_12px_40px_-12px_rgba(0,0,0,0.35)]";
 
   return (
-    <header className={`fixed inset-x-0 top-0 z-50 px-3 transition-all ${scrolled ? "py-2" : "py-4"}`}>
-      <nav className={`mx-auto flex max-w-[1200px] items-center justify-between rounded-full px-3 py-2 backdrop-blur-2xl transition-all md:px-5 md:py-2.5 ${navGlass}`}>
+    <header className="site-header">
+      <nav className={`mx-auto flex w-full max-w-[1200px] items-center justify-between rounded-full px-3 py-2 backdrop-blur-2xl transition-all md:px-5 md:py-2.5 ${navGlass}`}>
         <a href="/" className="flex shrink-0 items-center">
           <span className={`brand-logo-shell ${scrolled ? "is-scrolled" : ""}`}>
             <img src={LOGO_IMAGE} alt="Credmais Securitizadora" />
