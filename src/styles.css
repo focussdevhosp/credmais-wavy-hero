@@ -423,11 +423,19 @@ li {
   flex-shrink: 0;
 }
 
+@media (min-width: 1024px) {
+  .brand-logo-shell {
+    height: 56px;
+    padding: 0 1.25rem;
+  }
+}
+
 .nav-container.is-scrolled .brand-logo-shell {
   height: 42px;
   padding: 0 0.75rem;
   width: 100%;
 }
+
 
 .brand-logo-shell img {
   height: 100%;
@@ -435,7 +443,31 @@ li {
   object-fit: contain;
 }
 
+.nav-mobile-toggle {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .nav-mobile-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-right: 0.25rem;
+  }
+
+  .nav-mobile-toggle.is-scrolled {
+    display: none;
+  }
+}
+
 .nav-links {
+
   display: flex;
   align-items: center;
   gap: 0.5rem;
