@@ -380,14 +380,14 @@ export function SiteHeader() {
 
   return (
     <header className="site-header">
-      <nav className={`mx-auto flex w-full max-w-[1200px] items-center justify-between rounded-full px-3 py-2 backdrop-blur-2xl transition-all md:px-5 md:py-2.5 ${navGlass}`}>
+      <nav className={`mx-auto flex w-full items-center justify-between rounded-full px-3 py-2 backdrop-blur-2xl transition-all duration-500 md:px-5 md:py-2.5 ${navGlass} ${scrolled ? "max-w-[140px]" : "max-w-[1200px]"}`}>
         <a href="/" className="flex shrink-0 items-center">
           <span className={`brand-logo-shell ${scrolled ? "is-scrolled" : ""}`}>
             <img src={LOGO_IMAGE} alt="Credmais Securitizadora" />
           </span>
         </a>
 
-        <div className="hidden items-center gap-4 text-[11px] font-black uppercase tracking-[0.18em] md:flex lg:gap-8 lg:tracking-[0.2em]">
+        <div className={`hidden items-center gap-4 text-[11px] font-black uppercase tracking-[0.18em] transition-all duration-500 md:flex lg:gap-8 lg:tracking-[0.2em] ${scrolled ? "pointer-events-none absolute scale-90 opacity-0" : "w-auto scale-100 opacity-100"}`}>
           <NavLink href="/" active={pathname === "/"} scrolled={scrolled}>Início</NavLink>
           <SolutionsDropdown pathname={pathname} scrolled={scrolled} />
           <NavLink href="/sobre" active={pathname === "/sobre"} scrolled={scrolled}>Sobre</NavLink>
@@ -398,7 +398,7 @@ export function SiteHeader() {
           href={CONTACT_WHATSAPP_URL}
           target="_blank"
           rel="noreferrer"
-          className="hidden shrink-0 items-center justify-center rounded-full bg-white px-4 py-2.5 text-[10px] font-black uppercase tracking-[0.14em] !text-[#142946] shadow-[0_10px_28px_-12px_rgba(0,0,0,0.35)] transition-all duration-300 hover:-translate-y-[1px] hover:bg-white/90 active:scale-[0.98] md:inline-flex lg:px-6 lg:text-[11px] lg:tracking-[0.18em]"
+          className={`hidden shrink-0 items-center justify-center rounded-full bg-white px-4 py-2.5 text-[10px] font-black uppercase tracking-[0.14em] !text-[#142946] shadow-[0_10px_28px_-12px_rgba(0,0,0,0.35)] transition-all duration-500 hover:-translate-y-[1px] hover:bg-white/90 active:scale-[0.98] md:inline-flex lg:px-6 lg:text-[11px] lg:tracking-[0.18em] ${scrolled ? "pointer-events-none absolute scale-90 opacity-0" : "w-auto scale-100 opacity-100"}`}
         >
           Simular agora
         </a>
