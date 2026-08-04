@@ -401,7 +401,7 @@ li {
   box-shadow: 
     0 10px 40px -10px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: all 0.5s var(--ease-out);
   overflow: hidden;
   max-width: 90vw;
   width: auto;
@@ -442,6 +442,7 @@ li {
   height: 100%;
   width: auto;
   object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(233, 240, 250, 0.2));
 }
 
 .nav-mobile-toggle {
