@@ -370,8 +370,8 @@ li {
 
 .brand-logo-shell {
   display: inline-flex;
-  height: 46px;
-  max-width: min(50vw, 200px);
+  height: 58px;
+  max-width: min(60vw, 240px);
   align-items: center;
   border: none;
   border-radius: 16px;
@@ -383,10 +383,10 @@ li {
 
 @media (min-width: 1024px) {
   .brand-logo-shell {
-    height: 60px;
+    height: 72px;
     border-radius: 18px;
     padding: 0.42rem 0.75rem;
-    max-width: 230px;
+    max-width: 280px;
   }
 }
 
