@@ -500,6 +500,19 @@ li {
   background: rgba(233, 240, 250, 0.1);
 }
 
+.nav-link.is-active {
+  color: #ffffff;
+}
+
+.nav-link.is-scrolled {
+  color: #142946;
+}
+
+.nav-link.is-scrolled.is-active {
+  color: #142946;
+}
+}
+
 .nav-cta {
   margin-left: 0.5rem;
   transition: all 0.4s ease;
