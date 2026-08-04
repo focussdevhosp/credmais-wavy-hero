@@ -469,7 +469,7 @@ function SolutionsDropdown({ pathname, scrolled }: { pathname: string; scrolled:
 }
 
 function NavLink({ href, active, scrolled, children }: { href: string; active: boolean; scrolled: boolean; children: ReactNode }) {
-  return <a href={href} className={`transition hover:opacity-100 ${active ? (scrolled ? "text-[#142946]" : "text-white") : scrolled ? "text-[#142946]/70" : "text-white/80"}`}>{children}</a>;
+  return <a href={href} className={`nav-link ${active ? "is-active" : ""} ${scrolled ? "is-scrolled" : ""}`}>{children}</a>;
 }
 
 function MobileLink({ href, onClick, children }: { href: string; onClick: () => void; children: ReactNode }) {
