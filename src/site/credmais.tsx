@@ -988,15 +988,16 @@ function ContactSection({ compact = false }: { compact?: boolean }) {
     <section id="contato" className={`bg-[#142946] px-5 text-white md:px-[10%] ${compact ? "py-24" : "py-32"}`}>
       <div className="mx-auto max-w-6xl text-center">
         <p className="mb-6 text-xs font-black uppercase tracking-[0.36em] text-[#e9f0fa]">Contato</p>
-        <h2 className="text-5xl font-black leading-none tracking-[-0.06em] md:text-8xl">O que sua empresa precisa resolver?</h2>
-        <p className="mx-auto mt-6 max-w-3xl text-base font-bold leading-relaxed text-white/58 md:text-lg">
+        <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-extralight leading-none tracking-[-0.04em]">O que sua empresa precisa resolver?</h2>
+        <p className="mx-auto mt-6 max-w-3xl text-base font-normal leading-relaxed text-white/58 md:text-lg">
           Fale com a Credmais sobre falta de caixa, venda a prazo, inadimplência, dificuldade de crédito, boleto garantido, crediário, gestão de contas ou recebimento de dívidas — respondemos rápido e com clareza.
         </p>
-        <div className="contact-service-grid" aria-label="Soluções para contato">
+
+        <div className="contact-service-grid mt-12 mb-16" aria-label="Soluções para contato">
           {solutions.map((solution) => {
             const Icon = solution.icon;
             return (
-              <a key={solution.slug} href={`/${solution.slug}`} style={{ "--accent": solution.accent } as CSSProperties}>
+              <a key={solution.slug} href="#form-contato" style={{ "--accent": solution.accent } as CSSProperties}>
                 <span className="contact-service-icon"><Icon className="h-5 w-5" /></span>
                 <strong>{solution.title}</strong>
                 <small>{solution.metric}</small>
@@ -1004,7 +1005,10 @@ function ContactSection({ compact = false }: { compact?: boolean }) {
             );
           })}
         </div>
-        <ContactForm />
+
+        <div id="form-contato" className="bg-white/5 p-8 rounded-[42px] border border-white/10 shadow-2xl backdrop-blur-md max-w-5xl mx-auto">
+          <ContactForm />
+        </div>
       </div>
     </section>
   );
