@@ -367,50 +367,50 @@ export function SiteHeader() {
   const pathname = useRouterState({ select: (s) => s.location.pathname }) || "/";
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 80);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navGlass = scrolled
-    ? "border border-[#142946]/10 bg-white/90 text-[#142946] shadow-[0_12px_40px_-12px_rgba(0,0,0,0.2)]"
-    : "border border-white/20 bg-[#142946]/25 text-white shadow-[0_12px_40px_-12px_rgba(0,0,0,0.35)]";
-
   return (
-    <header className="site-header transition-all duration-500">
-      <nav className={`mx-auto flex w-full items-center justify-between rounded-full px-3 py-2 backdrop-blur-2xl transition-all duration-500 md:px-5 md:py-2.5 ${navGlass} ${scrolled ? "max-w-[140px]" : "max-w-[1200px]"}`} style={{ position: scrolled ? 'fixed' : 'relative', top: scrolled ? '1rem' : 'auto' }}>
-        <a href="/" className="flex shrink-0 items-center">
-          <span className={`brand-logo-shell ${scrolled ? "is-scrolled" : ""}`}>
-            <img src={LOGO_IMAGE} alt="Credmais Securitizadora" />
-          </span>
+    <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
+      <nav className={`nav-container ${scrolled ? "is-scrolled" : ""}`}>
+        <a href="/" className="brand-logo-shell">
+          <img src={LOGO_IMAGE} alt="CredMais" />
         </a>
 
-        <div className={`hidden items-center gap-4 text-[11px] font-black uppercase tracking-[0.18em] transition-all duration-500 md:flex lg:gap-8 lg:tracking-[0.2em] ${scrolled ? "pointer-events-none absolute scale-90 opacity-0" : "w-auto scale-100 opacity-100"}`}>
+        <div className={`nav-links ${scrolled ? "hidden" : ""}`}>
           <NavLink href="/" active={pathname === "/"} scrolled={scrolled}>Início</NavLink>
           <SolutionsDropdown pathname={pathname} scrolled={scrolled} />
           <NavLink href="/sobre" active={pathname === "/sobre"} scrolled={scrolled}>Sobre</NavLink>
           <NavLink href="/contato" active={pathname === "/contato"} scrolled={scrolled}>Contato</NavLink>
         </div>
 
-        <a
-          href={CONTACT_WHATSAPP_URL}
-          target="_blank"
-          rel="noreferrer"
-          className={`hidden shrink-0 items-center justify-center rounded-full bg-white px-4 py-2.5 text-[10px] font-black uppercase tracking-[0.14em] !text-[#142946] shadow-[0_10px_28px_-12px_rgba(0,0,0,0.35)] transition-all duration-500 hover:-translate-y-[1px] hover:bg-white/90 active:scale-[0.98] md:inline-flex lg:px-6 lg:text-[11px] lg:tracking-[0.18em] ${scrolled ? "pointer-events-none absolute scale-90 opacity-0" : "w-auto scale-100 opacity-100"}`}
-        >
-          Simular agora
-        </a>
+        <div className={`nav-cta ${scrolled ? "hidden" : ""}`}>
+          <a
+            href={CONTACT_WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav-cta-button"
+          >
+            Simular agora
+            <ArrowUpRight size={14} />
+          </a>
+        </div>
 
         <button
-          className={`grid h-10 w-10 place-items-center rounded-full border md:hidden ${scrolled ? "border-[#142946]/10 bg-[#f6f7fb] text-[#142946]" : "border-white/20 bg-white/12 text-white"}`}
+          className={`nav-mobile-toggle ${scrolled ? "is-scrolled" : ""}`}
           onClick={() => setOpen((value) => !value)}
           aria-label="Menu"
         >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {open ? <X size={20} /> : <Menu size={20} />}
         </button>
       </nav>
+
 
       {open && (
         <div className="mx-3 mt-2 grid gap-1 overflow-hidden rounded-[24px] border border-[#142946]/10 bg-white p-3 text-[#142946] shadow-2xl md:hidden">
