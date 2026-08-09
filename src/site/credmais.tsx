@@ -660,10 +660,6 @@ export function HomePage() {
                 Uma esteira financeira completa para vender a prazo com segurança, antecipar recebíveis, proteger boletos, organizar contas e recuperar dívidas com previsibilidade real.
               </p>
 
-              <div className="solutions-metrics gsap-reveal" aria-label="Indicadores das soluções">
-                <span><strong>5</strong> frentes financeiras integradas</span>
-                <span><strong>D+1</strong> nas operações elegíveis</span>
-              </div>
 
               <div className="solutions-scroll-rail gsap-reveal" aria-hidden="true">
                 <span />
