@@ -384,10 +384,16 @@ export function SiteHeader() {
         </a>
 
         <div className={`nav-links ${scrolled ? "hidden" : ""}`}>
-          <NavLink href="/" active={pathname === "/"} scrolled={scrolled}>Início</NavLink>
+          <NavLink href="/" active={pathname === "/"} scrolled={scrolled}>
+            Início
+          </NavLink>
           <SolutionsDropdown pathname={pathname} scrolled={scrolled} />
-          <NavLink href="/sobre" active={pathname === "/sobre"} scrolled={scrolled}>Sobre</NavLink>
-          <NavLink href="/contato" active={pathname === "/contato"} scrolled={scrolled}>Contato</NavLink>
+          <NavLink href="/#sobre" active={pathname === "/sobre"} scrolled={scrolled}>
+            Sobre
+          </NavLink>
+          <NavLink href="/#form-contato" active={pathname === "/contato"} scrolled={scrolled}>
+            Contato
+          </NavLink>
         </div>
 
         <div className={`nav-cta ${scrolled ? "hidden" : ""}`}>
@@ -395,10 +401,10 @@ export function SiteHeader() {
             href={CONTACT_WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="nav-cta-button"
+            className="nav-cta-button group"
           >
             Simular agora
-            <ArrowUpRight size={14} />
+            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
         </div>
 
@@ -407,31 +413,42 @@ export function SiteHeader() {
           onClick={() => setOpen((value) => !value)}
           aria-label="Menu"
         >
-          {open ? <X size={20} /> : <Menu size={20} />}
+          {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </nav>
 
-
       {open && (
-        <div className="mx-3 mt-2 grid gap-1 overflow-hidden rounded-[24px] border border-[#142946]/10 bg-white p-3 text-[#142946] shadow-2xl md:hidden">
-          <MobileLink href="/" onClick={() => setOpen(false)}>Início</MobileLink>
-          <span className="px-4 pt-3 text-[10px] font-black uppercase tracking-[0.24em] text-[#142946]/45">Soluções</span>
-          {solutions.map((solution) => <MobileLink key={solution.slug} href={`/${solution.slug}`} onClick={() => setOpen(false)}>{solution.title}</MobileLink>)}
-          <MobileLink href="/sobre" onClick={() => setOpen(false)}>Sobre</MobileLink>
-          <MobileLink href="/contato" onClick={() => setOpen(false)}>Contato</MobileLink>
-          <a
-            href={CONTACT_WHATSAPP_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-1 inline-flex items-center justify-center rounded-full bg-[#142946] px-5 py-3 text-sm font-black uppercase tracking-[0.16em] !text-white"
-          >
-            Simular agora
-          </a>
+        <div className="mx-3 mt-3 overflow-hidden rounded-[32px] border border-white/10 bg-[#142946]/95 p-4 text-white shadow-2xl backdrop-blur-2xl md:hidden">
+          <div className="grid gap-2">
+            <MobileLink href="/" onClick={() => setOpen(false)}>Início</MobileLink>
+            <div className="my-2 border-t border-white/5 pt-2">
+              <span className="px-4 text-[10px] font-black uppercase tracking-[0.24em] text-white/40">Soluções</span>
+              <div className="mt-2 grid gap-1">
+                {solutions.map((solution) => (
+                  <MobileLink key={solution.slug} href={`/${solution.slug}`} onClick={() => setOpen(false)}>
+                    {solution.title}
+                  </MobileLink>
+                ))}
+              </div>
+            </div>
+            <MobileLink href="/#sobre" onClick={() => setOpen(false)}>Sobre</MobileLink>
+            <MobileLink href="/#form-contato" onClick={() => setOpen(false)}>Contato</MobileLink>
+            <a
+              href={CONTACT_WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-2 flex items-center justify-center gap-2 rounded-full bg-white px-6 py-4 text-sm font-black uppercase tracking-[0.16em] text-[#142946]"
+            >
+              Simular agora
+              <ArrowUpRight size={16} />
+            </a>
+          </div>
         </div>
       )}
     </header>
   );
 }
+
 
 function SolutionsDropdown({ pathname, scrolled }: { pathname: string; scrolled: boolean }) {
   const active = solutions.some((item) => pathname === `/${item.slug}`);
