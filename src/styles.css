@@ -3252,7 +3252,6 @@ li {
   margin: clamp(3.5rem, 6vw, 5rem) auto 0;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
-}
 
 .testimonial-card {
   position: relative;
