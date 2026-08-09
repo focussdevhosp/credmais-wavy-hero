@@ -24,7 +24,7 @@
 
 html {
   scroll-behavior: smooth;
-  background: #142946;
+  background: #F6F8FA;
 }
 
 html,
@@ -419,9 +419,8 @@ li {
 }
 
 .site-header.is-scrolled::before {
-  background: rgba(255, 255, 255, 1);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  background: rgba(7, 26, 51, 1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
 .site-header > * {
