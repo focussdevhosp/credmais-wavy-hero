@@ -653,20 +653,20 @@ export function HomePage() {
         <div className="solutions-showcase-bg" aria-hidden="true" />
         <div className="relative z-10 mx-auto max-w-7xl">
           <div className="solutions-scroll-layout">
-            <div className="solutions-scroll-copy gsap-reveal">
-              <p className="solutions-eyebrow">Soluções Credmais</p>
-              <h2>Soluções que giram o seu caixa.</h2>
-              <p>
+            <div className="solutions-scroll-copy">
+              <span className="solutions-eyebrow gsap-reveal">Soluções CredMais</span>
+              <h2 className="gsap-reveal">Soluções que giram o seu caixa.</h2>
+              <p className="gsap-reveal">
                 Uma esteira financeira completa para vender a prazo com segurança, antecipar recebíveis, proteger boletos, organizar contas e recuperar dívidas com previsibilidade real.
               </p>
 
-              <div className="solutions-metrics" aria-label="Indicadores das soluções">
+              <div className="solutions-metrics gsap-reveal" aria-label="Indicadores das soluções">
                 <span><strong>5</strong> frentes financeiras integradas</span>
                 <span><strong>D+1</strong> nas operações elegíveis</span>
                 <span><strong>Recuperação</strong> ativa de dívidas em atraso</span>
               </div>
 
-              <div className="solutions-scroll-rail" aria-hidden="true">
+              <div className="solutions-scroll-rail gsap-reveal" aria-hidden="true">
                 <span />
               </div>
             </div>
