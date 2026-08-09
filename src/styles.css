@@ -422,14 +422,12 @@ li {
 
 @media (min-width: 1024px) {
   .brand-logo-shell {
-    height: 72px;
-    padding: 0 1.5rem;
+    height: 60px;
   }
 }
 
 .nav-container.is-scrolled .brand-logo-shell {
-  height: 48px;
-  padding: 0 0.8rem;
+  height: 40px;
 }
 
 .brand-logo-shell img {
