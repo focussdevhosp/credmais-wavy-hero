@@ -8,8 +8,10 @@
   --color-deep: #142946;
   --color-muted: #7a8fa8;
   --color-surface: #ffffff;
-  --shadow-soft: 0 24px 80px rgb(11 22 40 / 0.18);
-  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --shadow-soft: 0 40px 100px rgb(0 0 0 / 0.25);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --radius-xl: 40px;
+  --radius-2xl: 60px;
 }
 
 * {
@@ -147,13 +149,12 @@ li {
 
 .hero-animated-copy {
   position: absolute;
-  left: clamp(1.25rem, 6.8vw, 6rem);
-  top: clamp(7rem, 20vh, 13rem);
+  left: clamp(1.25rem, 8vw, 8rem);
+  top: clamp(8rem, 25vh, 16rem);
   z-index: 8;
-  max-width: min(44vw, 560px);
+  max-width: min(50vw, 680px);
   color: #ffffff;
-  text-shadow: 0 18px 50px rgb(0 0 0 / 0.42);
-  animation: hero-copy-rise 760ms cubic-bezier(0.22, 1, 0.36, 1) 220ms both;
+  animation: hero-copy-rise 900ms var(--ease-out) 200ms both;
 }
 
 .hero-animated-copy > span {
@@ -171,12 +172,12 @@ li {
 }
 
 .hero-animated-copy h1 {
-  margin-top: 1.15rem;
-  max-width: min(100%, 13ch);
-  font-size: clamp(3rem, 5.15vw, 4rem);
+  margin-top: 1.5rem;
+  max-width: min(100%, 15ch);
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
   font-weight: 200;
-  line-height: 0.92;
-  letter-spacing: -0.052em;
+  line-height: 0.88;
+  letter-spacing: -0.06em;
 }
 
 .hero-animated-copy p {
@@ -234,17 +235,16 @@ li {
     "services services";
   align-items: start;
   gap: 1.1rem 1.5rem;
-  border: 1px solid rgb(255 255 255 / 0.22);
-  border-radius: 48px;
+  border: 1px solid rgb(255 255 255 / 0.15);
+  border-radius: var(--radius-2xl);
   background:
-    linear-gradient(160deg, rgb(11 22 40 / 0.72), rgb(11 22 40 / 0.42)),
-    radial-gradient(120% 80% at 80% 0%, rgb(190 214 240 / 0.14), transparent 50%);
-  padding: 1.25rem;
-  padding-left: 1.5rem;
+    linear-gradient(160deg, rgb(20 41 70 / 0.85), rgb(20 41 70 / 0.65)),
+    radial-gradient(120% 80% at 80% 0%, rgb(190 214 240 / 0.2), transparent 50%);
+  padding: 2rem;
   box-shadow:
-    0 28px 90px rgb(0 0 0 / 0.28),
-    inset 0 1px 0 rgb(255 255 255 / 0.12);
-  backdrop-filter: blur(20px) saturate(140%);
+    0 40px 100px rgb(0 0 0 / 0.4),
+    inset 0 1px 0 rgb(255 255 255 / 0.1);
+  backdrop-filter: blur(30px) saturate(160%);
 }
 
 .hero-cta-copy {
@@ -327,22 +327,22 @@ li {
 .hero-cta-button {
   grid-area: action;
   display: inline-flex;
-  min-height: 60px;
+  min-height: 72px;
   align-items: center;
   justify-content: center;
-  gap: 0.7rem;
+  gap: 1rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, #e9f0fa 0%, #c8d8ec 100%);
-  padding: 1rem 1.55rem;
-  color: #0b1628;
-  font-size: 0.74rem;
-  font-weight: 200;
-  letter-spacing: 0.14em;
+  background: #ffffff;
+  padding: 1rem 2.5rem;
+  color: #142946;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
   line-height: 1.15;
   text-align: center;
   text-transform: uppercase;
-  box-shadow: 0 18px 44px rgb(190 214 240 / 0.32);
-  transition: transform 180ms ease, background 180ms ease, color 180ms ease, box-shadow 180ms ease;
+  box-shadow: 0 20px 50px rgb(0 0 0 / 0.3);
+  transition: all 0.4s var(--ease-out);
   white-space: nowrap;
 }
 
