@@ -383,7 +383,7 @@ export function SiteHeader() {
           <img src={LOGO_IMAGE} alt="CredMais" />
         </a>
 
-        <div className={`nav-links ${scrolled ? "hidden" : ""}`}>
+        <div className="nav-links">
           <NavLink href="/" active={pathname === "/"} scrolled={scrolled}>
             Início
           </NavLink>
@@ -396,7 +396,7 @@ export function SiteHeader() {
           </NavLink>
         </div>
 
-        <div className={`nav-cta ${scrolled ? "hidden" : ""}`}>
+        <div className="nav-cta">
           <a
             href={CONTACT_WHATSAPP_URL}
             target="_blank"
