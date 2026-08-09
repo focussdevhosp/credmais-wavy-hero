@@ -654,12 +654,11 @@ export function HomePage() {
         <div className="relative z-10 mx-auto max-w-7xl">
           <div className="solutions-scroll-layout">
             <div className="solutions-scroll-copy">
-              <span className="solutions-eyebrow gsap-reveal">Soluções CredMais</span>
-              <h2 className="gsap-reveal">Soluções que giram o seu caixa.</h2>
+              <span className="solutions-eyebrow gsap-reveal">Nossos Produtos</span>
+              <h2 className="gsap-reveal">Soluções reais para o seu negócio.</h2>
               <p className="gsap-reveal">
-                Uma esteira financeira completa para vender a prazo com segurança, antecipar recebíveis, proteger boletos, organizar contas e recuperar dívidas com previsibilidade real.
+                Desenvolvemos ferramentas financeiras focadas em liquidez e segurança, estruturadas para empresas que buscam crescimento sólido sem a burocracia tradicional.
               </p>
-
 
               <div className="solutions-scroll-rail gsap-reveal" aria-hidden="true">
                 <span />
