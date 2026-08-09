@@ -1018,7 +1018,7 @@ function ContactSection({ compact = false }: { compact?: boolean }) {
           })}
         </div>
 
-        <div id="form-contato" className="bg-white/5 p-8 rounded-[42px] border border-white/10 shadow-2xl backdrop-blur-md max-w-5xl mx-auto">
+        <div id="form-contato" className="bg-white/5 p-8 rounded-[56px] border border-white/10 shadow-2xl backdrop-blur-md max-w-5xl mx-auto">
           <ContactForm />
         </div>
       </div>
