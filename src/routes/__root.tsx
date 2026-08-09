@@ -11,7 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import { SiteHeader, SiteFooter } from "@/site/credmais";
+import { SiteHeader, SiteFooter, WhatsAppFloat } from "@/site/credmais";
 import { Toaster } from "@/components/ui/sonner";
 
 
@@ -106,7 +106,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800;900&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap",
       },
 
     ],
@@ -136,12 +136,13 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="min-h-screen bg-[#F6F8FA]">
+      <div className="min-h-dvh bg-[#F6F8FA]">
         <SiteHeader />
-        <main>
+        <main id="conteudo">
           <Outlet />
         </main>
         <SiteFooter />
+        <WhatsAppFloat />
         <Toaster position="top-center" richColors />
       </div>
     </QueryClientProvider>
