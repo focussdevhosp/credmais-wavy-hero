@@ -60,7 +60,7 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-type IconComponent = ComponentType<{ className?: string; strokeWidth?: number }>;
+type IconComponent = ComponentType<{ className?: string; strokeWidth?: number; size?: number | string }>;
 
 type Solution = {
   slug: string;
@@ -139,62 +139,62 @@ export const solutions: Solution[] = [
   {
     slug: "antecipacao-de-recebiveis",
     title: "Antecipação de Recebíveis",
-    headline: "Transforme vendas a prazo em caixa imediato.",
-    summary: "Converta duplicatas, boletos e contratos em capital de giro hoje mesmo. Nossa análise técnica garante as melhores taxas para você manter sua operação em pleno movimento.",
+    headline: "Potencialize seu caixa.",
+    summary: "Liquidez imediata para sua empresa. Converta vendas a prazo em capital de giro hoje mesmo.",
     detail: "Uma estrutura de securitização desenhada para empresas que buscam agilidade. Com a Credmais, o valor das suas vendas futuras é liberado em D+1, eliminando a espera e a burocracia bancária.",
     icon: HandCoins,
     bullets: ["Liquidez em até 24 horas", "Taxas competitivas e transparentes", "Análise técnica personalizada"],
     image: brandAgro.url,
     metric: "Liquidez Imediata",
-    accent: "#4a7fb5",
+    accent: "#C7A96B",
   },
   {
     slug: "boleto-garantido",
     title: "Boleto Garantido",
-    headline: "Venda com a segurança de um recebimento blindado.",
-    summary: "Elimine o risco de inadimplência em suas vendas por boleto. Nós garantimos o fluxo financeiro enquanto você foca em expandir sua base de clientes.",
+    headline: "Boleto protegido.",
+    summary: "Mais proteção e previsibilidade. Elimine o risco de inadimplência em suas vendas por boleto.",
     detail: "Uma solução completa que engloba análise de risco, emissão e garantia de recebimento. Reduza incertezas e planeje seu crescimento com a certeza de que o capital entrará no caixa.",
     icon: FileText,
     bullets: ["Proteção contra inadimplência", "Previsibilidade total de caixa", "Gestão de cobrança profissional"],
     image: brandRestaurante.url,
-    metric: "Risco Zero",
-    accent: "#5f93c8",
+    metric: "Mais Segurança",
+    accent: "#C7A96B",
   },
   {
     slug: "consultoria",
     title: "Consultoria Estratégica",
-    headline: "Inteligência financeira para decisões de alto impacto.",
-    summary: "Desenvolvemos a estrutura de capital ideal para o seu momento. Nossa consultoria vai além dos números, entregando estratégia e clareza para sua expansão.",
+    headline: "Decida melhor.",
+    summary: "Alta performance financeira. Desenvolvemos a estrutura de capital ideal para o seu momento.",
     detail: "Mapeamos gargalos, analisamos contratos e desenhamos planos de ação executáveis. Tenha ao seu lado especialistas que entendem o mercado de securitização e crédito estruturado.",
     icon: LineChart,
     bullets: ["Diagnóstico 360º do fluxo", "Planejamento de capital sob medida", "Visão de longo prazo"],
     image: brandAssinatura.url,
     metric: "Alta Performance",
-    accent: "#3b6fa0",
+    accent: "#C7A96B",
   },
   {
     slug: "crediario",
     title: "Crediário Próprio",
-    headline: "Potencialize suas vendas oferecendo crédito direto.",
-    summary: "Aumente seu ticket médio e conversão permitindo que seu cliente parcele sem depender de bancos. Uma jornada simples que fideliza e gera resultados.",
+    headline: "Parcele mais.",
+    summary: "Expansão de vendas. Potencialize suas vendas oferecendo crédito direto ao seu cliente.",
     detail: "Estruturamos toda a jornada de crédito da sua empresa: da análise do comprador ao acompanhamento da carteira. Venda mais com a segurança de uma operação profissional.",
     icon: CircleDollarSign,
     bullets: ["Maior conversão de vendas", "Jornada sem burocracia", "Controle total da carteira"],
     image: brandVarejo.url,
     metric: "Expansão de Vendas",
-    accent: "#2d6fb0",
+    accent: "#C7A96B",
   },
   {
     slug: "gestao-de-contas",
     title: "Gestão de Recebíveis",
-    headline: "Recuperação especializada com foco em liquidez.",
-    summary: "Recupere valores em atraso sem desgastar o relacionamento com seus clientes. Nossa equipe atua com estratégia e respeito para trazer seu dinheiro de volta.",
+    headline: "Recupere seus recebíveis.",
+    summary: "Recuperação ágil e especializada. Mais fôlego, resultado e controle para sua operação.",
     detail: "Assumimos a gestão ativa da sua cobrança. Com processos estruturados e relatórios transparentes, transformamos dívidas paradas em capital produtivo para o seu negócio.",
     icon: Workflow,
     bullets: ["Recuperação ativa e ética", "Relatórios de performance", "Preservação de parcerias"],
     image: brandRecepcao.url,
     metric: "Recuperação Ágil",
-    accent: "#6fa3d4",
+    accent: "#C7A96B",
   },
 ];
 
@@ -388,10 +388,10 @@ export function SiteHeader() {
             Início
           </NavLink>
           <SolutionsDropdown pathname={pathname} scrolled={scrolled} />
-          <NavLink href="/#sobre" active={pathname === "/sobre"} scrolled={scrolled}>
+          <NavLink href="/sobre" active={pathname === "/sobre"} scrolled={scrolled}>
             Sobre
           </NavLink>
-          <NavLink href="/#form-contato" active={pathname === "/contato"} scrolled={scrolled}>
+          <NavLink href="/contato" active={pathname === "/contato"} scrolled={scrolled}>
             Contato
           </NavLink>
         </div>
@@ -431,8 +431,8 @@ export function SiteHeader() {
                 ))}
               </div>
             </div>
-            <MobileLink href="/#sobre" onClick={() => setOpen(false)}>Sobre</MobileLink>
-            <MobileLink href="/#form-contato" onClick={() => setOpen(false)}>Contato</MobileLink>
+            <MobileLink href="/sobre" onClick={() => setOpen(false)}>Sobre</MobileLink>
+            <MobileLink href="/contato" onClick={() => setOpen(false)}>Contato</MobileLink>
             <a
               href={CONTACT_WHATSAPP_URL}
               target="_blank"
@@ -648,13 +648,13 @@ export function HomePage() {
   useHomeMotion();
   return (
     <>
-      <CampaignHero className="home-hero" image={HERO_IMAGE} eyebrow="Soluções Financeiras de Elite" titleStart="Potencialize seu caixa." titleBridge="Cresça com" words={["inteligência.", "velocidade.", "estratégia."]} description="A securitizadora que transforma seus recebíveis em uma poderosa ferramenta de expansão, eliminando a burocracia e acelerando o seu sucesso." />
+      <CampaignHero className="home-hero" image={HERO_IMAGE} eyebrow="Soluções Financeiras de Elite" titleStart="Potencialize seu caixa." titleBridge="Cresça com" words={["inteligência.", "velocidade.", "estratégia."]} description="A securitizadora que transforma seus recebíveis em uma poderosa ferramenta de expansão estratégica para o seu sucesso." />
       <section id="solucoes" className="solutions-showcase px-5 py-32 text-[#0b1628] md:px-[8%]">
         <div className="mx-auto max-w-[1600px]">
           <div className="solutions-scroll-layout">
             <div className="solutions-scroll-copy sticky top-32">
-              <span className="mb-6 block text-[11px] font-black uppercase tracking-[0.4em] text-[#142946]/40">Engenharia Financeira</span>
-              <h2 className="gsap-reveal text-[clamp(4rem,8vw,9rem)] font-thin leading-[0.8] tracking-[-0.08em] text-[#142946]">Soluções que redefinem o seu fluxo.</h2>
+              <span className="mb-6 block text-[11px] font-black uppercase tracking-[0.4em] text-[#C7A96B]">Engenharia Financeira</span>
+              <h2 className="gsap-reveal text-[clamp(4rem,8vw,9rem)] font-thin leading-[0.8] tracking-[-0.08em] text-[#071A33]">Soluções que redefinem o seu fluxo.</h2>
               <p className="mt-8 max-w-md text-lg font-light leading-relaxed text-[#142946]/70">
                 Desenvolvemos arquiteturas de capital sob medida para empresas que não aceitam o comum. Securitização com propósito, agilidade e escala.
               </p>
@@ -677,51 +677,65 @@ export function HomePage() {
 
 function HomeTrustSection() {
   return (
-    <section className="home-trust-section">
-      <div className="home-trust-heading gsap-reveal">
-        <span>Parceria de Alto Nível</span>
-        <h2>A potência que sua empresa precisa para decidir com clareza.</h2>
-        <p>Unimos tecnologia de ponta e análise humana para estruturar operações que impulsionam o seu faturamento com total visibilidade.</p>
+    <section className="home-trust-section bg-[#F6F8FA] py-32 px-5 md:px-[8%]">
+      <div className="mx-auto max-w-7xl text-center mb-24">
+        <div className="home-trust-heading max-w-4xl mx-auto">
+          <span className="text-[11px] font-black uppercase tracking-[0.4em] text-[#C7A96B] mb-6 block">Parceria de Alto Nível</span>
+          <h2 className="text-[clamp(3rem,6vw,5.5rem)] font-thin leading-[0.85] tracking-[-0.06em] text-[#071A33] mb-8">A potência que sua empresa precisa para decidir com clareza.</h2>
+          <p className="text-lg text-[#52606D] font-light leading-relaxed">Unimos tecnologia de ponta e análise humana para estruturar operações que impulsionam o seu faturamento com total visibilidade.</p>
+        </div>
+        
+        <div className="trust-profile-row flex flex-wrap justify-center gap-8 mt-16 opacity-40">
+          {trustProfiles.map((profile) => (
+            <span key={profile} className="text-xs font-black uppercase tracking-widest text-[#071A33]">{profile}</span>
+          ))}
+        </div>
       </div>
-      <div className="trust-profile-row" aria-label="Perfis de empresas atendidas">
-        {trustProfiles.map((profile) => (
-          <span key={profile}>{profile}</span>
-        ))}
+
+      <div className="mx-auto max-w-7xl">
+        <div className="testimonial-grid grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((item) => (
+            <article key={item.author} className="bg-white p-12 rounded-[24px] shadow-sm hover:shadow-xl transition-all border border-[#E8EDF2] group">
+              <p className="text-lg italic text-[#52606D] mb-8 font-light leading-relaxed">"{item.quote}"</p>
+              <div className="flex flex-col gap-1 border-t border-[#E8EDF2] pt-6">
+                <strong className="text-[#071A33] font-bold text-sm uppercase tracking-wider">{item.author}</strong>
+                <span className="text-[#C7A96B] text-xs font-black uppercase tracking-widest">{item.company}</span>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
-      <div className="testimonial-grid">
-        {testimonials.map((item) => (
-          <article key={item.author} className="testimonial-card gsap-reveal">
-            <p>{item.quote}</p>
-            <div>
-              <strong>{item.author}</strong>
-              <span>{item.company}</span>
-            </div>
-          </article>
-        ))}
+
+      <div className="mt-24 text-center">
+        <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-4 bg-[#071A33] text-[#e9f0fa] px-10 py-6 rounded-full font-black uppercase tracking-widest text-xs hover:bg-[#C7A96B] hover:text-[#071A33] transition-all">
+          Quero avaliar minha operação
+          <ArrowUpRight className="h-4 w-4" />
+        </a>
+        <p className="mt-8 text-[11px] font-black uppercase tracking-[0.24em] text-[#52606D]/40">A Credmais estrutura capital, risco e contas para a sua empresa crescer com segurança.</p>
       </div>
-      <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer" className="trust-cta">
-        Quero avaliar minha operação
-        <ArrowUpRight className="h-4 w-4" />
-      </a>
-      <p className="cta-microcopy">Não somos banco digital. A Credmais estrutura capital, risco e contas para a sua empresa crescer com segurança.</p>
     </section>
   );
 }
 
 function HomeFAQSection() {
   return (
-    <section className="home-faq-section">
-      <div className="home-faq-heading gsap-reveal">
-        <span>Perguntas frequentes</span>
-        <h2>Tire suas dúvidas antes de falar com a Credmais.</h2>
-      </div>
-      <div className="home-faq-list">
-        {homeFaq.map((item) => (
-          <article key={item.q} className="home-faq-item gsap-reveal">
-            <h3>{item.q}</h3>
-            <p>{item.a}</p>
-          </article>
-        ))}
+    <section className="home-faq-section py-32 px-5 md:px-[15%] bg-white">
+      <div className="mx-auto max-w-4xl">
+        <div className="home-faq-heading mb-20 text-center">
+          <span className="text-[11px] font-black uppercase tracking-[0.4em] text-[#C7A96B] mb-6 block">Perguntas frequentes</span>
+          <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-thin leading-[0.9] tracking-[-0.06em] text-[#071A33]">Tire suas dúvidas antes de falar conosco.</h2>
+        </div>
+        <div className="home-faq-list grid gap-8">
+          {homeFaq.map((item) => (
+            <article key={item.q} className="group border-b border-[#E8EDF2] pb-8 last:border-0">
+              <h3 className="text-xl font-bold text-[#071A33] mb-4 flex items-start gap-4">
+                <span className="text-[#C7A96B] font-thin">?</span>
+                {item.q}
+              </h3>
+              <p className="text-[#52606D] font-light leading-relaxed pl-8">{item.a}</p>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -820,35 +834,42 @@ function getSolutionVisualSet(solution: Solution): SolutionVisualSet {
 function SolutionOperatingPanel({ solution, theme, visualSet }: { solution: Solution; theme: SolutionTheme; visualSet: SolutionVisualSet }) {
   const Icon = solution.icon;
   return (
-    <section className={`solution-operating-panel solution-operating-${visualSet.layout}`} style={{ "--accent": solution.accent } as CSSProperties}>
-      <div className="solution-operating-copy solution-animated">
-        <span>Plano operacional</span>
-        <h2>{theme.operatingTitle}</h2>
-        <p>{theme.operatingText}</p>
-        <ul className="solution-operating-bullets">
-          {solution.bullets.map((bullet) => (
-            <li key={bullet}>
-              <CheckCircle2 className="h-5 w-5" />
-              <span>{bullet}</span>
-            </li>
+    <section className={`solution-operating-panel py-32 px-5 md:px-[8%] bg-[#F6F8FA]`} style={{ "--accent": solution.accent } as CSSProperties}>
+      <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+        <div className="solution-operating-copy">
+          <span className="text-[11px] font-black uppercase tracking-[0.4em] text-[#C7A96B] mb-6 block">Plano operacional</span>
+          <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-thin leading-[0.9] tracking-[-0.06em] text-[#071A33] mb-8">{theme.operatingTitle}</h2>
+          <p className="text-lg text-[#52606D] font-light leading-relaxed mb-10">{theme.operatingText}</p>
+          
+          <ul className="flex flex-col gap-6 mb-12">
+            {solution.bullets.map((bullet) => (
+              <li key={bullet} className="flex items-center gap-4 text-[#071A33] font-medium uppercase tracking-widest text-xs">
+                <CheckCircle2 className="h-5 w-5 text-[#C7A96B]" />
+                <span>{bullet}</span>
+              </li>
+            ))}
+          </ul>
+          
+          <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-4 bg-[#071A33] text-white px-8 py-5 rounded-full font-black uppercase tracking-widest text-[10px] hover:bg-[#C7A96B] hover:text-[#071A33] transition-all shadow-lg">
+            Quero estruturar {solution.title}
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
+        </div>
+        
+        <div className="grid gap-6">
+          {theme.operating.map((item, index) => (
+            <article key={item.title} className="bg-white p-8 rounded-[24px] border border-[#E8EDF2] shadow-sm hover:shadow-xl transition-all group">
+              <div className="flex items-center gap-6 mb-4">
+              <div className="w-12 h-12 rounded-xl bg-[#F6F8FA] flex items-center justify-center text-[#C7A96B] group-hover:bg-[#071A33] transition-colors">
+                <Icon size={20} />
+              </div>
+                <span className="text-3xl font-thin text-[#C7A96B]/20">{String(index + 1).padStart(2, "0")}</span>
+              </div>
+              <h3 className="text-xl font-bold text-[#071A33] mb-2">{item.title}</h3>
+              <p className="text-[#52606D] font-light leading-relaxed">{item.text}</p>
+            </article>
           ))}
-        </ul>
-        <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer">
-          Quero estruturar {solution.title}
-          <ArrowUpRight className="h-4 w-4" />
-        </a>
-      </div>
-      <div className="solution-operating-stack" aria-label={`Plano operacional de ${solution.title}`}>
-        {theme.operating.map((item, index) => (
-          <article key={item.title} className="solution-operating-card solution-animated">
-            <div>
-              <Icon className="h-5 w-5" />
-              <span>{String(index + 1).padStart(2, "0")}</span>
-            </div>
-            <h3>{item.title}</h3>
-            <p>{item.text}</p>
-          </article>
-        ))}
+        </div>
       </div>
     </section>
   );
@@ -859,33 +880,27 @@ function SolutionExperience({ solution, visualSet }: { solution: Solution; visua
 
   return (
     <div className={`solution-experience solution-layout-${visualSet.layout}`} style={{ "--accent": solution.accent } as CSSProperties}>
-      <section className="solution-page-banner">
-        <div className="solution-banner-copy solution-animated">
-          <span>{solution.title}</span>
-          <h2>Estruture o financeiro antes do caixa apertar.</h2>
-          <p>
-            Falta de liquidez, inadimplência, venda a prazo ou controle financeiro: qualquer que seja a dor, a Credmais organiza a alternativa certa e acompanha a operação até o resultado.
-          </p>
-          <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer">
-            Falar com um especialista
-            <ArrowUpRight className="h-4 w-4" />
-          </a>
-        </div>
-        <div className="solution-banner-media solution-animated">
-          <img src={visualSet.banner} alt={solution.title} loading="lazy" decoding="async" />
-          <div className="solution-floating-card solution-floating-card-a">
-            <div className="solution-floating-card-icon">
-              <Icon className="h-5 w-5" />
-            </div>
-            <div className="solution-floating-card-body">
-              <strong>{solution.metric}</strong>
-              <small>proteção ativa</small>
-            </div>
+      <section className="solution-page-banner py-32 px-5 md:px-[8%] bg-white">
+        <div className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+          <div className="solution-banner-copy">
+            <span className="text-[11px] font-black uppercase tracking-[0.4em] text-[#C7A96B] mb-6 block">{solution.title}</span>
+            <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-thin leading-[0.9] tracking-[-0.06em] text-[#071A33] mb-8">Estruture o financeiro antes do caixa apertar.</h2>
+            <p className="text-lg text-[#52606D] font-light leading-relaxed mb-10">
+              Falta de liquidez, inadimplência, venda a prazo ou controle financeiro: qualquer que seja a dor, a Credmais organiza a alternativa certa e acompanha a operação até o resultado.
+            </p>
+            <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-4 bg-[#071A33] text-white px-8 py-5 rounded-full font-black uppercase tracking-widest text-[10px] hover:bg-[#C7A96B] hover:text-[#071A33] transition-all shadow-lg">
+              Falar com um especialista
+              <ArrowUpRight className="h-4 w-4" />
+            </a>
           </div>
-          <div className="solution-floating-card solution-floating-card-b">
-            <div className="solution-floating-card-body">
-              <span>D+1</span>
-              <small>agenda acompanhada</small>
+          <div className="solution-banner-media relative rounded-[24px] overflow-hidden shadow-2xl">
+            <img src={visualSet.banner} alt={solution.title} className="w-full h-full object-cover aspect-video" loading="lazy" decoding="async" />
+            <div className="absolute top-8 right-8 bg-[#071A33] text-white p-6 rounded-2xl shadow-2xl">
+              <div className="flex items-center gap-4 mb-2">
+                <Icon size={18} className="text-[#C7A96B]" />
+                <strong className="text-xs uppercase tracking-widest">{solution.metric}</strong>
+              </div>
+              <p className="text-[10px] text-white/40 uppercase font-black tracking-widest">Proteção ativa Credmais</p>
             </div>
           </div>
         </div>
@@ -935,25 +950,28 @@ function AboutIntroSection() {
   ];
 
   return (
-    <section className="about-intro-section">
-      <div className="about-intro-copy">
-        <span>Como trabalhamos</span>
-        <h2>Mais do que uma securitizadora, um parceiro de crescimento.</h2>
-        <p>Humanizamos o crédito e desenhamos estruturas financeiras para empresas evoluírem com previsibilidade. Operação, cobrança e capital deixam de ser blocos separados e passam a trabalhar juntos pelo seu resultado.</p>
-      </div>
-      <div className="about-intro-media">
-        <img src={baseOperacional.url} alt="" loading="lazy" decoding="async" />
-      </div>
-      <div className="about-principles">
-        {principles.map((item) => (
-          <article key={item.value}>
-            <strong>{item.value}</strong>
-            <div>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </div>
-          </article>
-        ))}
+    <section className="about-intro-section bg-[#F6F8FA] py-32 px-5 md:px-[8%]">
+      <div className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+        <div className="about-intro-copy">
+          <span className="text-[11px] font-black uppercase tracking-[0.4em] text-[#C7A96B] mb-6 block">Como trabalhamos</span>
+          <h2 className="text-[clamp(3rem,6vw,5.5rem)] font-thin leading-[0.85] tracking-[-0.06em] text-[#071A33] mb-8">Mais do que uma securitizadora, um parceiro de crescimento.</h2>
+          <p className="text-lg text-[#52606D] font-light leading-relaxed mb-12">Humanizamos o crédito e desenhamos estruturas financeiras para empresas evoluírem com previsibilidade. Operação, cobrança e capital deixam de ser blocos separados e passam a trabalhar juntos pelo seu resultado.</p>
+          
+          <div className="about-principles grid gap-10">
+            {principles.map((item) => (
+              <article key={item.value} className="flex gap-8 group">
+                <strong className="text-4xl font-thin text-[#C7A96B]/30 group-hover:text-[#C7A96B] transition-colors">{item.value}</strong>
+                <div>
+                  <h3 className="text-xl font-bold text-[#071A33] mb-2">{item.title}</h3>
+                  <p className="text-[#52606D] font-light leading-relaxed">{item.text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+        <div className="about-intro-media relative rounded-[24px] overflow-hidden shadow-2xl">
+          <img src={baseOperacional.url} alt="Ambiente corporativo Credmais" className="w-full h-full object-cover aspect-[4/5]" loading="lazy" decoding="async" />
+        </div>
       </div>
     </section>
   );
@@ -975,16 +993,16 @@ function CampaignHero({ className, image, eyebrow, titleStart, titleBridge, word
         <img src={image} alt="" className="hero-full-image" fetchPriority="high" decoding="async" />
       </div>
       <div className="hero-animated-copy">
-        <span>{eyebrow}</span>
-        <h1>
+        <span className="text-[11px] font-black uppercase tracking-[0.4em] text-[#C7A96B] mb-6 block">{eyebrow}</span>
+        <h1 className="text-[clamp(4rem,10vw,9rem)] font-thin leading-[0.8] tracking-[-0.08em] text-white">
           {titleStart}
           <br />
           {titleBridge}
-          <span className="hero-word-rotator" aria-hidden="true">
+          <span className="hero-word-rotator text-[#C7A96B]" aria-hidden="true">
             {words.map((word) => <i key={word}>{word}</i>)}
           </span>
         </h1>
-        <p>{description}</p>
+        <p className="mt-8 max-w-xl text-lg font-light leading-relaxed text-white/80">{description}</p>
       </div>
     </section>
   );
@@ -992,28 +1010,38 @@ function CampaignHero({ className, image, eyebrow, titleStart, titleBridge, word
 
 function ContactSection({ compact = false }: { compact?: boolean }) {
   return (
-    <section id="contato" className={`bg-[#142946] px-5 text-white md:px-[10%] ${compact ? "py-24" : "py-32"}`}>
-      <div className="mx-auto max-w-6xl text-center">
-        <p className="mb-6 text-xs font-black uppercase tracking-[0.36em] text-[#e9f0fa]">Contato</p>
-        <h2 className="text-[clamp(3.5rem,7vw,6rem)] font-extralight leading-[0.85] tracking-[-0.06em] mb-12">O que sua empresa precisa resolver?</h2>
-        <p className="mx-auto mt-6 max-w-3xl text-base font-normal leading-relaxed text-white/58 md:text-lg">
-          Fale com a Credmais sobre falta de caixa, venda a prazo, inadimplência, dificuldade de crédito, boleto garantido, crediário, gestão de contas ou recebimento de dívidas — respondemos rápido e com clareza.
-        </p>
-
-        <div className="contact-service-grid mt-12 mb-16" aria-label="Soluções para contato">
-          {solutions.map((solution) => {
-            const Icon = solution.icon;
-            return (
-              <a key={solution.slug} href="#form-contato" style={{ "--accent": solution.accent } as CSSProperties}>
-                <span className="contact-service-icon"><Icon className="h-5 w-5" /></span>
-                <strong>{solution.title}</strong>
-                <small>{solution.metric}</small>
-              </a>
-            );
-          })}
+    <section id="contato" className={`bg-[#071A33] px-5 text-white md:px-[8%] ${compact ? "py-24" : "py-32"}`}>
+      <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div className="contact-info-panel">
+          <span className="text-[11px] font-black uppercase tracking-[0.4em] text-[#C7A96B] mb-6 block">Contato e Conversão</span>
+          <h2 className="text-[clamp(3rem,6vw,5.5rem)] font-thin leading-[0.85] tracking-[-0.06em] text-white mb-12">O que sua empresa precisa resolver?</h2>
+          <p className="text-lg text-white/60 font-light leading-relaxed mb-12 max-w-xl">
+            Fale com a Credmais sobre falta de caixa, venda a prazo, inadimplência, dificuldade de crédito, boleto garantido, crediário, gestão de contas ou recebimento de dívidas — respondemos rápido e com clareza.
+          </p>
+          
+          <div className="flex flex-col gap-6">
+            <div className="flex items-center gap-6 group">
+              <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-[#C7A96B] group-hover:bg-[#C7A96B] group-hover:text-[#071A33] transition-all">
+                <Phone size={18} />
+              </div>
+              <div>
+                <span className="text-[10px] font-black uppercase tracking-widest text-white/30 block mb-1">WhatsApp</span>
+                <a href={CONTACT_WHATSAPP_URL} className="text-lg font-medium hover:text-[#C7A96B] transition-colors">{CONTACT_WHATSAPP_DISPLAY}</a>
+              </div>
+            </div>
+            <div className="flex items-center gap-6 group">
+              <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-[#C7A96B] group-hover:bg-[#C7A96B] group-hover:text-[#071A33] transition-all">
+                <Mail size={18} />
+              </div>
+              <div>
+                <span className="text-[10px] font-black uppercase tracking-widest text-white/30 block mb-1">E-mail corporativo</span>
+                <a href={`mailto:${CONTACT_EMAIL}`} className="text-lg font-medium hover:text-[#C7A96B] transition-colors">{CONTACT_EMAIL}</a>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div id="form-contato" className="bg-white/5 p-8 rounded-[56px] border border-white/10 shadow-2xl backdrop-blur-md max-w-5xl mx-auto">
+        <div id="form-contato" className="bg-white p-12 rounded-[24px] shadow-2xl border border-white/10">
           <ContactForm />
         </div>
       </div>
@@ -1084,19 +1112,19 @@ function ContactForm() {
   };
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit} noValidate>
-      <div className="contact-form-grid">
+    <form id="form-contato-main" className="contact-form grid gap-8" onSubmit={handleSubmit} noValidate>
+      <div className="contact-form-grid grid grid-cols-1 md:grid-cols-2 gap-6">
         <ContactField id="contact-name" label="Nome completo" placeholder="Como podemos te chamar?" value={values.name} onChange={update("name")} error={errors.name} autoComplete="name" />
         <ContactField id="contact-email" label="E-mail corporativo" type="email" placeholder="voce@suaempresa.com.br" value={values.email} onChange={update("email")} error={errors.email} autoComplete="email" />
         <ContactField id="contact-phone" label="WhatsApp / Telefone" type="tel" placeholder="(11) 90000-0000" value={values.phone} onChange={update("phone")} error={errors.phone} autoComplete="tel" />
         <ContactField id="contact-company" label="Empresa" placeholder="Razão social ou nome fantasia" value={values.company} onChange={update("company")} error={errors.company} autoComplete="organization" />
       </div>
 
-      <div className="contact-field">
-        <label htmlFor="contact-interest">Solução de interesse</label>
+      <div className="contact-field flex flex-col gap-2">
+        <label htmlFor="contact-interest" className="text-xs font-bold uppercase tracking-widest text-[#52606D]">Solução de interesse</label>
         <select
           id="contact-interest"
-          className={`contact-input contact-select${errors.interest ? " contact-input-error" : ""}`}
+          className={`contact-input p-4 rounded-xl border transition-all ${errors.interest ? "border-red-500" : "border-[#E8EDF2] focus:border-[#C7A96B]"} bg-[#F6F8FA] text-[#071A33] font-medium appearance-none`}
           value={values.interest}
           onChange={(event) => update("interest")(event.target.value)}
           aria-invalid={Boolean(errors.interest)}
@@ -1109,39 +1137,34 @@ function ContactForm() {
           ))}
           <option value="Ainda não sei">Ainda não sei / quero orientação</option>
         </select>
-        {errors.interest ? <span className="contact-error">{errors.interest}</span> : null}
+        {errors.interest ? <span className="text-xs text-red-500 font-medium">{errors.interest}</span> : null}
       </div>
 
-      <div className="contact-field">
-        <label htmlFor="contact-message">Sua necessidade</label>
+      <div className="contact-field flex flex-col gap-2">
+        <label htmlFor="contact-message" className="text-xs font-bold uppercase tracking-widest text-[#52606D]">Sua necessidade</label>
         <textarea
           id="contact-message"
-          className={`contact-input contact-textarea${errors.message ? " contact-input-error" : ""}`}
+          className={`contact-input p-4 rounded-xl border transition-all ${errors.message ? "border-red-500" : "border-[#E8EDF2] focus:border-[#C7A96B]"} bg-[#F6F8FA] text-[#071A33] font-medium min-h-[120px]`}
           placeholder="Conte o cenário atual: valores, prazos e o que precisa resolver."
           maxLength={1000}
           value={values.message}
           onChange={(event) => update("message")(event.target.value)}
           aria-invalid={Boolean(errors.message)}
         />
-        <div className="contact-field-foot">
-          {errors.message ? <span className="contact-error">{errors.message}</span> : <span className="contact-hint">Respondemos em até 1 dia útil.</span>}
-          <span className="contact-counter">{values.message.length}/1000</span>
+        <div className="contact-field-foot flex justify-between items-center mt-2">
+          {errors.message ? <span className="text-xs text-red-500 font-medium">{errors.message}</span> : <span className="text-[10px] font-black uppercase tracking-widest text-[#52606D]/50">Respondemos em até 1 dia útil.</span>}
+          <span className="text-[10px] font-black text-[#52606D]/30">{values.message.length}/1000</span>
         </div>
       </div>
 
-      <div className="contact-form-actions">
-        <div className="grid gap-3 text-sm text-white/55 md:text-left">
-          <ContactLine icon={Phone} value={`WhatsApp ${CONTACT_WHATSAPP_DISPLAY}`} href={CONTACT_WHATSAPP_URL} />
-          <ContactLine icon={Mail} value={CONTACT_EMAIL} href={`mailto:${CONTACT_EMAIL}`} />
-          <ContactLine icon={FileText} value={`CNPJ ${CONTACT_CNPJ}`} />
-        </div>
-        <div className="contact-submit-wrap">
-          <button type="submit" className="contact-submit" disabled={sending}>
-            {sending ? "Enviando..." : "Enviar e falar no WhatsApp"}
-            <ArrowUpRight className="h-4 w-4" />
-          </button>
-          <small>Seus dados são usados apenas para este atendimento.</small>
-        </div>
+      <div className="pt-4">
+        <button type="submit" className="w-full flex items-center justify-center gap-4 bg-[#071A33] text-white p-6 rounded-xl font-black uppercase tracking-widest text-xs hover:bg-[#C7A96B] hover:text-[#071A33] transition-all disabled:opacity-50" disabled={sending}>
+          {sending ? "Enviando..." : "Enviar e falar no WhatsApp"}
+          <ArrowUpRight className="h-4 w-4" />
+        </button>
+        <p className="text-center mt-6 text-[10px] font-black uppercase tracking-widest text-[#52606D]/40">
+          Seus dados são usados apenas para este atendimento conforme nossa política de privacidade.
+        </p>
       </div>
     </form>
   );
@@ -1167,19 +1190,19 @@ function ContactField({
   autoComplete?: string;
 }) {
   return (
-    <div className="contact-field">
-      <label htmlFor={id}>{label}</label>
+    <div className="contact-field flex flex-col gap-2">
+      <label htmlFor={id} className="text-xs font-bold uppercase tracking-widest text-[#52606D]">{label}</label>
       <input
         id={id}
         type={type}
-        className={`contact-input${error ? " contact-input-error" : ""}`}
+        className={`contact-input p-4 rounded-xl border transition-all ${error ? "border-red-500" : "border-[#E8EDF2] focus:border-[#C7A96B]"} bg-white/50 text-[#071A33]`}
         placeholder={placeholder}
         value={value}
         autoComplete={autoComplete}
         aria-invalid={Boolean(error)}
         onChange={(event) => onChange(event.target.value)}
       />
-      {error ? <span className="contact-error">{error}</span> : null}
+      {error ? <span className="text-xs text-red-500 font-medium">{error}</span> : null}
     </div>
   );
 }
@@ -1233,8 +1256,8 @@ export function SiteFooter() {
         <div>
           <h4 className="mb-6 text-[10px] font-black uppercase tracking-[0.2em] text-white/30">Institucional</h4>
           <ul className="space-y-4">
-            <li><a href="/#sobre" className="text-sm font-medium text-white/60 transition-colors hover:text-white">Sobre nós</a></li>
-            <li><a href="/#form-contato" className="text-sm font-medium text-white/60 transition-colors hover:text-white">Contato</a></li>
+            <li><a href="/sobre" className="text-sm font-medium text-white/60 transition-colors hover:text-white">Sobre nós</a></li>
+            <li><a href="/contato" className="text-sm font-medium text-white/60 transition-colors hover:text-white">Contato</a></li>
             <li><a href={CONTACT_WHATSAPP_URL} className="text-sm font-medium text-white/60 transition-colors hover:text-white">Simulação</a></li>
           </ul>
         </div>
@@ -1243,11 +1266,11 @@ export function SiteFooter() {
           <h4 className="mb-6 text-[10px] font-black uppercase tracking-[0.2em] text-white/30">Contato</h4>
           <ul className="space-y-4">
             <li className="flex items-center gap-3 text-sm text-white/60">
-              <Mail size={16} className="text-white/30" />
+              <Mail className="h-4 w-4 text-white/30" />
               {CONTACT_EMAIL}
             </li>
             <li className="flex items-center gap-3 text-sm text-white/60">
-              <Phone size={16} className="text-white/30" />
+              <Phone className="h-4 w-4 text-white/30" />
               {CONTACT_WHATSAPP_DISPLAY}
             </li>
             <li className="mt-8 pt-4 text-[10px] text-white/20">
