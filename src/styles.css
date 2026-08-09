@@ -3362,6 +3362,15 @@ li {
   text-align: left;
 }
 
+.home-faq-heading h2 {
+  color: #ffffff;
+  font-weight: 200;
+}
+
+.home-faq-heading span {
+  color: #e9f0fa;
+}
+
 .home-faq-list {
   display: grid;
   gap: 1rem;
