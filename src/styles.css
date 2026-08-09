@@ -480,6 +480,11 @@ li {
   transition: all 0.3s ease;
   text-transform: uppercase;
   position: relative;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.site-header.is-scrolled .nav-link {
+  text-shadow: none;
 }
 
 .nav-link::after {
