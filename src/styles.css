@@ -408,7 +408,7 @@ li {
 }
 
 .nav-container.is-scrolled {
-  width: 140px;
+  width: 180px;
   background: rgba(20, 41, 70, 0.85);
   padding: 0.25rem;
   border-color: rgba(233, 240, 250, 0.2);
@@ -416,7 +416,7 @@ li {
 
 .brand-logo-shell {
   display: flex;
-  height: 48px;
+  height: 66px;
   align-items: center;
   justify-content: center;
   padding: 0 1rem;
@@ -426,13 +426,13 @@ li {
 
 @media (min-width: 1024px) {
   .brand-logo-shell {
-    height: 56px;
+    height: 80px;
     padding: 0 1.25rem;
   }
 }
 
 .nav-container.is-scrolled .brand-logo-shell {
-  height: 42px;
+  height: 56px;
   padding: 0 0.75rem;
   width: 100%;
 }
@@ -559,7 +559,7 @@ li {
   }
   
   .brand-logo-shell {
-    height: 40px;
+    height: 56px;
   }
 }
 
@@ -4888,8 +4888,8 @@ li {
   }
 
   .brand-logo-shell {
-    height: 42px;
-    max-width: 54vw;
+    height: 58px;
+    max-width: 62vw;
     border-radius: 16px;
     padding: 0.36rem 0.58rem;
   }
