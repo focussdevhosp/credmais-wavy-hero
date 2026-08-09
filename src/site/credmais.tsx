@@ -139,61 +139,61 @@ export const solutions: Solution[] = [
   {
     slug: "antecipacao-de-recebiveis",
     title: "Antecipação de Recebíveis",
-    headline: "Transforme vendas a prazo em caixa hoje.",
-    summary: "Antecipe duplicatas, boletos e contratos com análise justa e liberação rápida — sem esperar o vencimento para operar.",
-    detail: "Compra de recebíveis comerciais com análise objetiva, condições transparentes e liberação ágil para manter sua operação girando.",
+    headline: "Transforme vendas a prazo em caixa imediato.",
+    summary: "Converta duplicatas, boletos e contratos em capital de giro hoje mesmo. Nossa análise técnica garante as melhores taxas para você manter sua operação em pleno movimento.",
+    detail: "Uma estrutura de securitização desenhada para empresas que buscam agilidade. Com a Credmais, o valor das suas vendas futuras é liberado em D+1, eliminando a espera e a burocracia bancária.",
     icon: HandCoins,
-    bullets: ["Taxas competitivas e sem surpresas", "Análise de duplicatas, boletos e contratos", "Caixa disponível em até 24 horas"],
+    bullets: ["Liquidez em até 24 horas", "Taxas competitivas e transparentes", "Análise técnica personalizada"],
     image: brandAgro.url,
-    metric: "Caixa em D+1",
+    metric: "Liquidez Imediata",
     accent: "#4a7fb5",
   },
   {
     slug: "boleto-garantido",
     title: "Boleto Garantido",
-    headline: "Venda por boleto com a segurança de receber.",
-    summary: "Reduza a inadimplência, planeje o caixa e mantenha o crédito comercial sem carregar o risco sozinho.",
-    detail: "Uma camada de proteção que blinda seu recebimento, organiza a cobrança e devolve previsibilidade ao contas a receber.",
+    headline: "Venda com a segurança de um recebimento blindado.",
+    summary: "Elimine o risco de inadimplência em suas vendas por boleto. Nós garantimos o fluxo financeiro enquanto você foca em expandir sua base de clientes.",
+    detail: "Uma solução completa que engloba análise de risco, emissão e garantia de recebimento. Reduza incertezas e planeje seu crescimento com a certeza de que o capital entrará no caixa.",
     icon: FileText,
-    bullets: ["Proteção contra inadimplência", "Cobrança acompanhada de ponta a ponta", "Previsibilidade real no contas a receber"],
+    bullets: ["Proteção contra inadimplência", "Previsibilidade total de caixa", "Gestão de cobrança profissional"],
     image: brandRestaurante.url,
-    metric: "Recebimento protegido",
+    metric: "Risco Zero",
     accent: "#5f93c8",
   },
   {
     slug: "consultoria",
-    title: "Consultoria",
-    headline: "Estrutura financeira sob medida para crescer.",
-    summary: "Especialistas ao seu lado para desenhar a estrutura de capital ideal para o momento real do seu negócio.",
-    detail: "Analisamos contratos, recebíveis, prazos, garantias e rotina financeira para montar um plano executável e aderente ao seu fluxo.",
+    title: "Consultoria Estratégica",
+    headline: "Inteligência financeira para decisões de alto impacto.",
+    summary: "Desenvolvemos a estrutura de capital ideal para o seu momento. Nossa consultoria vai além dos números, entregando estratégia e clareza para sua expansão.",
+    detail: "Mapeamos gargalos, analisamos contratos e desenhamos planos de ação executáveis. Tenha ao seu lado especialistas que entendem o mercado de securitização e crédito estruturado.",
     icon: LineChart,
-    bullets: ["Diagnóstico completo do fluxo de caixa", "Plano de capital de giro com dados", "Reestruturação clara e mensurável"],
+    bullets: ["Diagnóstico 360º do fluxo", "Planejamento de capital sob medida", "Visão de longo prazo"],
     image: brandAssinatura.url,
-    metric: "Decisão com clareza",
+    metric: "Alta Performance",
     accent: "#3b6fa0",
   },
   {
     slug: "crediario",
-    title: "Crediário",
-    headline: "Ofereça parcelamento e venda mais.",
-    summary: "Parcele direto para o cliente final e aumente sua conversão, sem depender de uma jornada bancária pesada.",
-    detail: "Conectamos sua venda ao financiamento do cliente com análise, documentação e acompanhamento da carteira do início ao fim.",
+    title: "Crediário Próprio",
+    headline: "Potencialize suas vendas oferecendo crédito direto.",
+    summary: "Aumente seu ticket médio e conversão permitindo que seu cliente parcele sem depender de bancos. Uma jornada simples que fideliza e gera resultados.",
+    detail: "Estruturamos toda a jornada de crédito da sua empresa: da análise do comprador ao acompanhamento da carteira. Venda mais com a segurança de uma operação profissional.",
     icon: CircleDollarSign,
-    bullets: ["Mais conversão no ponto de venda", "Jornada simples para o comprador", "Carteira acompanhada e organizada"],
+    bullets: ["Maior conversão de vendas", "Jornada sem burocracia", "Controle total da carteira"],
     image: brandVarejo.url,
-    metric: "Mais conversão",
+    metric: "Expansão de Vendas",
     accent: "#2d6fb0",
   },
   {
     slug: "gestao-de-contas",
-    title: "Gestão de Contas",
-    headline: "Recebemos suas dívidas para você.",
-    summary: "Deixe a cobrança conosco. Cuidamos da recuperação dos seus recebíveis com estratégia, respeito e resultados, enquanto você foca no crescimento do negócio.",
-    detail: "Assumimos o recebimento das suas dívidas com processo estruturado, equipe especializada e acompanhamento transparente, preservando o relacionamento com seu cliente.",
+    title: "Gestão de Recebíveis",
+    headline: "Recuperação especializada com foco em liquidez.",
+    summary: "Recupere valores em atraso sem desgastar o relacionamento com seus clientes. Nossa equipe atua com estratégia e respeito para trazer seu dinheiro de volta.",
+    detail: "Assumimos a gestão ativa da sua cobrança. Com processos estruturados e relatórios transparentes, transformamos dívidas paradas em capital produtivo para o seu negócio.",
     icon: Workflow,
-    bullets: ["Cobrança ativa e estruturada", "Relatórios claros de recuperação", "Preservamos a relação com o cliente"],
+    bullets: ["Recuperação ativa e ética", "Relatórios de performance", "Preservação de parcerias"],
     image: brandRecepcao.url,
-    metric: "Dívidas recebidas por você",
+    metric: "Recuperação Ágil",
     accent: "#6fa3d4",
   },
 ];
@@ -648,16 +648,16 @@ export function HomePage() {
   useHomeMotion();
   return (
     <>
-      <CampaignHero className="home-hero" image={HERO_IMAGE} eyebrow="Credmais Securitizadora" titleStart="Venda a prazo." titleBridge="Receba com" words={["liquidez.", "segurança.", "previsibilidade."]} description="Capital para sua empresa crescer sem depender do vencimento dos recebíveis nem da burocracia dos bancos." />
+      <CampaignHero className="home-hero" image={HERO_IMAGE} eyebrow="Soluções Financeiras de Elite" titleStart="Potencialize seu caixa." titleBridge="Cresça com" words={["inteligência.", "velocidade.", "estratégia."]} description="A securitizadora que transforma seus recebíveis em uma poderosa ferramenta de expansão, eliminando a burocracia e acelerando o seu sucesso." />
       <section id="solucoes" className="solutions-showcase relative px-5 py-24 text-[#0b1628] md:px-[8%] md:py-32">
         <div className="solutions-showcase-bg" aria-hidden="true" />
         <div className="relative z-10 mx-auto max-w-7xl">
           <div className="solutions-scroll-layout">
             <div className="solutions-scroll-copy">
               <span className="solutions-eyebrow gsap-reveal">Ecossistema Financeiro</span>
-              <h2 className="gsap-reveal font-extralight tracking-tighter">Soluções de capital desenhadas para o seu crescimento.</h2>
+              <h2 className="gsap-reveal font-extralight tracking-tighter">Soluções potentes para quem busca liderança no mercado.</h2>
               <p className="gsap-reveal font-light text-white/70">
-                Transformamos recebíveis em liquidez imediata com uma estrutura de securitização moderna, ágil e focada na previsibilidade do seu fluxo de caixa.
+                Mais do que antecipar recursos, entregamos a inteligência financeira necessária para securitizar o futuro do seu negócio com máxima eficiência e segurança.
               </p>
 
               <div className="solutions-scroll-rail gsap-reveal" aria-hidden="true">
@@ -684,9 +684,9 @@ function HomeTrustSection() {
   return (
     <section className="home-trust-section">
       <div className="home-trust-heading gsap-reveal">
-        <span>Confiança para decidir</span>
-        <h2>Empresas que crescem sem improviso escolhem a Credmais.</h2>
-        <p>Antes de qualquer estrutura financeira, você precisa de clareza, acompanhamento próximo e uma operação totalmente visível.</p>
+        <span>Parceria de Alto Nível</span>
+        <h2>A potência que sua empresa precisa para decidir com clareza.</h2>
+        <p>Unimos tecnologia de ponta e análise humana para estruturar operações que impulsionam o seu faturamento com total visibilidade.</p>
       </div>
       <div className="trust-profile-row" aria-label="Perfis de empresas atendidas">
         {trustProfiles.map((profile) => (
