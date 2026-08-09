@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import {
   CONTACT_WHATSAPP_URL,
   LOGO_IMAGE,
+  solutionPath,
   solutions,
   whatsappLink,
 } from "@/lib/site-data";
@@ -94,7 +95,7 @@ export function SiteHeader() {
                         return (
                           <Link
                             key={solution.slug}
-                            to={`/${solution.slug}`}
+                            to={solutionPath(solution.slug)}
                             className="group flex items-start gap-4 rounded-2xl p-4 transition-colors hover:bg-white/5"
                           >
                             <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-white/5 text-[#C7A96B] transition-colors group-hover:bg-[#C7A96B] group-hover:text-[#071A33]">
@@ -164,7 +165,7 @@ export function SiteHeader() {
                 return (
                   <Link
                     key={solution.slug}
-                    to={`/${solution.slug}`}
+                    to={solutionPath(solution.slug)}
                     className="flex items-center gap-3 rounded-2xl px-4 py-4 text-sm text-white/80 hover:bg-white/5 hover:text-white"
                   >
                     <Icon className="h-4 w-4 shrink-0 text-[#C7A96B]" />

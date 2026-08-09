@@ -367,3 +367,21 @@ export const aboutValues = [
   { title: "Responsabilidade", text: "Estruturas dimensionadas para a capacidade real da empresa, sem sobrecarregar o caixa." },
   { title: "Consistência", text: "Processos definidos, acompanhamento contínuo e relatórios que sustentam decisões." },
 ];
+
+/* ------------------------------------------------------------- rotas */
+
+export type AppPath =
+  | "/"
+  | "/antecipacao-de-recebiveis"
+  | "/boleto-garantido"
+  | "/consultoria"
+  | "/contato"
+  | "/crediario"
+  | "/gestao-de-contas"
+  | "/sobre"
+  | "/politica-de-privacidade"
+  | "/termos-de-uso";
+
+export function solutionPath(slug: string): AppPath {
+  return `/${slug}` as AppPath;
+}
