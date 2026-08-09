@@ -510,6 +510,8 @@ li {
 .nav-link:hover {
   color: #C7A96B;
 }
+
+.nav-link:active {
   transition: all 0.3s ease;
   text-transform: uppercase;
   position: relative;
