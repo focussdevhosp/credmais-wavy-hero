@@ -511,12 +511,12 @@ li {
 }
 
 .nav-cta.hidden {
-  opacity: 0;
-  transform: scale(0.95) translateX(15px);
-  width: 0;
-  margin: 0;
+  opacity: 1;
+  transform: none;
+  width: auto;
+  margin-left: 0.5rem;
   padding: 0;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 .nav-cta-button {
