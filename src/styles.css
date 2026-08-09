@@ -1671,7 +1671,7 @@ li {
   display: grid;
   gap: 0.8rem;
   margin-top: 2.2rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: stretch;
 }
 
@@ -1718,13 +1718,10 @@ li {
 
 .solutions-metrics strong {
   color: #0b1628;
-  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-size: clamp(2rem, 3.2vw, 3rem);
   font-weight: 900;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.06em;
   margin-bottom: -0.1rem;
-  white-space: normal;
-  overflow-wrap: break-word;
-  line-height: 1.1;
 }
 
 .solutions-scroll-rail {
