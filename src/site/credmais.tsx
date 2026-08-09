@@ -677,33 +677,42 @@ export function HomePage() {
 
 function HomeTrustSection() {
   return (
-    <section className="home-trust-section">
-      <div className="home-trust-heading gsap-reveal">
-        <span>Parceria de Alto Nível</span>
-        <h2>A potência que sua empresa precisa para decidir com clareza.</h2>
-        <p>Unimos tecnologia de ponta e análise humana para estruturar operações que impulsionam o seu faturamento com total visibilidade.</p>
+    <section className="home-trust-section bg-[#F6F8FA] py-32 px-5 md:px-[8%]">
+      <div className="mx-auto max-w-7xl text-center mb-24">
+        <div className="home-trust-heading max-w-4xl mx-auto">
+          <span className="text-[11px] font-black uppercase tracking-[0.4em] text-[#C7A96B] mb-6 block">Parceria de Alto Nível</span>
+          <h2 className="text-[clamp(3rem,6vw,5.5rem)] font-thin leading-[0.85] tracking-[-0.06em] text-[#071A33] mb-8">A potência que sua empresa precisa para decidir com clareza.</h2>
+          <p className="text-lg text-[#52606D] font-light leading-relaxed">Unimos tecnologia de ponta e análise humana para estruturar operações que impulsionam o seu faturamento com total visibilidade.</p>
+        </div>
+        
+        <div className="trust-profile-row flex flex-wrap justify-center gap-8 mt-16 opacity-40">
+          {trustProfiles.map((profile) => (
+            <span key={profile} className="text-xs font-black uppercase tracking-widest text-[#071A33]">{profile}</span>
+          ))}
+        </div>
       </div>
-      <div className="trust-profile-row" aria-label="Perfis de empresas atendidas">
-        {trustProfiles.map((profile) => (
-          <span key={profile}>{profile}</span>
-        ))}
+
+      <div className="mx-auto max-w-7xl">
+        <div className="testimonial-grid grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((item) => (
+            <article key={item.author} className="bg-white p-12 rounded-[24px] shadow-sm hover:shadow-xl transition-all border border-[#E8EDF2] group">
+              <p className="text-lg italic text-[#52606D] mb-8 font-light leading-relaxed">"{item.quote}"</p>
+              <div className="flex flex-col gap-1 border-t border-[#E8EDF2] pt-6">
+                <strong className="text-[#071A33] font-bold text-sm uppercase tracking-wider">{item.author}</strong>
+                <span className="text-[#C7A96B] text-xs font-black uppercase tracking-widest">{item.company}</span>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
-      <div className="testimonial-grid">
-        {testimonials.map((item) => (
-          <article key={item.author} className="testimonial-card gsap-reveal">
-            <p>{item.quote}</p>
-            <div>
-              <strong>{item.author}</strong>
-              <span>{item.company}</span>
-            </div>
-          </article>
-        ))}
+
+      <div className="mt-24 text-center">
+        <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-4 bg-[#071A33] text-[#e9f0fa] px-10 py-6 rounded-full font-black uppercase tracking-widest text-xs hover:bg-[#C7A96B] hover:text-[#071A33] transition-all">
+          Quero avaliar minha operação
+          <ArrowUpRight className="h-4 w-4" />
+        </a>
+        <p className="mt-8 text-[11px] font-black uppercase tracking-[0.24em] text-[#52606D]/40">A Credmais estrutura capital, risco e contas para a sua empresa crescer com segurança.</p>
       </div>
-      <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer" className="trust-cta">
-        Quero avaliar minha operação
-        <ArrowUpRight className="h-4 w-4" />
-      </a>
-      <p className="cta-microcopy">Não somos banco digital. A Credmais estrutura capital, risco e contas para a sua empresa crescer com segurança.</p>
     </section>
   );
 }
