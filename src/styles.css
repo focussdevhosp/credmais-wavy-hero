@@ -499,7 +499,7 @@ li {
 }
 
 .nav-link.is-active::after {
-  width: 60%;
+  width: 100%;
   opacity: 1;
 }
 
