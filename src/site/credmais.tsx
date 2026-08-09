@@ -8,7 +8,7 @@ import heroAntecipacao from "@/assets/hero-antecipacao.webp.asset.json";
 import heroBoletoGarantido from "@/assets/hero-boleto-garantido.webp.asset.json";
 import heroConsultoria from "@/assets/hero-consultoria.webp.asset.json";
 import heroCrediario from "@/assets/hero-crediario.webp.asset.json";
-import logoNew from "@/assets/credmais-logo.png.asset.json";
+import logoNew from "@/assets/logo-credmais-premium.png.asset.json";
 
 
 import baseOperacional from "@/assets/base-operacional.webp.asset.json";
@@ -1211,10 +1211,62 @@ function ContactLine({ icon: Icon, value, href }: { icon: IconComponent; value: 
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-white/10 bg-[#0b1628] px-5 py-10 text-white md:px-[10%]">
-      <span className="brand-logo-shell">
-        <img src={LOGO_IMAGE} alt="Credmais Securitizadora" />
-      </span>
+    <footer className="border-t border-white/5 bg-[#0b1628] px-5 py-20 text-white md:px-[8%]">
+      <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+        <div className="space-y-6">
+          <a href="/" className="brand-logo-shell block h-10 w-fit">
+            <img src={LOGO_IMAGE} alt="Credmais" className="h-full w-auto object-contain" />
+          </a>
+          <p className="max-w-xs text-sm leading-relaxed text-white/50">
+            Soluções financeiras estruturadas para transformar o fluxo de caixa da sua empresa com inteligência e segurança.
+          </p>
+        </div>
+
+        <div>
+          <h4 className="mb-6 text-[10px] font-black uppercase tracking-[0.2em] text-white/30">Soluções</h4>
+          <ul className="space-y-4">
+            {solutions.map(s => (
+              <li key={s.slug}>
+                <a href={`/${s.slug}`} className="text-sm font-medium text-white/60 transition-colors hover:text-white">
+                  {s.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="mb-6 text-[10px] font-black uppercase tracking-[0.2em] text-white/30">Institucional</h4>
+          <ul className="space-y-4">
+            <li><a href="/#sobre" className="text-sm font-medium text-white/60 transition-colors hover:text-white">Sobre nós</a></li>
+            <li><a href="/#form-contato" className="text-sm font-medium text-white/60 transition-colors hover:text-white">Contato</a></li>
+            <li><a href={CONTACT_WHATSAPP_URL} className="text-sm font-medium text-white/60 transition-colors hover:text-white">Simulação</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="mb-6 text-[10px] font-black uppercase tracking-[0.2em] text-white/30">Contato</h4>
+          <ul className="space-y-4">
+            <li className="flex items-center gap-3 text-sm text-white/60">
+              <Mail size={16} className="text-white/30" />
+              {CONTACT_EMAIL}
+            </li>
+            <li className="flex items-center gap-3 text-sm text-white/60">
+              <Phone size={16} className="text-white/30" />
+              {CONTACT_WHATSAPP_DISPLAY}
+            </li>
+            <li className="mt-8 pt-4 text-[10px] text-white/20">
+              CNPJ: {CONTACT_CNPJ}
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div className="mt-20 border-t border-white/5 pt-8 text-center">
+        <p className="text-[10px] font-medium tracking-[0.1em] text-white/20">
+          © {new Date().getFullYear()} CredMais Securitizadora. Todos os direitos reservados.
+        </p>
+      </div>
     </footer>
   );
 }
