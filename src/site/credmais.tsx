@@ -383,7 +383,7 @@ export function SiteHeader() {
           <img src={LOGO_IMAGE} alt="CredMais" />
         </a>
 
-        <div className={`nav-links ${scrolled ? "hidden" : ""}`}>
+        <div className="nav-links">
           <NavLink href="/" active={pathname === "/"} scrolled={scrolled}>
             Início
           </NavLink>
