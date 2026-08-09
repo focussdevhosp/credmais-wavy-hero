@@ -8,7 +8,7 @@ import heroAntecipacao from "@/assets/hero-antecipacao.webp.asset.json";
 import heroBoletoGarantido from "@/assets/hero-boleto-garantido.webp.asset.json";
 import heroConsultoria from "@/assets/hero-consultoria.webp.asset.json";
 import heroCrediario from "@/assets/hero-crediario.webp.asset.json";
-import logoNew from "@/assets/credmais-logo.png.asset.json";
+import logoNew from "@/assets/logo-credmais-premium.png.asset.json";
 
 
 import baseOperacional from "@/assets/base-operacional.webp.asset.json";
