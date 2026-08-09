@@ -460,13 +460,14 @@ function SolutionsDropdown({ pathname, scrolled }: { pathname: string; scrolled:
           <ChevronDown className="h-3 w-3" />
         </span>
       </a>
-      <div className="pointer-events-none absolute left-1/2 top-full z-50 w-[340px] -translate-x-1/2 translate-y-3 pt-3 opacity-0 transition duration-200 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
-        <div className="solutions-menu solutions-menu-compact overflow-hidden rounded-[24px] border border-white/40 bg-white/98 p-2 text-[#142946] shadow-[0_24px_70px_rgba(0,0,0,0.25)] backdrop-blur-2xl">
-          <div className="px-3 pb-2 pt-2">
-            <span className="text-[10px] font-black uppercase tracking-[0.24em] text-[#142946]/45">Soluções</span>
-            <p className="mt-1 text-xs font-bold leading-5 text-[#142946]/60">Escolha a melhor frente para seu fluxo.</p>
+      <div className="pointer-events-none absolute left-1/2 top-full z-50 w-[clamp(300px,80vw,640px)] -translate-x-1/2 translate-y-3 pt-3 opacity-0 transition duration-300 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
+        <div className="solutions-menu solutions-menu-premium overflow-hidden rounded-[32px] border border-white/20 bg-[#142946]/98 p-6 text-white shadow-[0_40px_100px_rgba(0,0,0,0.6)] backdrop-blur-3xl">
+          <div className="mb-6 border-b border-white/10 pb-4">
+            <span className="text-[11px] font-black uppercase tracking-[0.3em] text-white/40">Nossas Soluções</span>
+            <p className="mt-1.5 text-sm font-light text-white/60">Estruturas financeiras desenhadas para o seu crescimento.</p>
           </div>
-          <div className="grid gap-1">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+
             {solutions.map((solution) => {
               const Icon = solution.icon;
               const itemActive = pathname === `/${solution.slug}`;
