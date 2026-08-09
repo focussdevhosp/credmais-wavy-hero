@@ -1714,6 +1714,7 @@ li {
   transform-origin: center top;
   grid-template-columns: minmax(19rem, 0.86fr) minmax(0, 1.04fr);
   isolation: isolate;
+}
 
 @media (max-width: 768px) {
   .solution-showcase-card {
