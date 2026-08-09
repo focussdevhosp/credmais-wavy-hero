@@ -654,10 +654,10 @@ export function HomePage() {
         <div className="relative z-10 mx-auto max-w-7xl">
           <div className="solutions-scroll-layout">
             <div className="solutions-scroll-copy">
-              <span className="solutions-eyebrow gsap-reveal">Nossos Produtos</span>
-              <h2 className="gsap-reveal">Soluções reais para o seu negócio.</h2>
-              <p className="gsap-reveal">
-                Desenvolvemos ferramentas financeiras focadas em liquidez e segurança, estruturadas para empresas que buscam crescimento sólido sem a burocracia tradicional.
+              <span className="solutions-eyebrow gsap-reveal">Ecossistema Financeiro</span>
+              <h2 className="gsap-reveal font-extralight tracking-tighter">Soluções de capital desenhadas para o seu crescimento.</h2>
+              <p className="gsap-reveal font-light text-white/70">
+                Transformamos recebíveis em liquidez imediata com uma estrutura de securitização moderna, ágil e focada na previsibilidade do seu fluxo de caixa.
               </p>
 
               <div className="solutions-scroll-rail gsap-reveal" aria-hidden="true">
@@ -1018,7 +1018,7 @@ function ContactSection({ compact = false }: { compact?: boolean }) {
           })}
         </div>
 
-        <div id="form-contato" className="bg-white/5 p-8 rounded-[42px] border border-white/10 shadow-2xl backdrop-blur-md max-w-5xl mx-auto">
+        <div id="form-contato" className="bg-white/5 p-8 rounded-[56px] border border-white/10 shadow-2xl backdrop-blur-md max-w-5xl mx-auto">
           <ContactForm />
         </div>
       </div>

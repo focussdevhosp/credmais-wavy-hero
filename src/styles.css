@@ -32,8 +32,10 @@ body {
   background: #142946;
   color: #ffffff;
   font-family: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 button,
@@ -172,7 +174,7 @@ li {
   margin-top: 1.15rem;
   max-width: min(100%, 13ch);
   font-size: clamp(3rem, 5.15vw, 4rem);
-  font-weight: 300;
+  font-weight: 200;
   line-height: 0.92;
   letter-spacing: -0.052em;
 }
@@ -182,7 +184,7 @@ li {
   max-width: 31rem;
   color: rgb(255 255 255 / 0.9);
   font-size: clamp(1rem, 1.45vw, 1.18rem);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.55;
 }
 
@@ -233,7 +235,7 @@ li {
   align-items: start;
   gap: 1.1rem 1.5rem;
   border: 1px solid rgb(255 255 255 / 0.22);
-  border-radius: 32px;
+  border-radius: 48px;
   background:
     linear-gradient(160deg, rgb(11 22 40 / 0.72), rgb(11 22 40 / 0.42)),
     radial-gradient(120% 80% at 80% 0%, rgb(190 214 240 / 0.14), transparent 50%);
@@ -334,7 +336,7 @@ li {
   padding: 1rem 1.55rem;
   color: #0b1628;
   font-size: 0.74rem;
-  font-weight: 300;
+  font-weight: 200;
   letter-spacing: 0.14em;
   line-height: 1.15;
   text-align: center;
@@ -725,7 +727,7 @@ li {
   max-width: 34rem;
   color: #55677f;
   font-size: clamp(1rem, 1.4vw, 1.15rem);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.65;
 }
 
@@ -1162,7 +1164,7 @@ li {
   min-height: clamp(240px, 34vh, 360px);
   overflow: hidden;
   border: 1px solid rgb(20 41 70 / 0.08);
-  border-radius: 32px;
+  border-radius: 48px;
   background: #ffffff;
   grid-template-columns: 1fr 1fr;
   box-shadow: 0 24px 70px rgb(20 41 70 / 0.08);
@@ -1390,7 +1392,7 @@ li {
   padding: 0.95rem 1.6rem;
   border-radius: 999px;
   background: #e9f0fa;
-  font-weight: 300;
+  font-weight: 200;
   color: #142946;
   font-weight: 900;
   font-size: 12px;
@@ -1414,7 +1416,7 @@ li {
   border-radius: 999px;
   border: 1px solid rgb(255 255 255 / 0.2);
   color: rgb(238 243 250 / 0.9);
-  font-weight: 400;
+  font-weight: 300;
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -1528,7 +1530,7 @@ li {
   overflow: hidden;
   color: #09111f;
   font-size: 0.7rem;
-  font-weight: 300;
+  font-weight: 200;
   letter-spacing: 0.08em;
   line-height: 1.35;
   text-overflow: ellipsis;
@@ -1543,7 +1545,7 @@ li {
   margin-top: 0.16rem;
   color: #5b6578;
   font-size: 0.72rem;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 .solutions-menu-arrow {
@@ -1642,7 +1644,7 @@ li {
 .solutions-eyebrow {
   color: #2d4a6e;
   font-size: 0.85rem;
-  font-weight: 300;
+  font-weight: 200;
   letter-spacing: 0.28em;
   text-transform: uppercase;
 }
@@ -1661,7 +1663,7 @@ li {
   max-width: 31rem;
   color: #55677f;
   font-size: clamp(1.05rem, 1.35vw, 1.25rem);
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1.55;
   text-wrap: balance;
 }
@@ -1844,7 +1846,7 @@ li {
   margin-top: 1.1rem;
   color: #0b1628;
   font-size: clamp(1.85rem, 2.55vw, 2.65rem);
-  font-weight: 300;
+  font-weight: 200;
   letter-spacing: -0.055em;
   line-height: 0.98;
 }
@@ -1853,7 +1855,7 @@ li {
   margin-top: 1.15rem;
   color: #55677f;
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1.55;
   text-wrap: balance;
 }
@@ -1870,7 +1872,7 @@ li {
   gap: 0.55rem;
   color: #1e3a5f;
   font-size: 0.84rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.35;
 }
 
@@ -1891,7 +1893,7 @@ li {
   padding: 0.9rem 1.04rem;
   color: #ffffff;
   font-size: 0.72rem;
-  font-weight: 300;
+  font-weight: 200;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   transition: background 180ms ease, transform 180ms ease;
@@ -3221,7 +3223,7 @@ li {
   max-width: 48rem;
   color: #55677f;
   font-size: clamp(1.1rem, 1.45vw, 1.35rem);
-  font-weight: 300;
+  font-weight: 200;
   line-height: 1.6;
 }
 
@@ -3542,7 +3544,7 @@ li {
   flex-direction: column;
   justify-content: center;
   border: 1px solid rgb(11 22 40 / 0.08);
-  border-radius: 32px;
+  border-radius: 48px;
   background: rgb(255 255 255 / 0.72);
   padding: clamp(1.5rem, 3.2vw, 3rem);
   box-shadow: var(--shadow-soft);
@@ -3576,7 +3578,7 @@ li {
 .about-intro-media {
   min-height: clamp(360px, 42vw, 520px);
   overflow: hidden;
-  border-radius: 32px;
+  border-radius: 48px;
 }
 
 .about-intro-media img {
@@ -4711,7 +4713,7 @@ li {
 .testimonial-card span,
 .about-intro-copy p,
 .about-principles p {
-  font-weight: 300;
+  font-weight: 200;
   color: #44566e;
 }
 
