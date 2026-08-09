@@ -462,13 +462,12 @@ li {
 }
 
 .nav-link {
-  color: rgba(233, 240, 250, 0.85);
-  font-size: 0.72rem;
-  font-weight: 900;
-  letter-spacing: 0.16em;
-  padding: 0.6rem 0.5rem;
-  border-radius: 999px;
-  transition: all 0.25s ease;
+  color: rgba(233, 240, 250, 0.7);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
   text-transform: uppercase;
   position: relative;
 }
