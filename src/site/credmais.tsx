@@ -1256,8 +1256,8 @@ export function SiteFooter() {
         <div>
           <h4 className="mb-6 text-[10px] font-black uppercase tracking-[0.2em] text-white/30">Institucional</h4>
           <ul className="space-y-4">
-            <li><a href="/#sobre" className="text-sm font-medium text-white/60 transition-colors hover:text-white">Sobre nós</a></li>
-            <li><a href="/#form-contato" className="text-sm font-medium text-white/60 transition-colors hover:text-white">Contato</a></li>
+            <li><a href="/sobre" className="text-sm font-medium text-white/60 transition-colors hover:text-white">Sobre nós</a></li>
+            <li><a href="/contato" className="text-sm font-medium text-white/60 transition-colors hover:text-white">Contato</a></li>
             <li><a href={CONTACT_WHATSAPP_URL} className="text-sm font-medium text-white/60 transition-colors hover:text-white">Simulação</a></li>
           </ul>
         </div>
@@ -1266,11 +1266,11 @@ export function SiteFooter() {
           <h4 className="mb-6 text-[10px] font-black uppercase tracking-[0.2em] text-white/30">Contato</h4>
           <ul className="space-y-4">
             <li className="flex items-center gap-3 text-sm text-white/60">
-              <Mail size={16} className="text-white/30" />
+              <Mail className="h-4 w-4 text-white/30" />
               {CONTACT_EMAIL}
             </li>
             <li className="flex items-center gap-3 text-sm text-white/60">
-              <Phone size={16} className="text-white/30" />
+              <Phone className="h-4 w-4 text-white/30" />
               {CONTACT_WHATSAPP_DISPLAY}
             </li>
             <li className="mt-8 pt-4 text-[10px] text-white/20">
