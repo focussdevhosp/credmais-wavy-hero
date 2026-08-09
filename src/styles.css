@@ -475,13 +475,12 @@ li {
 .nav-link::after {
   content: "";
   position: absolute;
-  bottom: 0.2rem;
-  left: 50%;
+  bottom: -4px;
+  left: 0;
   width: 0;
-  height: 1px;
+  height: 2px;
   background: #e9f0fa;
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
   opacity: 0;
 }
 
@@ -491,7 +490,7 @@ li {
 }
 
 .nav-link:focus-visible::after, .nav-link:hover::after {
-  width: 60%;
+  width: 100%;
   opacity: 1;
 }
 
