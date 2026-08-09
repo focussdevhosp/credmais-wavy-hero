@@ -1715,19 +1715,18 @@ li {
 .solution-showcase-card {
   position: relative;
   display: grid;
-  min-height: clamp(600px, 85vh, 850px);
+  min-height: 600px;
   overflow: hidden;
-  border: 1px solid rgba(0,0,0,0.05);
-  border-radius: var(--radius-2xl);
+  border: 1px solid #E8EDF2;
+  border-radius: 24px;
   background: #ffffff;
-  box-shadow: 0 40px 100px rgba(0,0,0,0.05);
-  transition: all 0.6s var(--ease-out);
+  box-shadow: 0 10px 40px rgba(7, 26, 51, 0.05);
+  transition: all 0.6s var(--ease-expo);
   position: sticky;
   z-index: 1;
-  top: clamp(6.5rem, 10vw, 10rem);
-  margin-bottom: clamp(8rem, 40vh, 25rem);
-  transform-origin: center top;
-  grid-template-columns: minmax(19rem, 0.86fr) minmax(0, 1.04fr);
+  top: 120px;
+  margin-bottom: 120px;
+  grid-template-columns: 1fr 1fr;
   isolation: isolate;
 }
 
@@ -1748,18 +1747,16 @@ li {
   will-change: transform;
 }
 
-.solution-showcase-card:nth-child(1) { z-index: 1; top: clamp(6.5rem, 10vw, 10rem); }
-.solution-showcase-card:nth-child(2) { z-index: 2; top: calc(clamp(6.5rem, 10vw, 10rem) + 20px); }
-.solution-showcase-card:nth-child(3) { z-index: 3; top: calc(clamp(6.5rem, 10vw, 10rem) + 40px); }
-.solution-showcase-card:nth-child(4) { z-index: 4; top: calc(clamp(6.5rem, 10vw, 10rem) + 60px); }
-.solution-showcase-card:nth-child(5) { z-index: 5; top: calc(clamp(6.5rem, 10vw, 10rem) + 80px); margin-bottom: 0; }
+.solution-showcase-card:nth-child(1) { z-index: 1; top: 120px; }
+.solution-showcase-card:nth-child(2) { z-index: 2; top: 140px; }
+.solution-showcase-card:nth-child(3) { z-index: 3; top: 160px; }
+.solution-showcase-card:nth-child(4) { z-index: 4; top: 180px; }
+.solution-showcase-card:nth-child(5) { z-index: 5; top: 200px; margin-bottom: 0; }
 
 .solution-showcase-card:hover {
-  transform: translateY(-8px) scale(1.006);
-  border-color: color-mix(in srgb, var(--accent) 32%, transparent);
-  box-shadow:
-    0 34px 85px rgb(11 22 40 / 0.17),
-    0 0 0 1px color-mix(in srgb, var(--accent) 14%, transparent) inset;
+  transform: translateY(-5px);
+  border-color: #C7A96B;
+  box-shadow: 0 20px 60px rgba(7, 26, 51, 0.1);
 }
 
 .solution-card-media {
