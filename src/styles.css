@@ -173,11 +173,18 @@ li {
 
 .hero-animated-copy h1 {
   margin-top: 1.5rem;
-  max-width: min(100%, 15ch);
-  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  max-width: min(100%, 18ch);
+  font-size: clamp(4rem, 7.5vw, 6.8rem);
   font-weight: 200;
-  line-height: 0.88;
-  letter-spacing: -0.06em;
+  line-height: 0.82;
+  letter-spacing: -0.07em;
+  text-transform: lowercase;
+}
+
+.hero-animated-copy h1 br {
+  display: block;
+  content: "";
+  margin-top: -0.1em;
 }
 
 .hero-animated-copy p {
@@ -191,10 +198,13 @@ li {
 
 .hero-word-rotator {
   position: relative;
-  display: block;
-  width: min(100%, 14ch);
+  display: inline-block;
+  width: auto;
+  min-width: 8ch;
   min-height: 1em;
   color: #e9f0fa;
+  vertical-align: top;
+  margin-left: 0.15em;
 }
 
 .hero-word-rotator i {
@@ -276,10 +286,10 @@ li {
 
 .hero-cta-copy p {
   max-width: 36rem;
-  color: rgb(255 255 255 / 0.92);
-  font-size: clamp(0.92rem, 1.25vw, 1.05rem);
-  font-weight: 700;
-  line-height: 1.48;
+  color: rgb(255 255 255 / 0.95);
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  font-weight: 400;
+  line-height: 1.4;
 }
 
 .hero-service-links {
@@ -716,10 +726,11 @@ li {
 
 .home-proof-copy h2 {
   margin-top: 1rem;
-  font-size: clamp(2.8rem, 6vw, 6.2rem);
-  font-weight: 200;
-  letter-spacing: -0.07em;
-  line-height: 0.9;
+  font-size: clamp(3.2rem, 7vw, 7.5rem);
+  font-weight: 100;
+  letter-spacing: -0.08em;
+  line-height: 0.82;
+  text-transform: lowercase;
 }
 
 .home-proof-copy p {
