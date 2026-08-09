@@ -653,8 +653,8 @@ export function HomePage() {
         <div className="mx-auto max-w-[1600px]">
           <div className="solutions-scroll-layout">
             <div className="solutions-scroll-copy sticky top-32">
-              <span className="mb-6 block text-[11px] font-black uppercase tracking-[0.4em] text-[#142946]/40">Engenharia Financeira</span>
-              <h2 className="gsap-reveal text-[clamp(4rem,8vw,9rem)] font-thin leading-[0.8] tracking-[-0.08em] text-[#142946]">Soluções que redefinem o seu fluxo.</h2>
+              <span className="mb-6 block text-[11px] font-black uppercase tracking-[0.4em] text-[#C7A96B]">Engenharia Financeira</span>
+              <h2 className="gsap-reveal text-[clamp(4rem,8vw,9rem)] font-thin leading-[0.8] tracking-[-0.08em] text-[#071A33]">Soluções que redefinem o seu fluxo.</h2>
               <p className="mt-8 max-w-md text-lg font-light leading-relaxed text-[#142946]/70">
                 Desenvolvemos arquiteturas de capital sob medida para empresas que não aceitam o comum. Securitização com propósito, agilidade e escala.
               </p>
@@ -1167,19 +1167,19 @@ function ContactField({
   autoComplete?: string;
 }) {
   return (
-    <div className="contact-field">
-      <label htmlFor={id}>{label}</label>
+    <div className="contact-field flex flex-col gap-2">
+      <label htmlFor={id} className="text-xs font-bold uppercase tracking-widest text-[#52606D]">{label}</label>
       <input
         id={id}
         type={type}
-        className={`contact-input${error ? " contact-input-error" : ""}`}
+        className={`contact-input p-4 rounded-xl border transition-all ${error ? "border-red-500" : "border-[#E8EDF2] focus:border-[#C7A96B]"} bg-white/50 text-[#071A33]`}
         placeholder={placeholder}
         value={value}
         autoComplete={autoComplete}
         aria-invalid={Boolean(error)}
         onChange={(event) => onChange(event.target.value)}
       />
-      {error ? <span className="contact-error">{error}</span> : null}
+      {error ? <span className="text-xs text-red-500 font-medium">{error}</span> : null}
     </div>
   );
 }
