@@ -746,7 +746,7 @@ function SolutionCard({ solution, index }: { solution: Solution; index: number }
           <span className="solution-card-kicker">Credmais</span>
         </div>
         <h3>{solution.title}</h3>
-        <p>Desenvolvemos ferramentas financeiras focadas em liquidez e segurança, estruturadas para empresas que buscam crescimento sólido sem a burocracia tradicional.</p>
+        <p>{solution.summary}</p>
         <div className="solution-card-points">
           {solution.bullets.slice(0, 2).map((bullet) => (
             <span key={bullet}>
