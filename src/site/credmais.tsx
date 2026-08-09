@@ -388,10 +388,10 @@ export function SiteHeader() {
             Início
           </NavLink>
           <SolutionsDropdown pathname={pathname} scrolled={scrolled} />
-          <NavLink href="/#sobre" active={pathname === "/sobre"} scrolled={scrolled}>
+          <NavLink href="/sobre" active={pathname === "/sobre"} scrolled={scrolled}>
             Sobre
           </NavLink>
-          <NavLink href="/#form-contato" active={pathname === "/contato"} scrolled={scrolled}>
+          <NavLink href="/contato" active={pathname === "/contato"} scrolled={scrolled}>
             Contato
           </NavLink>
         </div>
@@ -413,7 +413,7 @@ export function SiteHeader() {
           onClick={() => setOpen((value) => !value)}
           aria-label="Menu"
         >
-          {open ? <X size={22} /> : <Menu size={22} />}
+          {open ? <X className="h-[22px] w-[22px]" /> : <Menu className="h-[22px] w-[22px]" />}
         </button>
       </nav>
 
@@ -431,8 +431,8 @@ export function SiteHeader() {
                 ))}
               </div>
             </div>
-            <MobileLink href="/#sobre" onClick={() => setOpen(false)}>Sobre</MobileLink>
-            <MobileLink href="/#form-contato" onClick={() => setOpen(false)}>Contato</MobileLink>
+            <MobileLink href="/sobre" onClick={() => setOpen(false)}>Sobre</MobileLink>
+            <MobileLink href="/contato" onClick={() => setOpen(false)}>Contato</MobileLink>
             <a
               href={CONTACT_WHATSAPP_URL}
               target="_blank"
@@ -440,7 +440,7 @@ export function SiteHeader() {
               className="mt-2 flex items-center justify-center gap-2 rounded-full bg-white px-6 py-4 text-sm font-black uppercase tracking-[0.16em] text-[#142946]"
             >
               Simular agora
-              <ArrowUpRight size={16} />
+              <ArrowUpRight className="h-4 w-4" />
             </a>
           </div>
         </div>
