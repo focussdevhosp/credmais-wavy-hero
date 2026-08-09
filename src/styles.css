@@ -8,10 +8,11 @@
   --color-deep: #142946;
   --color-muted: #7a8fa8;
   --color-surface: #ffffff;
-  --shadow-soft: 0 40px 100px rgb(0 0 0 / 0.25);
+  --shadow-premium: 0 50px 100px -20px rgba(0, 0, 0, 0.45);
+  --ease-expo: cubic-bezier(0.87, 0, 0.13, 1);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --radius-xl: 40px;
-  --radius-2xl: 60px;
+  --radius-pill: 999px;
+  --radius-huge: 80px;
 }
 
 * {
@@ -149,12 +150,12 @@ li {
 
 .hero-animated-copy {
   position: absolute;
-  left: clamp(1.25rem, 8vw, 8rem);
-  top: clamp(8rem, 25vh, 16rem);
+  left: 5vw;
+  bottom: 12vh;
   z-index: 8;
-  max-width: min(50vw, 680px);
+  max-width: 90vw;
   color: #ffffff;
-  animation: hero-copy-rise 900ms var(--ease-out) 200ms both;
+  animation: hero-fade-up 1.2s var(--ease-expo) both;
 }
 
 .hero-animated-copy > span {
@@ -172,13 +173,15 @@ li {
 }
 
 .hero-animated-copy h1 {
-  margin-top: 1.5rem;
-  max-width: min(100%, 18ch);
-  font-size: clamp(4rem, 7.5vw, 6.8rem);
-  font-weight: 200;
-  line-height: 0.82;
-  letter-spacing: -0.07em;
+  margin-top: 1rem;
+  font-size: clamp(4.5rem, 12vw, 12rem);
+  font-weight: 100;
+  line-height: 0.78;
+  letter-spacing: -0.06em;
   text-transform: lowercase;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
 }
 
 .hero-animated-copy h1 br {
@@ -246,7 +249,7 @@ li {
   align-items: start;
   gap: 1.1rem 1.5rem;
   border: 1px solid rgb(255 255 255 / 0.15);
-  border-radius: var(--radius-2xl);
+  border-radius: var(--radius-huge);
   background:
     linear-gradient(160deg, rgb(20 41 70 / 0.85), rgb(20 41 70 / 0.65)),
     radial-gradient(120% 80% at 80% 0%, rgb(190 214 240 / 0.2), transparent 50%);
@@ -391,7 +394,7 @@ li {
   padding: 1.5rem 2.5rem;
   pointer-events: none;
   background: transparent;
-  transition: all 0.4s var(--ease-out);
+  transition: all 0.6s var(--ease-expo);
 }
 
 .site-header::before {
@@ -744,17 +747,16 @@ li {
 
 .home-proof-media {
   position: relative;
-  min-height: clamp(360px, 48vw, 560px);
+  min-height: 80vh;
   overflow: hidden;
-  border-radius: 38px;
+  border-radius: var(--radius-huge);
 }
 
 .home-proof-media img {
   width: 100%;
   height: 100%;
-  min-height: inherit;
   object-fit: cover;
-  transform: scale(1.04);
+  transition: transform 1s var(--ease-expo);
 }
 
 

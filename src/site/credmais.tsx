@@ -649,20 +649,15 @@ export function HomePage() {
   return (
     <>
       <CampaignHero className="home-hero" image={HERO_IMAGE} eyebrow="Soluções Financeiras de Elite" titleStart="Potencialize seu caixa." titleBridge="Cresça com" words={["inteligência.", "velocidade.", "estratégia."]} description="A securitizadora que transforma seus recebíveis em uma poderosa ferramenta de expansão, eliminando a burocracia e acelerando o seu sucesso." />
-      <section id="solucoes" className="solutions-showcase relative px-5 py-24 text-[#0b1628] md:px-[8%] md:py-32">
-        <div className="solutions-showcase-bg" aria-hidden="true" />
-        <div className="relative z-10 mx-auto max-w-7xl">
+      <section id="solucoes" className="solutions-showcase px-5 py-32 text-[#0b1628] md:px-[8%]">
+        <div className="mx-auto max-w-[1600px]">
           <div className="solutions-scroll-layout">
-            <div className="solutions-scroll-copy">
-              <span className="solutions-eyebrow gsap-reveal">Ecossistema Financeiro</span>
-              <h2 className="gsap-reveal font-extralight tracking-tighter">Soluções potentes para quem busca liderança no mercado.</h2>
-              <p className="gsap-reveal font-light text-white/70">
-                Mais do que antecipar recursos, entregamos a inteligência financeira necessária para securitizar o futuro do seu negócio com máxima eficiência e segurança.
+            <div className="solutions-scroll-copy sticky top-32">
+              <span className="mb-6 block text-[11px] font-black uppercase tracking-[0.4em] text-[#142946]/40">Engenharia Financeira</span>
+              <h2 className="gsap-reveal text-[clamp(4rem,8vw,9rem)] font-thin leading-[0.8] tracking-[-0.08em] text-[#142946]">Soluções que redefinem o seu fluxo.</h2>
+              <p className="mt-8 max-w-md text-lg font-light leading-relaxed text-[#142946]/70">
+                Desenvolvemos arquiteturas de capital sob medida para empresas que não aceitam o comum. Securitização com propósito, agilidade e escala.
               </p>
-
-              <div className="solutions-scroll-rail gsap-reveal" aria-hidden="true">
-                <span />
-              </div>
             </div>
 
             <div className="solution-scroll-list">
