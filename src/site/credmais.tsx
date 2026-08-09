@@ -396,7 +396,7 @@ export function SiteHeader() {
           </NavLink>
         </div>
 
-        <div className={`nav-cta ${scrolled ? "hidden" : ""}`}>
+        <div className="nav-cta">
           <a
             href={CONTACT_WHATSAPP_URL}
             target="_blank"
