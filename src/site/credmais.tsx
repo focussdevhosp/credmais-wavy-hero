@@ -337,9 +337,9 @@ const solutionThemes: Record<string, SolutionTheme> = {
   },
   "gestao-de-contas": {
     proof: [
-      { value: "Cobrança", label: "ativada após análise" },
-      { value: "Recuperação", label: "acompanhada de perto" },
-      { value: "Resultado", label: "com relatório mensal" },
+      { value: "Cobrança", label: "especializada e ativa" },
+      { value: "Recuperação", label: "com foco em resultado" },
+      { value: "Relatórios", label: "claros e mensais" },
     ],
     audience: "Para empresas que têm recebíveis em atraso e precisam de uma operação especializada para recuperar valores sem desgaste interno.",
     operatingTitle: "Recebemos suas dívidas e cuidamos de toda a recuperação.",
