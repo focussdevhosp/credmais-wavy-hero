@@ -585,19 +585,11 @@ li {
 
 
 @media (max-width: 1023px) {
-  .nav-links, .nav-cta {
-    display: none;
-  }
-  
   .nav-container {
-    max-width: 160px;
     padding: 0.3rem;
   }
-  
-  .brand-logo-shell {
-    height: 56px;
-  }
 }
+
 
 
 
