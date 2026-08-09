@@ -1611,6 +1611,19 @@ li {
   grid-template-columns: minmax(20rem, 0.54fr) minmax(0, 1fr);
 }
 
+@media (max-width: 1023px) {
+  .solutions-scroll-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .solutions-scroll-copy {
+    position: relative !important;
+    top: 0 !important;
+    margin-bottom: 2rem;
+  }
+}
+
 .solutions-scroll-copy {
   position: sticky;
   top: 7.5rem;
@@ -1638,7 +1651,7 @@ li {
 .solutions-scroll-copy h2 {
   margin-top: 1.25rem;
   color: #0b1628;
-  font-size: clamp(3.2rem, 5.2vw, 5.4rem);
+  font-size: clamp(2.8rem, 5.2vw, 5.4rem);
   font-weight: 200;
   letter-spacing: -0.05em;
   line-height: 0.88;
@@ -1657,8 +1670,19 @@ li {
 .solutions-metrics {
   display: grid;
   gap: 0.65rem;
-  margin-top: 1.75rem;
+  margin-top: 2.2rem;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 640px) {
+  .solutions-metrics {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .solutions-metrics span {
+    min-height: 90px !important;
+  }
 }
 
 .solutions-metrics span {
@@ -1745,6 +1769,18 @@ li {
   transform-origin: center top;
   grid-template-columns: minmax(19rem, 0.86fr) minmax(0, 1.04fr);
   isolation: isolate;
+
+@media (max-width: 768px) {
+  .solution-showcase-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  
+  .solution-card-media {
+    height: 250px;
+    min-height: auto;
+  }
+}
   backface-visibility: hidden;
   will-change: transform;
 }
