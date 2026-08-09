@@ -1009,28 +1009,38 @@ function CampaignHero({ className, image, eyebrow, titleStart, titleBridge, word
 
 function ContactSection({ compact = false }: { compact?: boolean }) {
   return (
-    <section id="contato" className={`bg-[#142946] px-5 text-white md:px-[10%] ${compact ? "py-24" : "py-32"}`}>
-      <div className="mx-auto max-w-6xl text-center">
-        <p className="mb-6 text-xs font-black uppercase tracking-[0.36em] text-[#e9f0fa]">Contato</p>
-        <h2 className="text-[clamp(3.5rem,7vw,6rem)] font-extralight leading-[0.85] tracking-[-0.06em] mb-12">O que sua empresa precisa resolver?</h2>
-        <p className="mx-auto mt-6 max-w-3xl text-base font-normal leading-relaxed text-white/58 md:text-lg">
-          Fale com a Credmais sobre falta de caixa, venda a prazo, inadimplência, dificuldade de crédito, boleto garantido, crediário, gestão de contas ou recebimento de dívidas — respondemos rápido e com clareza.
-        </p>
-
-        <div className="contact-service-grid mt-12 mb-16" aria-label="Soluções para contato">
-          {solutions.map((solution) => {
-            const Icon = solution.icon;
-            return (
-              <a key={solution.slug} href="#form-contato" style={{ "--accent": solution.accent } as CSSProperties}>
-                <span className="contact-service-icon"><Icon className="h-5 w-5" /></span>
-                <strong>{solution.title}</strong>
-                <small>{solution.metric}</small>
-              </a>
-            );
-          })}
+    <section id="contato" className={`bg-[#071A33] px-5 text-white md:px-[8%] ${compact ? "py-24" : "py-32"}`}>
+      <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div className="contact-info-panel">
+          <span className="text-[11px] font-black uppercase tracking-[0.4em] text-[#C7A96B] mb-6 block">Contato e Conversão</span>
+          <h2 className="text-[clamp(3rem,6vw,5.5rem)] font-thin leading-[0.85] tracking-[-0.06em] text-white mb-12">O que sua empresa precisa resolver?</h2>
+          <p className="text-lg text-white/60 font-light leading-relaxed mb-12 max-w-xl">
+            Fale com a Credmais sobre falta de caixa, venda a prazo, inadimplência, dificuldade de crédito, boleto garantido, crediário, gestão de contas ou recebimento de dívidas — respondemos rápido e com clareza.
+          </p>
+          
+          <div className="flex flex-col gap-6">
+            <div className="flex items-center gap-6 group">
+              <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-[#C7A96B] group-hover:bg-[#C7A96B] group-hover:text-[#071A33] transition-all">
+                <Phone size={18} />
+              </div>
+              <div>
+                <span className="text-[10px] font-black uppercase tracking-widest text-white/30 block mb-1">WhatsApp</span>
+                <a href={CONTACT_WHATSAPP_URL} className="text-lg font-medium hover:text-[#C7A96B] transition-colors">{CONTACT_WHATSAPP_DISPLAY}</a>
+              </div>
+            </div>
+            <div className="flex items-center gap-6 group">
+              <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-[#C7A96B] group-hover:bg-[#C7A96B] group-hover:text-[#071A33] transition-all">
+                <Mail size={18} />
+              </div>
+              <div>
+                <span className="text-[10px] font-black uppercase tracking-widest text-white/30 block mb-1">E-mail corporativo</span>
+                <a href={`mailto:${CONTACT_EMAIL}`} className="text-lg font-medium hover:text-[#C7A96B] transition-colors">{CONTACT_EMAIL}</a>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div id="form-contato" className="bg-white/5 p-8 rounded-[56px] border border-white/10 shadow-2xl backdrop-blur-md max-w-5xl mx-auto">
+        <div id="form-contato" className="bg-white p-12 rounded-[24px] shadow-2xl border border-white/10">
           <ContactForm />
         </div>
       </div>
@@ -1101,19 +1111,19 @@ function ContactForm() {
   };
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit} noValidate>
-      <div className="contact-form-grid">
+    <form className="contact-form grid gap-8" onSubmit={handleSubmit} noValidate>
+      <div className="contact-form-grid grid grid-cols-1 md:grid-cols-2 gap-6">
         <ContactField id="contact-name" label="Nome completo" placeholder="Como podemos te chamar?" value={values.name} onChange={update("name")} error={errors.name} autoComplete="name" />
         <ContactField id="contact-email" label="E-mail corporativo" type="email" placeholder="voce@suaempresa.com.br" value={values.email} onChange={update("email")} error={errors.email} autoComplete="email" />
         <ContactField id="contact-phone" label="WhatsApp / Telefone" type="tel" placeholder="(11) 90000-0000" value={values.phone} onChange={update("phone")} error={errors.phone} autoComplete="tel" />
         <ContactField id="contact-company" label="Empresa" placeholder="Razão social ou nome fantasia" value={values.company} onChange={update("company")} error={errors.company} autoComplete="organization" />
       </div>
 
-      <div className="contact-field">
-        <label htmlFor="contact-interest">Solução de interesse</label>
+      <div className="contact-field flex flex-col gap-2">
+        <label htmlFor="contact-interest" className="text-xs font-bold uppercase tracking-widest text-[#52606D]">Solução de interesse</label>
         <select
           id="contact-interest"
-          className={`contact-input contact-select${errors.interest ? " contact-input-error" : ""}`}
+          className={`contact-input p-4 rounded-xl border transition-all ${errors.interest ? "border-red-500" : "border-[#E8EDF2] focus:border-[#C7A96B]"} bg-[#F6F8FA] text-[#071A33] font-medium appearance-none`}
           value={values.interest}
           onChange={(event) => update("interest")(event.target.value)}
           aria-invalid={Boolean(errors.interest)}
@@ -1126,39 +1136,34 @@ function ContactForm() {
           ))}
           <option value="Ainda não sei">Ainda não sei / quero orientação</option>
         </select>
-        {errors.interest ? <span className="contact-error">{errors.interest}</span> : null}
+        {errors.interest ? <span className="text-xs text-red-500 font-medium">{errors.interest}</span> : null}
       </div>
 
-      <div className="contact-field">
-        <label htmlFor="contact-message">Sua necessidade</label>
+      <div className="contact-field flex flex-col gap-2">
+        <label htmlFor="contact-message" className="text-xs font-bold uppercase tracking-widest text-[#52606D]">Sua necessidade</label>
         <textarea
           id="contact-message"
-          className={`contact-input contact-textarea${errors.message ? " contact-input-error" : ""}`}
+          className={`contact-input p-4 rounded-xl border transition-all ${errors.message ? "border-red-500" : "border-[#E8EDF2] focus:border-[#C7A96B]"} bg-[#F6F8FA] text-[#071A33] font-medium min-h-[120px]`}
           placeholder="Conte o cenário atual: valores, prazos e o que precisa resolver."
           maxLength={1000}
           value={values.message}
           onChange={(event) => update("message")(event.target.value)}
           aria-invalid={Boolean(errors.message)}
         />
-        <div className="contact-field-foot">
-          {errors.message ? <span className="contact-error">{errors.message}</span> : <span className="contact-hint">Respondemos em até 1 dia útil.</span>}
-          <span className="contact-counter">{values.message.length}/1000</span>
+        <div className="contact-field-foot flex justify-between items-center mt-2">
+          {errors.message ? <span className="text-xs text-red-500 font-medium">{errors.message}</span> : <span className="text-[10px] font-black uppercase tracking-widest text-[#52606D]/50">Respondemos em até 1 dia útil.</span>}
+          <span className="text-[10px] font-black text-[#52606D]/30">{values.message.length}/1000</span>
         </div>
       </div>
 
-      <div className="contact-form-actions">
-        <div className="grid gap-3 text-sm text-white/55 md:text-left">
-          <ContactLine icon={Phone} value={`WhatsApp ${CONTACT_WHATSAPP_DISPLAY}`} href={CONTACT_WHATSAPP_URL} />
-          <ContactLine icon={Mail} value={CONTACT_EMAIL} href={`mailto:${CONTACT_EMAIL}`} />
-          <ContactLine icon={FileText} value={`CNPJ ${CONTACT_CNPJ}`} />
-        </div>
-        <div className="contact-submit-wrap">
-          <button type="submit" className="contact-submit" disabled={sending}>
-            {sending ? "Enviando..." : "Enviar e falar no WhatsApp"}
-            <ArrowUpRight className="h-4 w-4" />
-          </button>
-          <small>Seus dados são usados apenas para este atendimento.</small>
-        </div>
+      <div className="pt-4">
+        <button type="submit" className="w-full flex items-center justify-center gap-4 bg-[#071A33] text-white p-6 rounded-xl font-black uppercase tracking-widest text-xs hover:bg-[#C7A96B] hover:text-[#071A33] transition-all disabled:opacity-50" disabled={sending}>
+          {sending ? "Enviando..." : "Enviar e falar no WhatsApp"}
+          <ArrowUpRight className="h-4 w-4" />
+        </button>
+        <p className="text-center mt-6 text-[10px] font-black uppercase tracking-widest text-[#52606D]/40">
+          Seus dados são usados apenas para este atendimento conforme nossa política de privacidade.
+        </p>
       </div>
     </form>
   );
