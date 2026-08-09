@@ -935,25 +935,28 @@ function AboutIntroSection() {
   ];
 
   return (
-    <section className="about-intro-section">
-      <div className="about-intro-copy">
-        <span>Como trabalhamos</span>
-        <h2>Mais do que uma securitizadora, um parceiro de crescimento.</h2>
-        <p>Humanizamos o crédito e desenhamos estruturas financeiras para empresas evoluírem com previsibilidade. Operação, cobrança e capital deixam de ser blocos separados e passam a trabalhar juntos pelo seu resultado.</p>
-      </div>
-      <div className="about-intro-media">
-        <img src={baseOperacional.url} alt="" loading="lazy" decoding="async" />
-      </div>
-      <div className="about-principles">
-        {principles.map((item) => (
-          <article key={item.value}>
-            <strong>{item.value}</strong>
-            <div>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </div>
-          </article>
-        ))}
+    <section className="about-intro-section bg-[#F6F8FA] py-32 px-5 md:px-[8%]">
+      <div className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+        <div className="about-intro-copy">
+          <span className="text-[11px] font-black uppercase tracking-[0.4em] text-[#C7A96B] mb-6 block">Como trabalhamos</span>
+          <h2 className="text-[clamp(3rem,6vw,5.5rem)] font-thin leading-[0.85] tracking-[-0.06em] text-[#071A33] mb-8">Mais do que uma securitizadora, um parceiro de crescimento.</h2>
+          <p className="text-lg text-[#52606D] font-light leading-relaxed mb-12">Humanizamos o crédito e desenhamos estruturas financeiras para empresas evoluírem com previsibilidade. Operação, cobrança e capital deixam de ser blocos separados e passam a trabalhar juntos pelo seu resultado.</p>
+          
+          <div className="about-principles grid gap-10">
+            {principles.map((item) => (
+              <article key={item.value} className="flex gap-8 group">
+                <strong className="text-4xl font-thin text-[#C7A96B]/30 group-hover:text-[#C7A96B] transition-colors">{item.value}</strong>
+                <div>
+                  <h3 className="text-xl font-bold text-[#071A33] mb-2">{item.title}</h3>
+                  <p className="text-[#52606D] font-light leading-relaxed">{item.text}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+        <div className="about-intro-media relative rounded-[24px] overflow-hidden shadow-2xl">
+          <img src={baseOperacional.url} alt="Ambiente corporativo Credmais" className="w-full h-full object-cover aspect-[4/5]" loading="lazy" decoding="async" />
+        </div>
       </div>
     </section>
   );
@@ -975,16 +978,16 @@ function CampaignHero({ className, image, eyebrow, titleStart, titleBridge, word
         <img src={image} alt="" className="hero-full-image" fetchPriority="high" decoding="async" />
       </div>
       <div className="hero-animated-copy">
-        <span>{eyebrow}</span>
-        <h1>
+        <span className="text-[11px] font-black uppercase tracking-[0.4em] text-[#C7A96B] mb-6 block">{eyebrow}</span>
+        <h1 className="text-[clamp(4rem,10vw,9rem)] font-thin leading-[0.8] tracking-[-0.08em] text-white">
           {titleStart}
           <br />
           {titleBridge}
-          <span className="hero-word-rotator" aria-hidden="true">
+          <span className="hero-word-rotator text-[#C7A96B]" aria-hidden="true">
             {words.map((word) => <i key={word}>{word}</i>)}
           </span>
         </h1>
-        <p>{description}</p>
+        <p className="mt-8 max-w-xl text-lg font-light leading-relaxed text-white/80">{description}</p>
       </div>
     </section>
   );
