@@ -139,62 +139,62 @@ export const solutions: Solution[] = [
   {
     slug: "antecipacao-de-recebiveis",
     title: "Antecipação de Recebíveis",
-    headline: "Transforme vendas a prazo em caixa imediato.",
-    summary: "Converta duplicatas, boletos e contratos em capital de giro hoje mesmo. Nossa análise técnica garante as melhores taxas para você manter sua operação em pleno movimento.",
+    headline: "Potencialize seu caixa.",
+    summary: "Liquidez imediata para sua empresa. Converta vendas a prazo em capital de giro hoje mesmo.",
     detail: "Uma estrutura de securitização desenhada para empresas que buscam agilidade. Com a Credmais, o valor das suas vendas futuras é liberado em D+1, eliminando a espera e a burocracia bancária.",
     icon: HandCoins,
     bullets: ["Liquidez em até 24 horas", "Taxas competitivas e transparentes", "Análise técnica personalizada"],
     image: brandAgro.url,
     metric: "Liquidez Imediata",
-    accent: "#4a7fb5",
+    accent: "#C7A96B",
   },
   {
     slug: "boleto-garantido",
     title: "Boleto Garantido",
-    headline: "Venda com a segurança de um recebimento blindado.",
-    summary: "Elimine o risco de inadimplência em suas vendas por boleto. Nós garantimos o fluxo financeiro enquanto você foca em expandir sua base de clientes.",
+    headline: "Boleto protegido.",
+    summary: "Mais proteção e previsibilidade. Elimine o risco de inadimplência em suas vendas por boleto.",
     detail: "Uma solução completa que engloba análise de risco, emissão e garantia de recebimento. Reduza incertezas e planeje seu crescimento com a certeza de que o capital entrará no caixa.",
     icon: FileText,
     bullets: ["Proteção contra inadimplência", "Previsibilidade total de caixa", "Gestão de cobrança profissional"],
     image: brandRestaurante.url,
-    metric: "Risco Zero",
-    accent: "#5f93c8",
+    metric: "Mais Segurança",
+    accent: "#C7A96B",
   },
   {
     slug: "consultoria",
     title: "Consultoria Estratégica",
-    headline: "Inteligência financeira para decisões de alto impacto.",
-    summary: "Desenvolvemos a estrutura de capital ideal para o seu momento. Nossa consultoria vai além dos números, entregando estratégia e clareza para sua expansão.",
+    headline: "Decida melhor.",
+    summary: "Alta performance financeira. Desenvolvemos a estrutura de capital ideal para o seu momento.",
     detail: "Mapeamos gargalos, analisamos contratos e desenhamos planos de ação executáveis. Tenha ao seu lado especialistas que entendem o mercado de securitização e crédito estruturado.",
     icon: LineChart,
     bullets: ["Diagnóstico 360º do fluxo", "Planejamento de capital sob medida", "Visão de longo prazo"],
     image: brandAssinatura.url,
     metric: "Alta Performance",
-    accent: "#3b6fa0",
+    accent: "#C7A96B",
   },
   {
     slug: "crediario",
     title: "Crediário Próprio",
-    headline: "Potencialize suas vendas oferecendo crédito direto.",
-    summary: "Aumente seu ticket médio e conversão permitindo que seu cliente parcele sem depender de bancos. Uma jornada simples que fideliza e gera resultados.",
+    headline: "Parcele mais.",
+    summary: "Expansão de vendas. Potencialize suas vendas oferecendo crédito direto ao seu cliente.",
     detail: "Estruturamos toda a jornada de crédito da sua empresa: da análise do comprador ao acompanhamento da carteira. Venda mais com a segurança de uma operação profissional.",
     icon: CircleDollarSign,
     bullets: ["Maior conversão de vendas", "Jornada sem burocracia", "Controle total da carteira"],
     image: brandVarejo.url,
     metric: "Expansão de Vendas",
-    accent: "#2d6fb0",
+    accent: "#C7A96B",
   },
   {
     slug: "gestao-de-contas",
     title: "Gestão de Recebíveis",
-    headline: "Recuperação especializada com foco em liquidez.",
-    summary: "Recupere valores em atraso sem desgastar o relacionamento com seus clientes. Nossa equipe atua com estratégia e respeito para trazer seu dinheiro de volta.",
+    headline: "Recupere seus recebíveis.",
+    summary: "Recuperação ágil e especializada. Mais fôlego, resultado e controle para sua operação.",
     detail: "Assumimos a gestão ativa da sua cobrança. Com processos estruturados e relatórios transparentes, transformamos dívidas paradas em capital produtivo para o seu negócio.",
     icon: Workflow,
     bullets: ["Recuperação ativa e ética", "Relatórios de performance", "Preservação de parcerias"],
     image: brandRecepcao.url,
     metric: "Recuperação Ágil",
-    accent: "#6fa3d4",
+    accent: "#C7A96B",
   },
 ];
 
@@ -648,7 +648,7 @@ export function HomePage() {
   useHomeMotion();
   return (
     <>
-      <CampaignHero className="home-hero" image={HERO_IMAGE} eyebrow="Soluções Financeiras de Elite" titleStart="Potencialize seu caixa." titleBridge="Cresça com" words={["inteligência.", "velocidade.", "estratégia."]} description="A securitizadora que transforma seus recebíveis em uma poderosa ferramenta de expansão, eliminando a burocracia e acelerando o seu sucesso." />
+      <CampaignHero className="home-hero" image={HERO_IMAGE} eyebrow="Soluções Financeiras de Elite" titleStart="Potencialize seu caixa." titleBridge="Cresça com" words={["inteligência.", "velocidade.", "estratégia."]} description="A securitizadora que transforma seus recebíveis em uma poderosa ferramenta de expansão estratégica para o seu sucesso." />
       <section id="solucoes" className="solutions-showcase px-5 py-32 text-[#0b1628] md:px-[8%]">
         <div className="mx-auto max-w-[1600px]">
           <div className="solutions-scroll-layout">

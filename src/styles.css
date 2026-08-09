@@ -3,16 +3,19 @@
 
 :root {
   --color-primary: #e9f0fa;
-  --color-secondary: #1e3a5f;
-  --color-ink: #0b1628;
-  --color-deep: #142946;
-  --color-muted: #7a8fa8;
-  --color-surface: #ffffff;
-  --shadow-premium: 0 50px 100px -20px rgba(0, 0, 0, 0.45);
-  --ease-expo: cubic-bezier(0.87, 0, 0.13, 1);
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --color-secondary: #0E3764;
+  --color-ink: #071A33;
+  --color-deep: #071A33;
+  --color-navy-light: #16558C;
+  --color-ice: #F6F8FA;
+  --color-gray-light: #E8EDF2;
+  --color-gray-text: #52606D;
+  --color-gold: #C7A96B;
+  --color-accent: #f97316; /* Laranja da logo */
+  --shadow-premium: 0 40px 100px -20px rgba(7, 26, 51, 0.15);
+  --ease-expo: cubic-bezier(0.22, 1, 0.36, 1);
   --radius-pill: 999px;
-  --radius-huge: 80px;
+  --radius-huge: 24px;
 }
 
 * {
