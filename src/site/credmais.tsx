@@ -1022,7 +1022,7 @@ function ContactSection({ compact = false }: { compact?: boolean }) {
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-6 group">
               <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-[#C7A96B] group-hover:bg-[#C7A96B] group-hover:text-[#071A33] transition-all">
-                <Phone size={18} />
+                <Phone className="h-[18px] w-[18px]" />
               </div>
               <div>
                 <span className="text-[10px] font-black uppercase tracking-widest text-white/30 block mb-1">WhatsApp</span>
@@ -1031,7 +1031,7 @@ function ContactSection({ compact = false }: { compact?: boolean }) {
             </div>
             <div className="flex items-center gap-6 group">
               <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-[#C7A96B] group-hover:bg-[#C7A96B] group-hover:text-[#071A33] transition-all">
-                <Mail size={18} />
+                <Mail className="h-[18px] w-[18px]" />
               </div>
               <div>
                 <span className="text-[10px] font-black uppercase tracking-widest text-white/30 block mb-1">E-mail corporativo</span>
