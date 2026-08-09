@@ -3179,143 +3179,149 @@ li {
   position: relative;
   overflow: hidden;
   background:
-    radial-gradient(circle at 8% 8%, rgb(190 214 240 / 0.12), transparent 30%),
-    radial-gradient(circle at 88% 18%, rgb(100 140 195 / 0.12), transparent 32%),
-    linear-gradient(180deg, #ffffff, #f3f7fc);
-  padding: clamp(5rem, 8vw, 7.5rem) 5vw;
+    radial-gradient(circle at 5% 5%, rgb(190 214 240 / 0.1), transparent 25%),
+    radial-gradient(circle at 95% 95%, rgb(100 140 195 / 0.08), transparent 30%),
+    linear-gradient(180deg, #ffffff, #f7f9fd);
+  padding: clamp(6rem, 10vw, 9rem) 5vw;
   color: var(--color-ink);
 }
 
 .home-trust-heading,
 .home-faq-heading {
-  max-width: 820px;
+  max-width: 920px;
   margin: 0 auto;
   text-align: center;
 }
 
 .home-trust-heading span,
 .home-faq-heading span {
-  color: var(--color-primary);
+  display: inline-block;
+  color: #7a8fa8;
   font-size: 0.72rem;
   font-weight: 950;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
 
 .home-trust-heading h2,
 .home-faq-heading h2 {
-  margin-top: 1rem;
-  font-size: clamp(2.7rem, 5vw, 4rem);
-  font-weight: 950;
-  letter-spacing: -0.06em;
-  line-height: 0.94;
+  margin-top: 0.5rem;
+  font-size: clamp(3.2rem, 6.5vw, 5.2rem);
+  font-weight: 200;
+  letter-spacing: -0.05em;
+  line-height: 0.96;
+  color: #0b1628;
 }
 
 .home-trust-heading p {
-  margin: 1.1rem auto 0;
-  max-width: 44rem;
-  color: var(--color-muted);
-  font-size: clamp(1rem, 1.35vw, 1.16rem);
-  font-weight: 750;
-  line-height: 1.65;
+  margin: 1.8rem auto 0;
+  max-width: 48rem;
+  color: #55677f;
+  font-size: clamp(1.1rem, 1.45vw, 1.35rem);
+  font-weight: 300;
+  line-height: 1.6;
 }
 
 .trust-profile-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.7rem;
-  margin: clamp(2rem, 4vw, 3rem) auto 0;
-  max-width: 980px;
+  gap: 0.8rem;
+  margin: clamp(2.5rem, 5vw, 4rem) auto 0;
+  max-width: 1080px;
 }
 
 .trust-profile-row span {
-  border: 1px solid rgb(11 22 40 / 0.08);
+  border: 1px solid rgb(11 22 40 / 0.05);
   border-radius: 999px;
-  background: rgb(255 255 255 / 0.72);
-  padding: 0.72rem 1rem;
+  background: #ffffff;
+  padding: 0.75rem 1.4rem;
   color: #1e3a5f;
   font-size: 0.72rem;
-  font-weight: 950;
-  letter-spacing: 0.14em;
+  font-weight: 900;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  box-shadow: 0 16px 40px rgb(11 22 40 / 0.06);
+  box-shadow: 0 12px 30px rgb(11 22 40 / 0.03);
 }
 
 .testimonial-grid {
   display: grid;
-  gap: 1rem;
-  max-width: 1180px;
-  margin: clamp(2rem, 4vw, 3rem) auto 0;
+  gap: 1.5rem;
+  max-width: 1240px;
+  margin: clamp(3.5rem, 6vw, 5rem) auto 0;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 }
 
 .testimonial-card {
   position: relative;
-  display: grid;
-  min-height: 260px;
-  align-content: space-between;
-  overflow: hidden;
-  border: 1px solid rgb(11 22 40 / 0.08);
-  border-radius: 30px;
-  background:
-    radial-gradient(circle at 100% 0%, rgb(190 214 240 / 0.12), transparent 34%),
-    rgb(255 255 255 / 0.82);
-  padding: clamp(1.25rem, 2.2vw, 1.8rem);
-  box-shadow: var(--shadow-soft);
-  transition: transform 240ms var(--ease-out), box-shadow 240ms var(--ease-out), border-color 240ms var(--ease-out);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgb(11 22 40 / 0.04);
+  border-radius: 40px;
+  background: #ffffff;
+  padding: clamp(2rem, 3.5vw, 2.8rem);
+  box-shadow: 0 30px 90px rgb(11 22 40 / 0.05);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
 }
 
 .testimonial-card:hover {
   transform: translateY(-8px);
-  border-color: rgb(190 214 240 / 0.2);
-  box-shadow: 0 34px 100px rgb(11 22 40 / 0.16);
+  box-shadow: 0 40px 110px rgb(11 22 40 / 0.08);
 }
 
 .testimonial-card p {
-  color: #1e3a5f;
-  font-size: clamp(1rem, 1.2vw, 1.12rem);
+  color: #0b1628;
+  font-size: clamp(1.1rem, 1.4vw, 1.35rem);
   font-weight: 800;
-  line-height: 1.65;
+  letter-spacing: -0.02em;
+  line-height: 1.45;
+}
+
+.testimonial-card div {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .testimonial-card strong {
-  display: block;
-  color: var(--color-ink);
-  font-size: 0.9rem;
-  font-weight: 950;
+  color: #0b1628;
+  font-size: 0.95rem;
+  font-weight: 900;
+  letter-spacing: -0.01em;
 }
 
-.testimonial-card span {
-  display: block;
-  margin-top: 0.25rem;
-  color: var(--color-muted);
-  font-size: 0.8rem;
-  font-weight: 800;
-}
-
-.trust-cta,
-.contact-submit {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.7rem;
-  border: 0;
-  border-radius: 999px;
-  background: var(--color-primary);
-  color: #ffffff;
-  font-size: 0.78rem;
-  font-weight: 950;
-  letter-spacing: 0.16em;
-  line-height: 1.15;
-  text-transform: uppercase;
-  box-shadow: 0 22px 70px rgb(190 214 240 / 0.28);
-  transition: transform 220ms var(--ease-out), background 220ms var(--ease-out), color 220ms var(--ease-out), box-shadow 220ms var(--ease-out);
+.testimonial-card div span {
+  color: #7a8fa8;
+  font-size: 0.82rem;
+  font-weight: 700;
 }
 
 .trust-cta {
-  margin: clamp(2rem, 4vw, 3rem) auto 0;
-  padding: 1rem 1.35rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: clamp(3rem, 5vw, 4.5rem) auto 0;
+  border-radius: 999px;
+  background: #142946;
+  padding: 1.1rem 2.2rem;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 0 20px 50px rgb(20 41 70 / 0.25);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.trust-cta:hover {
+  transform: translateY(-3px) scale(1.02);
+  background: #1e3a5f;
+  box-shadow: 0 25px 60px rgb(20 41 70 / 0.35);
+}
 }
 
 .trust-cta:hover,
@@ -3327,11 +3333,14 @@ li {
 }
 
 .cta-microcopy {
-  margin-top: 0.75rem;
-  color: var(--color-muted);
-  font-size: 0.82rem;
-  font-weight: 800;
+  margin-top: 1.8rem;
   text-align: center;
+  color: #7a8fa8;
+  font-size: 0.82rem;
+  font-weight: 700;
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .home-faq-section {
@@ -3351,6 +3360,15 @@ li {
   align-self: start;
   margin: 0;
   text-align: left;
+}
+
+.home-faq-heading h2 {
+  color: #ffffff;
+  font-weight: 200;
+}
+
+.home-faq-heading span {
+  color: #e9f0fa;
 }
 
 .home-faq-list {
