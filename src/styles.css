@@ -3186,13 +3186,15 @@ li {
   color: var(--color-ink);
 }
 
-.home-trust-heading {
+.home-trust-heading,
+.home-faq-heading {
   max-width: 920px;
   margin: 0 auto;
   text-align: center;
 }
 
-.home-trust-heading span {
+.home-trust-heading span,
+.home-faq-heading span {
   display: inline-block;
   color: #7a8fa8;
   font-size: 0.72rem;
@@ -3202,7 +3204,8 @@ li {
   margin-bottom: 0.5rem;
 }
 
-.home-trust-heading h2 {
+.home-trust-heading h2,
+.home-faq-heading h2 {
   margin-top: 0.5rem;
   font-size: clamp(3.2rem, 6.5vw, 5.2rem);
   font-weight: 200;
