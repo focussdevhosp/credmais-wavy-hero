@@ -1000,7 +1000,7 @@ function ContactSection({ compact = false }: { compact?: boolean }) {
     <section id="contato" className={`bg-[#142946] px-5 text-white md:px-[10%] ${compact ? "py-24" : "py-32"}`}>
       <div className="mx-auto max-w-6xl text-center">
         <p className="mb-6 text-xs font-black uppercase tracking-[0.36em] text-[#e9f0fa]">Contato</p>
-        <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-extralight leading-none tracking-[-0.04em]">O que sua empresa precisa resolver?</h2>
+        <h2 className="text-[clamp(3.5rem,7vw,6rem)] font-extralight leading-[0.85] tracking-[-0.06em] mb-12">O que sua empresa precisa resolver?</h2>
         <p className="mx-auto mt-6 max-w-3xl text-base font-normal leading-relaxed text-white/58 md:text-lg">
           Fale com a Credmais sobre falta de caixa, venda a prazo, inadimplência, dificuldade de crédito, boleto garantido, crediário, gestão de contas ou recebimento de dívidas — respondemos rápido e com clareza.
         </p>
