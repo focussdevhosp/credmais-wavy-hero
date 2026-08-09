@@ -413,7 +413,7 @@ export function SiteHeader() {
           onClick={() => setOpen((value) => !value)}
           aria-label="Menu"
         >
-          {open ? <X className="h-[22px] w-[22px]" /> : <Menu className="h-[22px] w-[22px]" />}
+          {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </nav>
 
@@ -440,7 +440,7 @@ export function SiteHeader() {
               className="mt-2 flex items-center justify-center gap-2 rounded-full bg-white px-6 py-4 text-sm font-black uppercase tracking-[0.16em] text-[#142946]"
             >
               Simular agora
-              <ArrowUpRight className="h-4 w-4" />
+              <ArrowUpRight size={16} />
             </a>
           </div>
         </div>
@@ -1022,7 +1022,7 @@ function ContactSection({ compact = false }: { compact?: boolean }) {
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-6 group">
               <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-[#C7A96B] group-hover:bg-[#C7A96B] group-hover:text-[#071A33] transition-all">
-                <Phone className="h-[18px] w-[18px]" />
+                <Phone size={18} />
               </div>
               <div>
                 <span className="text-[10px] font-black uppercase tracking-widest text-white/30 block mb-1">WhatsApp</span>
@@ -1031,7 +1031,7 @@ function ContactSection({ compact = false }: { compact?: boolean }) {
             </div>
             <div className="flex items-center gap-6 group">
               <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-[#C7A96B] group-hover:bg-[#C7A96B] group-hover:text-[#071A33] transition-all">
-                <Mail className="h-[18px] w-[18px]" />
+                <Mail size={18} />
               </div>
               <div>
                 <span className="text-[10px] font-black uppercase tracking-widest text-white/30 block mb-1">E-mail corporativo</span>
