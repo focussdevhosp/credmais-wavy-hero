@@ -1112,7 +1112,7 @@ function ContactForm() {
   };
 
   return (
-    <form className="contact-form grid gap-8" onSubmit={handleSubmit} noValidate>
+    <form id="form-contato-main" className="contact-form grid gap-8" onSubmit={handleSubmit} noValidate>
       <div className="contact-form-grid grid grid-cols-1 md:grid-cols-2 gap-6">
         <ContactField id="contact-name" label="Nome completo" placeholder="Como podemos te chamar?" value={values.name} onChange={update("name")} error={errors.name} autoComplete="name" />
         <ContactField id="contact-email" label="E-mail corporativo" type="email" placeholder="voce@suaempresa.com.br" value={values.email} onChange={update("email")} error={errors.email} autoComplete="email" />
