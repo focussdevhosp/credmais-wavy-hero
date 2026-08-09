@@ -660,11 +660,6 @@ export function HomePage() {
               </p>
             </div>
 
-              <div className="solutions-scroll-rail gsap-reveal" aria-hidden="true">
-                <span />
-              </div>
-            </div>
-
             <div className="solution-scroll-list">
               {solutions.map((solution, index) => <SolutionCard key={solution.slug} solution={solution} index={index} />)}
             </div>
