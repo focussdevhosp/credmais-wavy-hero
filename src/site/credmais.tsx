@@ -1,4 +1,4 @@
-import React, { ComponentType, CSSProperties, FormEvent, ReactNode, useEffect, useMemo, useRef, useState } from "react";
+import React, { ComponentType, CSSProperties, FormEvent, ReactNode, useEffect, useState } from "react";
 import { z } from "zod";
 import { toast } from "sonner";
 
@@ -860,9 +860,9 @@ function SolutionOperatingPanel({ solution, theme, visualSet }: { solution: Solu
           {theme.operating.map((item, index) => (
             <article key={item.title} className="bg-white p-8 rounded-[24px] border border-[#E8EDF2] shadow-sm hover:shadow-xl transition-all group">
               <div className="flex items-center gap-6 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-[#F6F8FA] flex items-center justify-center text-[#C7A96B] group-hover:bg-[#071A33] transition-colors">
-                  <Icon size={20} />
-                </div>
+              <div className="w-12 h-12 rounded-xl bg-[#F6F8FA] flex items-center justify-center text-[#C7A96B] group-hover:bg-[#071A33] transition-colors">
+                <Icon className="h-5 w-5" />
+              </div>
                 <span className="text-3xl font-thin text-[#C7A96B]/20">{String(index + 1).padStart(2, "0")}</span>
               </div>
               <h3 className="text-xl font-bold text-[#071A33] mb-2">{item.title}</h3>
@@ -897,7 +897,7 @@ function SolutionExperience({ solution, visualSet }: { solution: Solution; visua
             <img src={visualSet.banner} alt={solution.title} className="w-full h-full object-cover aspect-video" loading="lazy" decoding="async" />
             <div className="absolute top-8 right-8 bg-[#071A33] text-white p-6 rounded-2xl shadow-2xl">
               <div className="flex items-center gap-4 mb-2">
-                <Icon size={18} className="text-[#C7A96B]" />
+                <Icon className="h-[18px] w-[18px] text-[#C7A96B]" />
                 <strong className="text-xs uppercase tracking-widest">{solution.metric}</strong>
               </div>
               <p className="text-[10px] text-white/40 uppercase font-black tracking-widest">Proteção ativa Credmais</p>
