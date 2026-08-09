@@ -382,6 +382,7 @@ li {
   transition: all 0.4s var(--ease-out);
 }
 
+
 .site-header.is-scrolled {
   top: 0.75rem;
 }
