@@ -710,18 +710,23 @@ function HomeTrustSection() {
 
 function HomeFAQSection() {
   return (
-    <section className="home-faq-section">
-      <div className="home-faq-heading gsap-reveal">
-        <span>Perguntas frequentes</span>
-        <h2>Tire suas dúvidas antes de falar com a Credmais.</h2>
-      </div>
-      <div className="home-faq-list">
-        {homeFaq.map((item) => (
-          <article key={item.q} className="home-faq-item gsap-reveal">
-            <h3>{item.q}</h3>
-            <p>{item.a}</p>
-          </article>
-        ))}
+    <section className="home-faq-section py-32 px-5 md:px-[15%] bg-white">
+      <div className="mx-auto max-w-4xl">
+        <div className="home-faq-heading mb-20 text-center">
+          <span className="text-[11px] font-black uppercase tracking-[0.4em] text-[#C7A96B] mb-6 block">Perguntas frequentes</span>
+          <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-thin leading-[0.9] tracking-[-0.06em] text-[#071A33]">Tire suas dúvidas antes de falar conosco.</h2>
+        </div>
+        <div className="home-faq-list grid gap-8">
+          {homeFaq.map((item) => (
+            <article key={item.q} className="group border-b border-[#E8EDF2] pb-8 last:border-0">
+              <h3 className="text-xl font-bold text-[#071A33] mb-4 flex items-start gap-4">
+                <span className="text-[#C7A96B] font-thin">?</span>
+                {item.q}
+              </h3>
+              <p className="text-[#52606D] font-light leading-relaxed pl-8">{item.a}</p>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );
