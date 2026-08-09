@@ -834,35 +834,42 @@ function getSolutionVisualSet(solution: Solution): SolutionVisualSet {
 function SolutionOperatingPanel({ solution, theme, visualSet }: { solution: Solution; theme: SolutionTheme; visualSet: SolutionVisualSet }) {
   const Icon = solution.icon;
   return (
-    <section className={`solution-operating-panel solution-operating-${visualSet.layout}`} style={{ "--accent": solution.accent } as CSSProperties}>
-      <div className="solution-operating-copy solution-animated">
-        <span>Plano operacional</span>
-        <h2>{theme.operatingTitle}</h2>
-        <p>{theme.operatingText}</p>
-        <ul className="solution-operating-bullets">
-          {solution.bullets.map((bullet) => (
-            <li key={bullet}>
-              <CheckCircle2 className="h-5 w-5" />
-              <span>{bullet}</span>
-            </li>
+    <section className={`solution-operating-panel py-32 px-5 md:px-[8%] bg-[#F6F8FA]`} style={{ "--accent": solution.accent } as CSSProperties}>
+      <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+        <div className="solution-operating-copy">
+          <span className="text-[11px] font-black uppercase tracking-[0.4em] text-[#C7A96B] mb-6 block">Plano operacional</span>
+          <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-thin leading-[0.9] tracking-[-0.06em] text-[#071A33] mb-8">{theme.operatingTitle}</h2>
+          <p className="text-lg text-[#52606D] font-light leading-relaxed mb-10">{theme.operatingText}</p>
+          
+          <ul className="flex flex-col gap-6 mb-12">
+            {solution.bullets.map((bullet) => (
+              <li key={bullet} className="flex items-center gap-4 text-[#071A33] font-medium uppercase tracking-widest text-xs">
+                <CheckCircle2 className="h-5 w-5 text-[#C7A96B]" />
+                <span>{bullet}</span>
+              </li>
+            ))}
+          </ul>
+          
+          <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-4 bg-[#071A33] text-white px-8 py-5 rounded-full font-black uppercase tracking-widest text-[10px] hover:bg-[#C7A96B] hover:text-[#071A33] transition-all shadow-lg">
+            Quero estruturar {solution.title}
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
+        </div>
+        
+        <div className="grid gap-6">
+          {theme.operating.map((item, index) => (
+            <article key={item.title} className="bg-white p-8 rounded-[24px] border border-[#E8EDF2] shadow-sm hover:shadow-xl transition-all group">
+              <div className="flex items-center gap-6 mb-4">
+                <div className="w-12 h-12 rounded-xl bg-[#F6F8FA] flex items-center justify-center text-[#C7A96B] group-hover:bg-[#071A33] transition-colors">
+                  <Icon size={20} />
+                </div>
+                <span className="text-3xl font-thin text-[#C7A96B]/20">{String(index + 1).padStart(2, "0")}</span>
+              </div>
+              <h3 className="text-xl font-bold text-[#071A33] mb-2">{item.title}</h3>
+              <p className="text-[#52606D] font-light leading-relaxed">{item.text}</p>
+            </article>
           ))}
-        </ul>
-        <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer">
-          Quero estruturar {solution.title}
-          <ArrowUpRight className="h-4 w-4" />
-        </a>
-      </div>
-      <div className="solution-operating-stack" aria-label={`Plano operacional de ${solution.title}`}>
-        {theme.operating.map((item, index) => (
-          <article key={item.title} className="solution-operating-card solution-animated">
-            <div>
-              <Icon className="h-5 w-5" />
-              <span>{String(index + 1).padStart(2, "0")}</span>
-            </div>
-            <h3>{item.title}</h3>
-            <p>{item.text}</p>
-          </article>
-        ))}
+        </div>
       </div>
     </section>
   );
@@ -873,33 +880,27 @@ function SolutionExperience({ solution, visualSet }: { solution: Solution; visua
 
   return (
     <div className={`solution-experience solution-layout-${visualSet.layout}`} style={{ "--accent": solution.accent } as CSSProperties}>
-      <section className="solution-page-banner">
-        <div className="solution-banner-copy solution-animated">
-          <span>{solution.title}</span>
-          <h2>Estruture o financeiro antes do caixa apertar.</h2>
-          <p>
-            Falta de liquidez, inadimplência, venda a prazo ou controle financeiro: qualquer que seja a dor, a Credmais organiza a alternativa certa e acompanha a operação até o resultado.
-          </p>
-          <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer">
-            Falar com um especialista
-            <ArrowUpRight className="h-4 w-4" />
-          </a>
-        </div>
-        <div className="solution-banner-media solution-animated">
-          <img src={visualSet.banner} alt={solution.title} loading="lazy" decoding="async" />
-          <div className="solution-floating-card solution-floating-card-a">
-            <div className="solution-floating-card-icon">
-              <Icon className="h-5 w-5" />
-            </div>
-            <div className="solution-floating-card-body">
-              <strong>{solution.metric}</strong>
-              <small>proteção ativa</small>
-            </div>
+      <section className="solution-page-banner py-32 px-5 md:px-[8%] bg-white">
+        <div className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+          <div className="solution-banner-copy">
+            <span className="text-[11px] font-black uppercase tracking-[0.4em] text-[#C7A96B] mb-6 block">{solution.title}</span>
+            <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-thin leading-[0.9] tracking-[-0.06em] text-[#071A33] mb-8">Estruture o financeiro antes do caixa apertar.</h2>
+            <p className="text-lg text-[#52606D] font-light leading-relaxed mb-10">
+              Falta de liquidez, inadimplência, venda a prazo ou controle financeiro: qualquer que seja a dor, a Credmais organiza a alternativa certa e acompanha a operação até o resultado.
+            </p>
+            <a href={CONTACT_WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-4 bg-[#071A33] text-white px-8 py-5 rounded-full font-black uppercase tracking-widest text-[10px] hover:bg-[#C7A96B] hover:text-[#071A33] transition-all shadow-lg">
+              Falar com um especialista
+              <ArrowUpRight className="h-4 w-4" />
+            </a>
           </div>
-          <div className="solution-floating-card solution-floating-card-b">
-            <div className="solution-floating-card-body">
-              <span>D+1</span>
-              <small>agenda acompanhada</small>
+          <div className="solution-banner-media relative rounded-[24px] overflow-hidden shadow-2xl">
+            <img src={visualSet.banner} alt={solution.title} className="w-full h-full object-cover aspect-video" loading="lazy" decoding="async" />
+            <div className="absolute top-8 right-8 bg-[#071A33] text-white p-6 rounded-2xl shadow-2xl">
+              <div className="flex items-center gap-4 mb-2">
+                <Icon size={18} className="text-[#C7A96B]" />
+                <strong className="text-xs uppercase tracking-widest">{solution.metric}</strong>
+              </div>
+              <p className="text-[10px] text-white/40 uppercase font-black tracking-widest">Proteção ativa Credmais</p>
             </div>
           </div>
         </div>
