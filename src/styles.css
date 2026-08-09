@@ -446,7 +446,6 @@ li {
   height: 100%;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 0 15px rgba(233, 240, 250, 0.2));
 }
 
 .nav-links {
