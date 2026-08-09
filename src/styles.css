@@ -406,17 +406,16 @@ li {
 }
 
 .nav-container.is-scrolled {
-  background: rgba(20, 41, 70, 0.92);
-  border-color: rgba(233, 240, 250, 0.18);
-  padding: 0.35rem;
+  background: transparent;
+  border-color: transparent;
+  padding: 0;
   min-width: 0;
 }
 
 .brand-logo-shell {
   display: flex;
-  height: 60px;
+  height: 50px;
   align-items: center;
-  padding: 0 1.2rem;
   transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
   flex-shrink: 0;
 }
