@@ -385,9 +385,6 @@ li {
 
 .site-header.is-scrolled {
   padding: 0.75rem 2.5rem;
-  background: rgba(20, 41, 70, 0.95);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 .site-header > * {
