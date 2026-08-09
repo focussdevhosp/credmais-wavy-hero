@@ -569,23 +569,21 @@ li {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  background: transparent;
-  color: #ffffff;
-  border: 1px solid rgba(233, 240, 250, 0.3);
+  background: #C7A96B;
+  color: #071A33;
   font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  padding: 0.7rem 1.8rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  padding: 0.9rem 1.8rem;
   border-radius: 999px;
   text-transform: uppercase;
-  transition: all 0.3s var(--ease-out);
+  transition: all 0.4s var(--ease-expo);
   white-space: nowrap;
 }
 
-.nav-container.is-scrolled .nav-cta-button {
+.is-scrolled .nav-cta-button {
   background: #ffffff;
-  color: #142946;
-  border-color: #ffffff;
+  color: #071A33;
 }
 
 .nav-cta-button:hover, .nav-cta-button:focus-visible {
