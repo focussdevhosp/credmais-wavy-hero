@@ -1717,10 +1717,11 @@ li {
 
 .solutions-metrics strong {
   color: #0b1628;
-  font-size: clamp(2rem, 3.2vw, 3rem);
+  font-size: clamp(1.8rem, 2.8vw, 2.6rem);
   font-weight: 900;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.04em;
   margin-bottom: -0.1rem;
+  white-space: nowrap;
 }
 
 .solutions-scroll-rail {
