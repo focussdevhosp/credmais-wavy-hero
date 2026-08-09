@@ -60,7 +60,7 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-type IconComponent = ComponentType<{ className?: string; strokeWidth?: number }>;
+type IconComponent = ComponentType<{ className?: string; strokeWidth?: number; size?: number | string }>;
 
 type Solution = {
   slug: string;
