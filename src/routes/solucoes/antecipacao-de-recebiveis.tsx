@@ -165,14 +165,6 @@ function AntecipacaoPage() {
       </section>
 
       {/* Wide Motion Banner */}
-      <section className="relative w-full h-[60vh] overflow-hidden flex items-center justify-center">
-        <img 
-          src={motionAsset.url} 
-          alt="Seu Caixa em Movimento" 
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-navy/20" />
-      </section>
 
       {/* Z-Pattern Features */}
       <section className="py-24 lg:py-40">
