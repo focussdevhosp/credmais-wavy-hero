@@ -42,7 +42,7 @@ export function Hero({ title, subtitle, image }: HeroProps) {
             <div className="sr-only">
               <h1>{title}</h1>
               <p>{subtitle}</p>
-              <p>de responsatvidade a todos os tamanhos de tela</p>
+              <p>Identifique falhas, erros de lógica e bugs no código fornecido. Forneça a correção exata para cada problema encontrado, acompanhada de uma explicação clara sobre a causa raiz e a solução aplicada, garantindo que o código funcione perfeitamente e sem erros.</p>
             </div>
           </motion.div>
         </div>
