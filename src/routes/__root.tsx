@@ -11,7 +11,6 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import { SiteHeader, SiteFooter, WhatsAppFloat } from "@/site/credmais";
 import { Toaster } from "@/components/ui/sonner";
 
 
@@ -136,13 +135,10 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="min-h-dvh bg-[#F6F8FA]">
-        <SiteHeader />
-        <main id="conteudo">
+      <div className="min-h-dvh bg-background">
+        <main id="main-content">
           <Outlet />
         </main>
-        <SiteFooter />
-        <WhatsAppFloat />
         <Toaster position="top-center" richColors />
       </div>
     </QueryClientProvider>
