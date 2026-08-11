@@ -22,8 +22,9 @@ export function Hero({ title, subtitle, image }: HeroProps) {
           className="w-full h-full object-cover object-center"
           loading="eager"
         />
-        {/* Soft Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-ice/80 via-ice/40 to-transparent lg:from-ice/90" />
+        {/* Soft Overlay - Removed to match clean requested look */}
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-ice/80 via-ice/40 to-transparent lg:from-ice/90" /> */}
+
       </div>
 
       <div className="container relative z-10 mx-auto">
@@ -33,17 +34,17 @@ export function Hero({ title, subtitle, image }: HeroProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <span className="inline-block text-gold font-medium tracking-widest uppercase text-sm mb-6">
+            <span className="hidden">
               Elite Financial Solutions
             </span>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-thin leading-[0.9] text-navy mb-8 text-balance">
               {title}
             </h1>
-            <p className="text-xl md:text-2xl text-navy/70 mb-12 max-w-xl leading-relaxed font-light">
+            <p className="hidden">
               {subtitle}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="hidden">
               <Button size="lg" className="rounded-full bg-navy text-ice hover:bg-navy/90 px-8 py-7 text-lg shadow-xl shadow-navy/20">
                 Simular Agora
               </Button>
