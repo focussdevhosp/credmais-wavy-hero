@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import asset from '@/assets/solutions-benefits.png.asset.json';
 import growthAsset from '@/assets/solutions-growth.png.asset.json';
+import securitizacaoAsset from '@/assets/securitizacao-hero.png.asset.json';
 
 export function SolutionsBenefits() {
   return (
@@ -80,7 +81,7 @@ export function SolutionsBenefits() {
             <div className="rounded-[40px] overflow-hidden shadow-xl">
               <div className="aspect-video bg-ice relative">
                 <img 
-                  src={asset.url} 
+                  src={securitizacaoAsset.url} 
                   alt="Benefícios da Securitização" 
                   className="w-full h-full object-cover object-bottom"
                 />
