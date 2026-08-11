@@ -43,4 +43,13 @@
   .text-balance {
     text-wrap: balance;
   }
+  .fluid-text-h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+  }
+  .fluid-text-h2 {
+    font-size: clamp(2rem, 6vw, 3.5rem);
+  }
+  .fluid-text-p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+  }
 }
