@@ -11,9 +11,9 @@ function HomeComponent() {
     <div className="relative">
       <Navbar />
       <Hero 
-        title="seu caixa no ritmo do seu negócio"
-        subtitle="Soluções financeiras de elite para antecipação de recebíveis, gestão de crédito e estruturação de capital com agilidade máxima."
-        image="hero-placeholder" // Component is now hardcoded to use hero-home asset for placeholder strings
+        title="seu caixa em movimento"
+        subtitle="Liquidez para manter sua operação avançando."
+        image="hero-movimento" 
       />
       
       {/* Espaço para próximas seções */}
