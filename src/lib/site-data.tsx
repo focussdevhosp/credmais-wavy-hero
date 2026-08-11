@@ -9,6 +9,7 @@ import {
 
 import heroRooftop from "@/assets/hero-credmais-rooftop.webp.asset.json";
 import heroExecutiveDesk from "@/assets/hero-executive-desk.png.asset.json";
+import heroAntecipacao from "@/assets/hero-antecipacao.png.asset.json";
 import logoPremium from "@/assets/logo-credmais-premium.png.asset.json";
 import baseOperacional from "@/assets/base-operacional.webp.asset.json";
 import brandRecepcao from "@/assets/brand-1.webp.asset.json";
@@ -111,7 +112,7 @@ export const solutions: Solution[] = [
       "Antecipação por lote, sem comprometer toda a carteira",
       "Análise técnica feita por especialistas, não por robô",
     ],
-    heroImage: wide8.url,
+    heroImage: heroAntecipacao.url,
     cardImage: brandAgro.url,
     bannerImage: brandIndustria.url,
     steps: [
