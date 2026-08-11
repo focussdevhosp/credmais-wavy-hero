@@ -13,7 +13,7 @@ import teamAsset from '@/assets/antecipacao-v3-team.png.asset.json';
 import growthAsset from '@/assets/antecipacao-v3-growth.png.asset.json';
 import intelligentAsset from '@/assets/antecipacao-v3-intelligent.png.asset.json';
 import supportAsset from '@/assets/antecipacao-v3-support.png.asset.json';
-import motionAsset from '@/assets/antecipacao-v3-motion.png.asset.json';
+import motionAsset from '@/assets/antecipacao-v3-motion-v2.png.asset.json';
 
 export const Route = createFileRoute('/solucoes/antecipacao-de-recebiveis')({
   component: AntecipacaoPage,
@@ -165,24 +165,31 @@ function AntecipacaoPage() {
       </section>
 
       {/* Wide Motion Banner */}
-      <section className="relative w-full h-[60vh] overflow-hidden flex items-center justify-center">
-        <img 
-          src={motionAsset.url} 
-          alt="Seu Caixa em Movimento" 
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-navy/20" />
-        <div className="relative z-10 text-center text-white px-6">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="fluid-text-h2 font-heading font-light mb-8"
-          >
-            SEU CAIXA EM MOVIMENTO.
-          </motion.h2>
-          <Button className="bg-white text-navy hover:bg-white/90 rounded-full px-12 py-7 text-xl shadow-2xl">
-            Antecipe agora
-          </Button>
+      <section className="relative w-full min-h-[50vh] flex items-center justify-center py-20">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={motionAsset.url} 
+            alt="Seu Caixa em Movimento" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        <div className="container relative z-10 mx-auto px-6 text-center">
+          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-[60px] p-12 lg:p-20 max-w-4xl mx-auto shadow-2xl">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="fluid-text-h2 font-heading font-light text-white mb-8 leading-tight drop-shadow-lg"
+            >
+              SEU CAIXA EM <span className="font-bold text-gold italic">MOVIMENTO.</span>
+            </motion.h2>
+            <p className="text-white/90 text-xl font-light mb-10 max-w-2xl mx-auto drop-shadow-md">
+              Liquidez para manter sua operação avançando sem interrupções.
+            </p>
+            <Button className="bg-gold hover:bg-gold/90 text-white hover:scale-105 active:scale-95 transition-all rounded-full px-12 py-7 text-xl shadow-2xl">
+              Antecipe agora
+            </Button>
+          </div>
         </div>
       </section>
 
