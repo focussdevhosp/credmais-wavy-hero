@@ -3,19 +3,19 @@ import bannerAsset from '@/assets/banner-antecipacao.png.asset.json';
 
 export function WideBanner() {
   return (
-    <section className="w-full bg-[#F6F8FA] overflow-hidden">
+    <section className="w-full bg-[#F6F8FA] overflow-hidden relative min-h-[50px]">
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 0.5 }}
         className="w-full"
       >
         <img 
           src={bannerAsset.url} 
           alt="Antecipe seus recebíveis - Credmais" 
-          className="w-full h-auto object-cover block"
-          loading="lazy"
+          className="w-full h-auto block"
+          loading="eager"
         />
         
         {/* SEO Accessibility Content */}
