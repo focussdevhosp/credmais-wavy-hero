@@ -1,18 +1,23 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from '@tanstack/react-router';
+import { Hero } from '@/components/credmais/Hero';
+import { Navbar } from '@/components/credmais/Navbar';
 
 export const Route = createFileRoute('/')({
   component: HomeComponent,
-})
+});
 
 function HomeComponent() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4 text-center">
-      <h1 className="text-4xl font-bold tracking-tighter sm:text-6xl">
-        Credmais
-      </h1>
-      <p className="mt-4 text-xl text-muted-foreground">
-        Reiniciando o projeto do zero.
-      </p>
+    <div className="relative">
+      <Navbar />
+      <Hero 
+        title="capital para sua empresa crescer"
+        subtitle="Soluções financeiras de elite para antecipação de recebíveis, gestão de crédito e estruturação de capital com agilidade máxima."
+        image="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2560&auto=format&fit=crop"
+      />
+      
+      {/* Espaço para próximas seções */}
+      <div className="h-[200vh] bg-ice" />
     </div>
-  )
+  );
 }
