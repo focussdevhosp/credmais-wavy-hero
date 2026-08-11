@@ -3,7 +3,8 @@ import { Hero } from '@/components/credmais/Hero';
 import { Navbar } from '@/components/credmais/Navbar';
 import { Footer } from '@/components/credmais/Footer';
 import { SolutionFeatures } from '@/components/credmais/SolutionFeatures';
-import boletoHeroAsset from '@/assets/boleto-hero.png.asset.json';
+import { FAQSection } from '@/components/credmais/FAQSection';
+import heroAsset from '@/assets/boleto-hero.png.asset.json';
 import benefit1Asset from '@/assets/boleto-benefit-1.png.asset.json';
 import benefit2Asset from '@/assets/boleto-benefit-2.png.asset.json';
 import bannerAsset from '@/assets/boleto-banner.png.asset.json';
@@ -15,15 +16,15 @@ export const Route = createFileRoute('/solucoes/boleto-garantido')({
 function BoletoGarantidoPage() {
   const features = [
     {
-      title: "Antecipe o Valor das suas Vendas a Prazo",
-      description: "Com o Boleto Garantido CredMais, você não precisa esperar o vencimento para ter capital em mãos. Transformamos seus boletos futuros em liquidez imediata para sua empresa continuar crescendo, repondo estoque e mantendo a produção avançando.",
+      title: "Mais Previsibilidade para Planejar",
+      description: "Antecipe o recebimento de seus boletos e mantenha o foco no crescimento. O Boleto Garantido CredMais elimina o tempo de espera e a burocracia, garantindo que o capital das suas vendas esteja disponível quando você mais precisa.",
       image: benefit1Asset.url,
       imageLeft: false,
-      buttonText: "Simular Antecipação"
+      buttonText: "Simular Agora"
     },
     {
-      title: "Segurança e Clareza em Cada Operação",
-      description: "Oferecemos uma solução financeira transparente para o fluxo de caixa da sua empresa. Acompanhe cada etapa com previsibilidade total, garantindo que seu dinheiro não fique parado e sua gestão financeira seja impecável.",
+      title: "Segurança e Clareza em Cada Antecipação",
+      description: "Acompanhe suas operações com transparência total. Nossa solução oferece previsibilidade absoluta para seu fluxo de caixa, permitindo um planejamento financeiro sólido e sem surpresas desagradáveis.",
       image: benefit2Asset.url,
       imageLeft: true,
       buttonText: "Falar com Consultor"
@@ -34,9 +35,9 @@ function BoletoGarantidoPage() {
     <div className="min-h-screen bg-white">
       <Navbar />
       <Hero 
-        title="Você vende a prazo. A CredMais antecipa."
-        subtitle="Converta seus boletos a receber em capital imediato para o seu negócio."
-        image={boletoHeroAsset.url}
+        title="CredMais Securitizadora."
+        subtitle="Seus boletos transformados em liquidez imediata com segurança e solidez."
+        image={heroAsset.url}
       />
       
       <SolutionFeatures features={features} />
@@ -44,7 +45,7 @@ function BoletoGarantidoPage() {
       <section className="w-full">
         <img 
           src={bannerAsset.url} 
-          alt="CredMais Securitizadora - Seus boletos transformados em capital" 
+          alt="Você vende a prazo. A CredMais antecipa." 
           className="w-full h-auto block"
         />
       </section>
@@ -58,7 +59,7 @@ function BoletoGarantidoPage() {
               </div>
               <h4 className="text-xl font-heading font-bold text-navy">Fim da Inadimplência</h4>
               <p className="text-navy/60 font-light leading-relaxed">
-                Reduza riscos e garanta o recebimento das suas vendas, independente do pagamento do cliente final.
+                Reduza riscos e garanta o recebimento das suas vendas, independente do comportamento do cliente.
               </p>
             </div>
             <div className="space-y-4">
@@ -76,13 +77,14 @@ function BoletoGarantidoPage() {
               </div>
               <h4 className="text-xl font-heading font-bold text-navy">Agilidade Digital</h4>
               <p className="text-navy/60 font-light leading-relaxed">
-                Processo de antecipação 100% online, rápido e sem as burocracias das instituições bancárias tradicionais.
+                Processo de antecipação 100% online, rápido e sem as burocracias das instituições bancárias.
               </p>
             </div>
           </div>
         </div>
       </div>
       
+      <FAQSection />
       <Footer />
     </div>
   );
