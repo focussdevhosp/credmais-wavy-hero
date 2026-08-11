@@ -65,20 +65,20 @@ export function PixFeatures() {
               
               {/* Conteúdo Interno do Card Simulado */}
               <div className="flex-1 z-10">
-                <h3 className="text-3xl font-heading font-bold text-[#5568FE] mb-4">
+                <h3 className="text-3xl font-heading font-bold text-accent mb-4">
                   Consultoria Especializada
                 </h3>
                 <p className="text-navy/60 font-light mb-8 max-w-[280px]">
                   Um time de consultores em negócios com Setor Público à sua disposição.
                 </p>
                 
-                <div className="inline-block bg-[#FFFF33] text-navy px-8 py-3 rounded-md font-heading font-bold text-xs tracking-widest uppercase cursor-pointer hover:brightness-95 transition-all">
+                <div className="inline-block bg-accent text-navy px-8 py-3 rounded-md font-heading font-bold text-xs tracking-widest uppercase cursor-pointer hover:shadow-lg hover:shadow-accent/20 transition-all">
                   SAIBA MAIS
                 </div>
               </div>
 
               {/* A Imagem com fundo amarelo vibrante */}
-              <div className="relative z-10 w-full md:w-[320px] aspect-square md:aspect-[4/5] bg-[#FFFF00] rounded-[40px] overflow-hidden flex items-end justify-center">
+              <div className="relative z-10 w-full md:w-[320px] aspect-square md:aspect-[4/5] bg-accent/10 rounded-[40px] overflow-hidden flex items-end justify-center">
                 <img 
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=320&auto=format&fit=crop" 
                   alt="Consultor Especializado" 
@@ -87,18 +87,18 @@ export function PixFeatures() {
                 
                 {/* Triângulos Azuis Decorativos da referência */}
                 <div 
-                  className="absolute top-1/2 left-4 w-6 h-6 bg-[#2563EB]" 
+                  className="absolute top-1/2 left-4 w-6 h-6 bg-accent" 
                   style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}
                 />
                 <div 
-                  className="absolute bottom-1/4 right-4 w-4 h-4 bg-[#2563EB] rotate-180" 
+                  className="absolute bottom-1/4 right-4 w-4 h-4 bg-accent rotate-180" 
                   style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}
                 />
               </div>
 
               {/* Triângulo azul flutuando fora da imagem, no card branco */}
               <div 
-                className="absolute top-1/3 left-6 w-10 h-10 bg-[#2563EB]/20" 
+                className="absolute top-1/3 left-6 w-10 h-10 bg-accent/20" 
                 style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}
               />
             </div>
