@@ -16,8 +16,7 @@ function HomeComponent() {
         image="hero-movimento" 
       />
       
-      {/* Espaço para próximas seções */}
-      <div className="h-[200vh] bg-ice" />
+      {/* Próximas seções aqui */}
     </div>
   );
 }

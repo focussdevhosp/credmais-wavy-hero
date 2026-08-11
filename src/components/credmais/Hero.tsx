@@ -19,7 +19,7 @@ export function Hero({ title, subtitle, image }: HeroProps) {
       : image;
 
   return (
-    <section className="relative min-h-[80vh] sm:h-screen flex items-center pt-24 sm:pt-20 overflow-hidden bg-[#F6F8FA]">
+    <section className="relative min-h-[60vh] sm:h-screen flex items-center pt-24 sm:pt-0 overflow-hidden bg-[#F6F8FA]">
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0 flex items-center justify-center">
         <img 
@@ -50,11 +50,6 @@ export function Hero({ title, subtitle, image }: HeroProps) {
         </div>
       </div>
 
-      {/* Decorative Scroll Indicator */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-40">
-        <span className="text-[10px] uppercase tracking-[0.3em] text-navy">Scroll</span>
-        <div className="w-px h-12 bg-navy/30" />
-      </div>
     </section>
   );
 }
