@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import asset from '@/assets/solutions-benefits.png.asset.json';
+import growthAsset from '@/assets/solutions-growth.png.asset.json';
 
 export function SolutionsBenefits() {
   return (
@@ -19,7 +20,8 @@ export function SolutionsBenefits() {
               {/* Usando uma região específica da imagem de referência ou simulando o layout */}
               <div className="aspect-video bg-ice relative">
                 <img 
-                  src={asset.url} 
+                  src={growthAsset.url} 
+
                   alt="Soluções Credmais" 
                   className="w-full h-full object-cover object-top"
                 />
