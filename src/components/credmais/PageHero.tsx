@@ -30,14 +30,16 @@ export function PageHero({
         size === "tall" ? "min-h-[88svh]" : "min-h-[62svh]"
       }`}
     >
-      <img
-        src={image}
-        alt=""
-        aria-hidden="true"
-        fetchPriority="high"
-        decoding="async"
-        className="absolute inset-0 -z-20 size-full object-cover object-center"
-      />
+      <div className="absolute inset-0 -z-20 bg-white md:bg-[#071A33]">
+        <img
+          src={image}
+          alt=""
+          aria-hidden="true"
+          fetchPriority="high"
+          decoding="async"
+          className="size-full object-cover object-center md:object-contain"
+        />
+      </div>
       {!hideContent && (
         <div
           aria-hidden="true"
