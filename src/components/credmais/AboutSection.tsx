@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import aboutAsset from '@/assets/about-credmais.png.asset.json';
+import aboutAsset from '@/assets/about-credmais-v2.png.asset.json';
 
 const steps = [
   {
