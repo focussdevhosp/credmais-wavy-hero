@@ -19,7 +19,7 @@ export function Hero({ title, subtitle, image }: HeroProps) {
       : image;
 
   return (
-    <section className="relative min-h-[80vh] sm:h-screen flex items-center pt-24 sm:pt-20 overflow-hidden bg-[#F6F8FA]">
+    <section className="relative min-h-[60vh] sm:h-screen flex items-center pt-24 sm:pt-0 overflow-hidden bg-[#F6F8FA]">
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0 flex items-center justify-center">
         <img 
