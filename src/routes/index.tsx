@@ -2,6 +2,7 @@ import { createFileRoute } from '@tanstack/react-router';
 import { Hero } from '@/components/credmais/Hero';
 import { Navbar } from '@/components/credmais/Navbar';
 import { AboutSection } from '@/components/credmais/AboutSection';
+import { WideBanner } from '@/components/credmais/WideBanner';
 
 export const Route = createFileRoute('/')({
   component: HomeComponent,
@@ -18,6 +19,7 @@ function HomeComponent() {
       />
       
       <AboutSection />
+      <WideBanner />
       {/* Próximas seções aqui */}
     </div>
   );
