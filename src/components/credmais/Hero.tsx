@@ -39,6 +39,7 @@ export function Hero({ title, subtitle, image }: HeroProps) {
             <div className="sr-only">
               <h1>{title}</h1>
               <p>{subtitle}</p>
+              <p>de responsatvidade a todos os tamanhos de tela</p>
             </div>
           </motion.div>
         </div>
