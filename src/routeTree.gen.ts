@@ -9,62 +9,8 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as TermosDeUsoRouteImport } from './routes/termos-de-uso'
-import { Route as SobreRouteImport } from './routes/sobre'
-import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
-import { Route as GestaoDeContasRouteImport } from './routes/gestao-de-contas'
-import { Route as CrediarioRouteImport } from './routes/crediario'
-import { Route as ContatoRouteImport } from './routes/contato'
-import { Route as ConsultoriaRouteImport } from './routes/consultoria'
-import { Route as BoletoGarantidoRouteImport } from './routes/boleto-garantido'
-import { Route as AntecipacaoDeRecebiveisRouteImport } from './routes/antecipacao-de-recebiveis'
 import { Route as IndexRouteImport } from './routes/index'
 
-const TermosDeUsoRoute = TermosDeUsoRouteImport.update({
-  id: '/termos-de-uso',
-  path: '/termos-de-uso',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SobreRoute = SobreRouteImport.update({
-  id: '/sobre',
-  path: '/sobre',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
-  id: '/politica-de-privacidade',
-  path: '/politica-de-privacidade',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const GestaoDeContasRoute = GestaoDeContasRouteImport.update({
-  id: '/gestao-de-contas',
-  path: '/gestao-de-contas',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CrediarioRoute = CrediarioRouteImport.update({
-  id: '/crediario',
-  path: '/crediario',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContatoRoute = ContatoRouteImport.update({
-  id: '/contato',
-  path: '/contato',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ConsultoriaRoute = ConsultoriaRouteImport.update({
-  id: '/consultoria',
-  path: '/consultoria',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BoletoGarantidoRoute = BoletoGarantidoRouteImport.update({
-  id: '/boleto-garantido',
-  path: '/boleto-garantido',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AntecipacaoDeRecebiveisRoute = AntecipacaoDeRecebiveisRouteImport.update({
-  id: '/antecipacao-de-recebiveis',
-  path: '/antecipacao-de-recebiveis',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -73,158 +19,28 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/antecipacao-de-recebiveis': typeof AntecipacaoDeRecebiveisRoute
-  '/boleto-garantido': typeof BoletoGarantidoRoute
-  '/consultoria': typeof ConsultoriaRoute
-  '/contato': typeof ContatoRoute
-  '/crediario': typeof CrediarioRoute
-  '/gestao-de-contas': typeof GestaoDeContasRoute
-  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
-  '/sobre': typeof SobreRoute
-  '/termos-de-uso': typeof TermosDeUsoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/antecipacao-de-recebiveis': typeof AntecipacaoDeRecebiveisRoute
-  '/boleto-garantido': typeof BoletoGarantidoRoute
-  '/consultoria': typeof ConsultoriaRoute
-  '/contato': typeof ContatoRoute
-  '/crediario': typeof CrediarioRoute
-  '/gestao-de-contas': typeof GestaoDeContasRoute
-  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
-  '/sobre': typeof SobreRoute
-  '/termos-de-uso': typeof TermosDeUsoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/antecipacao-de-recebiveis': typeof AntecipacaoDeRecebiveisRoute
-  '/boleto-garantido': typeof BoletoGarantidoRoute
-  '/consultoria': typeof ConsultoriaRoute
-  '/contato': typeof ContatoRoute
-  '/crediario': typeof CrediarioRoute
-  '/gestao-de-contas': typeof GestaoDeContasRoute
-  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
-  '/sobre': typeof SobreRoute
-  '/termos-de-uso': typeof TermosDeUsoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/antecipacao-de-recebiveis'
-    | '/boleto-garantido'
-    | '/consultoria'
-    | '/contato'
-    | '/crediario'
-    | '/gestao-de-contas'
-    | '/politica-de-privacidade'
-    | '/sobre'
-    | '/termos-de-uso'
+  fullPaths: '/'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/antecipacao-de-recebiveis'
-    | '/boleto-garantido'
-    | '/consultoria'
-    | '/contato'
-    | '/crediario'
-    | '/gestao-de-contas'
-    | '/politica-de-privacidade'
-    | '/sobre'
-    | '/termos-de-uso'
-  id:
-    | '__root__'
-    | '/'
-    | '/antecipacao-de-recebiveis'
-    | '/boleto-garantido'
-    | '/consultoria'
-    | '/contato'
-    | '/crediario'
-    | '/gestao-de-contas'
-    | '/politica-de-privacidade'
-    | '/sobre'
-    | '/termos-de-uso'
+  to: '/'
+  id: '__root__' | '/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AntecipacaoDeRecebiveisRoute: typeof AntecipacaoDeRecebiveisRoute
-  BoletoGarantidoRoute: typeof BoletoGarantidoRoute
-  ConsultoriaRoute: typeof ConsultoriaRoute
-  ContatoRoute: typeof ContatoRoute
-  CrediarioRoute: typeof CrediarioRoute
-  GestaoDeContasRoute: typeof GestaoDeContasRoute
-  PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
-  SobreRoute: typeof SobreRoute
-  TermosDeUsoRoute: typeof TermosDeUsoRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/termos-de-uso': {
-      id: '/termos-de-uso'
-      path: '/termos-de-uso'
-      fullPath: '/termos-de-uso'
-      preLoaderRoute: typeof TermosDeUsoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sobre': {
-      id: '/sobre'
-      path: '/sobre'
-      fullPath: '/sobre'
-      preLoaderRoute: typeof SobreRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/politica-de-privacidade': {
-      id: '/politica-de-privacidade'
-      path: '/politica-de-privacidade'
-      fullPath: '/politica-de-privacidade'
-      preLoaderRoute: typeof PoliticaDePrivacidadeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/gestao-de-contas': {
-      id: '/gestao-de-contas'
-      path: '/gestao-de-contas'
-      fullPath: '/gestao-de-contas'
-      preLoaderRoute: typeof GestaoDeContasRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/crediario': {
-      id: '/crediario'
-      path: '/crediario'
-      fullPath: '/crediario'
-      preLoaderRoute: typeof CrediarioRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contato': {
-      id: '/contato'
-      path: '/contato'
-      fullPath: '/contato'
-      preLoaderRoute: typeof ContatoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/consultoria': {
-      id: '/consultoria'
-      path: '/consultoria'
-      fullPath: '/consultoria'
-      preLoaderRoute: typeof ConsultoriaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/boleto-garantido': {
-      id: '/boleto-garantido'
-      path: '/boleto-garantido'
-      fullPath: '/boleto-garantido'
-      preLoaderRoute: typeof BoletoGarantidoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/antecipacao-de-recebiveis': {
-      id: '/antecipacao-de-recebiveis'
-      path: '/antecipacao-de-recebiveis'
-      fullPath: '/antecipacao-de-recebiveis'
-      preLoaderRoute: typeof AntecipacaoDeRecebiveisRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/': {
       id: '/'
       path: '/'
@@ -237,15 +53,6 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AntecipacaoDeRecebiveisRoute: AntecipacaoDeRecebiveisRoute,
-  BoletoGarantidoRoute: BoletoGarantidoRoute,
-  ConsultoriaRoute: ConsultoriaRoute,
-  ContatoRoute: ContatoRoute,
-  CrediarioRoute: CrediarioRoute,
-  GestaoDeContasRoute: GestaoDeContasRoute,
-  PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
-  SobreRoute: SobreRoute,
-  TermosDeUsoRoute: TermosDeUsoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
