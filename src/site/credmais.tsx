@@ -54,11 +54,7 @@ export function HomePage() {
       <PageHero
         size="tall"
         image={IMAGES.homeHero}
-        eyebrow="Securitizadora para empresas"
-        title={<>Capital para sua empresa crescer.</>}
-        description="A Credmais estrutura antecipação, boleto garantido, crediário, consultoria e recuperação de recebíveis para empresas que precisam de fôlego financeiro com condições claras."
-        primary={{ href: whatsappLink("Olá, Credmais! Quero simular uma operação."), label: "Simular operação", external: true }}
-        secondary={{ href: "#solucoes", label: "Ver soluções" }}
+        hideContent
       />
 
       <Section id="solucoes" tone="ice">
