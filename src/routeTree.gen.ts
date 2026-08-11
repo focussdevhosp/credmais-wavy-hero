@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SolucoesSeguroVendasRouteImport } from './routes/solucoes/seguro-vendas'
 import { Route as SolucoesPixParceladoRouteImport } from './routes/solucoes/pix-parcelado'
 import { Route as SolucoesCrediarioRouteImport } from './routes/solucoes/crediario'
 import { Route as SolucoesBoletoGarantidoRouteImport } from './routes/solucoes/boleto-garantido'
@@ -18,6 +19,11 @@ import { Route as SolucoesAntecipacaoDeRecebiveisRouteImport } from './routes/so
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolucoesSeguroVendasRoute = SolucoesSeguroVendasRouteImport.update({
+  id: '/solucoes/seguro-vendas',
+  path: '/solucoes/seguro-vendas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SolucoesPixParceladoRoute = SolucoesPixParceladoRouteImport.update({
@@ -48,6 +54,7 @@ export interface FileRoutesByFullPath {
   '/solucoes/boleto-garantido': typeof SolucoesBoletoGarantidoRoute
   '/solucoes/crediario': typeof SolucoesCrediarioRoute
   '/solucoes/pix-parcelado': typeof SolucoesPixParceladoRoute
+  '/solucoes/seguro-vendas': typeof SolucoesSeguroVendasRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -55,6 +62,7 @@ export interface FileRoutesByTo {
   '/solucoes/boleto-garantido': typeof SolucoesBoletoGarantidoRoute
   '/solucoes/crediario': typeof SolucoesCrediarioRoute
   '/solucoes/pix-parcelado': typeof SolucoesPixParceladoRoute
+  '/solucoes/seguro-vendas': typeof SolucoesSeguroVendasRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -63,6 +71,7 @@ export interface FileRoutesById {
   '/solucoes/boleto-garantido': typeof SolucoesBoletoGarantidoRoute
   '/solucoes/crediario': typeof SolucoesCrediarioRoute
   '/solucoes/pix-parcelado': typeof SolucoesPixParceladoRoute
+  '/solucoes/seguro-vendas': typeof SolucoesSeguroVendasRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -72,6 +81,7 @@ export interface FileRouteTypes {
     | '/solucoes/boleto-garantido'
     | '/solucoes/crediario'
     | '/solucoes/pix-parcelado'
+    | '/solucoes/seguro-vendas'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -79,6 +89,7 @@ export interface FileRouteTypes {
     | '/solucoes/boleto-garantido'
     | '/solucoes/crediario'
     | '/solucoes/pix-parcelado'
+    | '/solucoes/seguro-vendas'
   id:
     | '__root__'
     | '/'
@@ -86,6 +97,7 @@ export interface FileRouteTypes {
     | '/solucoes/boleto-garantido'
     | '/solucoes/crediario'
     | '/solucoes/pix-parcelado'
+    | '/solucoes/seguro-vendas'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -94,6 +106,7 @@ export interface RootRouteChildren {
   SolucoesBoletoGarantidoRoute: typeof SolucoesBoletoGarantidoRoute
   SolucoesCrediarioRoute: typeof SolucoesCrediarioRoute
   SolucoesPixParceladoRoute: typeof SolucoesPixParceladoRoute
+  SolucoesSeguroVendasRoute: typeof SolucoesSeguroVendasRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -103,6 +116,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solucoes/seguro-vendas': {
+      id: '/solucoes/seguro-vendas'
+      path: '/solucoes/seguro-vendas'
+      fullPath: '/solucoes/seguro-vendas'
+      preLoaderRoute: typeof SolucoesSeguroVendasRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/solucoes/pix-parcelado': {
@@ -142,6 +162,7 @@ const rootRouteChildren: RootRouteChildren = {
   SolucoesBoletoGarantidoRoute: SolucoesBoletoGarantidoRoute,
   SolucoesCrediarioRoute: SolucoesCrediarioRoute,
   SolucoesPixParceladoRoute: SolucoesPixParceladoRoute,
+  SolucoesSeguroVendasRoute: SolucoesSeguroVendasRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
