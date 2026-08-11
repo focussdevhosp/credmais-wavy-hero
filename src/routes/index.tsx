@@ -4,6 +4,7 @@ import { Navbar } from '@/components/credmais/Navbar';
 import { AboutSection } from '@/components/credmais/AboutSection';
 import { SolutionsBenefits } from '@/components/credmais/SolutionsBenefits';
 import { WideBanner } from '@/components/credmais/WideBanner';
+import { FAQSection } from '@/components/credmais/FAQSection';
 
 export const Route = createFileRoute('/')({
   component: HomeComponent,
@@ -22,6 +23,7 @@ function HomeComponent() {
       <AboutSection />
       <SolutionsBenefits />
       <WideBanner />
+      <FAQSection />
       {/* Próximas seções aqui */}
     </div>
   );
