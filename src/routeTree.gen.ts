@@ -10,11 +10,20 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SolucoesSeguroVendasRouteImport } from './routes/solucoes/seguro-vendas'
 import { Route as SolucoesPixParceladoRouteImport } from './routes/solucoes/pix-parcelado'
+import { Route as SolucoesCrediarioRouteImport } from './routes/solucoes/crediario'
+import { Route as SolucoesBoletoGarantidoRouteImport } from './routes/solucoes/boleto-garantido'
+import { Route as SolucoesAntecipacaoDeRecebiveisRouteImport } from './routes/solucoes/antecipacao-de-recebiveis'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolucoesSeguroVendasRoute = SolucoesSeguroVendasRouteImport.update({
+  id: '/solucoes/seguro-vendas',
+  path: '/solucoes/seguro-vendas',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SolucoesPixParceladoRoute = SolucoesPixParceladoRouteImport.update({
@@ -22,31 +31,82 @@ const SolucoesPixParceladoRoute = SolucoesPixParceladoRouteImport.update({
   path: '/solucoes/pix-parcelado',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SolucoesCrediarioRoute = SolucoesCrediarioRouteImport.update({
+  id: '/solucoes/crediario',
+  path: '/solucoes/crediario',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolucoesBoletoGarantidoRoute = SolucoesBoletoGarantidoRouteImport.update({
+  id: '/solucoes/boleto-garantido',
+  path: '/solucoes/boleto-garantido',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolucoesAntecipacaoDeRecebiveisRoute =
+  SolucoesAntecipacaoDeRecebiveisRouteImport.update({
+    id: '/solucoes/antecipacao-de-recebiveis',
+    path: '/solucoes/antecipacao-de-recebiveis',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/solucoes/antecipacao-de-recebiveis': typeof SolucoesAntecipacaoDeRecebiveisRoute
+  '/solucoes/boleto-garantido': typeof SolucoesBoletoGarantidoRoute
+  '/solucoes/crediario': typeof SolucoesCrediarioRoute
   '/solucoes/pix-parcelado': typeof SolucoesPixParceladoRoute
+  '/solucoes/seguro-vendas': typeof SolucoesSeguroVendasRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/solucoes/antecipacao-de-recebiveis': typeof SolucoesAntecipacaoDeRecebiveisRoute
+  '/solucoes/boleto-garantido': typeof SolucoesBoletoGarantidoRoute
+  '/solucoes/crediario': typeof SolucoesCrediarioRoute
   '/solucoes/pix-parcelado': typeof SolucoesPixParceladoRoute
+  '/solucoes/seguro-vendas': typeof SolucoesSeguroVendasRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/solucoes/antecipacao-de-recebiveis': typeof SolucoesAntecipacaoDeRecebiveisRoute
+  '/solucoes/boleto-garantido': typeof SolucoesBoletoGarantidoRoute
+  '/solucoes/crediario': typeof SolucoesCrediarioRoute
   '/solucoes/pix-parcelado': typeof SolucoesPixParceladoRoute
+  '/solucoes/seguro-vendas': typeof SolucoesSeguroVendasRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/solucoes/pix-parcelado'
+  fullPaths:
+    | '/'
+    | '/solucoes/antecipacao-de-recebiveis'
+    | '/solucoes/boleto-garantido'
+    | '/solucoes/crediario'
+    | '/solucoes/pix-parcelado'
+    | '/solucoes/seguro-vendas'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/solucoes/pix-parcelado'
-  id: '__root__' | '/' | '/solucoes/pix-parcelado'
+  to:
+    | '/'
+    | '/solucoes/antecipacao-de-recebiveis'
+    | '/solucoes/boleto-garantido'
+    | '/solucoes/crediario'
+    | '/solucoes/pix-parcelado'
+    | '/solucoes/seguro-vendas'
+  id:
+    | '__root__'
+    | '/'
+    | '/solucoes/antecipacao-de-recebiveis'
+    | '/solucoes/boleto-garantido'
+    | '/solucoes/crediario'
+    | '/solucoes/pix-parcelado'
+    | '/solucoes/seguro-vendas'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  SolucoesAntecipacaoDeRecebiveisRoute: typeof SolucoesAntecipacaoDeRecebiveisRoute
+  SolucoesBoletoGarantidoRoute: typeof SolucoesBoletoGarantidoRoute
+  SolucoesCrediarioRoute: typeof SolucoesCrediarioRoute
   SolucoesPixParceladoRoute: typeof SolucoesPixParceladoRoute
+  SolucoesSeguroVendasRoute: typeof SolucoesSeguroVendasRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -58,6 +118,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/solucoes/seguro-vendas': {
+      id: '/solucoes/seguro-vendas'
+      path: '/solucoes/seguro-vendas'
+      fullPath: '/solucoes/seguro-vendas'
+      preLoaderRoute: typeof SolucoesSeguroVendasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/solucoes/pix-parcelado': {
       id: '/solucoes/pix-parcelado'
       path: '/solucoes/pix-parcelado'
@@ -65,12 +132,37 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SolucoesPixParceladoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/solucoes/crediario': {
+      id: '/solucoes/crediario'
+      path: '/solucoes/crediario'
+      fullPath: '/solucoes/crediario'
+      preLoaderRoute: typeof SolucoesCrediarioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solucoes/boleto-garantido': {
+      id: '/solucoes/boleto-garantido'
+      path: '/solucoes/boleto-garantido'
+      fullPath: '/solucoes/boleto-garantido'
+      preLoaderRoute: typeof SolucoesBoletoGarantidoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solucoes/antecipacao-de-recebiveis': {
+      id: '/solucoes/antecipacao-de-recebiveis'
+      path: '/solucoes/antecipacao-de-recebiveis'
+      fullPath: '/solucoes/antecipacao-de-recebiveis'
+      preLoaderRoute: typeof SolucoesAntecipacaoDeRecebiveisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  SolucoesAntecipacaoDeRecebiveisRoute: SolucoesAntecipacaoDeRecebiveisRoute,
+  SolucoesBoletoGarantidoRoute: SolucoesBoletoGarantidoRoute,
+  SolucoesCrediarioRoute: SolucoesCrediarioRoute,
   SolucoesPixParceladoRoute: SolucoesPixParceladoRoute,
+  SolucoesSeguroVendasRoute: SolucoesSeguroVendasRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
