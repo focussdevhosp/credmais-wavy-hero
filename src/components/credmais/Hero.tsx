@@ -21,11 +21,11 @@ export function Hero({ title, subtitle, image }: HeroProps) {
   return (
     <section className="relative min-h-[60vh] sm:h-screen flex items-center pt-24 sm:pt-0 overflow-hidden bg-[#F6F8FA]">
       {/* Background Image Container */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center">
+      <div className="absolute inset-0 z-0 flex items-center justify-center bg-[#F6F8FA]">
         <img 
           src={heroImage} 
           alt="Capital para sua empresa" 
-          className="w-full h-full object-cover sm:object-contain object-center"
+          className="w-full h-full object-cover sm:object-cover object-center"
           loading="eager"
         />
       </div>
