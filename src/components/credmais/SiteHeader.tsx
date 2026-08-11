@@ -77,12 +77,15 @@ export function SiteHeader() {
                 aria-expanded={megaOpen}
                 aria-haspopup="true"
                 className={cn(
-                  "inline-flex min-h-11 items-center gap-1.5 rounded-full px-4 py-2 text-[13px] font-medium text-white/80 transition-colors hover:text-white",
-                  solutionsActive && "text-[#C7A96B]",
+                  "relative inline-flex min-h-11 items-center gap-1.5 rounded-full px-5 py-2 text-[13px] font-semibold tracking-wide transition-all duration-300",
+                  solutionsActive 
+                    ? "text-[#C7A96B] after:absolute after:bottom-2 after:left-1/2 after:h-1 after:w-1 after:-translate-x-1/2 after:rounded-full after:bg-[#C7A96B]" 
+                    : "text-white/70 hover:bg-white/5 hover:text-white",
+                  megaOpen && "bg-white/10 text-white"
                 )}
               >
                 Soluções
-                <ChevronDown className={cn("h-4 w-4 transition-transform", megaOpen && "rotate-180")} />
+                <ChevronDown className={cn("h-3.5 w-3.5 transition-transform duration-300", megaOpen && "rotate-180")} />
               </button>
 
               {megaOpen ? (
@@ -123,10 +126,10 @@ export function SiteHeader() {
               href={whatsappLink("Olá, Credmais! Quero simular uma operação.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden min-h-11 items-center gap-2 rounded-full bg-[#C7A96B] px-6 text-[12px] font-semibold uppercase tracking-[0.14em] text-[#071A33] transition-colors hover:bg-white lg:inline-flex"
+              className="hidden min-h-11 items-center gap-2 rounded-full bg-[#C7A96B] px-6 text-[12px] font-bold uppercase tracking-[0.1em] text-[#071A33] shadow-[0_8px_20px_-8px_rgba(199,169,107,0.5)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_12px_24px_-8px_rgba(255,255,255,0.4)] lg:inline-flex"
             >
               Simular agora
-              <ArrowUpRight className="h-4 w-4" />
+              <ArrowUpRight className="h-4 w-4 stroke-[2.5]" />
             </a>
 
             <button
@@ -196,8 +199,10 @@ function HeaderLink({ to, label, active }: { to: string; label: string; active: 
     <Link
       to={to}
       className={cn(
-        "inline-flex min-h-11 items-center rounded-full px-4 py-2 text-[13px] font-medium transition-colors",
-        active ? "text-[#C7A96B]" : "text-white/80 hover:text-white",
+        "relative inline-flex min-h-11 items-center rounded-full px-5 py-2 text-[13px] font-semibold tracking-wide transition-all duration-300",
+        active 
+          ? "text-[#C7A96B] after:absolute after:bottom-2 after:left-1/2 after:h-1 after:w-1 after:-translate-x-1/2 after:rounded-full after:bg-[#C7A96B]" 
+          : "text-white/70 hover:bg-white/5 hover:text-white",
       )}
     >
       {label}
