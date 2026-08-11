@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SolucoesPixParceladoRouteImport } from './routes/solucoes/pix-parcelado'
+import { Route as SolucoesCrediarioRouteImport } from './routes/solucoes/crediario'
 import { Route as SolucoesBoletoGarantidoRouteImport } from './routes/solucoes/boleto-garantido'
 import { Route as SolucoesAntecipacaoDeRecebiveisRouteImport } from './routes/solucoes/antecipacao-de-recebiveis'
 
@@ -22,6 +23,11 @@ const IndexRoute = IndexRouteImport.update({
 const SolucoesPixParceladoRoute = SolucoesPixParceladoRouteImport.update({
   id: '/solucoes/pix-parcelado',
   path: '/solucoes/pix-parcelado',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolucoesCrediarioRoute = SolucoesCrediarioRouteImport.update({
+  id: '/solucoes/crediario',
+  path: '/solucoes/crediario',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SolucoesBoletoGarantidoRoute = SolucoesBoletoGarantidoRouteImport.update({
@@ -40,12 +46,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/solucoes/antecipacao-de-recebiveis': typeof SolucoesAntecipacaoDeRecebiveisRoute
   '/solucoes/boleto-garantido': typeof SolucoesBoletoGarantidoRoute
+  '/solucoes/crediario': typeof SolucoesCrediarioRoute
   '/solucoes/pix-parcelado': typeof SolucoesPixParceladoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/solucoes/antecipacao-de-recebiveis': typeof SolucoesAntecipacaoDeRecebiveisRoute
   '/solucoes/boleto-garantido': typeof SolucoesBoletoGarantidoRoute
+  '/solucoes/crediario': typeof SolucoesCrediarioRoute
   '/solucoes/pix-parcelado': typeof SolucoesPixParceladoRoute
 }
 export interface FileRoutesById {
@@ -53,6 +61,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/solucoes/antecipacao-de-recebiveis': typeof SolucoesAntecipacaoDeRecebiveisRoute
   '/solucoes/boleto-garantido': typeof SolucoesBoletoGarantidoRoute
+  '/solucoes/crediario': typeof SolucoesCrediarioRoute
   '/solucoes/pix-parcelado': typeof SolucoesPixParceladoRoute
 }
 export interface FileRouteTypes {
@@ -61,18 +70,21 @@ export interface FileRouteTypes {
     | '/'
     | '/solucoes/antecipacao-de-recebiveis'
     | '/solucoes/boleto-garantido'
+    | '/solucoes/crediario'
     | '/solucoes/pix-parcelado'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/solucoes/antecipacao-de-recebiveis'
     | '/solucoes/boleto-garantido'
+    | '/solucoes/crediario'
     | '/solucoes/pix-parcelado'
   id:
     | '__root__'
     | '/'
     | '/solucoes/antecipacao-de-recebiveis'
     | '/solucoes/boleto-garantido'
+    | '/solucoes/crediario'
     | '/solucoes/pix-parcelado'
   fileRoutesById: FileRoutesById
 }
@@ -80,6 +92,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   SolucoesAntecipacaoDeRecebiveisRoute: typeof SolucoesAntecipacaoDeRecebiveisRoute
   SolucoesBoletoGarantidoRoute: typeof SolucoesBoletoGarantidoRoute
+  SolucoesCrediarioRoute: typeof SolucoesCrediarioRoute
   SolucoesPixParceladoRoute: typeof SolucoesPixParceladoRoute
 }
 
@@ -97,6 +110,13 @@ declare module '@tanstack/react-router' {
       path: '/solucoes/pix-parcelado'
       fullPath: '/solucoes/pix-parcelado'
       preLoaderRoute: typeof SolucoesPixParceladoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solucoes/crediario': {
+      id: '/solucoes/crediario'
+      path: '/solucoes/crediario'
+      fullPath: '/solucoes/crediario'
+      preLoaderRoute: typeof SolucoesCrediarioRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/solucoes/boleto-garantido': {
@@ -120,6 +140,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   SolucoesAntecipacaoDeRecebiveisRoute: SolucoesAntecipacaoDeRecebiveisRoute,
   SolucoesBoletoGarantidoRoute: SolucoesBoletoGarantidoRoute,
+  SolucoesCrediarioRoute: SolucoesCrediarioRoute,
   SolucoesPixParceladoRoute: SolucoesPixParceladoRoute,
 }
 export const routeTree = rootRouteImport
