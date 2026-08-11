@@ -36,7 +36,7 @@ export function PageHero({
         aria-hidden="true"
         fetchPriority="high"
         decoding="async"
-        className="absolute inset-0 -z-20 size-full object-contain object-center bg-white"
+        className="absolute inset-0 -z-20 size-full object-cover object-center lg:object-contain"
       />
       {!hideContent && (
         <div
