@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import heroAsset from '@/assets/hero-home.png.asset.json';
+import heroHomeAsset from '@/assets/hero-home.png.asset.json';
+import heroMovimentoAsset from '@/assets/hero-movimento.png.asset.json';
 
 interface HeroProps {
   title: string;
@@ -11,7 +12,11 @@ interface HeroProps {
 export function Hero({ title, subtitle, image }: HeroProps) {
   // Use the image prop if it's not a placeholder, otherwise use the asset
   // Check specifically for placeholder strings to use the user's uploaded hero
-  const heroImage = (image === "hero-placeholder" || image.includes('unsplash')) ? heroAsset.url : image;
+  const heroImage = image === "hero-movimento" 
+    ? heroMovimentoAsset.url 
+    : (image === "hero-placeholder" || image.includes('unsplash')) 
+      ? heroHomeAsset.url 
+      : image;
 
   return (
     <section className="relative h-screen min-h-[600px] flex items-center pt-20 overflow-hidden bg-[#F6F8FA]">
