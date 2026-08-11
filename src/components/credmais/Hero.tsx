@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import heroAsset from '@/assets/hero-home.png.asset.json';
 
 interface HeroProps {
   title: string;
@@ -13,9 +14,9 @@ export function Hero({ title, subtitle, image }: HeroProps) {
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={image} 
+          src={heroAsset.url} 
           alt="Capital para sua empresa" 
-          className="w-full h-full object-cover object-[center_35%]"
+          className="w-full h-full object-cover object-center"
           loading="eager"
         />
         {/* Soft Overlay */}
