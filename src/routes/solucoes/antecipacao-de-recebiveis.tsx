@@ -13,7 +13,7 @@ import teamAsset from '@/assets/antecipacao-v3-team.png.asset.json';
 import growthAsset from '@/assets/antecipacao-v3-growth.png.asset.json';
 import intelligentAsset from '@/assets/antecipacao-v3-intelligent.png.asset.json';
 import supportAsset from '@/assets/antecipacao-v3-support.png.asset.json';
-import motionAsset from '@/assets/antecipacao-v3-motion.png.asset.json';
+import motionAsset from '@/assets/antecipacao-v3-motion-v2.png.asset.json';
 
 export const Route = createFileRoute('/solucoes/antecipacao-de-recebiveis')({
   component: AntecipacaoPage,
