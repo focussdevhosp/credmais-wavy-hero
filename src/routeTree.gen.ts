@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SolucoesPixParceladoRouteImport } from './routes/solucoes/pix-parcelado'
 import { Route as SolucoesBoletoGarantidoRouteImport } from './routes/solucoes/boleto-garantido'
+import { Route as SolucoesAntecipacaoDeRecebiveisRouteImport } from './routes/solucoes/antecipacao-de-recebiveis'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -28,37 +29,56 @@ const SolucoesBoletoGarantidoRoute = SolucoesBoletoGarantidoRouteImport.update({
   path: '/solucoes/boleto-garantido',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SolucoesAntecipacaoDeRecebiveisRoute =
+  SolucoesAntecipacaoDeRecebiveisRouteImport.update({
+    id: '/solucoes/antecipacao-de-recebiveis',
+    path: '/solucoes/antecipacao-de-recebiveis',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/solucoes/antecipacao-de-recebiveis': typeof SolucoesAntecipacaoDeRecebiveisRoute
   '/solucoes/boleto-garantido': typeof SolucoesBoletoGarantidoRoute
   '/solucoes/pix-parcelado': typeof SolucoesPixParceladoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/solucoes/antecipacao-de-recebiveis': typeof SolucoesAntecipacaoDeRecebiveisRoute
   '/solucoes/boleto-garantido': typeof SolucoesBoletoGarantidoRoute
   '/solucoes/pix-parcelado': typeof SolucoesPixParceladoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/solucoes/antecipacao-de-recebiveis': typeof SolucoesAntecipacaoDeRecebiveisRoute
   '/solucoes/boleto-garantido': typeof SolucoesBoletoGarantidoRoute
   '/solucoes/pix-parcelado': typeof SolucoesPixParceladoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/solucoes/boleto-garantido' | '/solucoes/pix-parcelado'
+  fullPaths:
+    | '/'
+    | '/solucoes/antecipacao-de-recebiveis'
+    | '/solucoes/boleto-garantido'
+    | '/solucoes/pix-parcelado'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/solucoes/boleto-garantido' | '/solucoes/pix-parcelado'
+  to:
+    | '/'
+    | '/solucoes/antecipacao-de-recebiveis'
+    | '/solucoes/boleto-garantido'
+    | '/solucoes/pix-parcelado'
   id:
     | '__root__'
     | '/'
+    | '/solucoes/antecipacao-de-recebiveis'
     | '/solucoes/boleto-garantido'
     | '/solucoes/pix-parcelado'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  SolucoesAntecipacaoDeRecebiveisRoute: typeof SolucoesAntecipacaoDeRecebiveisRoute
   SolucoesBoletoGarantidoRoute: typeof SolucoesBoletoGarantidoRoute
   SolucoesPixParceladoRoute: typeof SolucoesPixParceladoRoute
 }
@@ -86,11 +106,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SolucoesBoletoGarantidoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/solucoes/antecipacao-de-recebiveis': {
+      id: '/solucoes/antecipacao-de-recebiveis'
+      path: '/solucoes/antecipacao-de-recebiveis'
+      fullPath: '/solucoes/antecipacao-de-recebiveis'
+      preLoaderRoute: typeof SolucoesAntecipacaoDeRecebiveisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  SolucoesAntecipacaoDeRecebiveisRoute: SolucoesAntecipacaoDeRecebiveisRoute,
   SolucoesBoletoGarantidoRoute: SolucoesBoletoGarantidoRoute,
   SolucoesPixParceladoRoute: SolucoesPixParceladoRoute,
 }
