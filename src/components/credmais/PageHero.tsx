@@ -34,7 +34,7 @@ export function PageHero({
         aria-hidden="true"
         fetchPriority="high"
         decoding="async"
-        className="absolute inset-0 -z-20 size-full object-cover object-center"
+        className="absolute inset-0 -z-20 size-full object-cover object-[center_35%]"
       />
       <div
         aria-hidden="true"

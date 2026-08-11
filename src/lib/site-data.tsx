@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 
 import heroRooftop from "@/assets/hero-credmais-rooftop.webp.asset.json";
+import heroExecutiveDesk from "@/assets/hero-executive-desk.png.asset.json";
 import logoPremium from "@/assets/logo-credmais-premium.png.asset.json";
 import baseOperacional from "@/assets/base-operacional.webp.asset.json";
 import brandRecepcao from "@/assets/brand-1.webp.asset.json";
@@ -53,7 +54,7 @@ export function whatsappLink(message: string) {
 /* ------------------------------------------------------------ imagens */
 
 export const IMAGES = {
-  homeHero: heroRooftop.url,
+  homeHero: heroExecutiveDesk.url,
   aboutHero: wide3.url,
   contactHero: wide6.url,
   aboutTeam: baseOperacional.url,
