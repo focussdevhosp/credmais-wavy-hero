@@ -1,14 +1,18 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { HomePage } from "@/site/credmais";
+import { createFileRoute } from '@tanstack/react-router'
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Credmais Securitizadora | Capital, boleto e crediario" },
-      { name: "description", content: "Antecipe recebiveis, proteja boletos, organize contas e venda mais com credito estruturado." },
-      { property: "og:title", content: "Credmais Securitizadora | Capital, boleto e crediario" },
-      { property: "og:description", content: "Antecipe recebiveis, proteja boletos, organize contas e venda mais com credito estruturado." },
-    ],
-  }),
-  component: HomePage,
-});
+export const Route = createFileRoute('/')({
+  component: HomeComponent,
+})
+
+function HomeComponent() {
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen p-4 text-center">
+      <h1 className="text-4xl font-bold tracking-tighter sm:text-6xl">
+        Credmais
+      </h1>
+      <p className="mt-4 text-xl text-muted-foreground">
+        Reiniciando o projeto do zero.
+      </p>
+    </div>
+  )
+}
