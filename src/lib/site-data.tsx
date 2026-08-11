@@ -54,7 +54,7 @@ export function whatsappLink(message: string) {
 /* ------------------------------------------------------------ imagens */
 
 export const IMAGES = {
-  homeHero: heroRooftop.url,
+  homeHero: heroExecutiveDesk.url,
   aboutHero: wide3.url,
   contactHero: wide6.url,
   aboutTeam: baseOperacional.url,
