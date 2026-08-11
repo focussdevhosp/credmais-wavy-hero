@@ -63,7 +63,7 @@ export function Section({
   const tones = {
     ice: "bg-[#F6F8FA] text-[#52606D]",
     white: "bg-white text-[#52606D]",
-    navy: "bg-[#071A33] text-white/70",
+    navy: "bg-[#071A33] text-white/70 backdrop-blur-3xl",
   } as const;
 
   return (
@@ -126,7 +126,7 @@ export function CtaLink({ href, children, variant = "primary", external, classNa
       href={href}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       className={cn(
-        "group inline-flex min-h-11 items-center justify-center gap-3 rounded-full px-7 py-4 text-[12px] font-semibold uppercase tracking-[0.16em] transition-colors duration-300",
+        "group inline-flex min-h-11 items-center justify-center gap-3 rounded-full px-7 py-4 text-[11px] font-semibold uppercase tracking-[0.2em] transition-all duration-400 ease-premium hover:scale-[1.02]",
         variants[variant],
         className,
       )}
@@ -155,7 +155,7 @@ export function OptimizedImage({
   ratio?: string;
 }) {
   return (
-    <div className={cn("overflow-hidden rounded-[24px] bg-[#E2E8F0]", ratio, wrapperClassName)}>
+    <div className={cn("overflow-hidden rounded-[32px] bg-[#E2E8F0] shadow-soft transition-all duration-700 hover:shadow-premium hover:border-gold-soft border border-transparent", ratio, wrapperClassName)}>
       <img
         src={src}
         alt={alt}
