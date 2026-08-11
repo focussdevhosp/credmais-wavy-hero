@@ -20,6 +20,7 @@ function HomeComponent() {
       />
       
       <AboutSection />
+      <SolutionsBenefits />
       <WideBanner />
       {/* Próximas seções aqui */}
     </div>
