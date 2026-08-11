@@ -152,6 +152,7 @@ export function SolutionPage({ solution }: { solution: Solution }) {
     <>
       <PageHero
         image={solution.heroImage}
+        hideContent={solution.slug === "antecipacao-de-recebiveis"}
         eyebrow={solution.title}
         title={solution.headline}
         description={solution.summary}
