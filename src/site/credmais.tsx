@@ -83,7 +83,7 @@ export function HomePage() {
         <div className="mt-14 grid gap-6 md:grid-cols-2">
           {differentials.map((item, index) => (
             <Reveal key={item.title} delay={index * 80}>
-              <article className="h-full rounded-[24px] border border-[#E2E8F0] bg-[#F6F8FA] p-8">
+              <article className="h-full rounded-[32px] border border-[#E2E8F0]/60 bg-[#F6F8FA] p-8 transition-all duration-400 hover:bg-white hover:shadow-premium hover:border-[#C7A96B]/30">
                 <h3 className="text-lg font-semibold text-[#071A33]">{item.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-[#52606D]">{item.text}</p>
               </article>

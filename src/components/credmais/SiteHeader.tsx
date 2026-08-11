@@ -87,7 +87,7 @@ export function SiteHeader() {
 
               {megaOpen ? (
                 <div className="absolute left-1/2 top-full w-[min(92vw,720px)] -translate-x-1/2 pt-4">
-                  <div className="overflow-hidden rounded-[28px] border border-white/10 bg-[#071A33] p-6 shadow-[0_40px_90px_-40px_rgba(0,0,0,0.9)]">
+                  <div className="overflow-hidden rounded-[32px] border border-white/10 bg-[#071A33]/90 p-6 shadow-card backdrop-blur-2xl">
                     <p className="eyebrow">Soluções Credmais</p>
                     <div className="mt-5 grid gap-2 sm:grid-cols-2">
                       {solutions.map((solution) => {
