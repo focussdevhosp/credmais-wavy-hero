@@ -50,11 +50,6 @@ export function Hero({ title, subtitle, image }: HeroProps) {
         </div>
       </div>
 
-      {/* Decorative Scroll Indicator */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-40">
-        <span className="text-[10px] uppercase tracking-[0.3em] text-navy">Scroll</span>
-        <div className="w-px h-12 bg-navy/30" />
-      </div>
     </section>
   );
 }
