@@ -4,6 +4,7 @@ import { Navbar } from '@/components/credmais/Navbar';
 import { Footer } from '@/components/credmais/Footer';
 import { PixFeatures } from '@/components/credmais/PixFeatures';
 import { WideBanner } from '@/components/credmais/WideBanner';
+import { PixFAQ } from '@/components/credmais/PixFAQ';
 import pixHeroAsset from '@/assets/pix-parcelado-hero.png.asset.json';
 import pixBannerAssetV2 from '@/assets/pix-banner-v2.png.asset.json';
 
@@ -60,6 +61,7 @@ function PixParceladoPage() {
         </div>
       </div>
       
+      <PixFAQ />
       <Footer />
     </div>
   );
