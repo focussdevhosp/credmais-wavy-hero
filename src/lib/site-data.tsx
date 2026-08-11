@@ -20,7 +20,7 @@ export const SOLUTIONS: Solution[] = [
   },
   {
     id: '2',
-    slug: 'antecipacao',
+    slug: 'antecipacao-de-recebiveis',
     title: 'Antecipação de Recebíveis',
     description: 'Transforme suas vendas a prazo em capital imediato para o seu negócio.',
     icon: 'trending-up',
