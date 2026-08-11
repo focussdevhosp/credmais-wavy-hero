@@ -15,8 +15,7 @@ function PixParceladoPage() {
       <Hero 
         title="Simples para vender. Fácil para pagar."
         subtitle="Pix Parcelado CredMais: A evolução do pagamento para o seu negócio."
-        image="pix-parcelado"
-        customImage={pixHeroAsset.url}
+        image={pixHeroAsset.url}
       />
       <div className="py-24 max-w-7xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-heading font-light text-navy mb-8">
