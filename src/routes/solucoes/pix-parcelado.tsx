@@ -3,7 +3,9 @@ import { Hero } from '@/components/credmais/Hero';
 import { Navbar } from '@/components/credmais/Navbar';
 import { Footer } from '@/components/credmais/Footer';
 import { PixFeatures } from '@/components/credmais/PixFeatures';
+import { WideBanner } from '@/components/credmais/WideBanner';
 import pixHeroAsset from '@/assets/pix-parcelado-hero.png.asset.json';
+import pixBannerAsset from '@/assets/pix-banner.png.asset.json';
 
 export const Route = createFileRoute('/solucoes/pix-parcelado')({
   component: PixParceladoPage,
@@ -20,6 +22,18 @@ function PixParceladoPage() {
       />
       
       <PixFeatures />
+      
+      <section className="w-full">
+        <div className="max-w-7xl mx-auto px-6 py-12">
+          <div className="rounded-[40px] overflow-hidden shadow-2xl border border-navy/5">
+            <img 
+              src={pixBannerAsset.url} 
+              alt="Pix Parcelado para sua Empresa - CredMais" 
+              className="w-full h-auto block"
+            />
+          </div>
+        </div>
+      </section>
       
       <div className="py-24 bg-ice/30">
         <div className="max-w-7xl mx-auto px-6 text-center">
