@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SolucoesPixParceladoRouteImport } from './routes/solucoes/pix-parcelado'
+import { Route as SolucoesBoletoGarantidoRouteImport } from './routes/solucoes/boleto-garantido'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,30 +23,43 @@ const SolucoesPixParceladoRoute = SolucoesPixParceladoRouteImport.update({
   path: '/solucoes/pix-parcelado',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SolucoesBoletoGarantidoRoute = SolucoesBoletoGarantidoRouteImport.update({
+  id: '/solucoes/boleto-garantido',
+  path: '/solucoes/boleto-garantido',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/solucoes/boleto-garantido': typeof SolucoesBoletoGarantidoRoute
   '/solucoes/pix-parcelado': typeof SolucoesPixParceladoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/solucoes/boleto-garantido': typeof SolucoesBoletoGarantidoRoute
   '/solucoes/pix-parcelado': typeof SolucoesPixParceladoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/solucoes/boleto-garantido': typeof SolucoesBoletoGarantidoRoute
   '/solucoes/pix-parcelado': typeof SolucoesPixParceladoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/solucoes/pix-parcelado'
+  fullPaths: '/' | '/solucoes/boleto-garantido' | '/solucoes/pix-parcelado'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/solucoes/pix-parcelado'
-  id: '__root__' | '/' | '/solucoes/pix-parcelado'
+  to: '/' | '/solucoes/boleto-garantido' | '/solucoes/pix-parcelado'
+  id:
+    | '__root__'
+    | '/'
+    | '/solucoes/boleto-garantido'
+    | '/solucoes/pix-parcelado'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  SolucoesBoletoGarantidoRoute: typeof SolucoesBoletoGarantidoRoute
   SolucoesPixParceladoRoute: typeof SolucoesPixParceladoRoute
 }
 
@@ -65,11 +79,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SolucoesPixParceladoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/solucoes/boleto-garantido': {
+      id: '/solucoes/boleto-garantido'
+      path: '/solucoes/boleto-garantido'
+      fullPath: '/solucoes/boleto-garantido'
+      preLoaderRoute: typeof SolucoesBoletoGarantidoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  SolucoesBoletoGarantidoRoute: SolucoesBoletoGarantidoRoute,
   SolucoesPixParceladoRoute: SolucoesPixParceladoRoute,
 }
 export const routeTree = rootRouteImport
