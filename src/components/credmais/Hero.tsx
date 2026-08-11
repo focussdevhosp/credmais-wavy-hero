@@ -1,20 +1,18 @@
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
 import heroHomeAsset from '@/assets/hero-home.png.asset.json';
 import heroMovimentoAsset from '@/assets/hero-movimento.png.asset.json';
 
 interface HeroProps {
-  title: string;
-  subtitle: string;
-  image: string;
+  title?: string;
+  subtitle?: string;
+  image?: string;
 }
 
 export function Hero({ title, subtitle, image }: HeroProps) {
   // Use the image prop if it's not a placeholder, otherwise use the asset
-  // Check specifically for placeholder strings to use the user's uploaded hero
   const heroImage = image === "hero-movimento" 
     ? heroMovimentoAsset.url 
-    : (image === "hero-placeholder" || image.includes('unsplash')) 
+    : (image === "hero-home" || !image || image.includes('unsplash')) 
       ? heroHomeAsset.url 
       : image;
 
@@ -24,7 +22,7 @@ export function Hero({ title, subtitle, image }: HeroProps) {
       <div className="absolute inset-0 z-0 flex items-center justify-center bg-[#F6F8FA]">
         <img 
           src={heroImage} 
-          alt="Capital para sua empresa" 
+          alt={title || "Capital para sua empresa"} 
           className="w-full h-full object-cover sm:object-cover object-center"
           loading="eager"
         />
@@ -49,7 +47,6 @@ export function Hero({ title, subtitle, image }: HeroProps) {
           </motion.div>
         </div>
       </div>
-
     </section>
   );
 }

@@ -10,33 +10,43 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SolucoesPixParceladoRouteImport } from './routes/solucoes/pix-parcelado'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SolucoesPixParceladoRoute = SolucoesPixParceladoRouteImport.update({
+  id: '/solucoes/pix-parcelado',
+  path: '/solucoes/pix-parcelado',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/solucoes/pix-parcelado': typeof SolucoesPixParceladoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/solucoes/pix-parcelado': typeof SolucoesPixParceladoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/solucoes/pix-parcelado': typeof SolucoesPixParceladoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/solucoes/pix-parcelado'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/solucoes/pix-parcelado'
+  id: '__root__' | '/' | '/solucoes/pix-parcelado'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  SolucoesPixParceladoRoute: typeof SolucoesPixParceladoRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +58,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/solucoes/pix-parcelado': {
+      id: '/solucoes/pix-parcelado'
+      path: '/solucoes/pix-parcelado'
+      fullPath: '/solucoes/pix-parcelado'
+      preLoaderRoute: typeof SolucoesPixParceladoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  SolucoesPixParceladoRoute: SolucoesPixParceladoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
