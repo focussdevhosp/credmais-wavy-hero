@@ -9,12 +9,15 @@ interface HeroProps {
 }
 
 export function Hero({ title, subtitle, image }: HeroProps) {
+  // Use the image prop if it's not a placeholder, otherwise use the asset
+  const heroImage = image.includes('unsplash') ? heroAsset.url : image;
+
   return (
     <section className="relative min-h-[90vh] flex items-center pt-20 px-6 overflow-hidden">
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={heroAsset.url} 
+          src={heroImage} 
           alt="Capital para sua empresa" 
           className="w-full h-full object-cover object-center"
           loading="eager"
