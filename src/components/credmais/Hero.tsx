@@ -16,7 +16,7 @@ export function Hero({ title, subtitle, image }: HeroProps) {
     ? heroMovimentoAsset.url 
     : image === "hero-home-new"
       ? heroHomeNewAsset.url
-      : (image === "hero-home" || !image || image.includes('unsplash')) 
+      : (image === "hero-home" || !image) 
         ? heroHomeAsset.url 
         : image;
 

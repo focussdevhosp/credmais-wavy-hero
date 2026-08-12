@@ -80,7 +80,8 @@ export function PixFeatures() {
               {/* A Imagem com fundo amarelo vibrante */}
               <div className="relative z-10 w-full md:w-[320px] aspect-square md:aspect-[4/5] bg-accent/10 rounded-[40px] overflow-hidden flex items-end justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=320&auto=format&fit=crop" 
+                  src={consultoriaAsset.url} 
+
                   alt="Consultor Especializado" 
                   className="w-full h-full object-cover object-top"
                 />
