@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import heroHomeAsset from '@/assets/hero-home.png.asset.json';
 import heroMovimentoAsset from '@/assets/hero-movimento.png.asset.json';
+import heroHomeNewAsset from '@/assets/hero-home-new.png.asset.json';
 
 interface HeroProps {
   title?: string;
@@ -12,9 +13,11 @@ export function Hero({ title, subtitle, image }: HeroProps) {
   // Use the image prop if it's not a placeholder, otherwise use the asset
   const heroImage = image === "hero-movimento" 
     ? heroMovimentoAsset.url 
-    : (image === "hero-home" || !image || image.includes('unsplash')) 
-      ? heroHomeAsset.url 
-      : image;
+    : image === "hero-home-new"
+      ? heroHomeNewAsset.url
+      : (image === "hero-home" || !image || image.includes('unsplash')) 
+        ? heroHomeAsset.url 
+        : image;
 
   return (
     <section className="relative min-h-[60vh] sm:h-screen flex items-center pt-24 sm:pt-0 overflow-hidden bg-[#F6F8FA]">
