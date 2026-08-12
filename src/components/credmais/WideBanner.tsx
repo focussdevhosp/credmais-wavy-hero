@@ -18,7 +18,7 @@ export function WideBanner() {
           loading="eager"
           onError={(e) => {
             console.error("Erro no banner:", bannerAsset.url);
-            e.currentTarget.src = "https://images.unsplash.com/photo-1554774853-719586f82d77?q=80&w=2560&auto=format&fit=crop";
+            e.currentTarget.src = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop";
           }}
         />
         

@@ -36,9 +36,9 @@ export function Hero({ title, subtitle, image }: HeroProps) {
             onError={(e) => {
               const target = e.currentTarget;
               console.error("Erro ao carregar imagem da hero:", heroImage);
-              // Fallback to Unsplash only if the main asset fails completely
+              // Simple fallback that actually works if R2 is failing
               if (!target.src.includes('unsplash')) {
-                target.src = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1920&auto=format&fit=crop";
+                target.src = "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1920&auto=format&fit=crop";
               }
             }}
           />

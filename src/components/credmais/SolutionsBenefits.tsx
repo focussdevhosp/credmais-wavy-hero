@@ -84,6 +84,9 @@ export function SolutionsBenefits() {
                   src={securitizacaoAsset.url} 
                   alt="Benefícios da Securitização" 
                   className="w-full h-full object-cover object-bottom"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop";
+                  }}
                 />
               </div>
             </div>
