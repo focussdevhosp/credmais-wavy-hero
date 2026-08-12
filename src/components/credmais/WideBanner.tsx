@@ -14,8 +14,12 @@ export function WideBanner() {
         <img 
           src={bannerAsset.url} 
           alt="Antecipe seus recebíveis - Credmais" 
-          className="w-full h-auto block"
+          className="w-full h-auto block min-h-[50px] bg-ice"
           loading="eager"
+          onError={(e) => {
+            console.error("Erro no banner:", bannerAsset.url);
+            e.currentTarget.src = "https://images.unsplash.com/photo-1554774853-719586f82d77?q=80&w=2560&auto=format&fit=crop";
+          }}
         />
         
         {/* SEO Accessibility Content */}
