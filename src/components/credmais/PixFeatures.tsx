@@ -1,3 +1,4 @@
+import { CTAButton } from '@/components/credmais/CTAButton';
 import { motion } from 'framer-motion';
 import consultoriaAsset from '@/assets/pix-consultoria.png.asset.json';
 import { assetUrl } from '@/lib/asset-url';
@@ -44,13 +45,7 @@ export function PixFeatures() {
               </div>
             </div>
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-accent text-navy px-10 py-4 rounded-full font-heading font-bold uppercase tracking-wider text-sm shadow-lg shadow-accent/20 hover:shadow-accent/40 transition-all"
-            >
-              Saiba Mais
-            </motion.button>
+            <CTAButton variant="navy">Solicitar atendimento consultivo</CTAButton>
           </motion.div>
 
           {/* Coluna da Imagem Reconstruída */}

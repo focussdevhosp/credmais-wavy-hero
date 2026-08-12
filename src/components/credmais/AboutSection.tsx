@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
+import { CTAButton } from '@/components/credmais/CTAButton';
 import aboutAsset from '@/assets/about-credmais-v2.png.asset.json';
 import { assetUrl } from '@/lib/asset-url';
 
@@ -32,9 +32,9 @@ const steps = [
 
 export function AboutSection() {
   return (
-    <section id="sobre" className="py-24 sm:py-32 bg-[#F6F8FA] overflow-hidden">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section id="sobre" className="py-16 sm:py-24 lg:py-32 bg-[#F6F8FA] overflow-hidden">
+      <div className="container mx-auto px-5 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center">
           
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -42,7 +42,7 @@ export function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl sm:text-5xl font-heading font-light text-navy mb-12 leading-tight">
+            <h2 className="text-[clamp(2rem,5vw,3.25rem)] font-heading font-medium text-navy mb-10 sm:mb-12 leading-[1.12] tracking-tight">
               A força da Securitizadora <br />
               <span className="font-semibold italic">Credmais</span> no seu negócio
             </h2>
@@ -53,18 +53,14 @@ export function AboutSection() {
                   <div className="flex-shrink-0 w-8 h-8 rounded-full border border-gold flex items-center justify-center text-gold font-medium text-sm">
                     {step.number}
                   </div>
-                  <p className="text-navy/70 text-lg leading-relaxed font-light">
+                  <p className="text-navy/80 text-base sm:text-lg leading-relaxed font-normal">
                     {step.text}
                   </p>
                 </div>
               ))}
             </div>
 
-            <Button 
-              className="bg-gold hover:bg-gold/90 text-white rounded-full px-10 py-6 text-lg transition-all duration-300 shadow-lg shadow-gold/20"
-            >
-              Consulte agora
-            </Button>
+            <CTAButton variant="gold">Solicitar proposta comercial</CTAButton>
           </motion.div>
 
           <motion.div

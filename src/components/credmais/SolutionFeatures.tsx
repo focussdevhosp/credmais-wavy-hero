@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
+import { CTAButton } from '@/components/credmais/CTAButton';
 
 interface SolutionFeaturesProps {
   features: {
@@ -13,12 +13,12 @@ interface SolutionFeaturesProps {
 
 export function SolutionFeatures({ features }: SolutionFeaturesProps) {
   return (
-    <section className="py-24 sm:py-32 bg-white overflow-hidden">
-      <div className="container mx-auto px-6">
+    <section className="py-16 sm:py-24 lg:py-32 bg-white overflow-hidden">
+      <div className="container mx-auto px-5 sm:px-6">
         {features.map((feature, index) => (
           <div 
             key={index} 
-            className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${index !== features.length - 1 ? 'mb-24 lg:mb-32' : ''}`}
+            className={`grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center ${index !== features.length - 1 ? 'mb-16 sm:mb-24 lg:mb-32' : ''}`}
           >
             <motion.div
               initial={{ opacity: 0, x: feature.imageLeft ? -30 : 30 }}
@@ -48,18 +48,14 @@ export function SolutionFeatures({ features }: SolutionFeaturesProps) {
               transition={{ duration: 0.8 }}
               className={feature.imageLeft ? 'order-1 lg:order-2' : 'order-1'}
             >
-              <h3 className="text-3xl sm:text-4xl font-heading font-light text-navy mb-6 leading-tight">
+              <h3 className="text-[clamp(1.75rem,4.2vw,2.75rem)] font-heading font-medium text-navy mb-5 sm:mb-6 leading-[1.15] tracking-tight">
                 {feature.title}
               </h3>
-              <p className="text-navy/70 text-lg leading-relaxed font-light mb-8">
+              <p className="text-navy/80 text-base sm:text-lg leading-relaxed font-normal mb-8">
                 {feature.description}
               </p>
               {feature.buttonText && (
-                <Button 
-                  className="bg-gold hover:bg-gold/90 text-white rounded-full px-10 py-6 text-lg transition-all duration-300 shadow-lg shadow-gold/20"
-                >
-                  {feature.buttonText}
-                </Button>
+                <CTAButton variant="gold">{feature.buttonText}</CTAButton>
               )}
             </motion.div>
           </div>
