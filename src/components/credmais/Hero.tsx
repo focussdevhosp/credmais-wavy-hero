@@ -10,8 +10,8 @@ interface HeroProps {
 }
 
 export function Hero({ title, subtitle, image }: HeroProps) {
-  // Use a hardcoded fallback to the project's own assets if the import fails
-  // or use the imported asset URL which is the safe way in TanStack Start with Lovable
+  // TanStack Start handles asset.json imports by converting them to the final URL at build time.
+  // heroHomeNewAsset.url is already the relative path /__l5e/assets-v1/... which works in prod.
   const heroImage = image === "hero-movimento" 
     ? heroMovimentoAsset.url 
     : image === "hero-home-new"
@@ -36,9 +36,9 @@ export function Hero({ title, subtitle, image }: HeroProps) {
             onError={(e) => {
               const target = e.currentTarget;
               console.error("Erro ao carregar imagem da hero:", heroImage);
-              // Simple relative fallback just in case
+              // Fallback to Unsplash only if the main asset fails completely
               if (!target.src.includes('unsplash')) {
-                target.src = "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?q=80&w=1920&auto=format&fit=crop";
+                target.src = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1920&auto=format&fit=crop";
               }
             }}
           />
