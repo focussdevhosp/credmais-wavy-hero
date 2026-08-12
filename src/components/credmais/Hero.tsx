@@ -11,18 +11,16 @@ interface HeroProps {
 }
 
 export function Hero({ title, subtitle, image }: HeroProps) {
-  // TanStack Start handles asset.json imports by converting them to the final URL at build time.
-  // assetUrl(heroHomeNewAsset) is already the relative path /__l5e/assets-v1/... which works in prod.
-  const heroImage = image === "hero-movimento" 
-    ? assetUrl(heroMovimentoAsset) 
+  // As imagens ficam na CDN de assets; assetUrl garante URL absoluta em
+  // qualquer domínio (inclusive domínio próprio publicado na Cloudflare).
+  const heroImage = image === "hero-movimento"
+    ? assetUrl(heroMovimentoAsset)
     : image === "hero-home-new"
       ? assetUrl(heroHomeNewAsset)
-      : (image === "hero-home" || !image) 
-        ? assetUrl(heroHomeAsset) 
-        : image;
+      : (image === "hero-home" || !image)
+        ? assetUrl(heroHomeAsset)
+        : assetUrl(image);
 
-  // Add a base URL check for production if needed, but assets-v1 should be relative and work.
-  // We'll also ensure the image tag has basic styling to prevent layout shift.
 
   return (
     <section className="relative min-h-[60vh] sm:h-screen flex items-center pt-24 sm:pt-0 overflow-hidden bg-[#F6F8FA]">

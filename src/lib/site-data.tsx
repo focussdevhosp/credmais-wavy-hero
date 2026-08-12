@@ -57,5 +57,5 @@ export const SITE_CONFIG = {
   logo: 'https://storage.googleapis.com/gpt-engineer-file-uploads/0XILPRqqUbSOh99ow53X5OBDOCC3/assets/credmais-logo-navy.png',
   email: 'contato@sejacredmais.com',
   whatsapp: '5500000000000',
-  heroHome: '/__l5e/assets-v1/3924d9f6-a701-45a9-9d36-4451016476b7/hero-home-new.png', 
+  heroHome: 'https://credmais-wavy-hero.lovable.app/__l5e/assets-v1/3924d9f6-a701-45a9-9d36-4451016476b7/hero-home-new.png', 
 };
