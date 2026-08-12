@@ -57,5 +57,5 @@ export const SITE_CONFIG = {
   logo: 'https://storage.googleapis.com/gpt-engineer-file-uploads/0XILPRqqUbSOh99ow53X5OBDOCC3/assets/credmais-logo-navy.png',
   email: 'contato@sejacredmais.com',
   whatsapp: '5500000000000',
-  heroHome: '/mnt/user-uploads/ChatGPT_Image_11_08_2026_14_57_55_12.png', // This will be handled by the asset import in the component
+  heroHome: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1920&auto=format&fit=crop', 
 };

@@ -14,9 +14,9 @@ export function Footer() {
           
           {/* Brand Column */}
           <div className="space-y-8">
-            <div className="text-2xl font-heading font-bold tracking-tighter">
+            <a href="/" className="text-2xl font-heading font-bold tracking-tighter hover:opacity-80 transition-opacity block">
               CRED<span className="text-[#C7A96B]">MAIS</span>
-            </div>
+            </a>
             <p className="text-white/60 font-light leading-relaxed max-w-xs">
               Transformando ativos empresariais em liquidez imediata para impulsionar o crescimento do seu negócio com solidez e transparência.
             </p>

@@ -21,7 +21,7 @@ export function Navbar() {
     <header className="fixed top-4 sm:top-6 inset-x-0 z-50 flex justify-center px-4 sm:px-6 pointer-events-none">
       <nav className="bg-white/70 backdrop-blur-xl border border-white/20 shadow-sm rounded-full px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between w-full max-w-6xl pointer-events-auto relative">
         <div className="flex items-center">
-          <a href="/" className="text-navy font-heading font-bold text-lg sm:text-xl tracking-tighter">
+          <a href="/" className="text-navy font-heading font-bold text-lg sm:text-xl tracking-tighter hover:opacity-80 transition-opacity">
             CRED<span className="text-gold">MAIS</span>
           </a>
         </div>
