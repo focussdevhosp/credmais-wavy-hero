@@ -3,10 +3,18 @@ import { Hero } from '@/components/credmais/Hero';
 import { Navbar } from '@/components/credmais/Navbar';
 import { Footer } from '@/components/credmais/Footer';
 import { SolutionFeatures } from '@/components/credmais/SolutionFeatures';
-import heroAsset from '@/assets/seguro-hero.png.asset.json';
-import benefit1Asset from '@/assets/seguro-benefit-1.png.asset.json';
-import benefit2Asset from '@/assets/seguro-benefit-2.png.asset.json';
-import bannerAsset from '@/assets/seguro-banner.png.asset.json';
+import { motion } from 'framer-motion';
+
+import heroAsset from '@/assets/seguro-v3-hero.png.asset.json';
+import strongAsset from '@/assets/seguro-v3-strong.png.asset.json';
+import riskAsset from '@/assets/seguro-v3-risk.png.asset.json';
+import applianceAsset from '@/assets/seguro-v3-appliance.png.asset.json';
+import contractAsset from '@/assets/seguro-v3-contract.png.asset.json';
+import shoppingAsset from '@/assets/seguro-v3-shopping.png.asset.json';
+import opticalAsset from '@/assets/seguro-v3-optical.png.asset.json';
+import meetingAsset from '@/assets/seguro-v3-meeting.png.asset.json';
+import discussionAsset from '@/assets/seguro-v3-seguranca.png.asset.json';
+import familyAsset from '@/assets/seguro-v3-family.png.asset.json';
 
 export const Route = createFileRoute('/solucoes/seguro-vendas')({
   component: SeguroVendasPage,
@@ -15,91 +23,167 @@ export const Route = createFileRoute('/solucoes/seguro-vendas')({
 function SeguroVendasPage() {
   const features = [
     {
-      title: "Proteção Total contra Inadimplência",
-      description: "O Seguro Vendas CredMais garante que sua empresa receba o valor de cada transação realizada, mesmo que o cliente final não honre o pagamento. Uma camada extra de segurança para suas operações de crédito e vendas a prazo.",
-      image: benefit1Asset.url,
+      title: "Seu Caixa Protegido. Sua Empresa Mais Forte.",
+      description: "Venda a prazo com a segurança de receber. O Seguro Vendas CredMais blinda seu capital de giro contra imprevistos, permitindo que você foque no que realmente importa: o crescimento do seu negócio.",
+      image: strongAsset.url,
       imageLeft: false,
-      buttonText: "Contratar Seguro"
+      buttonText: "Fortalecer meu Caixa"
     },
     {
-      title: "Mais Capital para Movimentar seu Caixa",
-      description: "Use hoje o valor das vendas que receberia depois. Combinamos a proteção do seguro com a liquidez da antecipação, oferecendo o pacote completo para a saúde financeira do seu negócio crescer sem limites.",
-      image: benefit2Asset.url,
+      title: "Mais Vendas. Menos Risco.",
+      description: "Proteção para sua empresa vender a prazo com confiança. Analisamos o perfil de crédito e garantimos o recebimento, eliminando o medo da inadimplência no momento de fechar novos negócios.",
+      image: riskAsset.url,
       imageLeft: true,
-      buttonText: "Saiba Mais"
+      buttonText: "Reduzir Riscos"
+    },
+    {
+      title: "O Cliente Compra. Sua Empresa Vende Protegida.",
+      description: "O seguro reduz o impacto da inadimplência no seu negócio. Ofereça prazos competitivos para seus clientes enquanto mantém seu fluxo de caixa totalmente segurado e previsível.",
+      image: applianceAsset.url,
+      imageLeft: false,
+      buttonText: "Vender com Segurança"
+    },
+    {
+      title: "Venda a Prazo Sem Expor o Seu Caixa.",
+      description: "Mais segurança para sua empresa continuar crescendo. Com nossa estrutura de securitização e seguro, você escala suas operações sem comprometer a liquidez imediata necessária para o dia a dia.",
+      image: contractAsset.url,
+      imageLeft: true,
+      buttonText: "Escalar Vendas"
+    },
+    {
+      title: "Inadimplência Não Precisa Parar Suas Vendas.",
+      description: "Proteja seus recebimentos e mantenha o caixa em movimento. Nossa cobertura garante que, mesmo em cenários adversos, o fluxo de entrada da sua empresa permaneça constante e saudável.",
+      image: shoppingAsset.url,
+      imageLeft: false,
+      buttonText: "Proteger Recebimentos"
+    },
+    {
+      title: "Venda com Confiança. Receba com Segurança.",
+      description: "Proteção para o seu negócio continuar vendendo a prazo. Ideal para prestadores de serviços e varejistas que buscam expandir sua base de clientes sem aumentar a exposição ao risco de crédito.",
+      image: opticalAsset.url,
+      imageLeft: true,
+      buttonText: "Garantir Segurança"
+    },
+    {
+      title: "Proteja o Recebimento. Preserve o Crescimento.",
+      description: "O seguro ajuda a manter a previsibilidade do seu caixa. Planeje seus investimentos futuros com a certeza de que os valores das vendas realizadas entrarão conforme o previsto.",
+      image: meetingAsset.url,
+      imageLeft: false,
+      buttonText: "Preservar Crescimento"
+    },
+    {
+      title: "Mais Segurança Para Quem Vende.",
+      description: "Sua empresa protegida contra o impacto da inadimplência. Uma solução robusta que integra análise de risco, garantia de recebimento e gestão eficiente de cobrança.",
+      image: discussionAsset.url,
+      imageLeft: true,
+      buttonText: "Solicitar Proteção"
+    },
+    {
+      title: "Venda Mais. Arrisque Menos.",
+      description: "Com o seguro, seu recebimento fica protegido. Aumente seu ticket médio e fidelize clientes oferecendo melhores condições de pagamento, tudo com a garantia da CredMais.",
+      image: familyAsset.url,
+      imageLeft: false,
+      buttonText: "Vender Agora"
     }
   ];
 
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
+      
       <Hero 
-        title="Blindagem Financeira para seu Negócio."
-        subtitle="Venda com a certeza do recebimento. Proteção ativa contra riscos de crédito."
+        title="Seu Caixa no Ritmo do seu Negócio."
+        subtitle="O seguro que protege suas vendas e garante a liquidez que sua empresa precisa para crescer sem riscos."
         image={heroAsset.url}
       />
+
+      <div className="bg-ice py-20 border-y border-navy/5">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="space-y-4"
+            >
+              <h3 className="text-5xl font-heading font-bold text-gold">100%</h3>
+              <p className="text-navy/60 font-light uppercase tracking-widest text-sm">Garantia de Recebimento</p>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="space-y-4"
+            >
+              <h3 className="text-5xl font-heading font-bold text-navy">ZERO</h3>
+              <p className="text-navy/60 font-light uppercase tracking-widest text-sm">Risco de Inadimplência</p>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="space-y-4"
+            >
+              <h3 className="text-5xl font-heading font-bold text-gold">24h</h3>
+              <p className="text-navy/60 font-light uppercase tracking-widest text-sm">Análise de Crédito Ágil</p>
+            </motion.div>
+          </div>
+        </div>
+      </div>
       
       <SolutionFeatures features={features} />
 
-      <section className="w-full">
-        <img 
-          src={bannerAsset.url} 
-          alt="Seu dinheiro não precisa ficar parado - CredMais" 
-          className="w-full h-auto block"
-        />
-      </section>
-
-      <div className="py-24 bg-[#F6F8FA]">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-24 bg-navy text-white overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gold/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-heading font-light text-navy mb-8 leading-tight">
-                Venda sem <span className="text-gold font-bold">preocupações</span>.
+              <h2 className="text-4xl md:text-5xl font-heading font-light mb-8 leading-tight">
+                Venda com <span className="text-gold font-bold italic">liberdade</span> e segurança total.
               </h2>
-              <div className="space-y-6">
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-white rounded-2xl shadow-sm flex items-center justify-center shrink-0 border border-navy/5">
-                    <div className="w-2 h-2 bg-gold rounded-full" />
+              <div className="space-y-8">
+                {[
+                  { title: "Previsibilidade", desc: "Saiba exatamente quando e quanto vai receber." },
+                  { title: "Expansão", desc: "Aumente seus limites de venda sem medo." },
+                  { title: "Eficiência", desc: "Reduza custos com departamentos de cobrança." }
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-6 group">
+                    <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:border-gold/50 transition-colors">
+                      <div className="w-2 h-2 bg-gold rounded-full shadow-[0_0_15px_rgba(199,169,107,0.8)]" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-heading font-bold mb-2">{item.title}</h4>
+                      <p className="text-white/40 font-light leading-relaxed">{item.desc}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-heading font-bold text-navy mb-1">Certeza de Recebimento</h4>
-                    <p className="text-navy/60 text-sm font-light">Independente do comportamento do pagador, seu caixa está garantido.</p>
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-white rounded-2xl shadow-sm flex items-center justify-center shrink-0 border border-navy/5">
-                    <div className="w-2 h-2 bg-gold rounded-full" />
-                  </div>
-                  <div>
-                    <h4 className="font-heading font-bold text-navy mb-1">Score de Crédito</h4>
-                    <p className="text-navy/60 text-sm font-light">Melhoria nos indicadores financeiros da sua empresa perante o mercado.</p>
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 bg-white rounded-2xl shadow-sm flex items-center justify-center shrink-0 border border-navy/5">
-                    <div className="w-2 h-2 bg-gold rounded-full" />
-                  </div>
-                  <div>
-                    <h4 className="font-heading font-bold text-navy mb-1">Tranquilidade Jurídica</h4>
-                    <p className="text-navy/60 text-sm font-light">Redução drástica de custos com cobranças e processos judiciais.</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
-            <div className="bg-navy rounded-[40px] p-10 text-white">
-              <h3 className="text-2xl font-heading font-bold mb-6">Solicite um Diagnóstico</h3>
-              <p className="text-white/60 font-light mb-8">Nossos especialistas analisarão seu volume de vendas para oferecer a melhor cobertura.</p>
-              <form className="space-y-4">
-                <input type="text" placeholder="Nome da Empresa" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-gold/50 transition-all" />
-                <input type="email" placeholder="E-mail Corporativo" className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-gold/50 transition-all" />
-                <button className="w-full bg-gold hover:bg-gold/90 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-gold/20">
-                  Falar com Consultor
+            
+            <div className="bg-white rounded-[40px] p-10 lg:p-14 text-navy shadow-2xl">
+              <h3 className="text-3xl font-heading font-bold mb-4">Seja um parceiro</h3>
+              <p className="text-navy/60 font-light mb-10 text-lg">Proteja suas vendas agora mesmo. Preencha os dados e entraremos em contato.</p>
+              
+              <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+                <div className="space-y-2">
+                  <label className="text-xs uppercase tracking-widest font-bold text-navy/40 ml-1">Empresa</label>
+                  <input type="text" className="w-full bg-ice border-none rounded-2xl px-6 py-4 text-navy placeholder:text-navy/20 focus:ring-2 focus:ring-gold/20 outline-none transition-all" placeholder="Nome da sua empresa" />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-xs uppercase tracking-widest font-bold text-navy/40 ml-1">WhatsApp</label>
+                  <input type="tel" className="w-full bg-ice border-none rounded-2xl px-6 py-4 text-navy placeholder:text-navy/20 focus:ring-2 focus:ring-gold/20 outline-none transition-all" placeholder="(00) 00000-0000" />
+                </div>
+                <button className="w-full bg-navy hover:bg-navy/90 text-white font-bold py-5 rounded-2xl transition-all shadow-xl hover:shadow-navy/20 mt-4 group">
+                  Solicitar Diagnóstico Grátis
+                  <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
                 </button>
               </form>
             </div>
           </div>
         </div>
-      </div>
+      </section>
       
       <Footer />
     </div>
