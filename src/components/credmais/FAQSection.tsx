@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
+import { CTAButton } from '@/components/credmais/CTAButton';
 import { ChevronDown, Plus } from 'lucide-react';
 import faqAgentAsset from '@/assets/faq-agent.png.asset.json';
 import { assetUrl } from '@/lib/asset-url';
@@ -120,10 +121,13 @@ export function FAQSection() {
               viewport={{ once: true }}
               className="pt-4"
             >
-              <button className="flex items-center gap-2 text-[#C7A96B] font-medium hover:gap-3 transition-all group">
-                Ver mais perguntas
-                <ChevronDown size={18} className="group-hover:translate-y-0.5 transition-transform" />
-              </button>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+                <CTAButton variant="navy">Falar com um especialista</CTAButton>
+                <button className="flex items-center justify-center sm:justify-start gap-2 text-[#C7A96B] font-semibold hover:gap-3 transition-all group min-h-[44px]">
+                  Ver mais perguntas
+                  <ChevronDown size={18} className="group-hover:translate-y-0.5 transition-transform" />
+                </button>
+              </div>
             </motion.div>
           </div>
 
