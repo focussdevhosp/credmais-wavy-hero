@@ -23,12 +23,19 @@ export function Hero({ title, subtitle, image }: HeroProps) {
     <section className="relative min-h-[60vh] sm:h-screen flex items-center pt-24 sm:pt-0 overflow-hidden bg-[#F6F8FA]">
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0 flex items-center justify-center bg-[#F6F8FA]">
-        <img 
-          src={heroImage} 
-          alt={title || "Capital para sua empresa"} 
-          className="w-full h-full object-cover sm:object-cover object-center"
-          loading="eager"
-        />
+        {heroImage && (
+          <img 
+            src={heroImage} 
+            alt={title || "Capital para sua empresa"} 
+            className="w-full h-full object-cover sm:object-cover object-center"
+            loading="eager"
+            onError={(e) => {
+              console.error("Erro ao carregar imagem da hero:", heroImage);
+              e.currentTarget.style.display = 'none';
+              // Fallback opcional: e.currentTarget.src = "/fallback.png";
+            }}
+          />
+        )}
       </div>
 
       <div className="container relative z-10 mx-auto px-6">
