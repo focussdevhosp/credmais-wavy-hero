@@ -6,6 +6,12 @@ import { SolutionFeatures } from '@/components/credmais/SolutionFeatures';
 import heroAsset from '@/assets/crediario-hero.png.asset.json';
 import benefit1Asset from '@/assets/crediario-benefit-1.png.asset.json';
 import benefit2Asset from '@/assets/crediario-benefit-2.png.asset.json';
+import benefit3Asset from '@/assets/crediario-benefit-3.png.asset.json';
+import benefit4Asset from '@/assets/crediario-benefit-4.png.asset.json';
+import benefit5Asset from '@/assets/crediario-benefit-5.png.asset.json';
+import benefit6Asset from '@/assets/crediario-benefit-6.png.asset.json';
+import benefit7Asset from '@/assets/crediario-benefit-7.png.asset.json';
+import benefit8Asset from '@/assets/crediario-benefit-8.png.asset.json';
 import bannerAsset from '@/assets/crediario-banner.png.asset.json';
 
 export const Route = createFileRoute('/solucoes/crediario')({
