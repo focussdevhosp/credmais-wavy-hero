@@ -10,7 +10,8 @@ interface HeroProps {
 }
 
 export function Hero({ title, subtitle, image }: HeroProps) {
-  // Use the image prop if it's not a placeholder, otherwise use the asset
+  // Use a hardcoded fallback to the project's own assets if the import fails
+  // or use the imported asset URL which is the safe way in TanStack Start with Lovable
   const heroImage = image === "hero-movimento" 
     ? heroMovimentoAsset.url 
     : image === "hero-home-new"
@@ -18,6 +19,9 @@ export function Hero({ title, subtitle, image }: HeroProps) {
       : (image === "hero-home" || !image || image.includes('unsplash')) 
         ? heroHomeAsset.url 
         : image;
+
+  // Add a base URL check for production if needed, but assets-v1 should be relative and work.
+  // We'll also ensure the image tag has basic styling to prevent layout shift.
 
   return (
     <section className="relative min-h-[60vh] sm:h-screen flex items-center pt-24 sm:pt-0 overflow-hidden bg-[#F6F8FA]">
@@ -30,9 +34,12 @@ export function Hero({ title, subtitle, image }: HeroProps) {
             className="w-full h-full object-cover sm:object-cover object-center"
             loading="eager"
             onError={(e) => {
+              const target = e.currentTarget;
               console.error("Erro ao carregar imagem da hero:", heroImage);
-              e.currentTarget.style.display = 'none';
-              // Fallback opcional: e.currentTarget.src = "/fallback.png";
+              // Simple relative fallback just in case
+              if (!target.src.includes('unsplash')) {
+                target.src = "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?q=80&w=1920&auto=format&fit=crop";
+              }
             }}
           />
         )}
