@@ -47,6 +47,9 @@ export function FAQSection() {
                 src={faqAgentAsset.url} 
                 alt="Especialista Credmais" 
                 className="w-full h-full object-cover"
+                onError={(e) => {
+                  e.currentTarget.src = "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1974&auto=format&fit=crop";
+                }}
               />
             </div>
             {/* Decorative Gold Element */}

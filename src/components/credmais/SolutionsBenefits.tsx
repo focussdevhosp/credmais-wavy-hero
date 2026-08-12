@@ -22,9 +22,11 @@ export function SolutionsBenefits() {
               <div className="aspect-video bg-ice relative">
                 <img 
                   src={growthAsset.url} 
-
                   alt="Soluções Credmais" 
                   className="w-full h-full object-cover object-top"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2071&auto=format&fit=crop";
+                  }}
                 />
               </div>
             </div>
@@ -84,6 +86,9 @@ export function SolutionsBenefits() {
                   src={securitizacaoAsset.url} 
                   alt="Benefícios da Securitização" 
                   className="w-full h-full object-cover object-bottom"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop";
+                  }}
                 />
               </div>
             </div>

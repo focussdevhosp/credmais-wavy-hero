@@ -81,9 +81,11 @@ export function PixFeatures() {
               <div className="relative z-10 w-full md:w-[320px] aspect-square md:aspect-[4/5] bg-accent/10 rounded-[40px] overflow-hidden flex items-end justify-center">
                 <img 
                   src={consultoriaAsset.url} 
-
                   alt="Consultor Especializado" 
                   className="w-full h-full object-cover object-top"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop";
+                  }}
                 />
                 
                 {/* Triângulos Azuis Decorativos da referência */}

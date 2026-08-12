@@ -78,6 +78,9 @@ export function AboutSection() {
                 src={aboutAsset.url} 
                 alt="Especialista Credmais" 
                 className="w-full h-auto object-cover"
+                onError={(e) => {
+                  e.currentTarget.src = "https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1974&auto=format&fit=crop";
+                }}
               />
             </div>
             
