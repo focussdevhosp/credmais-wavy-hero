@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import aboutAsset from '@/assets/about-credmais-v2.png.asset.json';
+import { assetUrl } from '@/lib/asset-url';
 
 const steps = [
   {
@@ -75,7 +76,7 @@ export function AboutSection() {
           >
             <div className="rounded-[40px] sm:rounded-[60px] overflow-hidden shadow-2xl">
               <img 
-                src={aboutAsset.url} 
+                src={assetUrl(aboutAsset)} 
                 alt="Especialista Credmais" 
                 className="w-full h-auto object-cover"
                 onError={(e) => {

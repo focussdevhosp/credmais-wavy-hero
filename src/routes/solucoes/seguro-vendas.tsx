@@ -15,6 +15,7 @@ import opticalAsset from '@/assets/seguro-v3-optical.png.asset.json';
 import meetingAsset from '@/assets/seguro-v3-meeting.png.asset.json';
 import discussionAsset from '@/assets/seguro-v3-seguranca.png.asset.json';
 import familyAsset from '@/assets/seguro-v3-family.png.asset.json';
+import { assetUrl } from '@/lib/asset-url';
 
 export const Route = createFileRoute('/solucoes/seguro-vendas')({
   component: SeguroVendasPage,
@@ -25,63 +26,63 @@ function SeguroVendasPage() {
     {
       title: "Seu Caixa Protegido. Sua Empresa Mais Forte.",
       description: "Venda a prazo com a segurança de receber. O Seguro Vendas CredMais blinda seu capital de giro contra imprevistos, permitindo que você foque no que realmente importa: o crescimento do seu negócio.",
-      image: strongAsset.url,
+      image: assetUrl(strongAsset),
       imageLeft: false,
       buttonText: "Fortalecer meu Caixa"
     },
     {
       title: "Mais Vendas. Menos Risco.",
       description: "Proteção para sua empresa vender a prazo com confiança. Analisamos o perfil de crédito e garantimos o recebimento, eliminando o medo da inadimplência no momento de fechar novos negócios.",
-      image: riskAsset.url,
+      image: assetUrl(riskAsset),
       imageLeft: true,
       buttonText: "Reduzir Riscos"
     },
     {
       title: "O Cliente Compra. Sua Empresa Vende Protegida.",
       description: "O seguro reduz o impacto da inadimplência no seu negócio. Ofereça prazos competitivos para seus clientes enquanto mantém seu fluxo de caixa totalmente segurado e previsível.",
-      image: applianceAsset.url,
+      image: assetUrl(applianceAsset),
       imageLeft: false,
       buttonText: "Vender com Segurança"
     },
     {
       title: "Venda a Prazo Sem Expor o Seu Caixa.",
       description: "Mais segurança para sua empresa continuar crescendo. Com nossa estrutura de securitização e seguro, você escala suas operações sem comprometer a liquidez imediata necessária para o dia a dia.",
-      image: contractAsset.url,
+      image: assetUrl(contractAsset),
       imageLeft: true,
       buttonText: "Escalar Vendas"
     },
     {
       title: "Inadimplência Não Precisa Parar Suas Vendas.",
       description: "Proteja seus recebimentos e mantenha o caixa em movimento. Nossa cobertura garante que, mesmo em cenários adversos, o fluxo de entrada da sua empresa permaneça constante e saudável.",
-      image: shoppingAsset.url,
+      image: assetUrl(shoppingAsset),
       imageLeft: false,
       buttonText: "Proteger Recebimentos"
     },
     {
       title: "Venda com Confiança. Receba com Segurança.",
       description: "Proteção para o seu negócio continuar vendendo a prazo. Ideal para prestadores de serviços e varejistas que buscam expandir sua base de clientes sem aumentar a exposição ao risco de crédito.",
-      image: opticalAsset.url,
+      image: assetUrl(opticalAsset),
       imageLeft: true,
       buttonText: "Garantir Segurança"
     },
     {
       title: "Proteja o Recebimento. Preserve o Crescimento.",
       description: "O seguro ajuda a manter a previsibilidade do seu caixa. Planeje seus investimentos futuros com a certeza de que os valores das vendas realizadas entrarão conforme o previsto.",
-      image: meetingAsset.url,
+      image: assetUrl(meetingAsset),
       imageLeft: false,
       buttonText: "Preservar Crescimento"
     },
     {
       title: "Mais Segurança Para Quem Vende.",
       description: "Sua empresa protegida contra o impacto da inadimplência. Uma solução robusta que integra análise de risco, garantia de recebimento e gestão eficiente de cobrança.",
-      image: discussionAsset.url,
+      image: assetUrl(discussionAsset),
       imageLeft: true,
       buttonText: "Solicitar Proteção"
     },
     {
       title: "Venda Mais. Arrisque Menos.",
       description: "Com o seguro, seu recebimento fica protegido. Aumente seu ticket médio e fidelize clientes oferecendo melhores condições de pagamento, tudo com a garantia da CredMais.",
-      image: familyAsset.url,
+      image: assetUrl(familyAsset),
       imageLeft: false,
       buttonText: "Vender Agora"
     }
@@ -94,7 +95,7 @@ function SeguroVendasPage() {
       <Hero 
         title="Seu Caixa no Ritmo do seu Negócio."
         subtitle="O seguro que protege suas vendas e garante a liquidez que sua empresa precisa para crescer sem riscos."
-        image={heroAsset.url}
+        image={assetUrl(heroAsset)}
       />
 
       <div className="bg-ice py-20 border-y border-navy/5">

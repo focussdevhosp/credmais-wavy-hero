@@ -7,6 +7,7 @@ import { WideBanner } from '@/components/credmais/WideBanner';
 import { PixFAQ } from '@/components/credmais/PixFAQ';
 import pixHeroAsset from '@/assets/pix-parcelado-hero.png.asset.json';
 import pixBannerAssetV2 from '@/assets/pix-banner-v2.png.asset.json';
+import { assetUrl } from '@/lib/asset-url';
 
 export const Route = createFileRoute('/solucoes/pix-parcelado')({
   component: PixParceladoPage,
@@ -19,14 +20,14 @@ function PixParceladoPage() {
       <Hero 
         title="Simples para vender. Fácil para pagar."
         subtitle="Pix Parcelado CredMais: A evolução do pagamento para o seu negócio."
-        image={pixHeroAsset.url}
+        image={assetUrl(pixHeroAsset)}
       />
       
       <PixFeatures />
       
       <section className="w-full">
         <img 
-          src={pixBannerAssetV2.url} 
+          src={assetUrl(pixBannerAssetV2)} 
           alt="Pix Parcelado para sua Empresa - CredMais" 
           className="w-full h-auto block"
         />

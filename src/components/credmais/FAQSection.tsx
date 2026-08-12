@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { ChevronDown, Plus } from 'lucide-react';
 import faqAgentAsset from '@/assets/faq-agent.png.asset.json';
+import { assetUrl } from '@/lib/asset-url';
 
 const faqs = [
   {
@@ -44,7 +45,7 @@ export function FAQSection() {
           >
             <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl">
               <img 
-                src={faqAgentAsset.url} 
+                src={assetUrl(faqAgentAsset)} 
                 alt="Especialista Credmais" 
                 className="w-full h-full object-cover"
                 onError={(e) => {
