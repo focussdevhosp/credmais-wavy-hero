@@ -22,9 +22,11 @@ export function SolutionsBenefits() {
               <div className="aspect-video bg-ice relative">
                 <img 
                   src={growthAsset.url} 
-
                   alt="Soluções Credmais" 
                   className="w-full h-full object-cover object-top"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2071&auto=format&fit=crop";
+                  }}
                 />
               </div>
             </div>
