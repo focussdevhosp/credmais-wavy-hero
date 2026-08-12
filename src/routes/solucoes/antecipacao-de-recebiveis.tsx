@@ -14,6 +14,7 @@ import growthAsset from '@/assets/antecipacao-v3-growth.png.asset.json';
 import intelligentAsset from '@/assets/antecipacao-v3-intelligent.png.asset.json';
 import supportAsset from '@/assets/antecipacao-v3-support.png.asset.json';
 import motionAsset from '@/assets/antecipacao-v3-motion-v2.png.asset.json';
+import { assetUrl } from '@/lib/asset-url';
 
 export const Route = createFileRoute('/solucoes/antecipacao-de-recebiveis')({
   component: AntecipacaoPage,
@@ -60,7 +61,7 @@ function AntecipacaoPage() {
           >
             <div className="rounded-[60px] overflow-hidden shadow-[0_50px_100px_-20px_rgba(7,26,51,0.3)] border border-white/20">
               <img 
-                src={heroAsset.url} 
+                src={assetUrl(heroAsset)} 
                 alt="Executiva CredMais" 
                 className="w-full h-auto object-cover"
               />
@@ -109,7 +110,7 @@ function AntecipacaoPage() {
               className="order-2 lg:order-1"
             >
               <div className="rounded-[60px] overflow-hidden shadow-2xl">
-                <img src={intelligentAsset.url} alt="Crédito Inteligente" className="w-full h-auto" />
+                <img src={assetUrl(intelligentAsset)} alt="Crédito Inteligente" className="w-full h-auto" />
               </div>
             </motion.div>
             <div className="order-1 lg:order-2">
@@ -157,7 +158,7 @@ function AntecipacaoPage() {
               viewport={{ once: true }}
             >
               <div className="rounded-[60px] overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700">
-                <img src={growthAsset.url} alt="Crescimento Empresarial" className="w-full h-auto" />
+                <img src={assetUrl(growthAsset)} alt="Crescimento Empresarial" className="w-full h-auto" />
               </div>
             </motion.div>
           </div>
@@ -180,14 +181,14 @@ function AntecipacaoPage() {
               </p>
             </div>
             <div className="rounded-[40px] overflow-hidden shadow-xl">
-              <img src={benefit1Asset.url} alt="Planejamento" className="w-full h-auto" />
+              <img src={assetUrl(benefit1Asset)} alt="Planejamento" className="w-full h-auto" />
             </div>
           </div>
 
           {/* Item 2 */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="order-2 lg:order-1 rounded-[40px] overflow-hidden shadow-xl">
-              <img src={benefit2Asset.url} alt="Segurança" className="w-full h-auto" />
+              <img src={assetUrl(benefit2Asset)} alt="Segurança" className="w-full h-auto" />
             </div>
             <div className="order-1 lg:order-2 lg:pl-12">
               <h3 className="text-3xl font-heading font-light text-navy mb-6">
@@ -217,7 +218,7 @@ function AntecipacaoPage() {
               </Button>
             </div>
             <div className="relative">
-              <img src={supportAsset.url} alt="Consultoria Especializada" className="w-full h-auto rounded-[40px]" />
+              <img src={assetUrl(supportAsset)} alt="Consultoria Especializada" className="w-full h-auto rounded-[40px]" />
               <div className="absolute inset-0 border-[20px] border-ice rounded-[40px] pointer-events-none" />
             </div>
           </div>
@@ -226,7 +227,7 @@ function AntecipacaoPage() {
 
       {/* Final Banner */}
       <section className="w-full">
-        <img src={bannerAsset.url} alt="CredMais Securitizadora" className="w-full h-auto" />
+        <img src={assetUrl(bannerAsset)} alt="CredMais Securitizadora" className="w-full h-auto" />
       </section>
 
       <Footer />

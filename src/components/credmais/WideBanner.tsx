@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import bannerAsset from '@/assets/banner-antecipacao.png.asset.json';
+import { assetUrl } from '@/lib/asset-url';
 
 export function WideBanner() {
   return (
@@ -12,12 +13,12 @@ export function WideBanner() {
         className="w-full"
       >
         <img 
-          src={bannerAsset.url} 
+          src={assetUrl(bannerAsset)} 
           alt="Antecipe seus recebíveis - Credmais" 
           className="w-full h-auto block min-h-[50px] bg-ice"
           loading="eager"
           onError={(e) => {
-            console.error("Erro no banner:", bannerAsset.url);
+            console.error("Erro no banner:", assetUrl(bannerAsset));
             e.currentTarget.src = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop";
           }}
         />

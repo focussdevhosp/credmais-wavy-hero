@@ -13,6 +13,7 @@ import benefit6Asset from '@/assets/crediario-benefit-6.png.asset.json';
 import benefit7Asset from '@/assets/crediario-benefit-7.png.asset.json';
 import benefit8Asset from '@/assets/crediario-benefit-8.png.asset.json';
 import bannerAsset from '@/assets/crediario-banner.png.asset.json';
+import { assetUrl } from '@/lib/asset-url';
 
 export const Route = createFileRoute('/solucoes/crediario')({
   component: CrediarioPage,
@@ -23,56 +24,56 @@ function CrediarioPage() {
     {
       title: "Facilite a Compra. Aumente suas Vendas.",
       description: "Ofereça parcelamento próprio e transforme o interesse do seu cliente em negócio fechado. Nossa plataforma simplifica a aprovação de crédito em tempo real.",
-      image: benefit1Asset.url,
+      image: assetUrl(benefit1Asset),
       imageLeft: false,
       buttonText: "Ativar Crediário"
     },
     {
       title: "Mais Poder de Compra para seus Clientes",
       description: "Dê liberdade para seus clientes escolherem a melhor forma de pagar, aumentando o ticket médio e a fidelização com sua marca.",
-      image: benefit2Asset.url,
+      image: assetUrl(benefit2Asset),
       imageLeft: true,
       buttonText: "Saber Mais"
     },
     {
       title: "Crediário Também para Serviços",
       description: "Sua clínica, escritório ou empresa de serviços pode oferecer condições que ajudam seus clientes a realizar planos importantes hoje.",
-      image: benefit3Asset.url,
+      image: assetUrl(benefit3Asset),
       imageLeft: false,
       buttonText: "Ver Soluções"
     },
     {
       title: "Parcele. Venda. Cresça.",
       description: "Uma solução de crediário pensada especificamente para o comércio, com taxas competitivas e gestão completa de cobrança.",
-      image: benefit4Asset.url,
+      image: assetUrl(benefit4Asset),
       imageLeft: true,
       buttonText: "Simular Taxas"
     },
     {
       title: "Mais Opções para Vender a Prazo",
       description: "Aproxime seus clientes da compra com flexibilidade total. O Crediário CredMais se adapta ao seu modelo de negócio.",
-      image: benefit5Asset.url,
+      image: assetUrl(benefit5Asset),
       imageLeft: false,
       buttonText: "Consultar Especialista"
     },
     {
       title: "Do Orçamento à Venda Fechada",
       description: "Elimine as barreiras no fechamento da venda. Facilite o pagamento e amplie suas oportunidades de mercado com segurança.",
-      image: benefit6Asset.url,
+      image: assetUrl(benefit6Asset),
       imageLeft: true,
       buttonText: "Começar Agora"
     },
     {
       title: "Mais Flexibilidade no Pagamento",
       description: "Abra novos caminhos para o seu cliente concluir a compra. Oferecemos suporte completo para implementar seu crediário garantido.",
-      image: benefit7Asset.url,
+      image: assetUrl(benefit7Asset),
       imageLeft: false,
       buttonText: "Solicitar Proposta"
     },
     {
       title: "Fortaleça seu Relacionamento",
       description: "Crediário inteligente para fortalecer suas vendas e o vínculo com seus clientes, criando uma base sólida para o crescimento.",
-      image: benefit8Asset.url,
+      image: assetUrl(benefit8Asset),
       imageLeft: true,
       buttonText: "Ver Benefícios"
     }
@@ -84,14 +85,14 @@ function CrediarioPage() {
       <Hero 
         title="Seu Crediário. Nossa Garantia."
         subtitle="Venda parcelado no boleto ou carnê com risco zero e liquidez imediata."
-        image={heroAsset.url}
+        image={assetUrl(heroAsset)}
       />
       
       <SolutionFeatures features={features} />
 
       <section className="w-full">
         <img 
-          src={bannerAsset.url} 
+          src={assetUrl(bannerAsset)} 
           alt="Receba antes, continue crescendo - CredMais" 
           className="w-full h-auto block"
         />

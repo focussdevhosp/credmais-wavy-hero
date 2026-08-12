@@ -8,6 +8,7 @@ import heroAsset from '@/assets/boleto-hero.png.asset.json';
 import benefit1Asset from '@/assets/boleto-benefit-1.png.asset.json';
 import benefit2Asset from '@/assets/boleto-benefit-2.png.asset.json';
 import bannerAsset from '@/assets/boleto-banner.png.asset.json';
+import { assetUrl } from '@/lib/asset-url';
 
 export const Route = createFileRoute('/solucoes/boleto-garantido')({
   component: BoletoGarantidoPage,
@@ -18,14 +19,14 @@ function BoletoGarantidoPage() {
     {
       title: "Mais Previsibilidade para Planejar",
       description: "Antecipe o recebimento de seus boletos e mantenha o foco no crescimento. O Boleto Garantido CredMais elimina o tempo de espera e a burocracia, garantindo que o capital das suas vendas esteja disponível quando você mais precisa.",
-      image: benefit1Asset.url,
+      image: assetUrl(benefit1Asset),
       imageLeft: false,
       buttonText: "Simular Agora"
     },
     {
       title: "Segurança e Clareza em Cada Antecipação",
       description: "Acompanhe suas operações com transparência total. Nossa solução oferece previsibilidade absoluta para seu fluxo de caixa, permitindo um planejamento financeiro sólido e sem surpresas desagradáveis.",
-      image: benefit2Asset.url,
+      image: assetUrl(benefit2Asset),
       imageLeft: true,
       buttonText: "Falar com Consultor"
     }
@@ -37,14 +38,14 @@ function BoletoGarantidoPage() {
       <Hero 
         title="CredMais Securitizadora."
         subtitle="Seus boletos transformados em liquidez imediata com segurança e solidez."
-        image={heroAsset.url}
+        image={assetUrl(heroAsset)}
       />
       
       <SolutionFeatures features={features} />
 
       <section className="w-full">
         <img 
-          src={bannerAsset.url} 
+          src={assetUrl(bannerAsset)} 
           alt="Você vende a prazo. A CredMais antecipa." 
           className="w-full h-auto block"
         />

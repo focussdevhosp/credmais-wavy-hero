@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import asset from '@/assets/solutions-benefits.png.asset.json';
 import growthAsset from '@/assets/solutions-growth.png.asset.json';
 import securitizacaoAsset from '@/assets/securitizacao-hero.png.asset.json';
+import { assetUrl } from '@/lib/asset-url';
 
 export function SolutionsBenefits() {
   return (
@@ -21,7 +22,7 @@ export function SolutionsBenefits() {
               {/* Usando uma região específica da imagem de referência ou simulando o layout */}
               <div className="aspect-video bg-ice relative">
                 <img 
-                  src={growthAsset.url} 
+                  src={assetUrl(growthAsset)} 
                   alt="Soluções Credmais" 
                   className="w-full h-full object-cover object-top"
                   onError={(e) => {
@@ -83,7 +84,7 @@ export function SolutionsBenefits() {
             <div className="rounded-[40px] overflow-hidden shadow-xl">
               <div className="aspect-video bg-ice relative">
                 <img 
-                  src={securitizacaoAsset.url} 
+                  src={assetUrl(securitizacaoAsset)} 
                   alt="Benefícios da Securitização" 
                   className="w-full h-full object-cover object-bottom"
                   onError={(e) => {

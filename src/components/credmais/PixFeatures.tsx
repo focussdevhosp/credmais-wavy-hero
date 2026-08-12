@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import consultoriaAsset from '@/assets/pix-consultoria.png.asset.json';
+import { assetUrl } from '@/lib/asset-url';
 
 export function PixFeatures() {
   return (
@@ -80,7 +81,7 @@ export function PixFeatures() {
               {/* A Imagem com fundo amarelo vibrante */}
               <div className="relative z-10 w-full md:w-[320px] aspect-square md:aspect-[4/5] bg-accent/10 rounded-[40px] overflow-hidden flex items-end justify-center">
                 <img 
-                  src={consultoriaAsset.url} 
+                  src={assetUrl(consultoriaAsset)} 
                   alt="Consultor Especializado" 
                   className="w-full h-full object-cover object-top"
                   onError={(e) => {
