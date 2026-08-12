@@ -21,18 +21,60 @@ export const Route = createFileRoute('/solucoes/crediario')({
 function CrediarioPage() {
   const features = [
     {
-      title: "Venda no Carnê com Segurança Total",
-      description: "O Crediário CredMais permite que sua empresa ofereça parcelamento próprio sem correr riscos de inadimplência. Nós assumimos a gestão de crédito, permitindo que você foque apenas em vender mais e fidelizar seus clientes.",
+      title: "Facilite a Compra. Aumente suas Vendas.",
+      description: "Ofereça parcelamento próprio e transforme o interesse do seu cliente em negócio fechado. Nossa plataforma simplifica a aprovação de crédito em tempo real.",
       image: benefit1Asset.url,
       imageLeft: false,
       buttonText: "Ativar Crediário"
     },
     {
-      title: "Mais Previsibilidade para seu Planejamento",
-      description: "Antecipe os recebimentos do seu crediário e organize melhor o seu fluxo de caixa. Com nossa solução, o valor das parcelas futuras vira capital disponível hoje para novos investimentos e expansão do seu negócio.",
+      title: "Mais Poder de Compra para seus Clientes",
+      description: "Dê liberdade para seus clientes escolherem a melhor forma de pagar, aumentando o ticket médio e a fidelização com sua marca.",
       image: benefit2Asset.url,
       imageLeft: true,
-      buttonText: "Simular Agora"
+      buttonText: "Saber Mais"
+    },
+    {
+      title: "Crediário Também para Serviços",
+      description: "Sua clínica, escritório ou empresa de serviços pode oferecer condições que ajudam seus clientes a realizar planos importantes hoje.",
+      image: benefit3Asset.url,
+      imageLeft: false,
+      buttonText: "Ver Soluções"
+    },
+    {
+      title: "Parcele. Venda. Cresça.",
+      description: "Uma solução de crediário pensada especificamente para o comércio, com taxas competitivas e gestão completa de cobrança.",
+      image: benefit4Asset.url,
+      imageLeft: true,
+      buttonText: "Simular Taxas"
+    },
+    {
+      title: "Mais Opções para Vender a Prazo",
+      description: "Aproxime seus clientes da compra com flexibilidade total. O Crediário CredMais se adapta ao seu modelo de negócio.",
+      image: benefit5Asset.url,
+      imageLeft: false,
+      buttonText: "Consultar Especialista"
+    },
+    {
+      title: "Do Orçamento à Venda Fechada",
+      description: "Elimine as barreiras no fechamento da venda. Facilite o pagamento e amplie suas oportunidades de mercado com segurança.",
+      image: benefit6Asset.url,
+      imageLeft: true,
+      buttonText: "Começar Agora"
+    },
+    {
+      title: "Mais Flexibilidade no Pagamento",
+      description: "Abra novos caminhos para o seu cliente concluir a compra. Oferecemos suporte completo para implementar seu crediário garantido.",
+      image: benefit7Asset.url,
+      imageLeft: false,
+      buttonText: "Solicitar Proposta"
+    },
+    {
+      title: "Fortaleça seu Relacionamento",
+      description: "Crediário inteligente para fortalecer suas vendas e o vínculo com seus clientes, criando uma base sólida para o crescimento.",
+      image: benefit8Asset.url,
+      imageLeft: true,
+      buttonText: "Ver Benefícios"
     }
   ];
 
