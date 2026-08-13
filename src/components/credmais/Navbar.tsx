@@ -20,17 +20,17 @@ export function Navbar() {
   };
 
   return (
-    <header className="fixed top-4 sm:top-6 inset-x-0 z-50 flex justify-center px-4 sm:px-6 pointer-events-none">
-      <nav className="bg-white/70 backdrop-blur-xl border border-white/20 shadow-sm rounded-full px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between w-full max-w-6xl pointer-events-auto relative">
+    <header className="fixed top-0 inset-x-0 z-50 flex justify-center px-0 sm:px-0 pointer-events-none pt-4 sm:pt-6">
+      <nav className="bg-white/40 backdrop-blur-2xl border border-white/30 shadow-[0_8px_32px_0_rgba(7,26,51,0.08)] rounded-full px-6 sm:px-8 py-3 sm:py-4 flex items-center justify-between w-full max-w-6xl pointer-events-auto relative mx-4 transition-all duration-300 hover:bg-white/60">
         <div className="flex items-center">
           <a href="/" className="hover:opacity-80 transition-opacity flex items-center">
-            <img src={assetUrl(logoAsset.url)} alt="CredMais" className="h-10 sm:h-12 w-auto" />
+            <img src={assetUrl(logoAsset.url)} alt="CredMais" className="h-10 sm:h-11 w-auto transition-transform duration-300 hover:scale-105" />
           </a>
         </div>
 
         {/* Hidden on small mobile, visible from md up */}
         <div className="hidden lg:flex items-center gap-6 xl:gap-8 text-[10px] sm:text-[11px] font-bold text-navy/80 tracking-widest uppercase">
-          <a href="/" className="hover:text-gold transition-colors">Início</a>
+          <a href="/" className="hover:text-gold transition-all duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-gold after:transition-all hover:after:w-full">Início</a>
           
           {/* Dropdown Solutions */}
           <div 
@@ -78,12 +78,12 @@ export function Navbar() {
             </AnimatePresence>
           </div>
 
-          <a href="#sobre" className="hover:text-gold transition-colors">Institucional</a>
-          <a href="#contato" className="hover:text-gold transition-colors">Contato</a>
+          <a href="#sobre" className="hover:text-gold transition-all duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-gold after:transition-all hover:after:w-full">Institucional</a>
+          <a href="#contato" className="hover:text-gold transition-all duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-gold after:transition-all hover:after:w-full">Contato</a>
         </div>
 
         <div className="flex items-center gap-3">
-          <button className="bg-navy text-white text-[9px] sm:text-[10px] font-bold uppercase tracking-widest px-4 sm:px-5 py-2 sm:py-2.5 rounded-full shadow-lg shadow-navy/20 hover:scale-105 transition-transform active:scale-95 min-h-[44px] min-w-[44px] flex items-center justify-center">
+          <button className="bg-navy text-white text-[9px] sm:text-[10px] font-bold uppercase tracking-widest px-6 sm:px-7 py-3 sm:py-3.5 rounded-full shadow-[0_4px_20px_0_rgba(7,26,51,0.15)] hover:shadow-[0_8px_30px_0_rgba(7,26,51,0.25)] hover:-translate-y-0.5 transition-all active:scale-95 min-h-[48px] flex items-center justify-center">
             Acesso Restrito
           </button>
         </div>
