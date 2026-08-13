@@ -1,12 +1,20 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
-import { ChevronDown, Zap, TrendingUp, ShieldCheck, CreditCard, Lock } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { ChevronDown, Zap, TrendingUp, ShieldCheck, CreditCard, Lock, Menu, X } from 'lucide-react';
 import { SITE_CONFIG, SOLUTIONS } from '@/lib/site-data';
 import logoAsset from '@/assets/logo-credmais-premium.png.asset.json';
 import { assetUrl } from '@/lib/asset-url';
 
 export function Navbar() {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [isMobileSolutionsOpen, setIsMobileSolutionsOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = isMobileOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [isMobileOpen]);
+
 
   const getIcon = (iconName: string) => {
     switch (iconName) {
