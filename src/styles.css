@@ -53,3 +53,7 @@
     font-size: clamp(1rem, 2vw, 1.25rem);
   }
 }
+
+#lovable-badge {
+  display: none !important;
+}
