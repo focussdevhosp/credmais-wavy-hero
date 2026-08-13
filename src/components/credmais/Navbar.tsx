@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { ChevronDown, Zap, TrendingUp, ShieldCheck, CreditCard, Lock } from 'lucide-react';
 import { SITE_CONFIG, SOLUTIONS } from '@/lib/site-data';
-import logoAsset from '@/assets/logo-credmais-dark.png.asset.json';
+import logoAsset from '@/assets/logo-credmais-premium.png.asset.json';
 import { assetUrl } from '@/lib/asset-url';
 
 export function Navbar() {
@@ -24,7 +24,7 @@ export function Navbar() {
       <nav className="bg-white/70 backdrop-blur-xl border border-white/20 shadow-sm rounded-full px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between w-full max-w-6xl pointer-events-auto relative">
         <div className="flex items-center">
           <a href="/" className="hover:opacity-80 transition-opacity flex items-center">
-            <img src={assetUrl(logoAsset.url)} alt="CredMais" className="h-10 sm:h-12 w-auto invert brightness-0" />
+            <img src={assetUrl(logoAsset.url)} alt="CredMais" className="h-10 sm:h-12 w-auto" />
           </a>
         </div>
 
