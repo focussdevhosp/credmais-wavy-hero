@@ -122,7 +122,7 @@ export function FAQSection() {
               className="pt-4"
             >
               <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-                <CTAButton variant="navy">Falar com um especialista</CTAButton>
+                <CTAButton variant="gold">Falar com um especialista</CTAButton>
                 <button className="flex items-center justify-center sm:justify-start gap-2 text-[#C7A96B] font-semibold hover:gap-3 transition-all group min-h-[44px]">
                   Ver mais perguntas
                   <ChevronDown size={18} className="group-hover:translate-y-0.5 transition-transform" />

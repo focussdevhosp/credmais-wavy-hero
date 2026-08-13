@@ -10,8 +10,8 @@ type CTAButtonProps = {
 
 const variants = {
   gold: 'bg-gold text-white hover:bg-gold/90 shadow-lg shadow-gold/25',
-  navy: 'bg-navy text-white hover:bg-navy/90 shadow-lg shadow-navy/20',
-  outline: 'border border-navy/20 text-navy hover:border-gold hover:text-gold bg-transparent',
+  navy: 'bg-gold text-white hover:bg-gold/90 shadow-lg shadow-gold/25',
+  outline: 'border border-gold/20 text-gold hover:border-gold hover:text-white hover:bg-gold bg-transparent',
 };
 
 export function CTAButton({ children, href = '#contato', variant = 'gold', className }: CTAButtonProps) {
