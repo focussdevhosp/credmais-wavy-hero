@@ -23,7 +23,7 @@ export function Hero({ title, subtitle, image }: HeroProps) {
 
 
   return (
-    <section className="relative flex items-center pt-20 sm:pt-0 overflow-hidden bg-[#F6F8FA] min-h-0 sm:min-h-[70vh] lg:h-screen">
+    <section className="relative block sm:flex sm:items-center pt-20 sm:pt-0 overflow-hidden bg-[#F6F8FA] min-h-0 sm:min-h-[70vh] lg:h-screen">
       {/* Background Image Container */}
       <div className="relative sm:absolute sm:inset-0 z-0 w-full flex items-center justify-center bg-[#F6F8FA]">
         {heroImage && (
