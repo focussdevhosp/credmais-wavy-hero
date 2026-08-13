@@ -23,7 +23,7 @@ export function CTAButton({ children, href = '#contato', variant = 'gold', class
         'px-7 sm:px-10 py-4 sm:py-5 min-h-[52px]',
         'font-heading font-semibold tracking-wide',
         'text-[0.95rem] sm:text-base md:text-lg text-center leading-none',
-        'transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0',
+        'transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:brightness-110 active:scale-95 active:translate-y-0',
         variants[variant],
         className,
       )}
