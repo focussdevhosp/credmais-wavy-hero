@@ -51,9 +51,9 @@ function BoletoGarantidoPage() {
         />
       </section>
 
-      <div className="py-24 bg-[#F6F8FA]">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="py-16 sm:py-24 bg-[#F6F8FA]">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12">
             <div className="space-y-4">
               <div className="w-12 h-12 bg-gold/10 rounded-2xl flex items-center justify-center mb-6">
                 <div className="w-6 h-6 bg-gold rounded-lg" />

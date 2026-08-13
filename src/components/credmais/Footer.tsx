@@ -7,12 +7,12 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#071A33] text-white pt-24 pb-12 overflow-hidden relative">
+    <footer className="bg-[#071A33] text-white pt-16 sm:pt-24 pb-10 sm:pb-12 overflow-hidden relative">
       {/* Background Decorative Element */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-[#C7A96B]/5 -skew-x-12 transform origin-top translate-x-20 pointer-events-none" />
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-[#C7A96B]/5 -skew-x-12 transform origin-top translate-x-20 pointer-events-none hidden sm:block" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-20">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-8 mb-12 sm:mb-20">
           
           {/* Brand Column */}
           <div className="space-y-8">

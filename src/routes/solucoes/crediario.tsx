@@ -98,18 +98,18 @@ function CrediarioPage() {
         />
       </section>
 
-      <div className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-navy rounded-[60px] p-12 lg:p-20 text-center relative overflow-hidden">
+      <div className="py-16 sm:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6">
+          <div className="bg-navy rounded-[32px] sm:rounded-[60px] p-7 sm:p-12 lg:p-20 text-center relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-gold/10 rounded-full -mr-32 -mt-32 blur-3xl" />
             <div className="relative z-10">
-              <h2 className="text-3xl lg:text-5xl font-heading font-light text-white mb-8">
+              <h2 className="text-[clamp(1.75rem,6vw,3rem)] font-heading font-light text-white mb-6 sm:mb-8 leading-tight">
                 Pronto para transformar as vendas da sua <span className="text-gold font-bold">empresa</span>?
               </h2>
-              <p className="text-white/60 text-lg mb-12 max-w-2xl mx-auto font-light">
+              <p className="text-white/60 text-base sm:text-lg mb-8 sm:mb-12 max-w-2xl mx-auto font-light">
                 Junte-se a milhares de lojistas que já vendem com o Crediário Garantido CredMais.
               </p>
-              <button className="bg-gold hover:bg-gold/90 text-white px-12 py-5 rounded-full font-heading font-bold uppercase tracking-widest text-sm transition-all shadow-xl shadow-gold/20">
+              <button className="bg-gold hover:bg-gold/90 text-white w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 rounded-full font-heading font-bold uppercase tracking-widest text-xs sm:text-sm transition-all shadow-xl shadow-gold/20">
                 Começar agora
               </button>
             </div>
