@@ -23,15 +23,16 @@ export function Hero({ title, subtitle, image }: HeroProps) {
 
 
   return (
-    <section className="relative min-h-[60vh] sm:h-screen flex items-center pt-24 sm:pt-0 overflow-hidden bg-[#F6F8FA]">
+    <section className="relative block sm:flex sm:items-center pt-20 sm:pt-0 overflow-hidden bg-[#F6F8FA] min-h-0 sm:min-h-[70vh] lg:h-screen">
       {/* Background Image Container */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center bg-[#F6F8FA]">
+      <div className="relative sm:absolute sm:inset-0 z-0 w-full flex items-center justify-center bg-[#F6F8FA]">
         {heroImage && (
           <img 
             src={heroImage} 
             alt={title || "Capital para sua empresa"} 
-            className="w-full h-full object-cover sm:object-cover object-center"
+            className="w-full h-auto object-contain sm:h-full sm:object-cover object-center"
             loading="eager"
+
             onError={(e) => {
               const target = e.currentTarget;
               console.error("Erro ao carregar imagem da hero:", heroImage);

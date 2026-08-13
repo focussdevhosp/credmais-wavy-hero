@@ -32,9 +32,9 @@ export function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-[#F6F8FA] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section className="py-16 sm:py-24 bg-[#F6F8FA] overflow-hidden">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6">
+        <div className="grid lg:grid-cols-2 gap-10 sm:gap-12 items-center">
           
           {/* Image Container */}
           <motion.div
@@ -44,7 +44,7 @@ export function FAQSection() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl">
+            <div className="aspect-[4/5] rounded-[32px] sm:rounded-[40px] overflow-hidden shadow-2xl">
               <img 
                 src={assetUrl(faqAgentAsset)} 
                 alt="Especialista Credmais" 
@@ -55,7 +55,7 @@ export function FAQSection() {
               />
             </div>
             {/* Decorative Gold Element */}
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#C7A96B] rounded-3xl -z-10" />
+            <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 w-20 h-20 sm:w-32 sm:h-32 bg-[#C7A96B] rounded-3xl -z-10" />
           </motion.div>
 
           {/* Content Container */}
@@ -66,7 +66,7 @@ export function FAQSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl lg:text-5xl font-light text-[#071A33] leading-tight mb-4">
+              <h2 className="text-[clamp(1.85rem,6vw,3rem)] font-light text-[#071A33] leading-tight mb-4">
                 Dúvidas frequentes sobre a <span className="font-bold">Securitização</span>
               </h2>
               <p className="text-lg text-[#071A33]/70 font-light">
@@ -86,9 +86,9 @@ export function FAQSection() {
                 >
                   <button
                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                    className="w-full text-left p-6 bg-white rounded-2xl border border-black/5 hover:border-[#C7A96B]/30 transition-all flex justify-between items-center group"
+                    className="w-full text-left p-4 sm:p-6 bg-white rounded-2xl border border-black/5 hover:border-[#C7A96B]/30 transition-all flex justify-between items-center group"
                   >
-                    <span className={`text-lg transition-colors ${openIndex === index ? 'text-[#C7A96B] font-medium' : 'text-[#071A33]'}`}>
+                    <span className={`text-base sm:text-lg pr-3 transition-colors ${openIndex === index ? 'text-[#C7A96B] font-medium' : 'text-[#071A33]'}`}>
                       {faq.question}
                     </span>
                     <div className={`p-2 rounded-full transition-all ${openIndex === index ? 'bg-[#C7A96B] text-white rotate-180' : 'bg-[#F6F8FA] text-[#071A33]'}`}>
@@ -105,7 +105,7 @@ export function FAQSection() {
                         transition={{ duration: 0.3 }}
                         className="overflow-hidden"
                       >
-                        <div className="p-6 pt-2 text-[#071A33]/80 leading-relaxed font-light">
+                        <div className="p-4 sm:p-6 pt-2 text-sm sm:text-base text-[#071A33]/80 leading-relaxed font-light">
                           {faq.answer}
                         </div>
                       </motion.div>

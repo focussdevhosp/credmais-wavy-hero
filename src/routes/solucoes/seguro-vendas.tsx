@@ -99,7 +99,7 @@ function SeguroVendasPage() {
       />
 
       <div className="bg-ice py-20 border-y border-navy/5">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -136,9 +136,9 @@ function SeguroVendasPage() {
       
       <SolutionFeatures features={features} />
 
-      <section className="py-24 bg-navy text-white overflow-hidden relative">
+      <section className="py-16 sm:py-24 bg-navy text-white overflow-hidden relative">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gold/5 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2" />
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-heading font-light mb-8 leading-tight">

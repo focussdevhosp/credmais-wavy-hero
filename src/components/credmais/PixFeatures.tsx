@@ -5,8 +5,8 @@ import { assetUrl } from '@/lib/asset-url';
 
 export function PixFeatures() {
   return (
-    <section className="py-24 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-16 sm:py-24 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Coluna de Texto */}
           <motion.div
@@ -57,7 +57,7 @@ export function PixFeatures() {
             className="relative"
           >
             {/* O container principal que simula o card branco da referência */}
-            <div className="bg-white rounded-[60px] p-8 md:p-12 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] border border-navy/5 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
+            <div className="bg-white rounded-[32px] sm:rounded-[60px] p-6 sm:p-8 md:p-12 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] border border-navy/5 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
               
               {/* Conteúdo Interno do Card Simulado */}
               <div className="flex-1 z-10">
