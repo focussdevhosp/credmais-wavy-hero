@@ -2,6 +2,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import { ChevronDown, Zap, TrendingUp, ShieldCheck, CreditCard, Lock } from 'lucide-react';
 import { SITE_CONFIG, SOLUTIONS } from '@/lib/site-data';
+import logoAsset from '@/assets/logo-credmais-dark.png.asset.json';
+import { assetUrl } from '@/lib/asset-url';
 
 export function Navbar() {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -21,8 +23,8 @@ export function Navbar() {
     <header className="fixed top-4 sm:top-6 inset-x-0 z-50 flex justify-center px-4 sm:px-6 pointer-events-none">
       <nav className="bg-white/70 backdrop-blur-xl border border-white/20 shadow-sm rounded-full px-4 sm:px-6 py-2.5 sm:py-3 flex items-center justify-between w-full max-w-6xl pointer-events-auto relative">
         <div className="flex items-center">
-          <a href="/" className="text-navy font-heading font-bold text-lg sm:text-xl tracking-tighter hover:opacity-80 transition-opacity">
-            CRED<span className="text-gold">MAIS</span>
+          <a href="/" className="hover:opacity-80 transition-opacity flex items-center">
+            <img src={assetUrl(logoAsset.url)} alt="CredMais" className="h-10 sm:h-12 w-auto invert brightness-0" />
           </a>
         </div>
 
