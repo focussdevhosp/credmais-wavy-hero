@@ -29,10 +29,11 @@ export function Navbar() {
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 flex justify-center px-0 sm:px-0 pointer-events-none pt-4 sm:pt-6">
-      <nav className="bg-white/40 backdrop-blur-2xl border border-white/30 shadow-[0_8px_32px_0_rgba(7,26,51,0.08)] rounded-full px-6 sm:px-8 py-3 sm:py-4 flex items-center justify-between w-full max-w-6xl pointer-events-auto relative mx-4 transition-all duration-300 hover:bg-white/60">
-        <div className="flex items-center">
+      <nav className="bg-white/40 backdrop-blur-2xl border border-white/30 shadow-[0_8px_32px_0_rgba(7,26,51,0.08)] rounded-full px-4 sm:px-8 py-2.5 sm:py-4 flex items-center justify-between w-full max-w-6xl pointer-events-auto relative mx-3 sm:mx-4 transition-all duration-300 hover:bg-white/60">
+        <div className="flex items-center min-w-0">
           <a href="/" className="hover:opacity-80 transition-opacity flex items-center">
-            <img src={assetUrl(logoAsset.url)} alt="CredMais" className="h-10 sm:h-11 w-auto transition-transform duration-300 hover:scale-105" />
+            <img src={assetUrl(logoAsset.url)} alt="CredMais" className="h-8 sm:h-11 w-auto transition-transform duration-300 hover:scale-105" />
+
           </a>
         </div>
 
