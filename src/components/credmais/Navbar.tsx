@@ -90,15 +90,93 @@ export function Navbar() {
           <a href="#contato" className="hover:text-gold transition-all duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-gold after:transition-all hover:after:w-full">Contato</a>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <a 
             href="#contato"
-            className="bg-gold text-white text-[9px] sm:text-[10px] font-bold uppercase tracking-widest px-6 sm:px-7 py-3 sm:py-3.5 rounded-full shadow-[0_4px_20px_0_rgba(199,169,107,0.15)] hover:shadow-[0_8px_30px_0_rgba(199,169,107,0.3)] hover:-translate-y-1 hover:brightness-110 transition-all duration-300 active:scale-95 min-h-[48px] flex items-center justify-center whitespace-nowrap"
+            className="hidden sm:flex bg-gold text-white text-[9px] sm:text-[10px] font-bold uppercase tracking-widest px-6 sm:px-7 py-3 sm:py-3.5 rounded-full shadow-[0_4px_20px_0_rgba(199,169,107,0.15)] hover:shadow-[0_8px_30px_0_rgba(199,169,107,0.3)] hover:-translate-y-1 hover:brightness-110 transition-all duration-300 active:scale-95 min-h-[48px] items-center justify-center whitespace-nowrap"
           >
             Falar com Especialista
           </a>
+
+          <button
+            type="button"
+            aria-label={isMobileOpen ? 'Fechar menu' : 'Abrir menu'}
+            aria-expanded={isMobileOpen}
+            onClick={() => setIsMobileOpen((v) => !v)}
+            className="lg:hidden w-11 h-11 shrink-0 rounded-full bg-navy text-white flex items-center justify-center active:scale-95 transition-transform"
+          >
+            {isMobileOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
       </nav>
+
+      {/* Menu mobile */}
+      <AnimatePresence>
+        {isMobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.22 }}
+            className="lg:hidden fixed inset-x-3 top-[92px] bottom-3 z-40 pointer-events-auto overflow-y-auto rounded-[32px] bg-white/95 backdrop-blur-2xl border border-black/5 shadow-2xl p-5"
+          >
+            <nav className="flex flex-col gap-1">
+              <a href="/" onClick={() => setIsMobileOpen(false)} className="px-4 py-4 rounded-2xl text-navy font-semibold hover:bg-ice transition-colors">Início</a>
+
+              <button
+                type="button"
+                onClick={() => setIsMobileSolutionsOpen((v) => !v)}
+                className="px-4 py-4 rounded-2xl text-navy font-semibold hover:bg-ice transition-colors flex items-center justify-between"
+              >
+                Soluções
+                <ChevronDown size={16} className={`transition-transform ${isMobileSolutionsOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              <AnimatePresence initial={false}>
+                {isMobileSolutionsOpen && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="flex flex-col gap-1 pb-2">
+                      {SOLUTIONS.map((solution) => (
+                        <a
+                          key={solution.slug}
+                          href={`/solucoes/${solution.slug}`}
+                          onClick={() => setIsMobileOpen(false)}
+                          className="flex items-start gap-3 px-4 py-3 rounded-2xl hover:bg-ice transition-colors"
+                        >
+                          <div className="w-9 h-9 shrink-0 rounded-xl bg-navy/5 flex items-center justify-center text-navy">
+                            {getIcon(solution.icon)}
+                          </div>
+                          <div className="min-w-0">
+                            <p className="text-sm font-semibold text-navy">{solution.title}</p>
+                            <p className="text-xs text-navy/60 leading-snug">{solution.description}</p>
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              <a href="#sobre" onClick={() => setIsMobileOpen(false)} className="px-4 py-4 rounded-2xl text-navy font-semibold hover:bg-ice transition-colors">Institucional</a>
+              <a href="#contato" onClick={() => setIsMobileOpen(false)} className="px-4 py-4 rounded-2xl text-navy font-semibold hover:bg-ice transition-colors">Contato</a>
+
+              <a
+                href="#contato"
+                onClick={() => setIsMobileOpen(false)}
+                className="mt-3 bg-gold text-white text-[11px] font-bold uppercase tracking-widest px-6 py-4 rounded-full text-center active:scale-95 transition-transform"
+              >
+                Falar com Especialista
+              </a>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
+
