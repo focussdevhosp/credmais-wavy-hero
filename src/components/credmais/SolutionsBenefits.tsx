@@ -3,6 +3,7 @@ import { CTAButton } from '@/components/credmais/CTAButton';
 import growthAsset from '@/assets/solutions-growth.png.asset.json';
 import securitizacaoAsset from '@/assets/securitizacao-hero.png.asset.json';
 import logoCardFooter from '@/assets/logo-card-footer.png.asset.json';
+import consultoriaNewAsset from '@/assets/consultoria-card-new.png.asset.json';
 import { assetUrl } from '@/lib/asset-url';
 
 export function SolutionsBenefits() {
