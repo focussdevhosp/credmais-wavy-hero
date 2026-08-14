@@ -1,10 +1,10 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { Hero } from '@/components/credmais/Hero';
+import { motion } from 'framer-motion';
 import { Navbar } from '@/components/credmais/Navbar';
 import { Footer } from '@/components/credmais/Footer';
 import { PixFeatures } from '@/components/credmais/PixFeatures';
-import { WideBanner } from '@/components/credmais/WideBanner';
 import { PixFAQ } from '@/components/credmais/PixFAQ';
+import { CTAButton } from '@/components/credmais/CTAButton';
 import pixHeroAsset from '@/assets/pix-parcelado-hero-new.png.asset.json';
 import pixBannerAssetV2 from '@/assets/pix-banner-v2.png.asset.json';
 import { assetUrl } from '@/lib/asset-url';
