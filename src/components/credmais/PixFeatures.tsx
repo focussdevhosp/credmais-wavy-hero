@@ -1,6 +1,6 @@
 import { CTAButton } from '@/components/credmais/CTAButton';
 import { motion } from 'framer-motion';
-import consultoriaAsset from '@/assets/pix-consultoria.png.asset.json';
+import consultoriaAsset from '@/assets/pix-consultoria-v2.png.asset.json';
 import { assetUrl } from '@/lib/asset-url';
 
 export function PixFeatures() {
