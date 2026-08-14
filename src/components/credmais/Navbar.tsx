@@ -87,7 +87,6 @@ export function Navbar() {
             </AnimatePresence>
           </div>
 
-          <a href="#sobre" className="hover:text-gold transition-all duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-gold after:transition-all hover:after:w-full">Institucional</a>
           <a href="#contato" className="hover:text-gold transition-all duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-gold after:transition-all hover:after:w-full">Contato</a>
         </div>
 
@@ -163,7 +162,6 @@ export function Navbar() {
                 )}
               </AnimatePresence>
 
-              <a href="#sobre" onClick={() => setIsMobileOpen(false)} className="px-4 py-4 rounded-2xl text-navy font-semibold hover:bg-ice transition-colors">Institucional</a>
               <a href="#contato" onClick={() => setIsMobileOpen(false)} className="px-4 py-4 rounded-2xl text-navy font-semibold hover:bg-ice transition-colors">Contato</a>
 
               <a
