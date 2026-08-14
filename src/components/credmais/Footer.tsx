@@ -16,8 +16,8 @@ export function Footer() {
           
           {/* Brand Column */}
           <div className="space-y-8">
-            <a href="/" className="hover:opacity-80 transition-opacity block w-fit">
-              <img src={assetUrl(logoAsset.url)} alt="CredMais" className="h-10 w-auto brightness-110" />
+            <a href="/" className="hover:opacity-90 transition-opacity block w-fit bg-black rounded-2xl px-4 py-3">
+              <img src={assetUrl(logoAsset.url)} alt="CredMais" className="h-8 w-auto" />
             </a>
             <p className="text-white/60 font-light leading-relaxed max-w-xs">
               Transformando ativos empresariais em liquidez imediata para impulsionar o crescimento do seu negócio com solidez e transparência.
