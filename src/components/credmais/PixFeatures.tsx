@@ -1,6 +1,6 @@
 import { CTAButton } from '@/components/credmais/CTAButton';
 import { motion } from 'framer-motion';
-import consultoriaAsset from '@/assets/pix-consultoria.png.asset.json';
+import consultoriaAsset from '@/assets/pix-consultoria-v2.png.asset.json';
 import { assetUrl } from '@/lib/asset-url';
 
 export function PixFeatures() {
@@ -48,7 +48,7 @@ export function PixFeatures() {
             <CTAButton variant="gold">Solicitar atendimento consultivo</CTAButton>
           </motion.div>
 
-          {/* Coluna da Imagem Reconstruída */}
+          {/* Coluna da Imagem */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -56,52 +56,16 @@ export function PixFeatures() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            {/* O container principal que simula o card branco da referência */}
-            <div className="bg-white rounded-[32px] sm:rounded-[60px] p-6 sm:p-8 md:p-12 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.1)] border border-navy/5 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
-              
-              {/* Conteúdo Interno do Card Simulado */}
-              <div className="flex-1 z-10">
-                <h3 className="text-3xl font-heading font-bold text-accent mb-4">
-                  Consultoria Especializada
-                </h3>
-                <p className="text-navy/60 font-light mb-8 max-w-[280px]">
-                  Um time de consultores em negócios com Setor Público à sua disposição.
-                </p>
-                
-                <div className="inline-block bg-accent text-navy px-8 py-3 rounded-md font-heading font-bold text-xs tracking-widest uppercase cursor-pointer hover:shadow-lg hover:shadow-accent/20 transition-all">
-                  SAIBA MAIS
-                </div>
-              </div>
-
-              {/* A Imagem com fundo amarelo vibrante */}
-              <div className="relative z-10 w-full md:w-[320px] aspect-square md:aspect-[4/5] bg-accent/10 rounded-[40px] overflow-hidden flex items-end justify-center">
-                <img 
-                  src={assetUrl(consultoriaAsset)} 
-                  alt="Consultor Especializado" 
-                  className="w-full h-full object-cover object-top"
-                  onError={(e) => {
-                    e.currentTarget.src = "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop";
-                  }}
-                />
-                
-                {/* Triângulos Azuis Decorativos da referência */}
-                <div 
-                  className="absolute top-1/2 left-4 w-6 h-6 bg-accent" 
-                  style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}
-                />
-                <div 
-                  className="absolute bottom-1/4 right-4 w-4 h-4 bg-accent rotate-180" 
-                  style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}
-                />
-              </div>
-
-              {/* Triângulo azul flutuando fora da imagem, no card branco */}
-              <div 
-                className="absolute top-1/3 left-6 w-10 h-10 bg-accent/20" 
-                style={{ clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)' }}
+            <div className="rounded-[32px] sm:rounded-[48px] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.12)] border border-navy/5">
+              <img
+                src={assetUrl(consultoriaAsset)}
+                alt="Consultoria especializada CredMais: conversas que movimentam negócios"
+                loading="lazy"
+                className="w-full h-auto block"
               />
             </div>
           </motion.div>
+
         </div>
       </div>
     </section>
