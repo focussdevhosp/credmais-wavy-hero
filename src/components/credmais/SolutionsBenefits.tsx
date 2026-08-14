@@ -3,14 +3,13 @@ import { CTAButton } from '@/components/credmais/CTAButton';
 import growthAsset from '@/assets/solutions-growth.png.asset.json';
 import securitizacaoAsset from '@/assets/securitizacao-hero.png.asset.json';
 import logoCardFooter from '@/assets/logo-card-footer.png.asset.json';
-import consultoriaNewAsset from '@/assets/consultoria-card-new.png.asset.json';
 import { assetUrl } from '@/lib/asset-url';
 
 export function SolutionsBenefits() {
   return (
     <section className="py-16 sm:py-24 lg:py-32 bg-white overflow-hidden">
       <div className="container mx-auto px-5 sm:px-6">
-        {/* Bloco 1: Imagem Esquerda, Texto Direita (Replaced with Custom Card) */}
+        {/* Bloco 1: Imagem Esquerda, Texto Direita */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center mb-16 sm:mb-24 lg:mb-32">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -22,12 +21,22 @@ export function SolutionsBenefits() {
             <div className="rounded-[40px] overflow-hidden shadow-2xl relative">
               <div className="aspect-[4/3] sm:aspect-video bg-ice relative">
                 <img 
-                  src={assetUrl(consultoriaNewAsset)} 
-                  alt="Consultoria Especializada Credmais" 
-                  className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
+                  src={assetUrl(growthAsset)} 
+                  alt="Soluções Credmais" 
+                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110"
                   onError={(e) => {
-                    e.currentTarget.src = assetUrl(growthAsset);
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2071&auto=format&fit=crop";
                   }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              </div>
+
+              {/* Logo Overlay at the bottom */}
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-48 sm:w-64 opacity-90 brightness-0 invert filter group-hover:brightness-100 group-hover:invert-0 transition-all duration-500">
+                <img 
+                  src={assetUrl(logoCardFooter)} 
+                  alt="Credmais Securitizadora" 
+                  className="w-full h-auto"
                 />
               </div>
             </div>
@@ -43,12 +52,12 @@ export function SolutionsBenefits() {
             className="order-1 lg:order-2"
           >
             <h3 className="text-[clamp(1.75rem,4.2vw,2.75rem)] font-heading font-medium text-navy mb-5 sm:mb-6 leading-[1.15] tracking-tight">
-              Consultoria <span className="font-semibold italic text-gold">Especializada</span> para o seu negócio
+              A <span className="font-semibold italic text-gold">Credmais</span> ajuda a expandir o seu patrimônio
             </h3>
             <p className="text-navy/80 text-base sm:text-lg leading-relaxed font-normal mb-8">
-              Um time de consultores em negócios com Setor Público e Privado à sua disposição para impulsionar sua liquidez e crescimento.
+              Transformamos seus recebíveis em capital imediato. Construa o futuro da sua empresa com planejamento estratégico e toda a solidez que só a Credmais oferece ao mercado.
             </p>
-            <CTAButton variant="gold">Falar com um consultor agora</CTAButton>
+            <CTAButton variant="gold">Simular operação com um consultor</CTAButton>
           </motion.div>
         </div>
 
