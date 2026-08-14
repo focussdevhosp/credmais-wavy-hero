@@ -59,7 +59,7 @@ export function Hero({ title, subtitle, image }: HeroProps) {
             <div className="sr-only">
               <h1>{title}</h1>
               <p>{subtitle}</p>
-              <p>Identifique falhas, erros de lógica e bugs no código fornecido. Forneça a correção exata para cada problema encontrado, acompanhada de uma explicação clara sobre a causa raiz e a solução aplicada, garantindo que o código funcione perfeitamente e sem erros.</p>
+              <p>Antecipação de recebíveis, pix parcelado, boleto garantido e consultoria especializada para impulsionar o seu negócio com segurança e agilidade.</p>
             </div>
           </motion.div>
         </div>

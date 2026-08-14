@@ -16,7 +16,7 @@ function HomeComponent() {
     <div className="relative">
       <Navbar />
       <Hero 
-        title="VENDA MAIS. CRESÇA COM INTELIGÊNCIA."
+        title="Seu caixa em movimento"
         subtitle="Soluções financeiras para fortalecer o seu negócio."
         image="hero-home-new" 
       />
