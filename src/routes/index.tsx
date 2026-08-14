@@ -20,7 +20,7 @@ function HomeComponent() {
         image="hero-home-new" 
       />
       
-      <AboutSection />
+      
       <SolutionsBenefits />
       <FAQSection />
       <Footer />
