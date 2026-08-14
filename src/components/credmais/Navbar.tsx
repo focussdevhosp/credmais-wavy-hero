@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { ChevronDown, Zap, TrendingUp, ShieldCheck, CreditCard, Lock, Menu, X } from 'lucide-react';
 import { SITE_CONFIG, SOLUTIONS } from '@/lib/site-data';
-import logoAsset from '@/assets/logo-credmais-premium.png.asset.json';
+import logoAsset from '@/assets/logo-credmais-nova.png.asset.json';
 import { assetUrl } from '@/lib/asset-url';
 
 export function Navbar() {

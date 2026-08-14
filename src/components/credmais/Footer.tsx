@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Instagram, Linkedin, ArrowRight } from 'lucide-react';
-import logoAsset from '@/assets/logo-credmais-premium.png.asset.json';
+import logoAsset from '@/assets/logo-credmais-nova.png.asset.json';
 import { assetUrl } from '@/lib/asset-url';
 
 export function Footer() {
