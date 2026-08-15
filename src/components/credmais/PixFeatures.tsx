@@ -45,7 +45,7 @@ export function PixFeatures() {
               </div>
             </div>
 
-            <CTAButton variant="gold">Solicitar atendimento consultivo</CTAButton>
+            <CTAButton variant="gold" href="/contato">Solicitar atendimento consultivo</CTAButton>
           </motion.div>
 
           {/* Coluna da Imagem */}

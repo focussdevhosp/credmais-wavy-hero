@@ -55,7 +55,7 @@ export function SolutionFeatures({ features }: SolutionFeaturesProps) {
                 {feature.description}
               </p>
               {feature.buttonText && (
-                <CTAButton variant="gold">{feature.buttonText}</CTAButton>
+                <CTAButton variant="gold" href="/contato">{feature.buttonText}</CTAButton>
               )}
             </motion.div>
           </div>
