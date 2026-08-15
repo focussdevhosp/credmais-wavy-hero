@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { ChevronDown, Zap, TrendingUp, ShieldCheck, CreditCard, Lock, Menu, X } from 'lucide-react';
 import { SITE_CONFIG, SOLUTIONS } from '@/lib/site-data';
-import logoAsset from '@/assets/logo-credmais-2026.png.asset.json';
+import logoAsset from '@/assets/logo-credmais-transparente.png.asset.json';
 import { assetUrl } from '@/lib/asset-url';
 
 export function Navbar() {
@@ -31,8 +31,8 @@ export function Navbar() {
     <header className="fixed top-0 inset-x-0 z-50 flex justify-center px-0 sm:px-0 pointer-events-none pt-4 sm:pt-6">
       <nav className="bg-white/40 backdrop-blur-2xl border border-white/30 shadow-[0_8px_32px_0_rgba(7,26,51,0.08)] rounded-full px-4 sm:px-8 py-2.5 sm:py-4 flex items-center justify-between w-full max-w-6xl pointer-events-auto relative mx-3 sm:mx-4 transition-all duration-300 hover:bg-white/60">
         <div className="flex items-center min-w-0">
-          <a href="/" className="hover:opacity-90 transition-opacity flex items-center bg-[#071A33] rounded-2xl px-3 py-2 sm:px-4 sm:py-2.5">
-            <img src={assetUrl(logoAsset.url)} alt="CredMais" className="h-7 sm:h-9 w-auto transition-transform duration-300 hover:scale-105" />
+          <a href="/" className="hover:opacity-90 transition-opacity flex items-center">
+            <img src={assetUrl(logoAsset.url)} alt="CredMais" className="h-8 sm:h-11 w-auto transition-transform duration-300 hover:scale-105" />
           </a>
         </div>
 
