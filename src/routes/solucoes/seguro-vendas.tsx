@@ -3,6 +3,7 @@ import { Hero } from '@/components/credmais/Hero';
 import { Navbar } from '@/components/credmais/Navbar';
 import { Footer } from '@/components/credmais/Footer';
 import { SolutionFeatures } from '@/components/credmais/SolutionFeatures';
+import { ContactForm } from '@/components/credmais/ContactForm';
 import { motion } from 'framer-motion';
 
 import heroAsset from '@/assets/seguro-v3-hero.png.asset.json';
@@ -164,28 +165,11 @@ function SeguroVendasPage() {
               </div>
             </div>
             
-            <div className="bg-white rounded-[40px] p-10 lg:p-14 text-navy shadow-2xl">
-              <h3 className="text-3xl font-heading font-bold mb-4">Seja um parceiro</h3>
-              <p className="text-navy/60 font-light mb-10 text-lg">Proteja suas vendas agora mesmo. Preencha os dados e entraremos em contato.</p>
-              
-              <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
-                <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-widest font-bold text-navy/40 ml-1">Empresa</label>
-                  <input type="text" className="w-full bg-ice border-none rounded-2xl px-6 py-4 text-navy placeholder:text-navy/20 focus:ring-2 focus:ring-gold/20 outline-none transition-all" placeholder="Nome da sua empresa" />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-widest font-bold text-navy/40 ml-1">WhatsApp</label>
-                  <input type="tel" className="w-full bg-ice border-none rounded-2xl px-6 py-4 text-navy placeholder:text-navy/20 focus:ring-2 focus:ring-gold/20 outline-none transition-all" placeholder="(00) 00000-0000" />
-                </div>
-                <a 
-                  href="/contato"
-                  className="w-full bg-navy hover:bg-navy/90 text-white font-bold py-5 rounded-2xl transition-all shadow-xl hover:shadow-navy/20 mt-4 group flex items-center justify-center gap-2"
-                >
-                  Solicitar Diagnóstico Grátis
-                  <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
-                </a>
-              </form>
-            </div>
+            <ContactForm
+              title="Seja um parceiro"
+              description="Proteja suas vendas agora mesmo. Preencha os dados e nossa equipe entrará em contato."
+              submitLabel="Solicitar diagnóstico gratuito"
+            />
           </div>
         </div>
       </section>

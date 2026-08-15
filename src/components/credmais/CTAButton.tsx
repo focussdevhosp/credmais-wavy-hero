@@ -14,7 +14,7 @@ const variants = {
   outline: 'border border-gold/20 text-gold hover:border-gold hover:text-white hover:bg-gold bg-transparent',
 };
 
-export function CTAButton({ children, href = '#contato', variant = 'gold', className }: CTAButtonProps) {
+export function CTAButton({ children, href = '/contato', variant = 'gold', className }: CTAButtonProps) {
   return (
     <a
       href={href}
