@@ -96,6 +96,7 @@ function SeguroVendasPage() {
         title="Seu Caixa no Ritmo do seu Negócio."
         subtitle="O seguro que protege suas vendas e garante a liquidez que sua empresa precisa para crescer sem riscos."
         image={assetUrl(heroAsset)}
+        hideContent
       />
 
       <div className="bg-ice py-20 border-y border-navy/5">

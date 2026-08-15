@@ -86,6 +86,7 @@ function CrediarioPage() {
         title="Seu Crediário. Nossa Garantia."
         subtitle="Venda parcelado no boleto ou carnê com risco zero e liquidez imediata."
         image={assetUrl(heroAsset)}
+        hideContent
       />
       
       <SolutionFeatures features={features} />
