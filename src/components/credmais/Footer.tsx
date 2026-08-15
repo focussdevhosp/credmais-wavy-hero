@@ -50,7 +50,7 @@ export function Footer() {
               <li><a href="#" className="hover:text-[#C7A96B] transition-colors flex items-center gap-2 group"><ArrowRight size={12} className="opacity-0 group-hover:opacity-100 transition-all -ml-4 group-hover:ml-0" /> Sobre nós</a></li>
               <li><a href="#" className="hover:text-[#C7A96B] transition-colors flex items-center gap-2 group"><ArrowRight size={12} className="opacity-0 group-hover:opacity-100 transition-all -ml-4 group-hover:ml-0" /> Compliance</a></li>
               <li><a href="#" className="hover:text-[#C7A96B] transition-colors flex items-center gap-2 group"><ArrowRight size={12} className="opacity-0 group-hover:opacity-100 transition-all -ml-4 group-hover:ml-0" /> Termos de Uso</a></li>
-              <li><a href="#" className="hover:text-[#C7A96B] transition-colors flex items-center gap-2 group"><ArrowRight size={12} className="opacity-0 group-hover:opacity-100 transition-all -ml-4 group-hover:ml-0" /> Contato</a></li>
+              <li><a href="/contato" className="hover:text-[#C7A96B] transition-colors flex items-center gap-2 group"><ArrowRight size={12} className="opacity-0 group-hover:opacity-100 transition-all -ml-4 group-hover:ml-0" /> Contato</a></li>
             </ul>
           </div>
 
@@ -73,7 +73,7 @@ export function Footer() {
                 </div>
                 <div>
                   <p className="text-xs text-white/40 uppercase tracking-widest mb-1">Telefone</p>
-                  <a href="tel:08000000000" className="text-sm hover:text-[#C7A96B] transition-colors">0800 000 0000</a>
+                  <a href="tel:5511940893852" className="text-sm hover:text-[#C7A96B] transition-colors">(11) 94089-3852</a>
                 </div>
               </div>
             </div>
