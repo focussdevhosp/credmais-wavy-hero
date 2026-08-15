@@ -3,7 +3,7 @@ import { Navbar } from '@/components/credmais/Navbar';
 import { Footer } from '@/components/credmais/Footer';
 import { ContactForm } from '@/components/credmais/ContactForm';
 import { assetUrl } from '@/lib/asset-url';
-import heroAsset from '@/assets/contato-hero.png.asset.json';
+import heroAsset from '@/assets/contato-hero-2026.png.asset.json';
 import { Helmet } from 'react-helmet-async';
 
 export const Route = createFileRoute('/contato')({
