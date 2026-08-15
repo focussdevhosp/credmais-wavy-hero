@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Toaster } from "@/components/ui/sonner";
+import { FloatingWhatsApp } from "@/components/credmais/FloatingWhatsApp";
 
 
 
@@ -140,6 +141,7 @@ function RootComponent() {
           <Outlet />
         </main>
         <Toaster position="top-center" richColors />
+        <FloatingWhatsApp />
       </div>
     </QueryClientProvider>
 
