@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Instagram, Linkedin, ArrowRight } from 'lucide-react';
-import logoAsset from '@/assets/logo-credmais-2026.png.asset.json';
+import logoAsset from '@/assets/logo-credmais-transparente.png.asset.json';
 import { assetUrl } from '@/lib/asset-url';
 
 export function Footer() {
@@ -16,8 +16,8 @@ export function Footer() {
           
           {/* Brand Column */}
           <div className="space-y-8">
-            <a href="/" className="hover:opacity-90 transition-opacity block w-fit bg-black rounded-2xl px-4 py-3">
-              <img src={assetUrl(logoAsset.url)} alt="CredMais" className="h-8 w-auto" />
+            <a href="/" className="hover:opacity-90 transition-opacity block w-fit">
+              <img src={assetUrl(logoAsset.url)} alt="CredMais" className="h-11 w-auto brightness-0 invert" />
             </a>
             <p className="text-white/60 font-light leading-relaxed max-w-xs">
               Transformando ativos empresariais em liquidez imediata para impulsionar o crescimento do seu negócio com solidez e transparência.
