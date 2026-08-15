@@ -73,7 +73,7 @@ export function Footer() {
                 </div>
                 <div>
                   <p className="text-xs text-white/40 uppercase tracking-widest mb-1">Telefone</p>
-                  <a href="tel:5511940893852" className="text-sm hover:text-[#C7A96B] transition-colors">(11) 94089-3852</a>
+                  <a href="tel:+5511940893852" className="text-sm hover:text-[#C7A96B] transition-colors">(11) 94089-3852</a>
                 </div>
               </div>
             </div>
