@@ -3,7 +3,7 @@ import { Navbar } from '@/components/credmais/Navbar';
 import { Footer } from '@/components/credmais/Footer';
 import { ContactForm } from '@/components/credmais/ContactForm';
 import { assetUrl } from '@/lib/asset-url';
-import heroAsset from '@/assets/contato-hero.png.asset.json';
+import heroAsset from '@/assets/contato-hero-2026.png.asset.json';
 import { Helmet } from 'react-helmet-async';
 
 export const Route = createFileRoute('/contato')({
@@ -41,13 +41,12 @@ function ContactPage() {
                 Dúvidas, propostas ou consultoria personalizada? Nossa equipe de especialistas está à disposição para acelerar o crescimento do seu negócio.
               </p>
 
-              <div className="relative rounded-[48px] overflow-hidden shadow-2xl border border-white/20 aspect-video lg:aspect-square max-h-[500px]">
+              <div className="relative rounded-[48px] overflow-hidden shadow-2xl border border-white/20 bg-white">
                 <img 
                   src={assetUrl(heroAsset.url)} 
                   alt="Atendimento CredMais" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto object-contain"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent" />
               </div>
             </div>
 
