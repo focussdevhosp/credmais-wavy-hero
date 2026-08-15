@@ -109,9 +109,12 @@ function CrediarioPage() {
               <p className="text-white/60 text-base sm:text-lg mb-8 sm:mb-12 max-w-2xl mx-auto font-light">
                 Junte-se a milhares de lojistas que já vendem com o Crediário Garantido CredMais.
               </p>
-              <button className="bg-gold hover:bg-gold/90 text-white w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 rounded-full font-heading font-bold uppercase tracking-widest text-xs sm:text-sm transition-all shadow-xl shadow-gold/20">
+              <a 
+                href="/contato"
+                className="inline-flex bg-gold hover:bg-gold/90 text-white w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 rounded-full font-heading font-bold uppercase tracking-widest text-xs sm:text-sm transition-all shadow-xl shadow-gold/20 items-center justify-center"
+              >
                 Começar agora
-              </button>
+              </a>
             </div>
           </div>
         </div>

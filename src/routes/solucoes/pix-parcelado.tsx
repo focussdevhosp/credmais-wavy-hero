@@ -21,6 +21,7 @@ function PixParceladoPage() {
         title="Simples para vender. Fácil para pagar."
         subtitle="Pix Parcelado CredMais: A evolução do pagamento para o seu negócio."
         image={assetUrl(pixHeroAsset)}
+        hideContent
       />
       
       <PixFeatures />

@@ -176,10 +176,13 @@ function SeguroVendasPage() {
                   <label className="text-xs uppercase tracking-widest font-bold text-navy/40 ml-1">WhatsApp</label>
                   <input type="tel" className="w-full bg-ice border-none rounded-2xl px-6 py-4 text-navy placeholder:text-navy/20 focus:ring-2 focus:ring-gold/20 outline-none transition-all" placeholder="(00) 00000-0000" />
                 </div>
-                <button className="w-full bg-navy hover:bg-navy/90 text-white font-bold py-5 rounded-2xl transition-all shadow-xl hover:shadow-navy/20 mt-4 group">
+                <a 
+                  href="/contato"
+                  className="w-full bg-navy hover:bg-navy/90 text-white font-bold py-5 rounded-2xl transition-all shadow-xl hover:shadow-navy/20 mt-4 group flex items-center justify-center gap-2"
+                >
                   Solicitar Diagnóstico Grátis
                   <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
-                </button>
+                </a>
               </form>
             </div>
           </div>
