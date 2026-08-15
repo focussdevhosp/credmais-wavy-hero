@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { ChevronDown, Zap, TrendingUp, ShieldCheck, CreditCard, Lock, Menu, X } from 'lucide-react';
 import { SITE_CONFIG, SOLUTIONS } from '@/lib/site-data';
-import logoAsset from '@/assets/logo-credmais-nova.png.asset.json';
+import logoAsset from '@/assets/logo-credmais-2026.png.asset.json';
 import { assetUrl } from '@/lib/asset-url';
 
 export function Navbar() {
@@ -86,12 +86,12 @@ export function Navbar() {
             </AnimatePresence>
           </div>
 
-          <a href="#contato" className="hover:text-gold transition-all duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-gold after:transition-all hover:after:w-full">Contato</a>
+          <a href="/contato" className="hover:text-gold transition-all duration-300 relative after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[1px] after:bg-gold after:transition-all hover:after:w-full">Contato</a>
         </div>
 
         <div className="flex items-center gap-2 sm:gap-3">
           <a 
-            href="#contato"
+            href="/contato"
             className="hidden sm:flex bg-gold text-white text-[9px] sm:text-[10px] font-bold uppercase tracking-widest px-6 sm:px-7 py-3 sm:py-3.5 rounded-full shadow-[0_4px_20px_0_rgba(199,169,107,0.15)] hover:shadow-[0_8px_30px_0_rgba(199,169,107,0.3)] hover:-translate-y-1 hover:brightness-110 transition-all duration-300 active:scale-95 min-h-[48px] items-center justify-center whitespace-nowrap"
           >
             Falar com Especialista
@@ -161,10 +161,10 @@ export function Navbar() {
                 )}
               </AnimatePresence>
 
-              <a href="#contato" onClick={() => setIsMobileOpen(false)} className="px-4 py-4 rounded-2xl text-navy font-semibold hover:bg-ice transition-colors">Contato</a>
+              <a href="/contato" onClick={() => setIsMobileOpen(false)} className="px-4 py-4 rounded-2xl text-navy font-semibold hover:bg-ice transition-colors">Contato</a>
 
               <a
-                href="#contato"
+                href="/contato"
                 onClick={() => setIsMobileOpen(false)}
                 className="mt-3 bg-gold text-white text-[11px] font-bold uppercase tracking-widest px-6 py-4 rounded-full text-center active:scale-95 transition-transform"
               >

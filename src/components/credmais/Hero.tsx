@@ -8,9 +8,10 @@ interface HeroProps {
   title?: string;
   subtitle?: string;
   image?: string;
+  hideContent?: boolean;
 }
 
-export function Hero({ title, subtitle, image }: HeroProps) {
+export function Hero({ title, subtitle, image, hideContent }: HeroProps) {
   // As imagens ficam na CDN de assets; assetUrl garante URL absoluta em
   // qualquer domínio (inclusive domínio próprio publicado na Cloudflare).
   const heroImage = image === "hero-movimento"
@@ -56,10 +57,9 @@ export function Hero({ title, subtitle, image }: HeroProps) {
                 We keep the structure for SEO but hide the content visually 
                 as requested since it's already in the image 
             */}
-            <div className="sr-only">
-              <h1>{title}</h1>
-              <p>{subtitle}</p>
-              <p>Identifique falhas, erros de lógica e bugs no código fornecido. Forneça a correção exata para cada problema encontrado, acompanhada de uma explicação clara sobre a causa raiz e a solução aplicada, garantindo que o código funcione perfeitamente e sem erros.</p>
+            <div className={hideContent ? "sr-only" : "space-y-6"}>
+              <h1 className="fluid-text-h1 font-heading font-bold text-navy leading-[0.9]">{title}</h1>
+              <p className="text-navy/70 text-lg sm:text-xl font-light max-w-lg leading-relaxed">{subtitle}</p>
             </div>
           </motion.div>
         </div>

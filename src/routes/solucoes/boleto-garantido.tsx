@@ -39,6 +39,7 @@ function BoletoGarantidoPage() {
         title="CredMais Securitizadora."
         subtitle="Seus boletos transformados em liquidez imediata com segurança e solidez."
         image={assetUrl(heroAsset)}
+        hideContent
       />
       
       <SolutionFeatures features={features} />

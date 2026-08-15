@@ -44,11 +44,18 @@ function AntecipacaoPage() {
               Antecipação de recebíveis com a inteligência e segurança que o seu negócio exige para crescer sem pausas.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-navy hover:bg-navy/90 text-white rounded-full w-full sm:w-auto px-8 sm:px-10 py-6 sm:py-7 text-base sm:text-lg shadow-2xl transition-all hover:scale-105 active:scale-95">
-                Simular Antecipação
+              <Button 
+                asChild
+                className="bg-navy hover:bg-navy/90 text-white rounded-full w-full sm:w-auto px-8 sm:px-10 py-6 sm:py-7 text-base sm:text-lg shadow-2xl transition-all hover:scale-105 active:scale-95"
+              >
+                <a href="/contato">Simular Antecipação</a>
               </Button>
-              <Button variant="outline" className="border-navy/20 text-navy rounded-full w-full sm:w-auto px-8 sm:px-10 py-6 sm:py-7 text-base sm:text-lg hover:bg-navy/5 transition-all">
-                Falar com Especialista
+              <Button 
+                asChild
+                variant="outline" 
+                className="border-navy/20 text-navy rounded-full w-full sm:w-auto px-8 sm:px-10 py-6 sm:py-7 text-base sm:text-lg hover:bg-navy/5 transition-all"
+              >
+                <a href="/contato">Falar com Especialista</a>
               </Button>
             </div>
           </motion.div>
@@ -148,8 +155,8 @@ function AntecipacaoPage() {
               <p className="text-navy/70 text-base sm:text-lg font-light mb-10 leading-relaxed">
                 A pessoa tem uma conta a receber e a gente antecipa o valor para ela. Simples assim. Liberte o capital que está preso em vendas a prazo e reinvista no que importa: seu crescimento.
               </p>
-              <Button className="bg-gold hover:bg-gold/90 text-white rounded-full w-full sm:w-auto px-8 sm:px-10 py-6 text-base sm:text-lg shadow-lg">
-                Começar agora
+              <Button asChild className="bg-gold hover:bg-gold/90 text-white rounded-full w-full sm:w-auto px-8 sm:px-10 py-6 text-base sm:text-lg shadow-lg">
+                <a href="/contato">Começar agora</a>
               </Button>
             </div>
             <motion.div
@@ -213,8 +220,8 @@ function AntecipacaoPage() {
               <p className="text-navy/70 text-base sm:text-lg font-light mb-10 leading-relaxed">
                 Nossos consultores são especialistas em mercado financeiro e securitização, prontos para oferecer a melhor estratégia para sua empresa.
               </p>
-              <Button className="bg-navy text-white hover:bg-navy/90 rounded-full px-10 py-6 text-lg w-full sm:w-auto">
-                Falar com consultor
+              <Button asChild className="bg-navy text-white hover:bg-navy/90 rounded-full px-10 py-6 text-lg w-full sm:w-auto">
+                <a href="/contato">Falar com consultor</a>
               </Button>
             </div>
             <div className="relative">

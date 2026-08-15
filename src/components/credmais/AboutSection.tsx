@@ -60,7 +60,7 @@ export function AboutSection() {
               ))}
             </div>
 
-            <CTAButton variant="gold">Solicitar proposta comercial</CTAButton>
+            <CTAButton variant="gold" href="/contato">Solicitar proposta comercial</CTAButton>
           </motion.div>
 
           <motion.div

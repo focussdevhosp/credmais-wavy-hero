@@ -19,6 +19,7 @@ function HomeComponent() {
         title="VENDA MAIS. CRESÇA COM INTELIGÊNCIA."
         subtitle="Soluções financeiras para fortalecer o seu negócio."
         image="hero-home-new" 
+        hideContent
       />
       
       <AboutSection />
