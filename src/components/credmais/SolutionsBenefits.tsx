@@ -57,7 +57,7 @@ export function SolutionsBenefits() {
             <p className="text-navy/80 text-base sm:text-lg leading-relaxed font-normal mb-8">
               Transformamos seus recebíveis em capital imediato. Construa o futuro da sua empresa com planejamento estratégico e toda a solidez que só a Credmais oferece ao mercado.
             </p>
-            <CTAButton variant="gold">Simular operação com um consultor</CTAButton>
+            <CTAButton variant="gold" href="/contato">Simular operação com um consultor</CTAButton>
           </motion.div>
         </div>
 
