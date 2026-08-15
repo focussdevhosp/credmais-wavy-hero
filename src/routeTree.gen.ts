@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SolucoesSeguroVendasRouteImport } from './routes/solucoes/seguro-vendas'
 import { Route as SolucoesPixParceladoRouteImport } from './routes/solucoes/pix-parcelado'
@@ -16,6 +17,11 @@ import { Route as SolucoesCrediarioRouteImport } from './routes/solucoes/crediar
 import { Route as SolucoesBoletoGarantidoRouteImport } from './routes/solucoes/boleto-garantido'
 import { Route as SolucoesAntecipacaoDeRecebiveisRouteImport } from './routes/solucoes/antecipacao-de-recebiveis'
 
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -50,6 +56,7 @@ const SolucoesAntecipacaoDeRecebiveisRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
   '/solucoes/antecipacao-de-recebiveis': typeof SolucoesAntecipacaoDeRecebiveisRoute
   '/solucoes/boleto-garantido': typeof SolucoesBoletoGarantidoRoute
   '/solucoes/crediario': typeof SolucoesCrediarioRoute
@@ -58,6 +65,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
   '/solucoes/antecipacao-de-recebiveis': typeof SolucoesAntecipacaoDeRecebiveisRoute
   '/solucoes/boleto-garantido': typeof SolucoesBoletoGarantidoRoute
   '/solucoes/crediario': typeof SolucoesCrediarioRoute
@@ -67,6 +75,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
   '/solucoes/antecipacao-de-recebiveis': typeof SolucoesAntecipacaoDeRecebiveisRoute
   '/solucoes/boleto-garantido': typeof SolucoesBoletoGarantidoRoute
   '/solucoes/crediario': typeof SolucoesCrediarioRoute
@@ -77,6 +86,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/contato'
     | '/solucoes/antecipacao-de-recebiveis'
     | '/solucoes/boleto-garantido'
     | '/solucoes/crediario'
@@ -85,6 +95,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/contato'
     | '/solucoes/antecipacao-de-recebiveis'
     | '/solucoes/boleto-garantido'
     | '/solucoes/crediario'
@@ -93,6 +104,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/contato'
     | '/solucoes/antecipacao-de-recebiveis'
     | '/solucoes/boleto-garantido'
     | '/solucoes/crediario'
@@ -102,6 +114,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContatoRoute: typeof ContatoRoute
   SolucoesAntecipacaoDeRecebiveisRoute: typeof SolucoesAntecipacaoDeRecebiveisRoute
   SolucoesBoletoGarantidoRoute: typeof SolucoesBoletoGarantidoRoute
   SolucoesCrediarioRoute: typeof SolucoesCrediarioRoute
@@ -111,6 +124,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -158,6 +178,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContatoRoute: ContatoRoute,
   SolucoesAntecipacaoDeRecebiveisRoute: SolucoesAntecipacaoDeRecebiveisRoute,
   SolucoesBoletoGarantidoRoute: SolucoesBoletoGarantidoRoute,
   SolucoesCrediarioRoute: SolucoesCrediarioRoute,
