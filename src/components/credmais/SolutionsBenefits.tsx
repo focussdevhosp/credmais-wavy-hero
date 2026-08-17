@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { CTAButton } from '@/components/credmais/CTAButton';
 import growthAsset from '@/assets/solutions-growth.png.asset.json';
 import securitizacaoAsset from '@/assets/securitizacao-hero.png.asset.json';
-import logoCardFooter from '@/assets/logo-card-footer.png.asset.json';
+
 import { assetUrl } from '@/lib/asset-url';
 
 export function SolutionsBenefits() {
@@ -29,15 +29,6 @@ export function SolutionsBenefits() {
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </div>
-
-              {/* Logo Overlay at the bottom */}
-              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-48 sm:w-64 opacity-90 brightness-0 invert filter group-hover:brightness-100 group-hover:invert-0 transition-all duration-500">
-                <img 
-                  src={assetUrl(logoCardFooter)} 
-                  alt="Credmais Securitizadora" 
-                  className="w-full h-auto"
-                />
               </div>
             </div>
             {/* Decorative element */}
@@ -100,15 +91,6 @@ export function SolutionsBenefits() {
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </div>
-
-              {/* Logo Overlay at the bottom */}
-              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-48 sm:w-64 opacity-90 brightness-0 invert filter group-hover:brightness-100 group-hover:invert-0 transition-all duration-500">
-                <img 
-                  src={assetUrl(logoCardFooter)} 
-                  alt="Credmais Securitizadora" 
-                  className="w-full h-auto"
-                />
               </div>
             </div>
             {/* Decorative element */}
