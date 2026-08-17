@@ -30,15 +30,6 @@ export function SolutionsBenefits() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
-
-              {/* Logo Overlay at the bottom */}
-              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-48 sm:w-64 opacity-90 brightness-0 invert filter group-hover:brightness-100 group-hover:invert-0 transition-all duration-500">
-                <img 
-                  src={assetUrl(logoCardFooter)} 
-                  alt="Credmais Securitizadora" 
-                  className="w-full h-auto"
-                />
-              </div>
             </div>
             {/* Decorative element */}
             <div className="absolute -z-10 -left-4 -top-4 w-24 h-24 bg-gold/10 rounded-full blur-2xl group-hover:bg-gold/20 transition-colors" />
